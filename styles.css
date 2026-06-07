@@ -390,6 +390,14 @@ span {
   color: var(--muted);
 }
 
+.site-footer small {
+  display: block;
+  margin-top: 4px;
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.4;
+}
+
 .status-band div {
   padding: 22px;
   border-radius: 8px;
