@@ -12,6 +12,7 @@
 - 形式：网页互动课程站
 - 品牌：思美奇主理人 Jerry Fu 作品
 - 体验：原创日漫轻赛博风、音乐开关、声效反馈、家长 Tips、English Practice
+- 音乐：本地 MP3 轻音乐，来源 Orange Free Sounds，CC BY 4.0
 
 说明：
 
@@ -20,3 +21,5 @@
 - 等 PDF 大纲中准确标题确认后，可以快速替换课名和内容。
 - 工具重点不是让孩子直接依赖 AI，而是训练观察、描述、修改和表达。
 - 当前二维码为占位图，后续可替换真实视频号二维码。
+- 音乐文件：`assets/music/calm-piano-background.mp3`
+- 音乐署名：Calm Piano Background Music by Orange Free Sounds, licensed under Creative Commons Attribution 4.0.
