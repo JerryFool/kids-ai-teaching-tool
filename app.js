@@ -1,34 +1,34 @@
 const ui = {
   zh: {
     brandWork: "思美奇主理人作品",
-    createdBy: "Created by Jerry Fu",
-    heroKicker: "Jerry 家庭 AI 课堂 · 蓝白日漫轻赛博风",
-    heroTitle: "AI未来家长学校互动课",
-    heroText: "31节课网站框架已建立。先完成第5、6、7课样板，每节约30分钟，适合家长用 iPad 横屏边讲边操作。",
-    authorTitle: "作者的话",
-    authorBody: "AI 时代已经来到孩子身边。作为家长，我们不能只把孩子交给工具，也不能站在一旁焦虑观望。思美奇希望做的，不只是把新工具介绍给孩子，而是陪孩子建立面向未来的底层能力：会提问、会判断、会表达、会创造，也知道如何保护自己。真正的教育不是让孩子更早依赖 AI，而是让他们在新技术面前依然保有好奇、善良、独立思考和动手创造的勇气。我们这一代家长也要重新学习，和孩子一起顺应时代，一起长出新的能力。",
+    createdBy: "CyberMagic by Jerry Fu",
+    heroKicker: "AI未来家长课堂 · 第5课高质量样板",
+    heroTitle: "把脑袋里的画说清楚",
+    heroText: "这不是一节“教孩子按按钮”的课，而是一节训练孩子想象、表达、修改和判断的家庭互动课。家长可以打开网页，边讲义提示边操作画面，带孩子完成一节约30分钟的AI创意表达课。",
+    authorTitle: "主理人的一点愿景",
+    authorBody: "AI来到孩子身边以后，家长最需要做的不是焦虑，也不是把孩子直接交给工具。我们要陪孩子学会把想法说清楚，学会判断结果好不好，学会在新技术面前保持好奇、审美和独立思考。思美奇做这套课，希望让更多家庭用轻松、温暖、可操作的方式，和孩子一起进入AI时代。",
     startLesson: "开始第5课",
-    catalogButton: "查看31课目录",
-    samples: "3节样板课",
-    samplesNote: "第5、6、7课完整互动设计",
-    entries: "31个入口",
-    entriesNote: "目录结构先搭好，后续逐节补齐",
-    minutes: "30分钟",
-    minutesNote: "每节课按家庭讲课节奏设计",
-    followKicker: "关注主理人",
-    followTitle: "思美奇主理人 Jerry Fu",
-    followBody: "一起探索 AI 教育、体育 IP 与儿童创造力。后续真实视频号二维码可直接替换这里。",
+    catalogButton: "查看课程结构",
+    samples: "1节深度样板",
+    samplesNote: "先把第5课做到可讲、可玩、可分享",
+    entries: "后续31课",
+    entriesNote: "确认样板后再批量扩展完整课程",
+    minutes: "约30分钟",
+    minutesNote: "按家庭讲课节奏拆成8个环节",
+    followKicker: "项目定位",
+    followTitle: "给朋友免费分享的家庭AI课",
+    followBody: "第一阶段目标不是卖课，而是先做出一个让家长愿意打开、孩子愿意参与、朋友愿意转发的样板。",
     followQr: "关注思美奇主理人",
     qrAccount: "Jerry Fu 视频号",
-    catalogKicker: "课程目录",
-    catalogTitle: "31节课总览",
-    catalogBody: "已完成样板课可直接进入；待校准课题会在拿到 PDF 准确目录后逐节替换。",
+    catalogKicker: "第5课结构",
+    catalogTitle: "从模糊想法到清楚指令",
+    catalogBody: "孩子不只是点击答案，而是在网页里拼描述、改错误、生成自己的AI画面设计卡。",
     enter: "进入课程",
-    waiting: "等待补齐",
-    sample: "完整样板",
-    done: "已讲待补",
-    pending: "待校准",
-    back: "目录",
+    waiting: "后续扩展",
+    sample: "当前样板",
+    done: "已完成线下",
+    pending: "后续扩展",
+    back: "首页",
     musicOff: "开启音乐",
     musicOn: "音乐开",
     sfxOn: "声效开",
@@ -39,40 +39,39 @@ const ui = {
     parentTips: "家长 Tips",
     childView: "给孩子看的画面",
     qrText: "二维码",
-    createdFooter: "Created by Jerry Fu, Founder / Curator of SIMARS",
-    musicCredit: "Music: Calm Piano Background Music by Orange Free Sounds, CC BY 4.0",
-    qrFooter: "AI教育 · 体育IP · 儿童创造力"
+    createdFooter: "Created by Jerry Fu, Founder / Curator of CyberMagic",
+    musicCredit: "Music: Calm Piano Background Music by Orange Free Sounds, CC BY 4.0"
   },
   en: {
-    brandWork: "A SIMARS Curator Project",
-    createdBy: "Created by Jerry Fu",
-    heroKicker: "Jerry's Family AI Classroom · blue-white anime cyber style",
-    heroTitle: "AI Future Parent School",
-    heroText: "A 31-lesson interactive site for parents teaching children at home. Lessons 5, 6, and 7 are complete samples, each designed for about 30 minutes.",
-    authorTitle: "A Note From The Author",
-    authorBody: "AI is already entering our children's world. As parents, we should not simply hand children to tools, nor stand aside with anxiety. What SIMARS hopes to build is not just a set of tool lessons, but a warmer path for children to grow future-ready abilities: asking, judging, expressing, creating, and staying safe. Real education is not about making children depend on AI earlier. It is about helping them keep curiosity, kindness, independent thinking, and the courage to create. We learn again, together with our children.",
+    brandWork: "A CyberMagic Curator Project",
+    createdBy: "CyberMagic by Jerry Fu",
+    heroKicker: "AI Future Parent Classroom · Lesson 5 sample",
+    heroTitle: "Describe The Picture In Your Mind",
+    heroText: "This is not a button-clicking AI lesson. It trains imagination, expression, revision, and judgment. Parents can teach from the notes while children interact with the visual pages.",
+    authorTitle: "A Note From The Curator",
+    authorBody: "As AI enters children's lives, parents do not need to panic, nor hand children directly to tools. We can help them express ideas clearly, judge results, and keep curiosity, taste, and independent thinking. CyberMagic hopes to make AI learning warmer, lighter, and easier for families to start.",
     startLesson: "Start Lesson 5",
-    catalogButton: "View 31 Lessons",
-    samples: "3 Sample Lessons",
-    samplesNote: "Lessons 5, 6, and 7 are fully interactive",
-    entries: "31 Entries",
-    entriesNote: "The full structure is ready for future lessons",
-    minutes: "30 Minutes",
-    minutesNote: "Each lesson follows a parent-led teaching flow",
-    followKicker: "Follow The Curator",
-    followTitle: "SIMARS Curator Jerry Fu",
-    followBody: "Explore AI education, sports IP, and children's creativity. Replace this placeholder with the real Channel QR code later.",
-    followQr: "Follow SIMARS Curator",
+    catalogButton: "View Lesson Flow",
+    samples: "1 Deep Sample",
+    samplesNote: "Lesson 5 is built for teaching, playing, and sharing",
+    entries: "31 Lessons Later",
+    entriesNote: "Scale after the sample is confirmed",
+    minutes: "About 30 Min",
+    minutesNote: "Eight parent-led teaching moments",
+    followKicker: "Project Position",
+    followTitle: "A free family AI lesson to share",
+    followBody: "Phase one is not about selling a course. It is about making one sample that parents can open, children can enjoy, and friends may want to forward.",
+    followQr: "Follow CyberMagic Curator",
     qrAccount: "Jerry Fu Channel",
-    catalogKicker: "Course Catalog",
-    catalogTitle: "31-Lesson Overview",
-    catalogBody: "Completed sample lessons are available now. Pending lessons will be aligned with the original PDF topics later.",
+    catalogKicker: "Lesson 5 Flow",
+    catalogTitle: "From vague idea to clear prompt",
+    catalogBody: "Children build descriptions, fix wrong AI results, and create their own AI picture design card inside the webpage.",
     enter: "Open Lesson",
-    waiting: "Coming Later",
+    waiting: "Later",
     sample: "Sample Ready",
-    done: "Taught Offline",
-    pending: "To Align",
-    back: "Catalog",
+    done: "Offline",
+    pending: "Later",
+    back: "Home",
     musicOff: "Music",
     musicOn: "Music On",
     sfxOn: "SFX On",
@@ -83,28 +82,14 @@ const ui = {
     parentTips: "Parent Tips",
     childView: "Child-facing visual",
     qrText: "QR",
-    createdFooter: "Created by Jerry Fu, Founder / Curator of SIMARS",
-    musicCredit: "Music: Calm Piano Background Music by Orange Free Sounds, CC BY 4.0",
-    qrFooter: "AI Education · Sports IP · Children's Creativity"
+    createdFooter: "Created by Jerry Fu, Founder / Curator of CyberMagic",
+    musicCredit: "Music: Calm Piano Background Music by Orange Free Sounds, CC BY 4.0"
   }
 };
 
-const DEFAULT_MUSIC_SOURCE = "https://orangefreesounds.com/wp-content/uploads/2023/04/Calm-piano-background-music-free.mp3";
-
 const lessonCatalog = [
-  { id: 1, zh: "未来什么本领最厉害", en: "What Skills Matter Most In The Future", status: "done" },
-  { id: 2, zh: "AI小帮手大比拼", en: "Different Kinds Of AI Helpers", status: "done" },
-  { id: 3, zh: "数字小守门员", en: "Little Digital Gatekeepers", status: "done" },
-  { id: 4, zh: "掌控指令：让AI听懂你的话", en: "Clear Instructions: Help AI Understand You", status: "done" },
-  { id: 5, zh: "AI创意画室：把脑袋里的画说清楚", en: "AI Art Studio: Describe The Picture In Your Mind", status: "sample" },
-  { id: 6, zh: "AI真假侦探：AI说的话都对吗", en: "AI Truth Detective: Is AI Always Right?", status: "sample" },
-  { id: 7, zh: "AI故事工厂：和AI一起讲故事", en: "AI Story Factory: Create Stories With AI", status: "sample" },
-  ...Array.from({ length: 24 }, (_, index) => ({
-    id: index + 8,
-    zh: `第${index + 8}课：待按PDF课题校准`,
-    en: `Lesson ${index + 8}: Topic To Be Aligned With PDF`,
-    status: "pending"
-  }))
+  { id: 5, zh: "第5课：AI创意画室，把脑袋里的画说清楚", en: "Lesson 5: AI Art Studio, Describe Your Picture Clearly", status: "sample" },
+  { id: 31, zh: "后续：确认样板后扩展31课完整目录", en: "Next: expand to the full 31-lesson catalog after this sample", status: "pending" }
 ];
 
 const lessonDetails = {
@@ -112,150 +97,135 @@ const lessonDetails = {
     illustration: "art",
     zh: {
       title: "AI创意画室：把脑袋里的画说清楚",
-      kicker: "30分钟家庭课 · 创意表达",
-      prep: "课前准备：打开一个能演示图片生成或图片描述的AI工具即可。不要一上来追求出图效果，先让孩子在纸上或口头说出画面。你今天要练的是孩子的表达，不是AI的技术。",
+      kicker: "30分钟家庭课 · 想象力与表达力",
+      prep: "课前家长准备：这节课的重点不是让孩子学会某个AI软件，而是训练孩子把脑袋里的画面说清楚。家长可以准备纸笔，也可以打开任意AI绘图工具作为演示。讲课时请记住三个原则：先让孩子说、再帮孩子拆、最后让孩子自己修改。",
       tips: [
-        "每一页都先让孩子说，再让家长补充。",
-        "孩子说不出来时，追问地点、主角、动作、颜色，不替他决定。",
-        "如果AI结果不满意，引导孩子说清楚“我想改哪里”。"
+        "孩子说得模糊时，不要直接替他说完整答案，先追问：在哪里？谁在？正在做什么？还有什么特别细节？",
+        "每一页的画面主要给孩子看，讲义主要给家长看。家长可以收起讲义，让孩子专注画面和操作。",
+        "如果孩子的想法很跳跃，先接住创意，再帮他排顺序。表达力不是一次说完美，而是一次比一次更清楚。"
       ],
       steps: [
-        step("cover", "课程封面", "把想象说清楚，AI才画得更像", "2分钟", "今天孩子要学会：先想象、再描述、最后修改。", "第4课已经学了清楚指令。这一课把指令用到画画里，让孩子知道 AI 不是读心术，自己的想象力才是起点。", ["会观察：我脑袋里有什么", "会描述：地点、主角、动作、细节", "会修改：不满意时说出改哪里"], "你可以先问：如果我说“画一个东西”，你知道我要什么吗？让孩子意识到“说清楚”本身就是能力。"),
-        step("talk", "开场引入", "如果你只说“画一个”，别人听得懂吗", "3分钟", "爸爸可以问：如果我让你画一个东西，但不说画什么，你会不会很困惑？AI也一样。它很会帮忙，但不会自动知道你脑袋里的画面。", "今天我们不是比赛谁会点按钮，而是练习谁能把脑袋里的画说清楚。", [], "让两个孩子分别说一个想画的东西。先不要评价，只追问：在哪里？有什么？什么颜色？"),
-        step("story", "小故事", "小安的未来公园", "5分钟", "小安想给妹妹做一张生日卡片。他第一次对AI说：帮我画一个公园。AI画出草地、长椅和太阳，虽然不难看，但和小安心里的画不一样。小安有点着急，觉得AI没有懂他。爸爸没有马上帮他说，而是问：这个公园在哪里？谁在里面？有什么特别的东西？小安想了想，说：这是一个未来公园，有机器人秋千、会发光的树、两个孩子在玩，天空里还有小小的飞行书包，颜色要明亮。第二次，AI画出来的画终于更像小安心里的生日卡片。", "问孩子：第二次为什么更像小安脑袋里的画？如果你是小安，还会加什么细节？", [], "讲故事时语速慢一点。重点不是记住故事，而是让孩子发现第二次多了“地点、主角、动作、细节”。"),
-        step("rules", "核心知识", "画面描述四件套", "8分钟", "记住四个小按钮：地点、主角、动作、细节。孩子每说一个画面，都试着补齐这四个按钮。", "", ["地点：画面发生在哪里", "主角：里面有谁或什么", "动作：他们正在做什么", "细节：颜色、心情、风格、特别物品"], "可以拿家里的任意物品练习，比如“桌上的杯子”。让孩子把普通句子慢慢说丰富。"),
-        quizStep("互动游戏", "哪一句更容易画出来", "6分钟", "请孩子选择更清楚的描述。", [
-          ["帮我画一个好玩的。", false, "太模糊了，AI不知道好玩在哪里。可以追问：在哪里？谁在玩？玩什么？"],
-          ["帮我画一个海底城市，有透明房子、发光小鱼和潜水机器人。", true, "很好，有地点、主角和细节。孩子可以继续补颜色、心情和画面风格。"],
-          ["帮我画漂亮一点。", false, "漂亮是感觉，还需要说清楚画面里有什么。可以改成：颜色明亮、像动画片、适合生日卡片。"]
-        ], "选完后不要马上跳过，问孩子：这句话多了哪些信息？"),
-        builderStep("小任务", "两个孩子各设计一幅AI画", "5分钟", "孩子A设计“未来学校”，孩子B设计“机器人朋友”。爸爸只追问，不替孩子决定。", ["请你当儿童插画师", "画一个未来学校", "给7岁小朋友看", "颜色明亮，不要太复杂"], "把孩子说的话记录下来。最后让孩子自己选择一个最想保留的细节。"),
-        summaryStep("总结", "把今天的创作过程回放一遍", "3分钟", "先想象，再描述，不满意就修改。", ["今天我们先看了什么问题：AI不会读心，描述越清楚越接近想象。", "我们练了哪四个按钮：地点、主角、动作、细节。", "你今天最满意的一句描述是什么？它比一开始多了哪些信息？", "下次你想让AI画图时，准备先说哪三个细节？"], "最后提醒：AI可以帮忙画，但想象力要从自己脑袋里先出来。")
+        {
+          type: "cover",
+          label: "开场",
+          title: "AI不是读心术",
+          minutes: "2分钟",
+          body: "今天我们练一个很厉害的能力：把脑袋里的画说清楚。",
+          quote: "AI可以帮我们画，但它不会自动知道你心里想的样子。",
+          bullets: ["先想象：画面里有什么", "再描述：地点、主角、动作、细节", "会修改：AI画错了也能说清楚怎么改"],
+          guide: "开场不要急着讲技术。你可以先问孩子：如果我只说“帮我画一个好玩的”，你知道我要什么吗？让孩子自己发现，模糊的表达会让别人和AI都听不懂。"
+        },
+        {
+          type: "story",
+          label: "小故事",
+          title: "小安的未来学校",
+          minutes: "5分钟",
+          body: "小安想设计一所未来学校。他第一次对AI说：帮我画一个好玩的。AI画出一张普通游乐场，小安不满意。爸爸问他：学校在哪里？谁在上课？老师是什么样子？画面是什么颜色？小安重新说：请画一个蓝白色的未来学校，里面有机器人老师，两个小朋友正在开心上课，画面明亮、有未来感。第二次，画面终于更接近小安心里的样子。",
+          quote: "问孩子：第二次为什么更清楚？它比“好玩的”多了哪些信息？",
+          guide: "故事讲完后，让孩子用自己的话复述一次。重点是让他发现：清楚描述不是字多，而是关键信息完整。"
+        },
+        {
+          type: "rules",
+          label: "方法",
+          title: "画面描述四件套",
+          minutes: "5分钟",
+          body: "任何AI画面指令，都可以先补齐四件套。",
+          bullets: ["地点：画面发生在哪里", "主角：谁在画面里", "动作：他们正在做什么", "细节：颜色、风格、表情、特别物品"],
+          guide: "每讲一个词，都让孩子用自己的例子说一句。比如地点可以是未来学校、海底城市、儿童房、月球图书馆。"
+        },
+        {
+          type: "puzzle",
+          label: "拼图游戏",
+          title: "把模糊想法拼清楚",
+          minutes: "6分钟",
+          prompt: "请孩子从四组词里各点一个，拼成一条更清楚的AI画图指令。",
+          groups: [
+            { name: "地点", options: ["未来学校", "海底城市", "儿童房", "月球图书馆"] },
+            { name: "主角", options: ["机器人老师", "潜水机器人", "两个小朋友", "会发光的小书包"] },
+            { name: "动作", options: ["正在开心上课", "寻找发光小鱼", "整理玩具", "一起设计机器人朋友"] },
+            { name: "细节", options: ["蓝白色、发光、明亮", "透明房子、像动画片", "温暖整洁、玩具很多", "轻赛博风、不要太复杂"] }
+          ],
+          guide: "这页让孩子实际操作。选完后读出完整句子，再问：如果要让画更像你心里想的，还能加哪一个细节？"
+        },
+        {
+          type: "upgrade",
+          label: "升级练习",
+          title: "把一句模糊话升级",
+          minutes: "4分钟",
+          prompt: "原句：帮我画一个好玩的。",
+          choices: ["未来学校", "机器人老师", "两个小朋友正在开心上课", "蓝白色、发光、明亮、有未来感"],
+          guide: "家长先让孩子判断原句为什么不够清楚，再通过点击补充信息。不要只追求一个标准答案，关键是孩子能说出自己补了什么。"
+        },
+        {
+          type: "repair",
+          label: "修正AI",
+          title: "AI画错了怎么办",
+          minutes: "4分钟",
+          problem: "你想要蓝白机器人，但AI画成了黑色机器人。",
+          target: "请把机器人改成蓝白色，保留儿童房和整理玩具的场景。",
+          options: ["改颜色：蓝白色", "保留地点：儿童房", "保留动作：整理玩具", "不要改变：开心、明亮、卡通感"],
+          guide: "这页训练“修改指令”。告诉孩子：不满意不是结束，而是第二轮表达的开始。修改时要说清楚保留什么、改变什么。"
+        },
+        {
+          type: "design",
+          label: "设计卡",
+          title: "我的AI画面设计卡",
+          minutes: "6分钟",
+          fields: ["地点", "主角", "动作", "细节"],
+          placeholder: "比如：未来学校 / 机器人老师 / 正在上课 / 蓝白色、发光、开心",
+          guide: "这是孩子真正输出的一页。让孩子自己填，你只负责追问和记录。填完后请孩子完整读一遍，这就是他的AI画图指令。"
+        },
+        {
+          type: "duo",
+          label: "双人任务",
+          title: "两个孩子各做一张创意卡",
+          minutes: "4分钟",
+          kids: [
+            { name: "孩子A", mission: "设计未来学校", starter: ["地点：未来学校", "主角：机器人老师", "动作：正在上课", "细节：蓝白色、发光、开心"] },
+            { name: "孩子B", mission: "设计机器人朋友", starter: ["地点：儿童房", "主角：蓝白机器人朋友", "动作：整理玩具", "细节：温暖、明亮、像动画片"] }
+          ],
+          guide: "如果两个孩子一起上课，这页可以分工。让他们互相听对方的描述，并各提一个“还能更清楚吗”的问题。"
+        },
+        {
+          type: "summary",
+          label: "复盘",
+          title: "今天到底学会了什么",
+          minutes: "4分钟",
+          chant: "先想象，再描述；AI画错了，再修改。",
+          recap: [
+            "今天一开始，我们发现“帮我画一个好玩的”太模糊，AI不知道好玩在哪里。",
+            "我们学习了画面描述四件套：地点、主角、动作、细节。",
+            "我们用拼图游戏把词语组合成完整指令，发现清楚表达会让画面更接近想象。",
+            "我们练习了AI画错后的修改方法：说清楚要改变什么，也说清楚要保留什么。",
+            "最后孩子完成自己的AI画面设计卡，真正把脑袋里的画变成了一段可以交给AI的清楚描述。"
+          ],
+          guide: "总结时请孩子说三句话：我今天设计的画面是……我用了哪四件套……如果AI画错了我会……这比家长单方面总结更有效。"
+        }
       ]
     },
     en: {
       title: "AI Art Studio: Describe The Picture In Your Mind",
-      kicker: "30-minute family lesson · Creative expression",
-      prep: "Before class: open any AI image or image-description tool. Do not focus on making a perfect image first. Let the child describe the picture in their mind. The goal is expression, not technology.",
+      kicker: "30-minute family lesson · Imagination and expression",
+      prep: "Parent prep: this lesson is not about a specific AI app. It trains children to describe the picture in their mind clearly. Prepare paper and pen, and optionally an AI image tool. Let the child speak first, help them break ideas into parts, then let them revise.",
       tips: [
-        "Let the child speak first on every page.",
-        "If the child gets stuck, ask about place, character, action, and color.",
-        "If the AI result is not good, guide the child to say what should change."
+        "When the child is vague, do not complete the answer for them. Ask: where, who, doing what, and what details?",
+        "The visuals are mainly for children. The notes are mainly for parents. Hide notes when the child needs focus.",
+        "If the idea jumps around, accept the creativity first, then help the child put it in order."
       ],
       steps: [
-        step("cover", "Cover", "Clear imagination makes better AI pictures", "2 min", "Today we learn: imagine first, describe clearly, then improve.", "AI cannot read our minds. The clearer we describe, the closer the picture becomes.", ["Observe: what is in my mind?", "Describe: place, character, action, details", "Improve: say what to change"], "Ask: if I only say 'draw something', do you know what I want?"),
-        step("talk", "Warm-up", "Can others understand 'draw one thing'?", "3 min", "Ask the children what information is missing when someone says only 'draw one thing'.", "We are not competing to press buttons. We are learning to express a picture clearly.", [], "Let each child name one picture idea. Ask follow-up questions slowly."),
-        step("story", "Story", "An's Future Park", "5 min", "An wants to make a birthday card for his sister. First he asks AI to draw a park. The picture has grass, a bench, and the sun, but it is not the picture in his mind. Dad asks: where is the park, who is inside, and what is special? An adds: a future park with robot swings, glowing trees, two children playing, flying schoolbags, and bright colors. Now the picture feels much closer.", "Ask: why is the second request clearer? What detail would you add?", [], "Help children notice place, character, action, and detail."),
-        step("rules", "Core Idea", "Four picture buttons", "8 min", "Use four buttons for every picture: place, character, action, details.", "", ["Place: where is it?", "Character: who or what is inside?", "Action: what are they doing?", "Details: color, mood, style, special objects"], "Practice with simple objects at home."),
-        quizStep("Game", "Which sentence is easier to draw?", "6 min", "Choose the clearer description.", [
-          ["Draw something fun.", false, "Too vague. Ask: where is it, who is playing, and what are they doing?"],
-          ["Draw an underwater city with glass houses, glowing fish, and diving robots.", true, "Great. It has place, characters, and details. You can still add color and mood."],
-          ["Make it beautiful.", false, "Beautiful is a feeling. Try: bright colors, cartoon style, for a birthday card."]
-        ], "After choosing, ask what information made it clearer."),
-        builderStep("Task", "Design one AI picture each", "5 min", "Child A designs a future school. Child B designs a robot friend. The parent only asks questions.", ["Act as a children's illustrator", "Draw a future school", "For a 7-year-old child", "Bright colors, not too complex"], "Write down the child's own words."),
-        summaryStep("Wrap-up", "Replay today's creative process", "3 min", "Imagine, describe, improve.", ["What did we learn first? AI cannot read our minds.", "Which four buttons did we practice? Place, character, action, details.", "What was your clearest sentence today?", "Next time you ask AI to draw, what three details will you say first?"], "Remind children: AI can help, but imagination starts with us.")
-      ]
-    }
-  },
-  6: {
-    illustration: "detective",
-    zh: {
-      title: "AI真假侦探：AI说的话都对吗",
-      kicker: "30分钟家庭课 · 判断力",
-      prep: "课前准备：准备两个常识例子和一个需要确认的生活例子，比如“苹果是水果”“明天是否停课”。这节课不是吓孩子，而是训练孩子温和地检查信息。",
-      tips: ["重点训练判断力，不是制造AI恐惧。", "涉及身体、安全、隐私、学校通知时，一定要问家长或可靠来源。", "孩子答错时问：这件事会影响行动吗？需要再确认吗？"],
-      steps: [
-        step("cover", "课程封面", "会用AI，也要会怀疑", "2分钟", "今天孩子要学会：AI会帮忙，但AI也可能说错。", "这一课训练孩子的判断力。不是让孩子害怕AI，而是让孩子看到答案之后，会停一下、想一下、查一下。", ["AI不是万能老师", "答案要看是否合理", "重要问题要问大人或查资料"], "先讲清楚：怀疑不是不礼貌，而是保护自己。"),
-        step("talk", "开场引入", "聪明人不是全都相信", "3分钟", "爸爸可以问：如果一个同学很聪明，他说的话就一定都对吗？如果一个机器人回答很快，它说的话就一定是真的吗？", "真正会用AI的小朋友，不是只会问，还会检查。", [], "用轻松语气讲，不要把AI讲成危险怪物。"),
-        step("story", "小故事", "小乐和会说错的百科机器人", "5分钟", "小乐正在做动物小报。他问AI：企鹅会不会飞？AI答对了，说企鹅不会飞。小乐又问：所有鸟都会飞吗？AI很快回答：都会。小乐停了一下，因为他想起在动物园见过鸵鸟，也知道企鹅不会飞。他没有马上把答案写进小报，而是去翻书，又问了爸爸。爸爸告诉他：AI有时会把话说得很像真的，但聪明的小朋友不会急着照抄，会先停一下、想一下、查一下。", "问孩子：小乐为什么没有马上相信AI？如果你要写进作业，应该怎么确认？", [], "强调小乐不是比AI更厉害，而是他愿意检查。"),
-        step("rules", "核心知识", "真假侦探三步法", "8分钟", "遇到AI答案，先做三件事。", "", ["停一下：不要马上照做", "想一下：这句话和我知道的事情冲突吗", "查一下：问大人、看书、看可靠资料"], "把三步法配动作：停手、摸头、找家长。"),
-        quizStep("互动游戏", "这句话要不要再查一查", "6分钟", "请孩子判断哪句话最需要再查。", [
-          ["太阳从东方升起。", false, "这是常识，通常不用特别查。可以问孩子：你在生活中见过吗？"],
-          ["明天学校一定停课。", true, "这种会影响行动的信息，一定要问老师或家长确认，不能只听AI一句话。"],
-          ["苹果是一种水果。", false, "这是常见事实，可以先接受。如果是写正式作业，也可以查书确认。"]
-        ], "问孩子：为什么“停课”这种话不能只信AI？"),
-        flipStep("互动翻卡", "哪些问题不能只问AI", "5分钟", ["身体不舒服怎么办", "家里地址能不能告诉别人", "作业答案是什么", "今天穿什么颜色"], "每翻一张卡，都让孩子说：这个问题为什么要问大人？"),
-        summaryStep("总结", "把今天的小侦探过程回放一遍", "3分钟", "先停一下，再想一下，重要事情查一下。", ["今天我们先发现：AI回答很快，但不代表一定正确。", "我们练了哪三步：停一下、想一下、查一下。", "哪些问题不能只问AI：身体、安全、隐私、学校通知、重要决定。", "下次你看到一个很像真的答案时，准备怎么确认？"], "结尾不要说AI不可信，而是说：重要事情要多确认。")
-      ]
-    },
-    en: {
-      title: "AI Truth Detective: Is AI Always Right?",
-      kicker: "30-minute family lesson · Judgment",
-      prep: "Before class: prepare two common-sense examples and one life example that needs checking. This lesson is about calm checking, not fear.",
-      tips: ["Train judgment, not fear.", "For health, safety, privacy, and school notices, ask adults or reliable sources.", "If the child answers wrong, ask: will this affect our action? Should we check again?"],
-      steps: [
-        step("cover", "Cover", "Use AI, but still think", "2 min", "Today we learn: AI can help, but AI can also be wrong.", "We learn to pause, think, and check.", ["AI is not a perfect teacher", "Answers should make sense", "Important things need reliable checking"], "Explain that checking is a smart habit."),
-        step("talk", "Warm-up", "Smart people can still be wrong", "3 min", "Ask: if a smart friend says something, is it always true? If a robot answers fast, is it always correct?", "Good AI users ask and check.", [], "Keep the tone calm and friendly."),
-        step("story", "Story", "Le and the mistaken robot", "5 min", "Le is making an animal poster. AI says penguins cannot fly. Then AI says all birds can fly. Le pauses because he remembers ostriches and penguins. He checks a book and asks Dad before writing it down. Dad says: AI can sound confident, so smart children pause, think, and check.", "Ask: why did Le not believe it immediately? How should he confirm it for homework?", [], "Highlight the habit of checking."),
-        step("rules", "Core Idea", "Three detective steps", "8 min", "Use three steps when AI gives an answer.", "", ["Pause: do not act immediately", "Think: does this conflict with what I know?", "Check: ask adults, books, or reliable sources"], "Pair each step with a body action."),
-        quizStep("Game", "Which sentence needs checking?", "6 min", "Choose the sentence that needs checking most.", [
-          ["The sun rises in the east.", false, "This is common knowledge. Ask: have you seen this in real life?"],
-          ["School will definitely be closed tomorrow.", true, "This affects action, so we must confirm it with teachers or parents."],
-          ["An apple is a fruit.", false, "This is a common fact. For formal homework, a book can confirm it."]
-        ], "Ask why school closure needs confirmation."),
-        flipStep("Flip Cards", "Questions AI should not answer alone", "5 min", ["What if I feel sick?", "Can I share my address?", "What is my homework answer?", "What color should I wear today?"], "Ask why each card may need an adult."),
-        summaryStep("Wrap-up", "Replay today's detective process", "3 min", "Pause, think, and check important things.", ["What did we discover first? Fast answers are not always correct.", "What three steps did we practice? Pause, think, check.", "What topics should not rely on AI alone? Health, safety, privacy, school notices, important choices.", "What will you do next time an answer sounds very confident?"], "Say: important things need confirmation.")
-      ]
-    }
-  },
-  7: {
-    illustration: "story",
-    zh: {
-      title: "AI故事工厂：和AI一起讲故事",
-      kicker: "30分钟家庭课 · 表达与创造",
-      prep: "课前准备：准备纸和笔，先让孩子口头说故事，不急着打开AI。这节课要让孩子成为故事导演，AI只是帮忙扩写。",
-      tips: ["训练结构化表达，让孩子知道故事需要角色、地点、麻烦和结尾。", "不要急着帮孩子编完整故事，先听孩子的第一个主意。", "孩子卡住时，用追问推进：谁在里面？在哪里？遇到什么问题？"],
-      steps: [
-        step("cover", "课程封面", "AI可以帮忙，主意要从孩子开始", "2分钟", "今天孩子要学会：用角色、地点、麻烦、结尾做一个故事。", "AI可以帮我们把故事讲长，但故事的第一个火花要从孩子自己开始。", ["角色：故事里有谁", "地点：发生在哪里", "麻烦：遇到什么问题", "结尾：希望怎样结束"], "先告诉孩子：你是导演，AI是助手。"),
-        step("talk", "开场引入", "一个好故事要有一点麻烦", "3分钟", "爸爸可以问：如果故事里什么都没发生，会不会无聊？一个好故事通常有主角、有地方、有麻烦，还有解决办法。", "AI可以帮我们把故事讲长，但第一个火花要由我们点亮。", [], "让孩子举一个最喜欢的动画，找出里面的“麻烦”。"),
-        step("story", "小故事", "小米和迷路的月亮车", "5分钟", "小米想给弟弟讲睡前故事。她第一次对AI说：讲一个故事。AI讲了一个很普通的小动物故事，小米觉得不像自己的想法。爸爸问她：主角是谁？发生在哪里？遇到了什么麻烦？最后希望怎么样？小米说：主角是一辆胆小的月亮车，它在月球迷路了，遇到一只会唱歌的小机器人，最后它们跟着星星的声音找到回家的路。AI再帮她整理时，故事一下子有了画面、麻烦和温暖的结尾。", "问孩子：小米第二次给了哪几个重要线索？你想给这个故事加一个什么角色？", [], "听孩子回答时，把角色、地点、麻烦、结尾写下来。"),
-        step("rules", "核心知识", "故事四块积木", "8分钟", "拼故事不用一开始就很厉害，先拼四块积木。", "", ["主角：谁在故事里", "地点：故事发生在哪里", "麻烦：主角遇到什么问题", "结尾：最后变好、变有趣或学会什么"], "用积木比喻，不要讲文学术语。"),
-        quizStep("互动游戏", "哪个故事更完整", "6分钟", "请孩子选择更像完整故事开头的一句。", [
-          ["有一只小猫。", false, "只有主角，还缺地点和麻烦。可以追问：它在哪里？遇到了什么？"],
-          ["一只小猫在图书馆迷路了，它要找到会发光的出口。", true, "很好，有主角、地点和麻烦。接下来可以补朋友、选择和结尾。"],
-          ["讲一个很有趣的故事。", false, "这只是要求，还没有故事材料。AI不知道什么对你来说有趣。"]
-        ], "选对后，请孩子把这句话继续往下讲一句。"),
-        builderStep("故事拼图", "拼出你的故事指令", "5分钟", "让两个孩子各选一个主角，再补地点、麻烦和结尾。", ["主角是一只小恐龙", "地点在未来图书馆", "麻烦是找不到回家的门", "结尾要开心又有点好笑"], "如果两个孩子抢答案，让他们轮流负责一块积木。"),
-        summaryStep("总结", "把今天的故事工厂回放一遍", "3分钟", "角色、地点、麻烦、结尾，故事马上活起来。", ["今天我们先发现：只说“讲个故事”太模糊。", "我们练了哪四块积木：角色、地点、麻烦、结尾。", "你的故事里最有趣的麻烦是什么？它最后怎么解决？", "下次你想和AI讲故事时，准备先给它哪四个线索？"], "结尾强调：主意来自孩子，AI只是帮忙整理。")
-      ]
-    },
-    en: {
-      title: "AI Story Factory: Create Stories With AI",
-      kicker: "30-minute family lesson · Expression and creativity",
-      prep: "Before class: prepare paper and pens. Let children speak their story before opening AI. The child is the director; AI helps expand.",
-      tips: ["Train structured expression: character, place, problem, ending.", "Do not write the whole story for the child. Listen to the first idea.", "If the child gets stuck, ask: who, where, what problem, what ending?"],
-      steps: [
-        step("cover", "Cover", "AI can help, but ideas start with children", "2 min", "Today we learn to build stories with character, place, problem, and ending.", "AI can make the story longer, but the first spark comes from the child.", ["Character: who is in the story?", "Place: where does it happen?", "Problem: what goes wrong?", "Ending: how does it end?"], "Tell children: you are the director; AI is the helper."),
-        step("talk", "Warm-up", "A good story needs a small problem", "3 min", "Ask: if nothing happens in a story, is it interesting?", "AI can help us expand, but we light the first spark.", [], "Use a favorite cartoon to find the problem in the story."),
-        step("story", "Story", "Mimi and the lost moon car", "5 min", "Mimi wants a bedtime story for her little brother. First she says: tell a story. It is plain. Dad asks: who is the main character, where are they, what problem happens, and how should it end? Mimi adds a shy moon car, the moon, getting lost, a singing robot, and a warm way home by following the sound of stars. Now the story has pictures, a problem, and a soft ending.", "Ask: what clues did Mimi give? What new character would you add?", [], "Write down character, place, problem, ending."),
-        step("rules", "Core Idea", "Four story blocks", "8 min", "Build a story with four blocks.", "", ["Character", "Place", "Problem", "Ending"], "Use building blocks as the metaphor."),
-        quizStep("Game", "Which beginning is more complete?", "6 min", "Choose the stronger story beginning.", [
-          ["There is a cat.", false, "Only a character. Ask: where is it, and what problem happens?"],
-          ["A cat gets lost in a library and must find the glowing exit.", true, "Great. It has character, place, and problem. Next add a friend, a choice, and an ending."],
-          ["Tell a very interesting story.", false, "This is a request, not story material. AI does not know what is interesting to you yet."]
-        ], "Ask the child to continue the chosen sentence."),
-        builderStep("Story Puzzle", "Build your story prompt", "5 min", "Each child chooses a character, then adds place, problem, and ending.", ["The main character is a little dinosaur", "The place is a future library", "The problem is finding the way home", "The ending is happy and funny"], "Let children take turns choosing blocks."),
-        summaryStep("Wrap-up", "Replay today's story factory", "3 min", "Character, place, problem, ending: the story comes alive.", ["What did we discover first? 'Tell a story' is too vague.", "What four blocks did we practice? Character, place, problem, ending.", "What was the most interesting problem in your story?", "Next time you create a story with AI, what four clues will you give first?"], "Remind: the idea comes from the child.")
+        { type: "cover", label: "Start", title: "AI cannot read minds", minutes: "2 min", body: "Today we practice one powerful skill: describing the picture in our mind clearly.", quote: "AI can help us draw, but it does not automatically know what we imagine.", bullets: ["Imagine: what is in the picture", "Describe: place, character, action, details", "Revise: say what to change if AI gets it wrong"], guide: "Begin with a simple question: if I only say 'draw something fun', do you know what I want?" },
+        { type: "story", label: "Story", title: "An's Future School", minutes: "5 min", body: "An wants to design a future school. First he says: draw something fun. AI creates a playground, but it is not what An wanted. Dad asks: where is the school, who is in class, what is the teacher like, and what colors do you want? An says: please draw a bright blue-white future school with a robot teacher and two children happily learning. Now the image is much closer.", quote: "Ask: why is the second prompt clearer? What information did it add?", guide: "After the story, ask the child to retell it. Clear description is not about more words; it is about key information." },
+        { type: "rules", label: "Method", title: "Four picture parts", minutes: "5 min", body: "Every AI image prompt can start with four parts.", bullets: ["Place: where is it?", "Character: who or what is inside?", "Action: what are they doing?", "Details: colors, style, mood, special objects"], guide: "After each part, ask the child for one example." },
+        { type: "puzzle", label: "Puzzle", title: "Build a clear prompt", minutes: "6 min", prompt: "Choose one item from each group to build a clearer AI image prompt.", groups: [{ name: "Place", options: ["future school", "underwater city", "children's room", "moon library"] }, { name: "Character", options: ["robot teacher", "diving robot", "two children", "glowing schoolbag"] }, { name: "Action", options: ["happily learning", "looking for glowing fish", "cleaning up toys", "designing a robot friend"] }, { name: "Details", options: ["blue-white, bright, glowing", "glass houses, cartoon style", "warm and tidy, many toys", "light cyber style, not too complex"] }], guide: "Let the child operate. Then read the full prompt and ask what extra detail would make it closer to their idea." },
+        { type: "upgrade", label: "Upgrade", title: "Upgrade a vague sentence", minutes: "4 min", prompt: "Original: draw something fun.", choices: ["future school", "robot teacher", "two children happily learning", "blue-white, glowing, bright, futuristic"], guide: "Ask why the original sentence is unclear. The key is that the child can explain what each added part does." },
+        { type: "repair", label: "Fix AI", title: "What if AI gets it wrong?", minutes: "4 min", problem: "You wanted a blue-white robot, but AI made a black robot.", target: "Please change the robot to blue-white, and keep the children's room and toy-cleaning scene.", options: ["Change color: blue-white", "Keep place: children's room", "Keep action: cleaning toys", "Keep mood: happy, bright, cartoon"], guide: "This trains revision. Say what to change and what to keep." },
+        { type: "design", label: "Design Card", title: "My AI Picture Design Card", minutes: "6 min", fields: ["Place", "Character", "Action", "Details"], placeholder: "Example: future school / robot teacher / teaching class / blue-white, glowing, happy", guide: "This is the child's output page. Let the child fill it. Then ask them to read the whole prompt aloud." },
+        { type: "duo", label: "Two Kids", title: "Two children, two creative cards", minutes: "4 min", kids: [{ name: "Child A", mission: "Design a future school", starter: ["Place: future school", "Character: robot teacher", "Action: teaching class", "Details: blue-white, glowing, happy"] }, { name: "Child B", mission: "Design a robot friend", starter: ["Place: children's room", "Character: blue-white robot friend", "Action: cleaning up toys", "Details: warm, bright, cartoon style"] }], guide: "If two children join, let them ask each other one question: how can this be clearer?" },
+        { type: "summary", label: "Review", title: "What did we learn today?", minutes: "4 min", chant: "Imagine first, describe clearly, revise when AI gets it wrong.", recap: ["We found that 'draw something fun' is too vague.", "We learned four picture parts: place, character, action, details.", "We built prompts by combining words.", "We practiced revision: say what to change and what to keep.", "The child completed an AI picture design card."], guide: "Ask the child to say three sentences: my picture is..., I used four parts..., if AI gets it wrong I will..." }
       ]
     }
   }
 };
-
-function step(type, label, title, minutes, body, quote, bullets, guide) {
-  return { type, label, title, minutes, body, quote, bullets, guide };
-}
-function quizStep(label, title, minutes, prompt, choices, guide) {
-  return { type: "quiz", label, title, minutes, prompt, choices: choices.map(([text, correct, feedback]) => ({ text, correct, feedback })), guide };
-}
-function builderStep(label, title, minutes, task, chips, guide) {
-  return { type: "builder", label, title, minutes, task, chips, guide };
-}
-function flipStep(label, title, minutes, cards, guide) {
-  return { type: "flip", label, title, minutes, cards, guide };
-}
-function summaryStep(label, title, minutes, chant, recap, guide) {
-  return { type: "summary", label, title, minutes, chant, recap, guide };
-}
 
 const homeView = document.querySelector("#homeView");
 const lessonView = document.querySelector("#lessonView");
@@ -338,12 +308,10 @@ function updateStaticLanguage() {
 function renderCatalog() {
   lessonGrid.innerHTML = lessonCatalog.map((lesson) => {
     const available = Boolean(lessonDetails[lesson.id]);
-    const statusText = lesson.status === "sample" ? tr("sample") : lesson.status === "done" ? tr("done") : tr("pending");
-    const note = lesson.status === "sample"
-      ? (languageMode === "zh" ? "完整样板课" : "Complete sample lesson")
-      : lesson.status === "done"
-        ? (languageMode === "zh" ? "已完成线下课，待补网页版" : "Taught offline, web version pending")
-        : (languageMode === "zh" ? "目录入口已建立，等待原始课题与子题目" : "Entry ready, waiting for original topic details");
+    const statusText = available ? tr("sample") : tr("pending");
+    const note = available
+      ? (languageMode === "zh" ? "当前可完整体验的第5课样板" : "The current complete sample lesson")
+      : (languageMode === "zh" ? "先不急着做满，等样板确认后再扩展" : "Will expand after this sample is confirmed");
     return `
       <button class="lesson-card ${available ? "available" : "disabled"}" ${available ? `data-open-lesson="${lesson.id}"` : "disabled"}>
         <div class="card-top">
@@ -358,37 +326,26 @@ function renderCatalog() {
   }).join("");
 }
 
-function illustration(type, scene = "cover") {
-  const palette = {
-    art: ["#119fe3", "#ee334e", "#ffd447"],
-    detective: ["#0a8fd3", "#f7d94a", "#ee334e"],
-    story: ["#229de5", "#ffcf3f", "#ff7aa8"]
-  }[type] || ["#119fe3", "#ee334e", "#ffd447"];
+function illustration(scene = "cover") {
   const prop = {
-    cover: `<rect x="212" y="72" width="178" height="124" rx="20" fill="#ffffff" stroke="#21313b" stroke-width="7" /><path d="M246 150 L290 104 L332 150 Z" fill="${palette[0]}" /><circle cx="346" cy="108" r="22" fill="${palette[1]}" />`,
-    talk: `<path d="M212 96 h150 q30 0 30 30 v40 q0 30-30 30h-62l-38 32v-32h-50q-30 0-30-30v-40q0-30 30-30z" fill="#fff" stroke="#21313b" stroke-width="7" /><path d="M230 132h116M230 164h78" stroke="${palette[0]}" stroke-width="8" stroke-linecap="round"/>`,
-    story: `<path d="M214 68 h154 q24 0 24 24v164q0 24-24 24H214q-24 0-24-24V92q0-24 24-24z" fill="#fff" stroke="#21313b" stroke-width="7" /><path d="M230 114h124M230 150h86M230 206h110" stroke="${palette[0]}" stroke-width="8" stroke-linecap="round"/>`,
-    rules: `<rect x="188" y="70" width="220" height="190" rx="20" fill="#fff" stroke="#21313b" stroke-width="7"/><circle cx="232" cy="124" r="18" fill="${palette[1]}"/><circle cx="232" cy="174" r="18" fill="${palette[0]}"/><circle cx="232" cy="224" r="18" fill="${palette[1]}"/><path d="M270 124h88M270 174h88M270 224h88" stroke="#21313b" stroke-width="8" stroke-linecap="round"/>`,
-    quiz: `<rect x="196" y="80" width="210" height="150" rx="22" fill="#fff" stroke="#21313b" stroke-width="7"/><path d="M250 154l32 32 72-82" fill="none" stroke="${palette[0]}" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>`,
-    builder: `<rect x="176" y="86" width="92" height="72" rx="16" fill="${palette[0]}" stroke="#21313b" stroke-width="7"/><rect x="286" y="86" width="92" height="72" rx="16" fill="${palette[1]}" stroke="#21313b" stroke-width="7"/><rect x="230" y="176" width="92" height="72" rx="16" fill="#fff" stroke="#21313b" stroke-width="7"/>`,
-    flip: `<rect x="188" y="84" width="86" height="126" rx="16" fill="#fff" stroke="#21313b" stroke-width="7"/><rect x="292" y="84" width="86" height="126" rx="16" fill="${palette[0]}" stroke="#21313b" stroke-width="7"/><path d="M214 236h140" stroke="${palette[1]}" stroke-width="10" stroke-linecap="round"/>`,
-    summary: `<path d="M196 96l54 44 86-76 72 124H170z" fill="#fff" stroke="#21313b" stroke-width="7"/><circle cx="354" cy="98" r="24" fill="${palette[1]}"/>`
+    cover: `<rect x="168" y="70" width="214" height="150" rx="22" fill="#fff" stroke="#21313b" stroke-width="7"/><path d="M210 172l54-64 48 64z" fill="#119fe3"/><circle cx="336" cy="112" r="23" fill="#ffd447"/><path d="M226 246h130" stroke="#ee334e" stroke-width="10" stroke-linecap="round"/>`,
+    story: `<rect x="142" y="78" width="248" height="162" rx="24" fill="#fff" stroke="#21313b" stroke-width="7"/><rect x="176" y="124" width="54" height="80" rx="18" fill="#119fe3" stroke="#21313b" stroke-width="6"/><circle cx="203" cy="152" r="8" fill="#fff"/><rect x="260" y="118" width="86" height="74" rx="12" fill="#ffd447" stroke="#21313b" stroke-width="6"/><path d="M184 250c52-28 94-28 146 0" stroke="#ee334e" stroke-width="10" stroke-linecap="round" fill="none"/>`,
+    rules: `<rect x="128" y="74" width="270" height="194" rx="22" fill="#fff" stroke="#21313b" stroke-width="7"/><circle cx="176" cy="124" r="19" fill="#119fe3"/><circle cx="176" cy="174" r="19" fill="#ffd447"/><circle cx="176" cy="224" r="19" fill="#ee334e"/><path d="M216 124h126M216 174h126M216 224h126" stroke="#21313b" stroke-width="8" stroke-linecap="round"/>`,
+    puzzle: `<rect x="112" y="88" width="116" height="74" rx="16" fill="#119fe3" stroke="#21313b" stroke-width="7"/><rect x="252" y="88" width="116" height="74" rx="16" fill="#ffd447" stroke="#21313b" stroke-width="7"/><rect x="112" y="188" width="116" height="74" rx="16" fill="#fff" stroke="#21313b" stroke-width="7"/><rect x="252" y="188" width="116" height="74" rx="16" fill="#ee334e" stroke="#21313b" stroke-width="7"/>`,
+    upgrade: `<path d="M138 238h248" stroke="#21313b" stroke-width="7" stroke-linecap="round"/><rect x="150" y="94" width="98" height="86" rx="18" fill="#fff" stroke="#21313b" stroke-width="7"/><rect x="284" y="78" width="118" height="126" rx="22" fill="#119fe3" stroke="#21313b" stroke-width="7"/><path d="M252 140h28" stroke="#ee334e" stroke-width="10" stroke-linecap="round"/>`,
+    repair: `<rect x="154" y="78" width="88" height="124" rx="26" fill="#1f2d35" stroke="#21313b" stroke-width="7"/><rect x="288" y="78" width="88" height="124" rx="26" fill="#f7fcff" stroke="#21313b" stroke-width="7"/><path d="M314 96h36" stroke="#119fe3" stroke-width="10" stroke-linecap="round"/><path d="M246 140h34" stroke="#ee334e" stroke-width="10" stroke-linecap="round"/>`,
+    design: `<rect x="134" y="68" width="256" height="218" rx="24" fill="#fff" stroke="#21313b" stroke-width="7"/><path d="M174 122h166M174 166h166M174 210h166M174 254h116" stroke="#119fe3" stroke-width="8" stroke-linecap="round"/><circle cx="344" cy="86" r="23" fill="#ffd447"/>`,
+    duo: `<circle cx="178" cy="156" r="48" fill="#fff" stroke="#21313b" stroke-width="7"/><circle cx="344" cy="156" r="48" fill="#fff" stroke="#21313b" stroke-width="7"/><path d="M150 158q28 30 58 0M316 158q28 30 58 0" stroke="#21313b" stroke-width="7" stroke-linecap="round" fill="none"/><rect x="118" y="236" width="286" height="42" rx="16" fill="#119fe3" stroke="#21313b" stroke-width="7"/>`,
+    summary: `<path d="M142 244l72-92 58 56 78-118 58 154z" fill="#fff" stroke="#21313b" stroke-width="7"/><circle cx="360" cy="92" r="26" fill="#ffd447"/><path d="M180 286h186" stroke="#ee334e" stroke-width="10" stroke-linecap="round"/>`
   }[scene] || "";
 
   return `
     <svg viewBox="0 0 520 360" role="img" aria-label="${tr("childView")}">
       <rect x="18" y="20" width="484" height="318" rx="28" fill="#f9fbff" />
-      <circle cx="84" cy="82" r="30" fill="${palette[1]}" />
-      <path d="M84 36v-22M84 150v-24M42 82H20M150 82h-28" stroke="${palette[1]}" stroke-width="8" stroke-linecap="round" />
+      <path d="M62 92h56M90 64v56" stroke="#65f3ff" stroke-width="8" stroke-linecap="round"/>
+      <circle cx="434" cy="82" r="25" fill="#ffd447"/>
       ${prop}
-      <path d="M66 282 C126 220, 190 302, 260 234 S386 222, 456 268" fill="none" stroke="${palette[0]}" stroke-width="12" stroke-linecap="round" />
-      <circle cx="132" cy="276" r="35" fill="#ffffff" stroke="#21313b" stroke-width="7" />
-      <path d="M108 274 Q132 300 164 274" fill="none" stroke="#21313b" stroke-width="6" stroke-linecap="round" />
-      <circle cx="132" cy="266" r="15" fill="${palette[0]}" />
-      <circle cx="384" cy="276" r="35" fill="#ffffff" stroke="#21313b" stroke-width="7" />
-      <path d="M360 274 Q384 300 416 274" fill="none" stroke="#21313b" stroke-width="6" stroke-linecap="round" />
-      <circle cx="384" cy="266" r="15" fill="${palette[0]}" />
-      <path d="M426 86h44M448 64v44" stroke="${palette[1]}" stroke-width="9" stroke-linecap="round" />
+      <path d="M66 296 C126 232, 190 314, 260 246 S386 234, 456 280" fill="none" stroke="#119fe3" stroke-width="12" stroke-linecap="round" />
     </svg>
   `;
 }
@@ -429,9 +386,9 @@ function playSfx(kind) {
 
 function startMusic() {
   if (!musicAudio) {
-    const musicSource = window.SIMARS_MUSIC_DATA_URI || DEFAULT_MUSIC_SOURCE || "./assets/music/calm-piano-background.mp3";
+    const musicSource = window.SIMARS_MUSIC_DATA_URI || "./assets/music/calm-piano-background.mp3";
     musicAudio = new Audio(musicSource);
-    musicAudio.volume = 0.34;
+    musicAudio.volume = 0.3;
     musicAudio.preload = "auto";
     musicAudio.loop = false;
     musicAudio.addEventListener("ended", () => {
@@ -446,12 +403,10 @@ function startGeneratedAmbientMusic() {
   const ctx = getAudioContext();
   const scale = [261.63, 293.66, 329.63, 392, 440, 493.88, 523.25, 587.33, 659.25];
   stopMusic();
-  // Self-generated royalty-free ambient music: slow, airy, and lightly randomized instead of a repeated melody.
   musicTimer = setInterval(() => {
     if (!musicEnabled) return;
     const root = scale[Math.floor(Math.random() * 5)];
-    const chord = [root, root * 1.25, root * 1.5].map((note) => note * (Math.random() > 0.75 ? 2 : 1));
-    chord.forEach((frequency, i) => {
+    [root, root * 1.25, root * 1.5].forEach((frequency, i) => {
       const oscillator = ctx.createOscillator();
       const gain = ctx.createGain();
       oscillator.type = i === 0 ? "sine" : "triangle";
@@ -526,60 +481,39 @@ function renderLesson() {
   stepCounter.textContent = `${currentStepIndex + 1} / ${lesson.steps.length}`;
   lectureTitle.textContent = currentStepIndex === 0 ? tr("notesTitle") : stepData.label;
   lectureBody.textContent = buildLectureText(lesson, stepData);
-
   stepNav.innerHTML = lesson.steps.map((item, index) => `
     <button class="step-button ${index === currentStepIndex ? "active" : ""}" data-step="${index}">
       <span>${index + 1}</span>${item.label}
     </button>
   `).join("");
-
-  stepPanel.innerHTML = renderStep(stepData, lessonDetails[currentLessonId].illustration, lesson);
+  stepPanel.innerHTML = renderStep(stepData, lesson);
   bindStepInteractions();
 }
 
 function buildLectureText(lesson, stepData) {
   const zh = languageMode === "zh";
-  const opening = currentStepIndex === 0 ? lesson.prep : stepData.guide;
   const typeHelp = {
-    cover: zh
-      ? "讲法：先让孩子看画面，不急着解释概念。请孩子用自己的话说今天可能要学什么，再把课程目标说出来。"
-      : "How to teach: let children look at the picture first. Ask what they think today's lesson is about, then state the goal.",
-    talk: zh
-      ? "讲法：用生活问题引入，尽量问孩子经历过的场景。不要直接给定义，用追问让孩子自己发现问题。"
-      : "How to teach: start from daily life. Ask about situations children know. Avoid definitions; use questions.",
-    story: zh
-      ? "讲法：故事要讲出起因、遇到的问题、孩子做出的选择、结果。讲完后不要急着总结，先让孩子复述一遍。"
-      : "How to teach: tell the beginning, problem, choice, and result. After the story, let the child retell it first.",
-    rules: zh
-      ? "讲法：每讲一个规则，就让孩子举一个自己的例子。规则不用背，能用出来更重要。"
-      : "How to teach: after each rule, ask the child for their own example. Using rules matters more than memorizing them.",
-    quiz: zh
-      ? "讲法：孩子选完后，一定问“为什么”。答错时不要说错了，而是让孩子找缺了什么信息。"
-      : "How to teach: after the child chooses, ask why. If wrong, ask what information is missing.",
-    builder: zh
-      ? "讲法：这是孩子输出的环节。家长只做记录员和提问者，不要抢着帮孩子组织漂亮答案。"
-      : "How to teach: this is the child's output stage. The parent records and asks, but does not take over.",
-    flip: zh
-      ? "讲法：翻卡片时让孩子先判断，再补充原因。重点是建立边界，不是吓唬孩子。"
-      : "How to teach: let the child judge first, then explain why. Build boundaries without creating fear.",
-    summary: zh
-      ? "讲法：带孩子按顺序回顾“我看到什么、我做了什么、我学会什么、下次怎么用”。让孩子说完整句。"
-      : "How to teach: review in order: what I saw, what I did, what I learned, and how I can use it next time."
+    cover: zh ? "讲法：先让孩子看画面并猜今天学什么，再把目标说出来：不是学画画软件，而是学会说清楚。" : "Teaching: let the child look and guess first, then explain that the goal is clear expression.",
+    story: zh ? "讲法：故事要讲出第一次为什么失败、爸爸怎么追问、第二次为什么更接近想象。" : "Teaching: show why the first prompt failed, how the parent asked, and why the second became clearer.",
+    rules: zh ? "讲法：四件套不用背，必须马上用。每讲一个词，请孩子立刻举自己的例子。" : "Teaching: do not memorize. Use each part immediately with the child's examples.",
+    puzzle: zh ? "讲法：让孩子自己点选组合。选完以后读完整句，并补一句“我还想加……”" : "Teaching: let the child choose and read the full prompt, then add one more detail.",
+    upgrade: zh ? "讲法：先让孩子说原句哪里模糊，再点按钮一点点升级。重点是孩子能解释升级原因。" : "Teaching: ask why the original is vague, then upgrade it step by step.",
+    repair: zh ? "讲法：告诉孩子，AI画错不是失败，而是进入第二轮表达。修改时说清楚改变和保留。" : "Teaching: AI mistakes begin the second round of expression. Say what to change and what to keep.",
+    design: zh ? "讲法：这是输出页。请家长做记录员，不要抢孩子的答案。" : "Teaching: this is the output page. The parent records but does not take over.",
+    duo: zh ? "讲法：适合两个孩子一起上。让他们互相提一个让画面更清楚的问题。" : "Teaching: good for two children. Let them ask each other one clarity question.",
+    summary: zh ? "讲法：不要只问“懂了吗”。让孩子完整说出过程、方法、下次怎么用。" : "Teaching: do not only ask 'do you understand'. Ask the child to explain the process, method, and next use."
   }[stepData.type];
-  const close = zh
-    ? "收束：这一页结束前，让孩子说一句自己的理解。家长可以帮他补完整，但不要替他说。"
-    : "Wrap-up: before leaving this page, ask the child to say one sentence in their own words. Help complete it, but do not speak for them.";
-  return [opening, typeHelp, close].filter(Boolean).join("\n\n");
+  return [currentStepIndex === 0 ? lesson.prep : stepData.guide, typeHelp].filter(Boolean).join("\n\n");
 }
 
 function tipsMarkup(lesson) {
   return `<div class="page-tips"><strong>${tr("parentTips")}</strong><span>${lesson.tips[currentStepIndex % lesson.tips.length]}</span></div>`;
 }
 
-function renderStep(stepData, illustrationType, lesson) {
-  const visual = `<div class="visual-card">${illustration(illustrationType, stepData.type)}</div>`;
+function renderStep(stepData, lesson) {
+  const visual = `<div class="visual-card">${illustration(stepData.type)}</div>`;
   const tips = tipsMarkup(lesson);
-  if (stepData.type === "cover" || stepData.type === "talk") {
+  if (["cover", "story", "rules"].includes(stepData.type)) {
     return `
       <div class="panel-grid">
         <div class="content-card child-card">
@@ -593,86 +527,102 @@ function renderStep(stepData, illustrationType, lesson) {
       ${tips}
     `;
   }
-  if (stepData.type === "story") {
-    return `
-      <div class="story-grid">
-        <div class="story-visual">
-          ${illustration(illustrationType, "story")}
-          <div class="demo-scene" aria-label="${tr("childView")}">
-            <div class="demo-orbit"></div><div class="demo-child"></div><div class="demo-bubble">${languageMode === "zh" ? "先想一想，再问AI" : "Think first, then ask AI"}</div><div class="demo-bot"></div>
-          </div>
-        </div>
-        <div class="content-card child-card">
-          <span class="time-tag">${stepData.minutes}</span>
-          <p>${stepData.body}</p>
-          <div class="callout"><strong>${languageMode === "zh" ? "问孩子：" : "Ask:"}</strong><br>${stepData.quote}</div>
-        </div>
-      </div>
-      ${tips}
-    `;
-  }
-  if (stepData.type === "rules") {
-    return `
-      <div class="rules-grid">
-        <div class="content-card child-card">
-          <span class="time-tag">${stepData.minutes}</span>
-          <p class="big-line">${stepData.body}</p>
-        </div>
-        <div class="content-card">
-          <ul class="rule-list">${stepData.bullets.map((item) => `<li>${item}</li>`).join("")}</ul>
-        </div>
-      </div>
-      ${tips}
-    `;
-  }
-  if (stepData.type === "quiz") {
+  if (stepData.type === "puzzle") {
     return `
       <div class="game-grid">
         <div class="game-card">
           <span class="time-tag">${stepData.minutes}</span>
           <p>${stepData.prompt}</p>
-          <div class="choice-list" data-quiz>
-            ${stepData.choices.map((choice) => `<button class="choice" data-correct="${choice.correct}" data-feedback="${choice.feedback}">${choice.text}</button>`).join("")}
+          <div class="prompt-groups">
+            ${stepData.groups.map((group, index) => `
+              <section>
+                <strong>${group.name}</strong>
+                <div class="chip-grid" data-puzzle-group="${index}">
+                  ${group.options.map((option) => `<button class="chip" data-piece="${option}">${option}</button>`).join("")}
+                </div>
+              </section>
+            `).join("")}
           </div>
         </div>
-        <div class="content-card feedback-card" data-feedback-card>
-          <span>${languageMode === "zh" ? "等待选择" : "Waiting"}</span>
-          <strong>${languageMode === "zh" ? "点一个答案，看它是不是更清楚。" : "Tap an answer and discuss why."}</strong>
+        <div class="content-card prompt-card">
+          <h3>${languageMode === "zh" ? "生成的清楚指令" : "Clear Prompt"}</h3>
+          <div class="prompt-output" data-puzzle-output>${languageMode === "zh" ? "每组点一个，完整指令会出现在这里。" : "Choose one from each group to build the prompt."}</div>
         </div>
       </div>
       ${tips}
     `;
   }
-  if (stepData.type === "builder") {
+  if (stepData.type === "upgrade") {
     return `
       <div class="game-grid">
         <div class="game-card">
           <span class="time-tag">${stepData.minutes}</span>
-          <p>${stepData.task}</p>
-          <div class="chip-grid" data-builder>
-            ${stepData.chips.map((chip) => `<button class="chip">${chip}</button>`).join("")}
+          <p class="big-line">${stepData.prompt}</p>
+          <div class="chip-grid" data-upgrade>
+            ${stepData.choices.map((item) => `<button class="chip" data-piece="${item}">${item}</button>`).join("")}
           </div>
         </div>
-        <div class="content-card">
-          <h3>${languageMode === "zh" ? "拼出的指令" : "Built Prompt"}</h3>
-          <div class="prompt-output" data-prompt-output>${languageMode === "zh" ? "点选拼图，组成一句完整指令。" : "Tap blocks to build a complete prompt."}</div>
-          <button class="secondary-action" data-reset-builder>${languageMode === "zh" ? "重新拼" : "Reset"}</button>
+        <div class="content-card prompt-card">
+          <h3>${languageMode === "zh" ? "升级后" : "Upgraded"}</h3>
+          <div class="prompt-output" data-upgrade-output>${languageMode === "zh" ? "点击补充信息，把模糊句变清楚。" : "Tap details to make it clearer."}</div>
         </div>
       </div>
       ${tips}
     `;
   }
-  if (stepData.type === "flip") {
+  if (stepData.type === "repair") {
     return `
       <div class="game-grid">
         <div class="game-card">
           <span class="time-tag">${stepData.minutes}</span>
-          <p>${languageMode === "zh" ? "点开卡片，说说为什么这些问题不能只问AI。" : "Flip a card and discuss why AI should not answer it alone."}</p>
-          <div class="flip-grid">
-            ${stepData.cards.map((card) => `<button class="flip-card" data-original="${card}" data-answer="${languageMode === "zh" ? "重要问题要问爸爸妈妈或可靠来源" : "Ask parents or reliable sources for important issues"}">${card}</button>`).join("")}
+          <div class="ai-mistake">
+            <div>${illustration("repair")}</div>
+            <p>${stepData.problem}</p>
+          </div>
+          <div class="chip-grid" data-repair>
+            ${stepData.options.map((item) => `<button class="chip" data-piece="${item}">${item}</button>`).join("")}
           </div>
         </div>
-        ${visual}
+        <div class="content-card prompt-card">
+          <h3>${languageMode === "zh" ? "修改指令" : "Revision Prompt"}</h3>
+          <div class="prompt-output" data-repair-output>${stepData.target}</div>
+        </div>
+      </div>
+      ${tips}
+    `;
+  }
+  if (stepData.type === "design") {
+    return `
+      <div class="game-grid">
+        <div class="game-card">
+          <span class="time-tag">${stepData.minutes}</span>
+          <div class="design-form" data-design-form>
+            ${stepData.fields.map((field) => `
+              <label>
+                <span>${field}</span>
+                <input type="text" placeholder="${stepData.placeholder}" data-design-field="${field}">
+              </label>
+            `).join("")}
+          </div>
+        </div>
+        <div class="content-card prompt-card">
+          <h3>${languageMode === "zh" ? "我的完整指令" : "My Full Prompt"}</h3>
+          <div class="prompt-output" data-design-output>${languageMode === "zh" ? "填完左边四格，这里会自动组成一句话。" : "Fill the four fields to build one sentence."}</div>
+        </div>
+      </div>
+      ${tips}
+    `;
+  }
+  if (stepData.type === "duo") {
+    return `
+      <div class="duo-grid">
+        ${stepData.kids.map((kid) => `
+          <div class="teacher-card kid-card">
+            <span class="time-tag">${kid.name}</span>
+            <h3>${kid.mission}</h3>
+            <ul class="rule-list">${kid.starter.map((item) => `<li contenteditable="true">${item}</li>`).join("")}</ul>
+          </div>
+        `).join("")}
       </div>
       ${tips}
     `;
@@ -682,50 +632,55 @@ function renderStep(stepData, illustrationType, lesson) {
       <div class="teacher-card">
         <span class="time-tag">${stepData.minutes}</span>
         <p class="big-line">${stepData.chant}</p>
-        <div class="quote-box">${languageMode === "zh" ? "家长引导：请孩子用自己的话讲一遍今天从开始到结束做了什么。重点不是背答案，而是说出过程、方法和下次怎么用。" : "Parent guide: ask the child to explain the whole lesson in their own words. Focus on process, method, and how to use it next time."}</div>
+        ${visual}
       </div>
       <div class="teacher-card">
-        <h3>${languageMode === "zh" ? "完整复盘" : "Full Reflection"}</h3>
-        <div class="teacher-grid">${stepData.recap.map((item, index) => `<div><strong>${index + 1}</strong><span>${item}</span></div>`).join("")}</div>
+        <h3>${languageMode === "zh" ? "完整复盘" : "Full Review"}</h3>
+        <div class="teacher-grid review-grid">${stepData.recap.map((item, index) => `<div><strong>${index + 1}</strong><span>${item}</span></div>`).join("")}</div>
       </div>
     </div>
     ${tips}
   `;
 }
 
+function joinPrompt(parts) {
+  if (!parts.length) return languageMode === "zh" ? "点击补充信息，把指令变清楚。" : "Tap details to make the prompt clearer.";
+  return languageMode === "zh"
+    ? `请帮我画：${parts.join("，")}。画面适合小学生，明亮、友好、有轻微未来感。`
+    : `Please draw: ${parts.join(", ")}. Make it bright, friendly, lightly futuristic, and suitable for children.`;
+}
+
 function bindStepInteractions() {
-  document.querySelectorAll("[data-quiz] .choice").forEach((button) => {
+  document.querySelectorAll("[data-puzzle-group] .chip").forEach((button) => {
     button.addEventListener("click", () => {
-      const list = button.closest("[data-quiz]");
-      const card = document.querySelector("[data-feedback-card]");
-      list.querySelectorAll(".choice").forEach((item) => item.classList.remove("correct", "wrong"));
-      const correct = button.dataset.correct === "true";
-      button.classList.add(correct ? "correct" : "wrong");
-      card.querySelector("span").textContent = correct ? (languageMode === "zh" ? "选得好" : "Good choice") : (languageMode === "zh" ? "再想一想" : "Think again");
-      card.querySelector("strong").textContent = button.dataset.feedback;
-      playSfx(correct ? "correct" : "wrong");
+      const group = button.closest("[data-puzzle-group]");
+      group.querySelectorAll(".chip").forEach((item) => item.classList.remove("selected"));
+      button.classList.add("selected");
+      const pieces = Array.from(document.querySelectorAll("[data-puzzle-group] .chip.selected")).map((item) => item.dataset.piece);
+      document.querySelector("[data-puzzle-output]").textContent = joinPrompt(pieces);
+      playSfx(pieces.length >= 4 ? "complete" : "click");
     });
   });
-  document.querySelectorAll("[data-builder] .chip").forEach((button) => {
+  document.querySelectorAll("[data-upgrade] .chip").forEach((button) => {
     button.addEventListener("click", () => {
       button.classList.toggle("selected");
-      const chips = Array.from(document.querySelectorAll("[data-builder] .chip.selected")).map((item) => item.textContent.trim());
-      document.querySelector("[data-prompt-output]").textContent = chips.length ? `${chips.join(languageMode === "zh" ? "，" : ", ")}${languageMode === "zh" ? "。" : "."}` : (languageMode === "zh" ? "点选拼图，组成一句完整指令。" : "Tap blocks to build a complete prompt.");
-      playSfx(chips.length >= 4 ? "complete" : "click");
+      const pieces = Array.from(document.querySelectorAll("[data-upgrade] .chip.selected")).map((item) => item.dataset.piece);
+      document.querySelector("[data-upgrade-output]").textContent = joinPrompt(pieces);
+      playSfx(pieces.length >= 4 ? "complete" : "click");
     });
   });
-  document.querySelectorAll("[data-reset-builder]").forEach((button) => {
+  document.querySelectorAll("[data-repair] .chip").forEach((button) => {
     button.addEventListener("click", () => {
-      document.querySelectorAll("[data-builder] .chip").forEach((item) => item.classList.remove("selected"));
-      document.querySelector("[data-prompt-output]").textContent = languageMode === "zh" ? "点选拼图，组成一句完整指令。" : "Tap blocks to build a complete prompt.";
-      playSfx("click");
+      button.classList.toggle("selected");
+      const pieces = Array.from(document.querySelectorAll("[data-repair] .chip.selected")).map((item) => item.dataset.piece);
+      document.querySelector("[data-repair-output]").textContent = pieces.length ? joinPrompt(pieces) : localLesson().steps[currentStepIndex].target;
+      playSfx(pieces.length >= 4 ? "complete" : "click");
     });
   });
-  document.querySelectorAll(".flip-card").forEach((button) => {
-    button.addEventListener("click", () => {
-      button.classList.toggle("revealed");
-      button.textContent = button.classList.contains("revealed") ? button.dataset.answer : button.dataset.original;
-      playSfx("click");
+  document.querySelectorAll("[data-design-field]").forEach((input) => {
+    input.addEventListener("input", () => {
+      const values = Array.from(document.querySelectorAll("[data-design-field]")).map((field) => field.value.trim()).filter(Boolean);
+      document.querySelector("[data-design-output]").textContent = values.length ? joinPrompt(values) : (languageMode === "zh" ? "填完左边四格，这里会自动组成一句话。" : "Fill the four fields to build one sentence.");
     });
   });
 }
