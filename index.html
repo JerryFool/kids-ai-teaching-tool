@@ -1,0 +1,222 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>第5课 AI创意画室</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <aside class="lesson-nav" aria-label="课程步骤">
+        <div class="brand">
+          <span class="brand-mark">AI</span>
+          <div>
+            <p>孩子AI家庭课</p>
+            <strong>第5课</strong>
+          </div>
+        </div>
+        <button class="nav-item active" data-slide="0">
+          <span>1</span>
+          <b>进入画室</b>
+        </button>
+        <button class="nav-item" data-slide="1">
+          <span>2</span>
+          <b>故事时间</b>
+        </button>
+        <button class="nav-item" data-slide="2">
+          <span>3</span>
+          <b>看图判断</b>
+        </button>
+        <button class="nav-item" data-slide="3">
+          <span>4</span>
+          <b>指令拼图</b>
+        </button>
+        <button class="nav-item" data-slide="4">
+          <span>5</span>
+          <b>创作任务</b>
+        </button>
+        <button class="nav-item" data-slide="5">
+          <span>6</span>
+          <b>爸爸提词卡</b>
+        </button>
+      </aside>
+
+      <section class="stage" aria-live="polite">
+        <header class="topbar">
+          <div>
+            <p class="eyebrow">iPad 互动教学工具</p>
+            <h1>AI创意画室：把脑袋里的画说清楚</h1>
+          </div>
+          <div class="timer">
+            <span id="progressText">1 / 6</span>
+          </div>
+        </header>
+
+        <section class="slide active" data-slide-panel="0">
+          <div class="hero-grid">
+            <div class="hero-copy">
+              <p class="tag">推测版课题，可替换为PDF准确标题</p>
+              <h2>今天孩子要学会：用清楚的话，让AI画出更接近想象的画。</h2>
+              <p>
+                第4课已经学了“说清楚指令”。第5课就把这个本领用在创意表达上：
+                不是让AI替孩子想，而是帮孩子把自己的想象变成画面。
+              </p>
+              <div class="goal-row">
+                <span>会观察</span>
+                <span>会描述</span>
+                <span>会修改</span>
+              </div>
+            </div>
+            <div class="art-board" aria-label="未来画室插画">
+              <svg viewBox="0 0 520 360" role="img" aria-label="两个孩子在AI画室里创作">
+                <rect x="18" y="22" width="484" height="316" rx="26" fill="#f8f2df" />
+                <path d="M64 270 C120 210, 190 288, 260 220 S388 214, 456 256" fill="none" stroke="#3e6f6b" stroke-width="12" stroke-linecap="round" />
+                <rect x="210" y="54" width="178" height="126" rx="18" fill="#ffffff" stroke="#1f2d35" stroke-width="7" />
+                <circle cx="252" cy="114" r="22" fill="#f2c84b" />
+                <path d="M286 142 L324 96 L360 142 Z" fill="#4aa3a1" />
+                <path d="M96 244 L136 144 L178 244 Z" fill="#e96f51" stroke="#1f2d35" stroke-width="7" />
+                <rect x="104" y="246" width="72" height="18" rx="9" fill="#1f2d35" />
+                <circle cx="118" cy="284" r="28" fill="#f4b9a6" stroke="#1f2d35" stroke-width="7" />
+                <path d="M93 281 Q118 306 145 280" fill="none" stroke="#1f2d35" stroke-width="6" stroke-linecap="round" />
+                <circle cx="386" cy="274" r="30" fill="#a9c6ff" stroke="#1f2d35" stroke-width="7" />
+                <path d="M364 272 Q386 294 414 270" fill="none" stroke="#1f2d35" stroke-width="6" stroke-linecap="round" />
+                <path d="M420 84 h44 M442 62 v44" stroke="#e96f51" stroke-width="9" stroke-linecap="round" />
+                <circle cx="82" cy="84" r="22" fill="#4aa3a1" />
+                <path d="M82 52 v-28 M82 144 v-28 M50 84 H22 M142 84h-28" stroke="#4aa3a1" stroke-width="8" stroke-linecap="round" />
+              </svg>
+            </div>
+          </div>
+        </section>
+
+        <section class="slide" data-slide-panel="1">
+          <div class="story-layout">
+            <div class="scene-card">
+              <svg viewBox="0 0 420 300" role="img" aria-label="小朋友描述一幅未来公园">
+                <rect width="420" height="300" rx="24" fill="#dfeee7" />
+                <rect x="34" y="40" width="160" height="210" rx="20" fill="#ffffff" stroke="#25313a" stroke-width="6" />
+                <path d="M64 190 C94 124, 132 210, 166 142" fill="none" stroke="#de6f55" stroke-width="9" stroke-linecap="round" />
+                <circle cx="100" cy="92" r="28" fill="#f1c84c" />
+                <rect x="238" y="72" width="116" height="80" rx="14" fill="#ffffff" stroke="#25313a" stroke-width="6" />
+                <path d="M258 128 L286 98 L310 128 Z" fill="#51a4a1" />
+                <circle cx="254" cy="210" r="27" fill="#f4b9a6" stroke="#25313a" stroke-width="6" />
+                <circle cx="336" cy="210" r="27" fill="#a9c6ff" stroke="#25313a" stroke-width="6" />
+                <path d="M234 48 C270 14, 340 18, 370 54" fill="none" stroke="#25313a" stroke-width="7" stroke-linecap="round" />
+              </svg>
+            </div>
+            <div class="story-copy">
+              <p class="tag">小故事 5分钟</p>
+              <h2>《小安的未来公园》</h2>
+              <p>
+                小安第一次说：“帮我画一个公园。”AI画得很普通。后来小安补充：
+                “未来公园、机器人秋千、会发光的树、两个孩子在玩、颜色明亮。”
+              </p>
+              <div class="callout">
+                <strong>问孩子：</strong>
+                <span>第二次为什么更像小安脑袋里的画？</span>
+              </div>
+              <button class="primary-action" id="revealStory">显示爸爸提示</button>
+              <p class="hidden-note" id="storyHint">
+                爸爸提示：AI不是读心术。孩子要先观察自己想要什么，再说出关键细节。
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section class="slide" data-slide-panel="2">
+          <div class="quiz-layout">
+            <div>
+              <p class="tag">互动判断 6分钟</p>
+              <h2>哪一句更容易画出来？</h2>
+              <p>请两个孩子轮流选。选完后问一句：为什么？</p>
+              <div class="choice-list" id="quizList">
+                <button class="choice" data-correct="false">帮我画一个好玩的。</button>
+                <button class="choice" data-correct="true">帮我画一个海底城市，有透明房子、发光小鱼和潜水机器人。</button>
+                <button class="choice" data-correct="false">帮我画漂亮一点。</button>
+              </div>
+            </div>
+            <div class="feedback-card" id="quizFeedback">
+              <span>等待选择</span>
+              <strong>清楚的画面，要有地点、主角、动作和细节。</strong>
+            </div>
+          </div>
+        </section>
+
+        <section class="slide" data-slide-panel="3">
+          <div class="builder-layout">
+            <div>
+              <p class="tag">指令拼图 8分钟</p>
+              <h2>把四块拼起来，变成一条好指令</h2>
+              <p>点选每一块，拼出一句可以给AI画图的描述。</p>
+              <div class="chip-grid">
+                <button class="chip" data-part="角色">请你当儿童插画师</button>
+                <button class="chip" data-part="主题">画一个太空游乐园</button>
+                <button class="chip" data-part="背景">给7岁小朋友看</button>
+                <button class="chip" data-part="要求">颜色明亮，不要太复杂</button>
+              </div>
+            </div>
+            <div class="prompt-box">
+              <p>孩子拼出的指令</p>
+              <div id="promptOutput">先点选四块拼图</div>
+              <button class="secondary-action" id="resetPrompt">重新拼</button>
+            </div>
+          </div>
+        </section>
+
+        <section class="slide" data-slide-panel="4">
+          <div class="task-layout">
+            <div class="mission-card">
+              <p class="tag">创作任务 7分钟</p>
+              <h2>两个孩子各设计一幅AI画</h2>
+              <ul>
+                <li>孩子A：设计一个“未来学校”</li>
+                <li>孩子B：设计一个“机器人朋友”</li>
+                <li>爸爸只负责追问，不替孩子决定</li>
+              </ul>
+            </div>
+            <div class="question-stack">
+              <button class="question-card">你想画在哪里？</button>
+              <button class="question-card">画面里有谁？</button>
+              <button class="question-card">他们正在做什么？</button>
+              <button class="question-card">你希望颜色是什么感觉？</button>
+            </div>
+          </div>
+        </section>
+
+        <section class="slide" data-slide-panel="5">
+          <div class="teacher-card">
+            <p class="tag">爸爸提词卡</p>
+            <h2>今天不要追求画得多高级，只练三件事</h2>
+            <div class="teacher-grid">
+              <div>
+                <strong>1. 先想象</strong>
+                <span>让孩子先说自己的画面，不急着打开AI。</span>
+              </div>
+              <div>
+                <strong>2. 再描述</strong>
+                <span>地点、主角、动作、细节，至少说出3个。</span>
+              </div>
+              <div>
+                <strong>3. 会修改</strong>
+                <span>如果结果不满意，问孩子“你想改哪里？”</span>
+              </div>
+            </div>
+            <div class="closing-line">
+              结尾口令：AI可以帮我们画出来，但想象力要先从我们自己脑袋里出来。
+            </div>
+          </div>
+        </section>
+
+        <footer class="controls">
+          <button class="icon-button" id="prevBtn" aria-label="上一页">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 18l-6-6 6-6" /></svg>
+          </button>
+          <button class="icon-button" id="nextBtn" aria-label="下一页">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6l6 6-6 6" /></svg>
+          </button>
+        </footer>
+      </section>
+    </main>
+    <script src="./app.js"></script>
+  </body>
+</html>
