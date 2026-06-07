@@ -40,6 +40,7 @@ const ui = {
     childView: "给孩子看的画面",
     qrText: "二维码",
     createdFooter: "Created by Jerry Fu, Founder / Curator of SIMARS",
+    musicCredit: "Music: Calm Piano Background Music by Orange Free Sounds, CC BY 4.0",
     qrFooter: "AI教育 · 体育IP · 儿童创造力"
   },
   en: {
@@ -83,6 +84,7 @@ const ui = {
     childView: "Child-facing visual",
     qrText: "QR",
     createdFooter: "Created by Jerry Fu, Founder / Curator of SIMARS",
+    musicCredit: "Music: Calm Piano Background Music by Orange Free Sounds, CC BY 4.0",
     qrFooter: "AI Education · Sports IP · Children's Creativity"
   }
 };
@@ -282,6 +284,7 @@ let currentStepIndex = 0;
 let languageMode = "zh";
 let audioContext;
 let musicTimer;
+let musicAudio;
 let musicEnabled = false;
 let sfxEnabled = true;
 let lectureCollapsed = false;
@@ -322,6 +325,7 @@ function updateStaticLanguage() {
   document.querySelector(".section-heading h2").textContent = tr("catalogTitle");
   document.querySelector(".section-heading p").textContent = tr("catalogBody");
   document.querySelector(".site-footer p").textContent = tr("createdFooter");
+  document.querySelector("#musicCredit").textContent = tr("musicCredit");
   backHome.querySelector("span").textContent = tr("back");
   lectureToggle.textContent = lectureCollapsed ? tr("expandNotes") : tr("collapseNotes");
   syncAudioButtons();
@@ -422,6 +426,21 @@ function playSfx(kind) {
 }
 
 function startMusic() {
+  if (!musicAudio) {
+    const musicSource = window.SIMARS_MUSIC_DATA_URI || "./assets/music/calm-piano-background.mp3";
+    musicAudio = new Audio(musicSource);
+    musicAudio.volume = 0.34;
+    musicAudio.preload = "auto";
+    musicAudio.loop = false;
+    musicAudio.addEventListener("ended", () => {
+      musicEnabled = false;
+      syncAudioButtons();
+    });
+  }
+  musicAudio.play().catch(() => startGeneratedAmbientMusic());
+}
+
+function startGeneratedAmbientMusic() {
   const ctx = getAudioContext();
   const scale = [261.63, 293.66, 329.63, 392, 440, 493.88, 523.25, 587.33, 659.25];
   stopMusic();
@@ -447,6 +466,10 @@ function startMusic() {
 }
 
 function stopMusic() {
+  if (musicAudio) {
+    musicAudio.pause();
+    musicAudio.currentTime = 0;
+  }
   if (musicTimer) clearInterval(musicTimer);
   musicTimer = null;
 }
