@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>AI未来家长课堂 · 第5课样板</title>
-    <link rel="stylesheet" href="./styles.css?v=lesson5-sample-20260607" />
+    <link rel="stylesheet" href="./styles.css?v=visual-v2-20260607" />
   </head>
   <body>
     <main class="site-shell">
@@ -51,23 +51,25 @@
               <button class="secondary-action" id="scrollCatalog">查看课程结构</button>
             </div>
           </div>
-          <div class="hero-visual" aria-label="孩子和家长一起学习AI">
-            <svg viewBox="0 0 620 420" role="img" aria-label="家庭AI课堂插画">
-              <rect x="24" y="28" width="572" height="360" rx="28" fill="#fff8e8" />
-              <rect x="316" y="72" width="220" height="156" rx="20" fill="#ffffff" stroke="#21313b" stroke-width="8" />
-              <path d="M358 174 L398 120 L430 174 Z" fill="#4b9f98" />
-              <circle cx="460" cy="124" r="24" fill="#f3c84d" />
-              <path d="M96 302 C144 236, 210 318, 276 250 S410 238, 506 292" fill="none" stroke="#3f8f88" stroke-width="14" stroke-linecap="round" />
-              <circle cx="132" cy="250" r="42" fill="#f4b7a5" stroke="#21313b" stroke-width="8" />
-              <path d="M98 250 Q132 284 170 248" fill="none" stroke="#21313b" stroke-width="7" stroke-linecap="round" />
-              <circle cx="236" cy="258" r="38" fill="#a9c6ff" stroke="#21313b" stroke-width="8" />
-              <path d="M210 256 Q236 286 270 256" fill="none" stroke="#21313b" stroke-width="7" stroke-linecap="round" />
-              <rect x="82" y="102" width="160" height="86" rx="18" fill="#eaf5f2" stroke="#21313b" stroke-width="7" />
-              <path d="M116 144 h88 M116 166 h58" stroke="#21313b" stroke-width="8" stroke-linecap="round" />
-              <path d="M526 72 h44 M548 50 v44" stroke="#e96f51" stroke-width="10" stroke-linecap="round" />
-              <circle cx="70" cy="78" r="22" fill="#f3c84d" />
-              <path d="M70 42 v-24 M70 138 v-24 M34 78 H10 M130 78h-24" stroke="#f3c84d" stroke-width="8" stroke-linecap="round" />
-            </svg>
+          <div class="hero-visual hero-classroom" aria-label="未来学校里的机器人老师和两个孩子">
+            <div class="sky-grid"></div>
+            <div class="sun-chip"></div>
+            <div class="school-window">
+              <span></span><span></span><span></span>
+            </div>
+            <div class="teacher-robot">
+              <span class="robot-eye left"></span>
+              <span class="robot-eye right"></span>
+              <span class="robot-smile"></span>
+            </div>
+            <div class="kid kid-a"></div>
+            <div class="kid kid-b"></div>
+            <div class="holo-board">
+              <strong>地点 + 主角 + 动作 + 细节</strong>
+              <span>Clear picture prompt</span>
+            </div>
+            <div class="floating-card card-place">未来学校</div>
+            <div class="floating-card card-action">开心上课</div>
           </div>
         </header>
 
@@ -150,6 +152,7 @@
               <div class="timer-pill" id="stepCounter">1 / 7</div>
             </div>
           </header>
+          <div class="progress-track" aria-hidden="true"><span id="progressFill"></span></div>
           <aside class="lecture-panel" id="lecturePanel">
             <div>
               <strong id="lectureTitle">课前家长讲义</strong>
@@ -160,8 +163,10 @@
           <footer class="lesson-controls">
             <button class="icon-button" id="prevStep" aria-label="上一步">
               <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 18l-6-6 6-6" /></svg>
+              <span>上一步</span>
             </button>
             <button class="icon-button" id="nextStep" aria-label="下一步">
+              <span>下一步</span>
               <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6l6 6-6 6" /></svg>
             </button>
           </footer>
@@ -169,7 +174,7 @@
       </section>
     </main>
 
-    <script src="./music-data.js?v=lesson5-sample-20260607"></script>
-    <script src="./app.js?v=lesson5-sample-20260607"></script>
+    <script src="./music-data.js?v=visual-v2-20260607"></script>
+    <script src="./app.js?v=visual-v2-20260607"></script>
   </body>
 </html>
