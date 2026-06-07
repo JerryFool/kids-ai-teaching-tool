@@ -89,6 +89,8 @@ const ui = {
   }
 };
 
+const DEFAULT_MUSIC_SOURCE = "https://orangefreesounds.com/wp-content/uploads/2023/04/Calm-piano-background-music-free.mp3";
+
 const lessonCatalog = [
   { id: 1, zh: "未来什么本领最厉害", en: "What Skills Matter Most In The Future", status: "done" },
   { id: 2, zh: "AI小帮手大比拼", en: "Different Kinds Of AI Helpers", status: "done" },
@@ -427,7 +429,7 @@ function playSfx(kind) {
 
 function startMusic() {
   if (!musicAudio) {
-    const musicSource = window.SIMARS_MUSIC_DATA_URI || "./assets/music/calm-piano-background.mp3";
+    const musicSource = window.SIMARS_MUSIC_DATA_URI || DEFAULT_MUSIC_SOURCE || "./assets/music/calm-piano-background.mp3";
     musicAudio = new Audio(musicSource);
     musicAudio.volume = 0.34;
     musicAudio.preload = "auto";
