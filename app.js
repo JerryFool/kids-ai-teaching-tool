@@ -6,7 +6,7 @@ const ui = {
     heroTitle: "AI未来家长学校互动课",
     heroText: "31节课网站框架已建立。先完成第5、6、7课样板，每节约30分钟，适合家长用 iPad 横屏边讲边操作。",
     authorTitle: "作者的话",
-    authorBody: "AI 时代已经来到孩子身边。作为家长，我们不能只把孩子交给工具，也不能站在一旁焦虑观望。真正重要的，是陪孩子学会提问、判断、表达和保护自己。我们一起重新学习，和孩子一起往前走。",
+    authorBody: "AI 时代已经来到孩子身边。作为家长，我们不能只把孩子交给工具，也不能站在一旁焦虑观望。思美奇希望做的，不只是把新工具介绍给孩子，而是陪孩子建立面向未来的底层能力：会提问、会判断、会表达、会创造，也知道如何保护自己。真正的教育不是让孩子更早依赖 AI，而是让他们在新技术面前依然保有好奇、善良、独立思考和动手创造的勇气。我们这一代家长也要重新学习，和孩子一起顺应时代，一起长出新的能力。",
     startLesson: "开始第5课",
     catalogButton: "查看31课目录",
     samples: "3节样板课",
@@ -49,7 +49,7 @@ const ui = {
     heroTitle: "AI Future Parent School",
     heroText: "A 31-lesson interactive site for parents teaching children at home. Lessons 5, 6, and 7 are complete samples, each designed for about 30 minutes.",
     authorTitle: "A Note From The Author",
-    authorBody: "AI is already entering our children's world. As parents, we should not simply hand children to tools, nor stand aside with anxiety. What matters is helping them ask, judge, express, create, and stay safe. We learn again, together with our children.",
+    authorBody: "AI is already entering our children's world. As parents, we should not simply hand children to tools, nor stand aside with anxiety. What SIMARS hopes to build is not just a set of tool lessons, but a warmer path for children to grow future-ready abilities: asking, judging, expressing, creating, and staying safe. Real education is not about making children depend on AI earlier. It is about helping them keep curiosity, kindness, independent thinking, and the courage to create. We learn again, together with our children.",
     startLesson: "Start Lesson 5",
     catalogButton: "View 31 Lessons",
     samples: "3 Sample Lessons",
@@ -118,15 +118,15 @@ const lessonDetails = {
       steps: [
         step("cover", "课程封面", "把想象说清楚，AI才画得更像", "2分钟", "今天孩子要学会：先想象、再描述、最后修改。", "第4课已经学了清楚指令。这一课把指令用到画画里，让孩子知道 AI 不是读心术，自己的想象力才是起点。", ["会观察：我脑袋里有什么", "会描述：地点、主角、动作、细节", "会修改：不满意时说出改哪里"], "你可以先问：如果我说“画一个东西”，你知道我要什么吗？让孩子意识到“说清楚”本身就是能力。"),
         step("talk", "开场引入", "如果你只说“画一个”，别人听得懂吗", "3分钟", "爸爸可以问：如果我让你画一个东西，但不说画什么，你会不会很困惑？AI也一样。它很会帮忙，但不会自动知道你脑袋里的画面。", "今天我们不是比赛谁会点按钮，而是练习谁能把脑袋里的画说清楚。", [], "让两个孩子分别说一个想画的东西。先不要评价，只追问：在哪里？有什么？什么颜色？"),
-        step("story", "小故事", "小安的未来公园", "5分钟", "小安第一次对AI说：帮我画一个公园。AI画出普通公园，小安不满意。第二次，小安说：画一个未来公园，有机器人秋千、会发光的树、两个孩子在玩，颜色明亮。AI终于更接近他的想象。", "问孩子：第二次为什么更像小安脑袋里的画？", [], "讲故事时语速慢一点。重点不是记住故事，而是让孩子发现第二次多了“地点、主角、动作、细节”。"),
+        step("story", "小故事", "小安的未来公园", "5分钟", "小安想给妹妹做一张生日卡片。他第一次对AI说：帮我画一个公园。AI画出草地、长椅和太阳，虽然不难看，但和小安心里的画不一样。小安有点着急，觉得AI没有懂他。爸爸没有马上帮他说，而是问：这个公园在哪里？谁在里面？有什么特别的东西？小安想了想，说：这是一个未来公园，有机器人秋千、会发光的树、两个孩子在玩，天空里还有小小的飞行书包，颜色要明亮。第二次，AI画出来的画终于更像小安心里的生日卡片。", "问孩子：第二次为什么更像小安脑袋里的画？如果你是小安，还会加什么细节？", [], "讲故事时语速慢一点。重点不是记住故事，而是让孩子发现第二次多了“地点、主角、动作、细节”。"),
         step("rules", "核心知识", "画面描述四件套", "8分钟", "记住四个小按钮：地点、主角、动作、细节。孩子每说一个画面，都试着补齐这四个按钮。", "", ["地点：画面发生在哪里", "主角：里面有谁或什么", "动作：他们正在做什么", "细节：颜色、心情、风格、特别物品"], "可以拿家里的任意物品练习，比如“桌上的杯子”。让孩子把普通句子慢慢说丰富。"),
         quizStep("互动游戏", "哪一句更容易画出来", "6分钟", "请孩子选择更清楚的描述。", [
-          ["帮我画一个好玩的。", false, "太模糊了，AI不知道好玩在哪里。"],
-          ["帮我画一个海底城市，有透明房子、发光小鱼和潜水机器人。", true, "很好，有地点、主角和细节。"],
-          ["帮我画漂亮一点。", false, "漂亮是感觉，还需要说清楚画面里有什么。"]
+          ["帮我画一个好玩的。", false, "太模糊了，AI不知道好玩在哪里。可以追问：在哪里？谁在玩？玩什么？"],
+          ["帮我画一个海底城市，有透明房子、发光小鱼和潜水机器人。", true, "很好，有地点、主角和细节。孩子可以继续补颜色、心情和画面风格。"],
+          ["帮我画漂亮一点。", false, "漂亮是感觉，还需要说清楚画面里有什么。可以改成：颜色明亮、像动画片、适合生日卡片。"]
         ], "选完后不要马上跳过，问孩子：这句话多了哪些信息？"),
         builderStep("小任务", "两个孩子各设计一幅AI画", "5分钟", "孩子A设计“未来学校”，孩子B设计“机器人朋友”。爸爸只追问，不替孩子决定。", ["请你当儿童插画师", "画一个未来学校", "给7岁小朋友看", "颜色明亮，不要太复杂"], "把孩子说的话记录下来。最后让孩子自己选择一个最想保留的细节。"),
-        summaryStep("总结", "想象力先从自己脑袋里出来", "3分钟", "先想象，再描述，不满意就修改。", ["你今天脑袋里最清楚的一幅画是什么？", "你给AI说了哪些细节？", "如果结果不满意，你会怎么改？"], "最后提醒：AI可以帮忙画，但想象力要从自己脑袋里先出来。")
+        summaryStep("总结", "把今天的创作过程回放一遍", "3分钟", "先想象，再描述，不满意就修改。", ["今天我们先看了什么问题：AI不会读心，描述越清楚越接近想象。", "我们练了哪四个按钮：地点、主角、动作、细节。", "你今天最满意的一句描述是什么？它比一开始多了哪些信息？", "下次你想让AI画图时，准备先说哪三个细节？"], "最后提醒：AI可以帮忙画，但想象力要从自己脑袋里先出来。")
       ]
     },
     en: {
@@ -141,15 +141,15 @@ const lessonDetails = {
       steps: [
         step("cover", "Cover", "Clear imagination makes better AI pictures", "2 min", "Today we learn: imagine first, describe clearly, then improve.", "AI cannot read our minds. The clearer we describe, the closer the picture becomes.", ["Observe: what is in my mind?", "Describe: place, character, action, details", "Improve: say what to change"], "Ask: if I only say 'draw something', do you know what I want?"),
         step("talk", "Warm-up", "Can others understand 'draw one thing'?", "3 min", "Ask the children what information is missing when someone says only 'draw one thing'.", "We are not competing to press buttons. We are learning to express a picture clearly.", [], "Let each child name one picture idea. Ask follow-up questions slowly."),
-        step("story", "Story", "An's Future Park", "5 min", "An first says: draw a park. The result is ordinary. Then An says: a future park with robot swings, glowing trees, two children playing, bright colors. Now AI understands better.", "Ask: why is the second request clearer?", [], "Help children notice place, character, action, and detail."),
+        step("story", "Story", "An's Future Park", "5 min", "An wants to make a birthday card for his sister. First he asks AI to draw a park. The picture has grass, a bench, and the sun, but it is not the picture in his mind. Dad asks: where is the park, who is inside, and what is special? An adds: a future park with robot swings, glowing trees, two children playing, flying schoolbags, and bright colors. Now the picture feels much closer.", "Ask: why is the second request clearer? What detail would you add?", [], "Help children notice place, character, action, and detail."),
         step("rules", "Core Idea", "Four picture buttons", "8 min", "Use four buttons for every picture: place, character, action, details.", "", ["Place: where is it?", "Character: who or what is inside?", "Action: what are they doing?", "Details: color, mood, style, special objects"], "Practice with simple objects at home."),
         quizStep("Game", "Which sentence is easier to draw?", "6 min", "Choose the clearer description.", [
-          ["Draw something fun.", false, "Too vague. AI does not know what fun means here."],
-          ["Draw an underwater city with glass houses, glowing fish, and diving robots.", true, "Great. It has place, characters, and details."],
-          ["Make it beautiful.", false, "Beautiful is a feeling. We still need concrete details."]
+          ["Draw something fun.", false, "Too vague. Ask: where is it, who is playing, and what are they doing?"],
+          ["Draw an underwater city with glass houses, glowing fish, and diving robots.", true, "Great. It has place, characters, and details. You can still add color and mood."],
+          ["Make it beautiful.", false, "Beautiful is a feeling. Try: bright colors, cartoon style, for a birthday card."]
         ], "After choosing, ask what information made it clearer."),
         builderStep("Task", "Design one AI picture each", "5 min", "Child A designs a future school. Child B designs a robot friend. The parent only asks questions.", ["Act as a children's illustrator", "Draw a future school", "For a 7-year-old child", "Bright colors, not too complex"], "Write down the child's own words."),
-        summaryStep("Wrap-up", "Imagination begins in your own mind", "3 min", "Imagine, describe, improve.", ["What picture was clearest in your mind?", "What details did you give AI?", "What would you change next time?"], "Remind children: AI can help, but imagination starts with us.")
+        summaryStep("Wrap-up", "Replay today's creative process", "3 min", "Imagine, describe, improve.", ["What did we learn first? AI cannot read our minds.", "Which four buttons did we practice? Place, character, action, details.", "What was your clearest sentence today?", "Next time you ask AI to draw, what three details will you say first?"], "Remind children: AI can help, but imagination starts with us.")
       ]
     }
   },
@@ -163,15 +163,15 @@ const lessonDetails = {
       steps: [
         step("cover", "课程封面", "会用AI，也要会怀疑", "2分钟", "今天孩子要学会：AI会帮忙，但AI也可能说错。", "这一课训练孩子的判断力。不是让孩子害怕AI，而是让孩子看到答案之后，会停一下、想一下、查一下。", ["AI不是万能老师", "答案要看是否合理", "重要问题要问大人或查资料"], "先讲清楚：怀疑不是不礼貌，而是保护自己。"),
         step("talk", "开场引入", "聪明人不是全都相信", "3分钟", "爸爸可以问：如果一个同学很聪明，他说的话就一定都对吗？如果一个机器人回答很快，它说的话就一定是真的吗？", "真正会用AI的小朋友，不是只会问，还会检查。", [], "用轻松语气讲，不要把AI讲成危险怪物。"),
-        step("story", "小故事", "小乐和会说错的百科机器人", "5分钟", "小乐问AI：企鹅会不会飞？AI答对了。小乐又问：所有鸟都会飞吗？AI说都会。小乐觉得奇怪，因为他知道企鹅和鸵鸟都不会飞。爸爸告诉他：AI有时会把话说得很像真的，所以我们要当小侦探。", "问孩子：小乐为什么没有马上相信AI？", [], "强调小乐不是比AI更厉害，而是他愿意检查。"),
+        step("story", "小故事", "小乐和会说错的百科机器人", "5分钟", "小乐正在做动物小报。他问AI：企鹅会不会飞？AI答对了，说企鹅不会飞。小乐又问：所有鸟都会飞吗？AI很快回答：都会。小乐停了一下，因为他想起在动物园见过鸵鸟，也知道企鹅不会飞。他没有马上把答案写进小报，而是去翻书，又问了爸爸。爸爸告诉他：AI有时会把话说得很像真的，但聪明的小朋友不会急着照抄，会先停一下、想一下、查一下。", "问孩子：小乐为什么没有马上相信AI？如果你要写进作业，应该怎么确认？", [], "强调小乐不是比AI更厉害，而是他愿意检查。"),
         step("rules", "核心知识", "真假侦探三步法", "8分钟", "遇到AI答案，先做三件事。", "", ["停一下：不要马上照做", "想一下：这句话和我知道的事情冲突吗", "查一下：问大人、看书、看可靠资料"], "把三步法配动作：停手、摸头、找家长。"),
         quizStep("互动游戏", "这句话要不要再查一查", "6分钟", "请孩子判断哪句话最需要再查。", [
-          ["太阳从东方升起。", false, "这是常识，通常不用特别查。"],
-          ["明天学校一定停课。", true, "这种会影响行动的信息，一定要问老师或家长确认。"],
-          ["苹果是一种水果。", false, "这是常见事实，可以先接受。"]
+          ["太阳从东方升起。", false, "这是常识，通常不用特别查。可以问孩子：你在生活中见过吗？"],
+          ["明天学校一定停课。", true, "这种会影响行动的信息，一定要问老师或家长确认，不能只听AI一句话。"],
+          ["苹果是一种水果。", false, "这是常见事实，可以先接受。如果是写正式作业，也可以查书确认。"]
         ], "问孩子：为什么“停课”这种话不能只信AI？"),
         flipStep("互动翻卡", "哪些问题不能只问AI", "5分钟", ["身体不舒服怎么办", "家里地址能不能告诉别人", "作业答案是什么", "今天穿什么颜色"], "每翻一张卡，都让孩子说：这个问题为什么要问大人？"),
-        summaryStep("总结", "AI答案要过脑子", "3分钟", "先停一下，再想一下，重要事情查一下。", ["AI可能在哪些地方说错？", "什么问题一定要问爸爸妈妈？", "今天你像侦探一样发现了什么？"], "结尾不要说AI不可信，而是说：重要事情要多确认。")
+        summaryStep("总结", "把今天的小侦探过程回放一遍", "3分钟", "先停一下，再想一下，重要事情查一下。", ["今天我们先发现：AI回答很快，但不代表一定正确。", "我们练了哪三步：停一下、想一下、查一下。", "哪些问题不能只问AI：身体、安全、隐私、学校通知、重要决定。", "下次你看到一个很像真的答案时，准备怎么确认？"], "结尾不要说AI不可信，而是说：重要事情要多确认。")
       ]
     },
     en: {
@@ -182,15 +182,15 @@ const lessonDetails = {
       steps: [
         step("cover", "Cover", "Use AI, but still think", "2 min", "Today we learn: AI can help, but AI can also be wrong.", "We learn to pause, think, and check.", ["AI is not a perfect teacher", "Answers should make sense", "Important things need reliable checking"], "Explain that checking is a smart habit."),
         step("talk", "Warm-up", "Smart people can still be wrong", "3 min", "Ask: if a smart friend says something, is it always true? If a robot answers fast, is it always correct?", "Good AI users ask and check.", [], "Keep the tone calm and friendly."),
-        step("story", "Story", "Le and the mistaken robot", "5 min", "Le asks if penguins can fly. AI answers correctly. Then AI says all birds can fly. Le feels something is wrong because penguins and ostriches cannot fly.", "Ask: why did Le not believe it immediately?", [], "Highlight the habit of checking."),
+        step("story", "Story", "Le and the mistaken robot", "5 min", "Le is making an animal poster. AI says penguins cannot fly. Then AI says all birds can fly. Le pauses because he remembers ostriches and penguins. He checks a book and asks Dad before writing it down. Dad says: AI can sound confident, so smart children pause, think, and check.", "Ask: why did Le not believe it immediately? How should he confirm it for homework?", [], "Highlight the habit of checking."),
         step("rules", "Core Idea", "Three detective steps", "8 min", "Use three steps when AI gives an answer.", "", ["Pause: do not act immediately", "Think: does this conflict with what I know?", "Check: ask adults, books, or reliable sources"], "Pair each step with a body action."),
         quizStep("Game", "Which sentence needs checking?", "6 min", "Choose the sentence that needs checking most.", [
-          ["The sun rises in the east.", false, "This is common knowledge."],
-          ["School will definitely be closed tomorrow.", true, "This affects action, so we must confirm it."],
-          ["An apple is a fruit.", false, "This is a common fact."]
+          ["The sun rises in the east.", false, "This is common knowledge. Ask: have you seen this in real life?"],
+          ["School will definitely be closed tomorrow.", true, "This affects action, so we must confirm it with teachers or parents."],
+          ["An apple is a fruit.", false, "This is a common fact. For formal homework, a book can confirm it."]
         ], "Ask why school closure needs confirmation."),
         flipStep("Flip Cards", "Questions AI should not answer alone", "5 min", ["What if I feel sick?", "Can I share my address?", "What is my homework answer?", "What color should I wear today?"], "Ask why each card may need an adult."),
-        summaryStep("Wrap-up", "AI answers need thinking", "3 min", "Pause, think, and check important things.", ["Where can AI be wrong?", "What must we ask parents about?", "What did you discover as a detective?"], "Say: important things need confirmation.")
+        summaryStep("Wrap-up", "Replay today's detective process", "3 min", "Pause, think, and check important things.", ["What did we discover first? Fast answers are not always correct.", "What three steps did we practice? Pause, think, check.", "What topics should not rely on AI alone? Health, safety, privacy, school notices, important choices.", "What will you do next time an answer sounds very confident?"], "Say: important things need confirmation.")
       ]
     }
   },
@@ -204,15 +204,15 @@ const lessonDetails = {
       steps: [
         step("cover", "课程封面", "AI可以帮忙，主意要从孩子开始", "2分钟", "今天孩子要学会：用角色、地点、麻烦、结尾做一个故事。", "AI可以帮我们把故事讲长，但故事的第一个火花要从孩子自己开始。", ["角色：故事里有谁", "地点：发生在哪里", "麻烦：遇到什么问题", "结尾：希望怎样结束"], "先告诉孩子：你是导演，AI是助手。"),
         step("talk", "开场引入", "一个好故事要有一点麻烦", "3分钟", "爸爸可以问：如果故事里什么都没发生，会不会无聊？一个好故事通常有主角、有地方、有麻烦，还有解决办法。", "AI可以帮我们把故事讲长，但第一个火花要由我们点亮。", [], "让孩子举一个最喜欢的动画，找出里面的“麻烦”。"),
-        step("story", "小故事", "小米和迷路的月亮车", "5分钟", "小米想讲故事，只说：讲一个故事。AI讲得很普通。后来小米说：主角是一辆胆小的月亮车，它在月球迷路了，遇到一只会唱歌的小机器人，最后一起找到回家的路。故事一下子有趣起来。", "问孩子：小米第二次给了哪几个重要线索？", [], "听孩子回答时，把角色、地点、麻烦、结尾写下来。"),
+        step("story", "小故事", "小米和迷路的月亮车", "5分钟", "小米想给弟弟讲睡前故事。她第一次对AI说：讲一个故事。AI讲了一个很普通的小动物故事，小米觉得不像自己的想法。爸爸问她：主角是谁？发生在哪里？遇到了什么麻烦？最后希望怎么样？小米说：主角是一辆胆小的月亮车，它在月球迷路了，遇到一只会唱歌的小机器人，最后它们跟着星星的声音找到回家的路。AI再帮她整理时，故事一下子有了画面、麻烦和温暖的结尾。", "问孩子：小米第二次给了哪几个重要线索？你想给这个故事加一个什么角色？", [], "听孩子回答时，把角色、地点、麻烦、结尾写下来。"),
         step("rules", "核心知识", "故事四块积木", "8分钟", "拼故事不用一开始就很厉害，先拼四块积木。", "", ["主角：谁在故事里", "地点：故事发生在哪里", "麻烦：主角遇到什么问题", "结尾：最后变好、变有趣或学会什么"], "用积木比喻，不要讲文学术语。"),
         quizStep("互动游戏", "哪个故事更完整", "6分钟", "请孩子选择更像完整故事开头的一句。", [
-          ["有一只小猫。", false, "只有主角，还缺地点和麻烦。"],
-          ["一只小猫在图书馆迷路了，它要找到会发光的出口。", true, "很好，有主角、地点和麻烦。"],
-          ["讲一个很有趣的故事。", false, "这只是要求，还没有故事材料。"]
+          ["有一只小猫。", false, "只有主角，还缺地点和麻烦。可以追问：它在哪里？遇到了什么？"],
+          ["一只小猫在图书馆迷路了，它要找到会发光的出口。", true, "很好，有主角、地点和麻烦。接下来可以补朋友、选择和结尾。"],
+          ["讲一个很有趣的故事。", false, "这只是要求，还没有故事材料。AI不知道什么对你来说有趣。"]
         ], "选对后，请孩子把这句话继续往下讲一句。"),
         builderStep("故事拼图", "拼出你的故事指令", "5分钟", "让两个孩子各选一个主角，再补地点、麻烦和结尾。", ["主角是一只小恐龙", "地点在未来图书馆", "麻烦是找不到回家的门", "结尾要开心又有点好笑"], "如果两个孩子抢答案，让他们轮流负责一块积木。"),
-        summaryStep("总结", "你是故事导演，AI是故事助手", "3分钟", "角色、地点、麻烦、结尾，故事马上活起来。", ["你今天的故事主角是谁？", "它遇到了什么麻烦？", "如果让AI帮你改，你想改哪里？"], "结尾强调：主意来自孩子，AI只是帮忙整理。")
+        summaryStep("总结", "把今天的故事工厂回放一遍", "3分钟", "角色、地点、麻烦、结尾，故事马上活起来。", ["今天我们先发现：只说“讲个故事”太模糊。", "我们练了哪四块积木：角色、地点、麻烦、结尾。", "你的故事里最有趣的麻烦是什么？它最后怎么解决？", "下次你想和AI讲故事时，准备先给它哪四个线索？"], "结尾强调：主意来自孩子，AI只是帮忙整理。")
       ]
     },
     en: {
@@ -223,15 +223,15 @@ const lessonDetails = {
       steps: [
         step("cover", "Cover", "AI can help, but ideas start with children", "2 min", "Today we learn to build stories with character, place, problem, and ending.", "AI can make the story longer, but the first spark comes from the child.", ["Character: who is in the story?", "Place: where does it happen?", "Problem: what goes wrong?", "Ending: how does it end?"], "Tell children: you are the director; AI is the helper."),
         step("talk", "Warm-up", "A good story needs a small problem", "3 min", "Ask: if nothing happens in a story, is it interesting?", "AI can help us expand, but we light the first spark.", [], "Use a favorite cartoon to find the problem in the story."),
-        step("story", "Story", "Mimi and the lost moon car", "5 min", "Mimi first says: tell a story. The story is plain. Then Mimi gives a shy moon car, the moon, getting lost, a singing robot, and a happy way home. Now the story becomes interesting.", "Ask: what clues did Mimi give?", [], "Write down character, place, problem, ending."),
+        step("story", "Story", "Mimi and the lost moon car", "5 min", "Mimi wants a bedtime story for her little brother. First she says: tell a story. It is plain. Dad asks: who is the main character, where are they, what problem happens, and how should it end? Mimi adds a shy moon car, the moon, getting lost, a singing robot, and a warm way home by following the sound of stars. Now the story has pictures, a problem, and a soft ending.", "Ask: what clues did Mimi give? What new character would you add?", [], "Write down character, place, problem, ending."),
         step("rules", "Core Idea", "Four story blocks", "8 min", "Build a story with four blocks.", "", ["Character", "Place", "Problem", "Ending"], "Use building blocks as the metaphor."),
         quizStep("Game", "Which beginning is more complete?", "6 min", "Choose the stronger story beginning.", [
-          ["There is a cat.", false, "Only a character. We need place and problem."],
-          ["A cat gets lost in a library and must find the glowing exit.", true, "Great. It has character, place, and problem."],
-          ["Tell a very interesting story.", false, "This is a request, not story material."]
+          ["There is a cat.", false, "Only a character. Ask: where is it, and what problem happens?"],
+          ["A cat gets lost in a library and must find the glowing exit.", true, "Great. It has character, place, and problem. Next add a friend, a choice, and an ending."],
+          ["Tell a very interesting story.", false, "This is a request, not story material. AI does not know what is interesting to you yet."]
         ], "Ask the child to continue the chosen sentence."),
         builderStep("Story Puzzle", "Build your story prompt", "5 min", "Each child chooses a character, then adds place, problem, and ending.", ["The main character is a little dinosaur", "The place is a future library", "The problem is finding the way home", "The ending is happy and funny"], "Let children take turns choosing blocks."),
-        summaryStep("Wrap-up", "You are the director. AI is the helper.", "3 min", "Character, place, problem, ending: the story comes alive.", ["Who is your main character?", "What problem did they meet?", "What would you ask AI to improve?"], "Remind: the idea comes from the child.")
+        summaryStep("Wrap-up", "Replay today's story factory", "3 min", "Character, place, problem, ending: the story comes alive.", ["What did we discover first? 'Tell a story' is too vague.", "What four blocks did we practice? Character, place, problem, ending.", "What was the most interesting problem in your story?", "Next time you create a story with AI, what four clues will you give first?"], "Remind: the idea comes from the child.")
       ]
     }
   }
@@ -423,25 +423,27 @@ function playSfx(kind) {
 
 function startMusic() {
   const ctx = getAudioContext();
-  const notes = [392, 523, 587, 659, 587, 523, 440, 392];
-  let index = 0;
+  const scale = [261.63, 293.66, 329.63, 392, 440, 493.88, 523.25, 587.33, 659.25];
   stopMusic();
-  // Gentle nature-style arpeggio inspired by light instrumental music, not a copyrighted recording.
+  // Self-generated royalty-free ambient music: slow, airy, and lightly randomized instead of a repeated melody.
   musicTimer = setInterval(() => {
     if (!musicEnabled) return;
-    const oscillator = ctx.createOscillator();
-    const gain = ctx.createGain();
-    oscillator.type = "sine";
-    oscillator.frequency.value = notes[index % notes.length];
-    gain.gain.setValueAtTime(0, ctx.currentTime);
-    gain.gain.linearRampToValueAtTime(0.014, ctx.currentTime + 0.08);
-    gain.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + 0.95);
-    oscillator.connect(gain);
-    gain.connect(ctx.destination);
-    oscillator.start();
-    oscillator.stop(ctx.currentTime + 1);
-    index += 1;
-  }, 780);
+    const root = scale[Math.floor(Math.random() * 5)];
+    const chord = [root, root * 1.25, root * 1.5].map((note) => note * (Math.random() > 0.75 ? 2 : 1));
+    chord.forEach((frequency, i) => {
+      const oscillator = ctx.createOscillator();
+      const gain = ctx.createGain();
+      oscillator.type = i === 0 ? "sine" : "triangle";
+      oscillator.frequency.value = frequency;
+      gain.gain.setValueAtTime(0, ctx.currentTime);
+      gain.gain.linearRampToValueAtTime(0.008 / (i + 1), ctx.currentTime + 0.35 + i * 0.08);
+      gain.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + 3.8 + Math.random() * 1.4);
+      oscillator.connect(gain);
+      gain.connect(ctx.destination);
+      oscillator.start(ctx.currentTime + i * 0.06);
+      oscillator.stop(ctx.currentTime + 5.3);
+    });
+  }, 4200);
 }
 
 function stopMusic() {
@@ -498,7 +500,7 @@ function renderLesson() {
   stepTitle.textContent = stepData.title;
   stepCounter.textContent = `${currentStepIndex + 1} / ${lesson.steps.length}`;
   lectureTitle.textContent = currentStepIndex === 0 ? tr("notesTitle") : stepData.label;
-  lectureBody.textContent = currentStepIndex === 0 ? lesson.prep : stepData.guide;
+  lectureBody.textContent = buildLectureText(lesson, stepData);
 
   stepNav.innerHTML = lesson.steps.map((item, index) => `
     <button class="step-button ${index === currentStepIndex ? "active" : ""}" data-step="${index}">
@@ -508,6 +510,41 @@ function renderLesson() {
 
   stepPanel.innerHTML = renderStep(stepData, lessonDetails[currentLessonId].illustration, lesson);
   bindStepInteractions();
+}
+
+function buildLectureText(lesson, stepData) {
+  const zh = languageMode === "zh";
+  const opening = currentStepIndex === 0 ? lesson.prep : stepData.guide;
+  const typeHelp = {
+    cover: zh
+      ? "讲法：先让孩子看画面，不急着解释概念。请孩子用自己的话说今天可能要学什么，再把课程目标说出来。"
+      : "How to teach: let children look at the picture first. Ask what they think today's lesson is about, then state the goal.",
+    talk: zh
+      ? "讲法：用生活问题引入，尽量问孩子经历过的场景。不要直接给定义，用追问让孩子自己发现问题。"
+      : "How to teach: start from daily life. Ask about situations children know. Avoid definitions; use questions.",
+    story: zh
+      ? "讲法：故事要讲出起因、遇到的问题、孩子做出的选择、结果。讲完后不要急着总结，先让孩子复述一遍。"
+      : "How to teach: tell the beginning, problem, choice, and result. After the story, let the child retell it first.",
+    rules: zh
+      ? "讲法：每讲一个规则，就让孩子举一个自己的例子。规则不用背，能用出来更重要。"
+      : "How to teach: after each rule, ask the child for their own example. Using rules matters more than memorizing them.",
+    quiz: zh
+      ? "讲法：孩子选完后，一定问“为什么”。答错时不要说错了，而是让孩子找缺了什么信息。"
+      : "How to teach: after the child chooses, ask why. If wrong, ask what information is missing.",
+    builder: zh
+      ? "讲法：这是孩子输出的环节。家长只做记录员和提问者，不要抢着帮孩子组织漂亮答案。"
+      : "How to teach: this is the child's output stage. The parent records and asks, but does not take over.",
+    flip: zh
+      ? "讲法：翻卡片时让孩子先判断，再补充原因。重点是建立边界，不是吓唬孩子。"
+      : "How to teach: let the child judge first, then explain why. Build boundaries without creating fear.",
+    summary: zh
+      ? "讲法：带孩子按顺序回顾“我看到什么、我做了什么、我学会什么、下次怎么用”。让孩子说完整句。"
+      : "How to teach: review in order: what I saw, what I did, what I learned, and how I can use it next time."
+  }[stepData.type];
+  const close = zh
+    ? "收束：这一页结束前，让孩子说一句自己的理解。家长可以帮他补完整，但不要替他说。"
+    : "Wrap-up: before leaving this page, ask the child to say one sentence in their own words. Help complete it, but do not speak for them.";
+  return [opening, typeHelp, close].filter(Boolean).join("\n\n");
 }
 
 function tipsMarkup(lesson) {
@@ -620,12 +657,11 @@ function renderStep(stepData, illustrationType, lesson) {
       <div class="teacher-card">
         <span class="time-tag">${stepData.minutes}</span>
         <p class="big-line">${stepData.chant}</p>
-        <div class="quote-box">${languageMode === "zh" ? "思美奇主理人 Jerry Fu：愿我们和孩子一起学习新工具，也一起保留人的判断、温度和创造力。" : "Jerry Fu, SIMARS Curator: May we learn new tools with our children while keeping human judgment, warmth, and creativity."}</div>
+        <div class="quote-box">${languageMode === "zh" ? "家长引导：请孩子用自己的话讲一遍今天从开始到结束做了什么。重点不是背答案，而是说出过程、方法和下次怎么用。" : "Parent guide: ask the child to explain the whole lesson in their own words. Focus on process, method, and how to use it next time."}</div>
       </div>
       <div class="teacher-card">
-        <h3>${languageMode === "zh" ? "复盘问题" : "Reflection Questions"}</h3>
+        <h3>${languageMode === "zh" ? "完整复盘" : "Full Reflection"}</h3>
         <div class="teacher-grid">${stepData.recap.map((item, index) => `<div><strong>${index + 1}</strong><span>${item}</span></div>`).join("")}</div>
-        <div class="qr-card inline-qr"><div class="qr-placeholder"><span></span><span></span><span></span><span></span><b>${tr("qrText")}</b></div><strong>${tr("followQr")}</strong><p>${tr("qrFooter")}</p></div>
       </div>
     </div>
     ${tips}
