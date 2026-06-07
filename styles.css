@@ -5,10 +5,10 @@
   --paper: #fffaf0;
   --panel: #ffffff;
   --line: #dfe5df;
-  --teal: #3f8f88;
-  --coral: #e96f51;
-  --yellow: #f2c84b;
-  --blue: #7fa7e8;
+  --teal: #119fe3;
+  --coral: #ee334e;
+  --yellow: #ffd447;
+  --blue: #148ee7;
   --green: #a8d3a0;
   --violet: #9a8be3;
   --cyber: #65f3ff;
@@ -32,7 +32,7 @@ body {
   background:
     linear-gradient(rgba(101, 243, 255, 0.08) 1px, transparent 1px),
     linear-gradient(90deg, rgba(101, 243, 255, 0.08) 1px, transparent 1px),
-    linear-gradient(135deg, #fff7e7 0%, #e8f5ee 44%, #edf3ff 100%);
+    linear-gradient(135deg, #f7fcff 0%, #eaf7ff 44%, #fff7df 100%);
   background-size: 42px 42px, 42px 42px, auto;
 }
 
@@ -90,7 +90,7 @@ button {
   color: #ffffff;
   background:
     radial-gradient(circle at 82% 18%, var(--cyber), transparent 24%),
-    linear-gradient(135deg, var(--ink), #335a66 58%, #3f8f88);
+    linear-gradient(135deg, #0b67b2, #119fe3 58%, #ffffff);
   box-shadow: 0 10px 24px rgba(63, 143, 136, 0.24);
 }
 
@@ -256,7 +256,7 @@ span {
 
 .primary-action {
   color: #ffffff;
-  background: var(--ink);
+  background: linear-gradient(135deg, #0b67b2, var(--teal));
   box-shadow: var(--shadow);
 }
 
@@ -456,7 +456,7 @@ span {
   height: 44px;
   border-radius: 50%;
   color: #ffffff;
-  background: var(--teal);
+  background: linear-gradient(135deg, #0b67b2, var(--teal));
   font-weight: 900;
 }
 
@@ -595,7 +595,7 @@ span {
 
 .step-button.active span {
   color: #ffffff;
-  background: var(--teal);
+  background: linear-gradient(135deg, #0b67b2, var(--teal));
 }
 
 .lesson-stage {
@@ -610,6 +610,14 @@ span {
   justify-content: space-between;
   gap: 18px;
   margin-bottom: 18px;
+}
+
+.topbar-actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 12px;
+  flex-wrap: wrap;
 }
 
 .lesson-topbar h1 {
@@ -633,6 +641,38 @@ span {
   min-height: 560px;
 }
 
+.lecture-panel {
+  margin: 0 0 18px;
+  padding: 16px 18px;
+  border: 1px solid rgba(17, 159, 227, 0.22);
+  border-left: 7px solid var(--blue);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.84);
+  box-shadow: 0 10px 26px rgba(31, 45, 53, 0.08);
+  transition: max-height 220ms ease, margin 220ms ease, padding 220ms ease, border-width 220ms ease;
+}
+
+.lecture-panel strong {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 18px;
+}
+
+.lecture-panel p {
+  margin-bottom: 0;
+  color: #40505a;
+  font-size: 16px;
+}
+
+.lecture-panel.collapsed {
+  max-height: 0;
+  margin: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+  overflow: hidden;
+  border-width: 0;
+}
+
 .panel-grid,
 .story-grid,
 .rules-grid,
@@ -640,7 +680,7 @@ span {
 .task-grid,
 .summary-grid {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(330px, 0.88fr);
+  grid-template-columns: minmax(0, 0.92fr) minmax(380px, 1.08fr);
   gap: 24px;
   align-items: stretch;
 }
@@ -683,7 +723,7 @@ span {
 
 .visual-card,
 .story-visual {
-  min-height: 430px;
+  min-height: 500px;
   align-content: center;
   gap: 16px;
 }
@@ -693,9 +733,37 @@ span {
 }
 
 .big-line {
-  font-size: clamp(30px, 4.2vw, 52px);
+  font-size: clamp(28px, 3.7vw, 48px);
   line-height: 1.15;
   font-weight: 900;
+}
+
+.child-card p,
+.child-card li {
+  font-size: 22px;
+}
+
+.page-tips {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-top: 14px;
+  padding: 10px 14px;
+  border: 1px solid rgba(31, 45, 53, 0.09);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.76);
+  color: var(--muted);
+}
+
+.page-tips strong {
+  flex: 0 0 auto;
+  color: var(--ink);
+  font-size: 14px;
+}
+
+.page-tips span {
+  font-size: 14px;
+  line-height: 1.45;
 }
 
 .time-tag {
@@ -778,7 +846,7 @@ span {
   justify-content: center;
   min-height: 360px;
   color: #ffffff;
-  background: var(--ink);
+  background: linear-gradient(135deg, #17324a, #0b67b2);
 }
 
 .feedback-card span {
@@ -806,7 +874,7 @@ span {
 
 .flip-card.revealed {
   color: #ffffff;
-  background: var(--teal);
+  background: linear-gradient(135deg, #0b67b2, var(--teal));
   animation: flipPulse 260ms ease;
 }
 

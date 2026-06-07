@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>AI未来家长学校互动课</title>
-    <link rel="stylesheet" href="./styles.css?v=simars-polish-20260607" />
+    <link rel="stylesheet" href="./styles.css?v=parent-console-20260607" />
   </head>
   <body>
     <main class="site-shell">
@@ -142,8 +142,17 @@
               <p class="eyebrow" id="lessonKicker">30分钟家庭课</p>
               <h1 id="stepTitle">步骤标题</h1>
             </div>
-            <div class="timer-pill" id="stepCounter">1 / 7</div>
+            <div class="topbar-actions">
+              <button class="sound-toggle" id="lectureToggle" aria-pressed="true">收起讲义</button>
+              <div class="timer-pill" id="stepCounter">1 / 7</div>
+            </div>
           </header>
+          <aside class="lecture-panel" id="lecturePanel">
+            <div>
+              <strong id="lectureTitle">课前家长讲义</strong>
+              <p id="lectureBody">这里放家长讲课提示。</p>
+            </div>
+          </aside>
           <article class="step-panel" id="stepPanel"></article>
           <footer class="lesson-controls">
             <button class="icon-button" id="prevStep" aria-label="上一步">
@@ -157,6 +166,6 @@
       </section>
     </main>
 
-    <script src="./app.js?v=simars-polish-20260607"></script>
+    <script src="./app.js?v=parent-console-20260607"></script>
   </body>
 </html>
