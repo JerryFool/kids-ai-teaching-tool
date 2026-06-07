@@ -14,6 +14,7 @@
   --cyber: #65f3ff;
   --pink: #ff8fc7;
   --shadow: 0 18px 48px rgba(31, 45, 53, 0.13);
+  --deep-shadow: 0 28px 70px rgba(11, 103, 178, 0.18);
 }
 
 * {
@@ -206,7 +207,7 @@ h3 {
 p,
 li,
 span {
-  font-size: 18px;
+  font-size: 17px;
   line-height: 1.55;
 }
 
@@ -280,7 +281,7 @@ span {
 
 .hero-visual {
   min-height: 420px;
-  padding: 22px;
+  padding: 0;
   position: relative;
   overflow: hidden;
 }
@@ -307,6 +308,216 @@ span {
 .story-visual svg {
   width: 100%;
   max-height: 100%;
+}
+
+.hero-classroom {
+  min-height: 460px;
+  isolation: isolate;
+  background:
+    radial-gradient(circle at 78% 18%, rgba(255, 212, 71, 0.42), transparent 18%),
+    linear-gradient(135deg, #f7fdff 0%, #dff5ff 52%, #fff4c9 100%);
+}
+
+.sky-grid,
+.scene-grid {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(rgba(17, 159, 227, 0.16) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(17, 159, 227, 0.16) 1px, transparent 1px);
+  background-size: 34px 34px;
+  mask-image: linear-gradient(to bottom, #000, transparent 86%);
+}
+
+.sun-chip,
+.scene-sun {
+  position: absolute;
+  right: 42px;
+  top: 40px;
+  width: 68px;
+  height: 68px;
+  border-radius: 50%;
+  background: var(--yellow);
+  box-shadow: 0 0 42px rgba(255, 212, 71, 0.72);
+  animation: glowPulse 3s ease-in-out infinite;
+}
+
+.school-window {
+  position: absolute;
+  left: 54px;
+  top: 50px;
+  width: 300px;
+  height: 170px;
+  border: 7px solid var(--ink);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.78);
+  box-shadow: inset 0 0 0 2px rgba(101, 243, 255, 0.42), var(--deep-shadow);
+}
+
+.school-window span {
+  position: absolute;
+  left: 32px;
+  bottom: 30px;
+  width: 64px;
+  height: 78px;
+  border-radius: 18px 18px 8px 8px;
+  background: #119fe3;
+  border: 5px solid var(--ink);
+}
+
+.school-window span:nth-child(2) {
+  left: 118px;
+  height: 108px;
+  background: #ffffff;
+}
+
+.school-window span:nth-child(3) {
+  left: 204px;
+  height: 88px;
+  background: #ffd447;
+}
+
+.teacher-robot,
+.robot-teacher {
+  position: absolute;
+  width: 120px;
+  height: 138px;
+  border: 7px solid var(--ink);
+  border-radius: 34px 34px 22px 22px;
+  background:
+    linear-gradient(135deg, #ffffff 0%, #e4f9ff 55%, #119fe3 100%);
+  box-shadow: 0 18px 42px rgba(11, 103, 178, 0.22);
+  animation: floatBot 2.8s ease-in-out infinite;
+}
+
+.teacher-robot {
+  right: 108px;
+  bottom: 128px;
+}
+
+.robot-eye,
+.eye {
+  position: absolute;
+  top: 42px;
+  width: 17px;
+  height: 17px;
+  border-radius: 50%;
+  background: var(--ink);
+  box-shadow: 0 0 12px rgba(101, 243, 255, 0.9);
+}
+
+.robot-eye.left,
+.eye.left { left: 33px; }
+.robot-eye.right,
+.eye.right { right: 33px; }
+
+.robot-smile,
+.mouth {
+  position: absolute;
+  left: 36px;
+  bottom: 38px;
+  width: 48px;
+  height: 22px;
+  border-bottom: 7px solid var(--ink);
+  border-radius: 0 0 40px 40px;
+}
+
+.kid,
+.student {
+  position: absolute;
+  width: 82px;
+  height: 82px;
+  border: 6px solid var(--ink);
+  border-radius: 50%;
+  background: #ffffff;
+  box-shadow: 0 16px 26px rgba(31, 45, 53, 0.12);
+}
+
+.kid::before,
+.student::before {
+  content: "";
+  position: absolute;
+  left: 22px;
+  top: 28px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--ink);
+  box-shadow: 28px 0 0 var(--ink);
+}
+
+.kid::after,
+.student::after {
+  content: "";
+  position: absolute;
+  left: 22px;
+  top: 48px;
+  width: 38px;
+  height: 18px;
+  border-bottom: 5px solid var(--ink);
+  border-radius: 0 0 28px 28px;
+}
+
+.kid-a {
+  left: 124px;
+  bottom: 66px;
+  background: #fff8e3;
+}
+
+.kid-b {
+  left: 232px;
+  bottom: 58px;
+  background: #eaf8ff;
+}
+
+.holo-board {
+  position: absolute;
+  right: 42px;
+  bottom: 34px;
+  width: 252px;
+  padding: 18px;
+  border: 2px solid rgba(101, 243, 255, 0.86);
+  border-radius: 8px;
+  color: #ffffff;
+  background: rgba(31, 45, 53, 0.86);
+  box-shadow: 0 0 34px rgba(101, 243, 255, 0.28);
+}
+
+.holo-board strong,
+.holo-board span {
+  display: block;
+}
+
+.holo-board strong {
+  font-size: 22px;
+}
+
+.holo-board span {
+  color: var(--cyber);
+  font-size: 14px;
+}
+
+.floating-card {
+  position: absolute;
+  min-width: 112px;
+  padding: 10px 14px;
+  border: 3px solid var(--ink);
+  border-radius: 8px;
+  background: #ffffff;
+  font-weight: 900;
+  box-shadow: 0 14px 26px rgba(31, 45, 53, 0.12);
+  animation: floatCard 3.4s ease-in-out infinite;
+}
+
+.card-place {
+  left: 54px;
+  bottom: 54px;
+}
+
+.card-action {
+  right: 222px;
+  top: 72px;
+  animation-delay: 0.7s;
 }
 
 .status-band {
@@ -497,7 +708,7 @@ span {
 
 .lesson-view {
   display: grid;
-  grid-template-columns: 244px minmax(0, 1fr);
+  grid-template-columns: 232px minmax(0, 1fr);
   min-height: 100vh;
 }
 
@@ -572,8 +783,8 @@ span {
   align-items: center;
   gap: 9px;
   width: 100%;
-  min-height: 48px;
-  padding: 8px 10px;
+  min-height: 54px;
+  padding: 9px 10px;
   border: 1px solid transparent;
   border-radius: 8px;
   background: transparent;
@@ -609,7 +820,7 @@ span {
 .lesson-stage {
   position: relative;
   min-width: 0;
-  padding: 26px 30px 92px;
+  padding: 24px 28px 104px;
 }
 
 .lesson-topbar {
@@ -645,13 +856,30 @@ span {
   font-weight: 900;
 }
 
+.progress-track {
+  height: 10px;
+  margin: -6px 0 16px;
+  overflow: hidden;
+  border-radius: 999px;
+  background: rgba(31, 45, 53, 0.08);
+}
+
+.progress-track span {
+  display: block;
+  width: 0;
+  height: 100%;
+  border-radius: inherit;
+  background: linear-gradient(90deg, var(--blue), var(--cyber), var(--yellow));
+  transition: width 260ms ease;
+}
+
 .step-panel {
   min-height: 560px;
 }
 
 .lecture-panel {
   margin: 0 0 18px;
-  padding: 16px 18px;
+  padding: 14px 16px;
   border: 1px solid rgba(17, 159, 227, 0.22);
   border-left: 7px solid var(--blue);
   border-radius: 8px;
@@ -663,13 +891,13 @@ span {
 .lecture-panel strong {
   display: block;
   margin-bottom: 6px;
-  font-size: 18px;
+  font-size: 17px;
 }
 
 .lecture-panel p {
   margin-bottom: 0;
   color: #40505a;
-  font-size: 16px;
+  font-size: 15px;
 }
 
 .lecture-panel.collapsed {
@@ -688,8 +916,8 @@ span {
 .task-grid,
 .summary-grid {
   display: grid;
-  grid-template-columns: minmax(0, 0.92fr) minmax(380px, 1.08fr);
-  gap: 24px;
+  grid-template-columns: minmax(0, 0.9fr) minmax(420px, 1.1fr);
+  gap: 22px;
   align-items: stretch;
 }
 
@@ -699,7 +927,7 @@ span {
 .game-card,
 .teacher-card,
 .task-card {
-  padding: 28px;
+  padding: 24px;
   border: 1px solid rgba(31, 45, 53, 0.1);
   border-radius: 8px;
   background: rgba(255, 255, 255, 0.84);
@@ -731,13 +959,9 @@ span {
 
 .visual-card,
 .story-visual {
-  min-height: 500px;
+  min-height: 520px;
   align-content: center;
   gap: 16px;
-}
-
-.visual-card svg {
-  animation: softFloat 5.8s ease-in-out infinite;
 }
 
 .story-visual svg {
@@ -745,14 +969,14 @@ span {
 }
 
 .big-line {
-  font-size: clamp(28px, 3.7vw, 48px);
+  font-size: clamp(28px, 3.2vw, 44px);
   line-height: 1.15;
   font-weight: 900;
 }
 
 .child-card p,
 .child-card li {
-  font-size: 22px;
+  font-size: 21px;
 }
 
 .page-tips {
@@ -776,6 +1000,412 @@ span {
 .page-tips span {
   font-size: 14px;
   line-height: 1.45;
+}
+
+.art-scene {
+  position: relative;
+  width: 100%;
+  min-height: 420px;
+  overflow: hidden;
+  border-radius: 8px;
+  background:
+    radial-gradient(circle at 82% 18%, rgba(255, 212, 71, 0.34), transparent 17%),
+    linear-gradient(135deg, #f7fdff 0%, #e2f7ff 52%, #fff4d3 100%);
+  box-shadow: inset 0 0 0 1px rgba(101, 243, 255, 0.34);
+}
+
+.prompt-card .art-scene,
+.ai-mistake .art-scene,
+.kid-card .art-scene {
+  min-height: 210px;
+  margin-bottom: 18px;
+}
+
+.kid-card .art-scene {
+  min-height: 180px;
+}
+
+.scene-title {
+  position: absolute;
+  left: 22px;
+  top: 20px;
+  z-index: 2;
+  display: grid;
+  gap: 4px;
+  padding: 12px 14px;
+  border: 2px solid rgba(31, 45, 53, 0.12);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.78);
+  backdrop-filter: blur(10px);
+}
+
+.scene-title strong {
+  font-size: clamp(22px, 2.4vw, 34px);
+  line-height: 1;
+}
+
+.scene-title span {
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: 850;
+}
+
+.robot-teacher {
+  right: 44px;
+  bottom: 84px;
+  transform-origin: center bottom;
+}
+
+.robot-teacher .antenna {
+  position: absolute;
+  left: 54px;
+  top: -28px;
+  width: 8px;
+  height: 32px;
+  border-radius: 999px;
+  background: var(--ink);
+}
+
+.robot-teacher .antenna::before {
+  content: "";
+  position: absolute;
+  left: -9px;
+  top: -18px;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: var(--yellow);
+  box-shadow: 0 0 18px rgba(255, 212, 71, 0.72);
+}
+
+.student-a {
+  left: 42%;
+  bottom: 56px;
+  background: #fff8e3;
+}
+
+.student-b {
+  left: 58%;
+  bottom: 50px;
+  background: #eaf8ff;
+}
+
+.thought-cloud {
+  position: absolute;
+  z-index: 2;
+  padding: 12px 16px;
+  border: 4px solid var(--ink);
+  border-radius: 999px;
+  background: #ffffff;
+  font-weight: 900;
+  box-shadow: 0 14px 28px rgba(31, 45, 53, 0.12);
+  animation: floatCard 3.2s ease-in-out infinite;
+}
+
+.cloud-a {
+  left: 34px;
+  bottom: 120px;
+}
+
+.cloud-b {
+  left: 148px;
+  bottom: 190px;
+  animation-delay: 0.6s;
+}
+
+.scene-board {
+  position: absolute;
+  left: 44px;
+  right: 180px;
+  bottom: 42px;
+  z-index: 1;
+  display: grid;
+  gap: 6px;
+  padding: 18px;
+  border: 5px solid var(--ink);
+  border-radius: 8px;
+  background: #ffffff;
+  box-shadow: var(--deep-shadow);
+}
+
+.scene-board b {
+  color: var(--blue);
+  font-size: clamp(48px, 7vw, 82px);
+  line-height: 0.9;
+}
+
+.scene-board span {
+  color: var(--muted);
+  font-weight: 900;
+}
+
+.board-glow {
+  box-shadow: 0 0 0 6px rgba(101, 243, 255, 0.22), var(--deep-shadow);
+}
+
+.school-mini {
+  position: absolute;
+  left: 42px;
+  bottom: 52px;
+  width: 260px;
+  height: 150px;
+  border: 6px solid var(--ink);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.86);
+  box-shadow: var(--deep-shadow);
+}
+
+.school-mini span {
+  position: absolute;
+  bottom: 24px;
+  width: 48px;
+  height: 68px;
+  border: 5px solid var(--ink);
+  border-radius: 14px 14px 6px 6px;
+  background: var(--blue);
+}
+
+.school-mini span:nth-child(1) { left: 30px; }
+.school-mini span:nth-child(2) { left: 106px; height: 94px; background: #ffffff; }
+.school-mini span:nth-child(3) { left: 184px; background: var(--yellow); }
+
+.prompt-ribbon {
+  position: absolute;
+  left: 24px;
+  right: 24px;
+  bottom: 24px;
+  z-index: 3;
+  padding: 13px 16px;
+  border: 3px solid var(--ink);
+  border-radius: 8px;
+  color: #ffffff;
+  background: linear-gradient(135deg, #17324a, #0b67b2);
+  box-shadow: 0 14px 30px rgba(31, 45, 53, 0.18);
+  font-weight: 900;
+  text-align: center;
+}
+
+.rule-orbit {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 270px;
+  height: 270px;
+  transform: translate(-50%, -43%);
+  border: 4px dashed rgba(17, 159, 227, 0.42);
+  border-radius: 50%;
+  animation: spin 16s linear infinite;
+}
+
+.rule-orbit span {
+  position: absolute;
+  display: grid;
+  place-items: center;
+  width: 86px;
+  height: 54px;
+  border: 4px solid var(--ink);
+  border-radius: 999px;
+  background: #ffffff;
+  font-weight: 900;
+  animation: counterSpin 16s linear infinite;
+}
+
+.rule-orbit span:nth-child(1) { left: 92px; top: -28px; }
+.rule-orbit span:nth-child(2) { right: -34px; top: 105px; }
+.rule-orbit span:nth-child(3) { left: 92px; bottom: -28px; }
+.rule-orbit span:nth-child(4) { left: -34px; top: 105px; }
+
+.block-stack {
+  position: absolute;
+  left: 46px;
+  top: 112px;
+  display: grid;
+  grid-template-columns: repeat(2, 112px);
+  gap: 14px;
+}
+
+.block-stack span {
+  height: 78px;
+  border: 5px solid var(--ink);
+  border-radius: 8px;
+  box-shadow: 0 12px 22px rgba(31, 45, 53, 0.12);
+  animation: popIn 520ms ease both;
+}
+
+.block-stack span:nth-child(1) { background: var(--blue); }
+.block-stack span:nth-child(2) { background: var(--yellow); animation-delay: 0.08s; }
+.block-stack span:nth-child(3) { background: #ffffff; animation-delay: 0.16s; }
+.block-stack span:nth-child(4) { background: var(--coral); animation-delay: 0.24s; }
+
+.upgrade-lane {
+  position: absolute;
+  left: 30px;
+  right: 30px;
+  top: 130px;
+  display: grid;
+  grid-template-columns: 1fr 58px 1.1fr;
+  align-items: center;
+  gap: 12px;
+}
+
+.upgrade-lane span,
+.upgrade-lane b {
+  min-height: 74px;
+  display: grid;
+  place-items: center;
+  border: 5px solid var(--ink);
+  border-radius: 8px;
+  background: #ffffff;
+  font-size: 19px;
+  text-align: center;
+}
+
+.upgrade-lane i {
+  height: 8px;
+  border-radius: 999px;
+  background: var(--coral);
+  position: relative;
+}
+
+.upgrade-lane i::after {
+  content: "";
+  position: absolute;
+  right: -2px;
+  top: -10px;
+  border-left: 20px solid var(--coral);
+  border-top: 14px solid transparent;
+  border-bottom: 14px solid transparent;
+}
+
+.upgrade-lane b {
+  background: #e9fbff;
+}
+
+.spark-cluster::before,
+.spark-cluster::after {
+  content: "";
+  position: absolute;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: var(--yellow);
+  box-shadow: 0 0 24px rgba(255, 212, 71, 0.8);
+  animation: glowPulse 2.4s ease-in-out infinite;
+}
+
+.spark-cluster::before {
+  right: 64px;
+  top: 80px;
+}
+
+.spark-cluster::after {
+  left: 78px;
+  bottom: 78px;
+  width: 28px;
+  height: 28px;
+  animation-delay: 0.8s;
+}
+
+.robot-pair {
+  position: absolute;
+  left: 36px;
+  right: 36px;
+  top: 84px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.mini-robot {
+  position: relative;
+  width: 96px;
+  height: 112px;
+  border: 6px solid var(--ink);
+  border-radius: 30px 30px 18px 18px;
+}
+
+.mini-robot::before {
+  content: "";
+  position: absolute;
+  left: 25px;
+  top: 34px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--ink);
+  box-shadow: 30px 0 0 var(--ink);
+}
+
+.wrong-robot {
+  background: #1f2d35;
+}
+
+.right-robot {
+  background: linear-gradient(135deg, #ffffff, #119fe3);
+  animation: popIn 560ms ease both;
+}
+
+.design-sheet {
+  position: absolute;
+  left: 54px;
+  right: 54px;
+  top: 82px;
+  display: grid;
+  gap: 13px;
+  padding: 18px;
+  border: 6px solid var(--ink);
+  border-radius: 8px;
+  background: #ffffff;
+  box-shadow: var(--deep-shadow);
+}
+
+.design-sheet span {
+  height: 28px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, rgba(17, 159, 227, 0.22), rgba(255, 212, 71, 0.38));
+}
+
+.duo-avatars {
+  position: absolute;
+  left: 50%;
+  top: 102px;
+  display: flex;
+  gap: 24px;
+  transform: translateX(-50%);
+}
+
+.duo-avatars span {
+  width: 72px;
+  height: 72px;
+  border: 6px solid var(--ink);
+  border-radius: 50%;
+  background: #ffffff;
+  box-shadow: 0 14px 26px rgba(31, 45, 53, 0.12);
+}
+
+.duo-avatars span:nth-child(2) {
+  background: #fff8e3;
+}
+
+.badge-ring {
+  position: absolute;
+  left: 50%;
+  top: 46%;
+  display: grid;
+  place-items: center;
+  width: 164px;
+  height: 164px;
+  border: 10px solid var(--yellow);
+  border-radius: 50%;
+  background: #ffffff;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 0 0 12px rgba(101, 243, 255, 0.18), var(--deep-shadow);
+  animation: popIn 560ms ease both;
+}
+
+.badge-ring b {
+  color: var(--blue);
+  font-size: 88px;
 }
 
 .time-tag {
@@ -808,7 +1438,7 @@ span {
 }
 
 .rule-list li {
-  padding: 16px;
+  padding: 14px 16px;
   border-radius: 8px;
   background: #f5f8f6;
   font-weight: 750;
@@ -864,16 +1494,35 @@ span {
 .chip,
 .flip-card,
 .question-card {
-  min-height: 72px;
-  padding: 16px 18px;
+  min-height: 68px;
+  padding: 15px 17px;
   border: 2px solid transparent;
   border-radius: 8px;
   background: #ffffff;
   color: var(--ink);
   box-shadow: 0 10px 24px rgba(31, 45, 53, 0.08);
   text-align: left;
-  font-size: 20px;
+  font-size: 19px;
   font-weight: 850;
+}
+
+.chip {
+  position: relative;
+  overflow: hidden;
+}
+
+.chip::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(110deg, transparent 0%, rgba(255, 255, 255, 0.54) 45%, transparent 60%);
+  transform: translateX(-120%);
+  transition: transform 360ms ease;
+}
+
+.chip:hover::after,
+.chip.selected::after {
+  transform: translateX(120%);
 }
 
 .choice.correct,
@@ -912,11 +1561,11 @@ span {
 .prompt-output {
   min-height: 180px;
   margin-top: 18px;
-  padding: 20px;
-  border: 2px dashed rgba(31, 45, 53, 0.28);
+  padding: 22px;
+  border: 3px dashed rgba(17, 159, 227, 0.32);
   border-radius: 8px;
   background: #fffdf7;
-  font-size: 23px;
+  font-size: clamp(20px, 2.2vw, 26px);
   line-height: 1.55;
   font-weight: 850;
   position: relative;
@@ -951,14 +1600,14 @@ span {
 
 .design-form input {
   width: 100%;
-  min-height: 54px;
-  padding: 0 14px;
+  min-height: 60px;
+  padding: 0 16px;
   border: 2px solid rgba(31, 45, 53, 0.12);
   border-radius: 8px;
   background: #ffffff;
   color: var(--ink);
   font: inherit;
-  font-size: 18px;
+  font-size: 19px;
 }
 
 .design-form input:focus {
@@ -1132,9 +1781,23 @@ span {
   to { transform: rotate(360deg); }
 }
 
+@keyframes counterSpin {
+  to { transform: rotate(-360deg); }
+}
+
 @keyframes softFloat {
   0%, 100% { transform: translateY(0); }
   50% { transform: translateY(-8px); }
+}
+
+@keyframes glowPulse {
+  0%, 100% { transform: scale(1); opacity: 0.95; }
+  50% { transform: scale(1.08); opacity: 0.72; }
+}
+
+@keyframes floatCard {
+  0%, 100% { transform: translateY(0) rotate(-1deg); }
+  50% { transform: translateY(-10px) rotate(1deg); }
 }
 
 .task-card ul {
@@ -1178,15 +1841,24 @@ span {
 }
 
 .icon-button {
-  display: grid;
-  place-items: center;
-  width: 58px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-width: 118px;
   height: 58px;
   border: 0;
-  border-radius: 50%;
+  border-radius: 999px;
   color: #ffffff;
   background: var(--ink);
   box-shadow: var(--shadow);
+  font-weight: 900;
+}
+
+.icon-button span {
+  color: inherit;
+  font-size: 16px;
+  line-height: 1;
 }
 
 @media (max-width: 980px) {
@@ -1250,4 +1922,174 @@ span {
   .lesson-stage {
     padding: 20px 18px 86px;
   }
+
+  .hero-classroom {
+    min-height: 420px;
+  }
+
+  .school-window {
+    left: 28px;
+    top: 50px;
+    width: 250px;
+  }
+
+  .teacher-robot {
+    right: 58px;
+  }
+
+  .holo-board {
+    left: 26px;
+    right: 26px;
+    bottom: 22px;
+    width: auto;
+  }
+
+  .art-scene {
+    min-height: 360px;
+  }
+
+  .prompt-card .art-scene,
+  .ai-mistake .art-scene,
+  .kid-card .art-scene {
+    min-height: 200px;
+  }
+
+  .scene-board {
+    right: 132px;
+  }
+}
+
+@media (max-width: 560px) {
+  h1 {
+    font-size: clamp(38px, 12vw, 54px);
+  }
+
+  .home-view {
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+
+  .hero-classroom {
+    min-height: 390px;
+  }
+
+  .school-window {
+    width: 210px;
+    height: 136px;
+  }
+
+  .teacher-robot,
+  .robot-teacher {
+    width: 92px;
+    height: 108px;
+  }
+
+  .teacher-robot {
+    right: 28px;
+    bottom: 132px;
+  }
+
+  .kid,
+  .student {
+    width: 66px;
+    height: 66px;
+  }
+
+  .kid-a {
+    left: 70px;
+  }
+
+  .kid-b {
+    left: 150px;
+  }
+
+  .floating-card {
+    min-width: 96px;
+    font-size: 14px;
+  }
+
+  .card-action {
+    right: 26px;
+    top: 76px;
+  }
+
+  .lesson-sidebar {
+    padding: 12px;
+  }
+
+  .step-button {
+    min-width: 116px;
+    font-size: 15px;
+  }
+
+  .lesson-topbar {
+    flex-direction: column;
+  }
+
+  .lesson-controls {
+    left: 18px;
+    right: 18px;
+    justify-content: space-between;
+  }
+
+  .icon-button {
+    min-width: 132px;
+  }
+
+  .art-scene {
+    min-height: 320px;
+  }
+
+  .robot-teacher {
+    right: 24px;
+    bottom: 72px;
+  }
+
+  .student-a {
+    left: 36%;
+  }
+
+  .student-b {
+    left: 55%;
+  }
+
+  .scene-board {
+    left: 18px;
+    right: 96px;
+    bottom: 22px;
+    padding: 14px;
+  }
+
+  .scene-board b {
+    font-size: 42px;
+  }
+
+  .block-stack {
+    left: 24px;
+    grid-template-columns: repeat(2, minmax(86px, 1fr));
+  }
+
+  .block-stack span {
+    width: 86px;
+  }
+
+  .upgrade-lane {
+    left: 18px;
+    right: 18px;
+    grid-template-columns: 1fr;
+  }
+
+  .upgrade-lane i {
+    display: none;
+  }
+
+  .rule-orbit {
+    width: 220px;
+    height: 220px;
+  }
+
+  .rule-orbit span:nth-child(1) { left: 67px; top: -28px; }
+  .rule-orbit span:nth-child(2) { right: -38px; top: 82px; }
+  .rule-orbit span:nth-child(3) { left: 67px; bottom: -28px; }
+  .rule-orbit span:nth-child(4) { left: -38px; top: 82px; }
 }
