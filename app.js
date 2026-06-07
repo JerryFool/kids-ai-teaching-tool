@@ -14,7 +14,7 @@ const ui = {
     entries: "后续31课",
     entriesNote: "确认样板后再批量扩展完整课程",
     minutes: "约30分钟",
-    minutesNote: "按家庭讲课节奏拆成8个环节",
+    minutesNote: "按家庭讲课节奏拆成9个环节",
     followKicker: "项目定位",
     followTitle: "给朋友免费分享的家庭AI课",
     followBody: "第一阶段目标不是卖课，而是先做出一个让家长愿意打开、孩子愿意参与、朋友愿意转发的样板。",
@@ -57,7 +57,7 @@ const ui = {
     entries: "31 Lessons Later",
     entriesNote: "Scale after the sample is confirmed",
     minutes: "About 30 Min",
-    minutesNote: "Eight parent-led teaching moments",
+    minutesNote: "Nine parent-led teaching moments",
     followKicker: "Project Position",
     followTitle: "A free family AI lesson to share",
     followBody: "Phase one is not about selling a course. It is about making one sample that parents can open, children can enjoy, and friends may want to forward.",
@@ -250,6 +250,7 @@ const lectureToggle = document.querySelector("#lectureToggle");
 const lecturePanel = document.querySelector("#lecturePanel");
 const lectureTitle = document.querySelector("#lectureTitle");
 const lectureBody = document.querySelector("#lectureBody");
+const progressFill = document.querySelector("#progressFill");
 
 let currentLessonId = 5;
 let currentStepIndex = 0;
@@ -326,27 +327,86 @@ function renderCatalog() {
   }).join("");
 }
 
-function illustration(scene = "cover") {
-  const prop = {
-    cover: `<rect x="168" y="70" width="214" height="150" rx="22" fill="#fff" stroke="#21313b" stroke-width="7"/><path d="M210 172l54-64 48 64z" fill="#119fe3"/><circle cx="336" cy="112" r="23" fill="#ffd447"/><path d="M226 246h130" stroke="#ee334e" stroke-width="10" stroke-linecap="round"/>`,
-    story: `<rect x="142" y="78" width="248" height="162" rx="24" fill="#fff" stroke="#21313b" stroke-width="7"/><rect x="176" y="124" width="54" height="80" rx="18" fill="#119fe3" stroke="#21313b" stroke-width="6"/><circle cx="203" cy="152" r="8" fill="#fff"/><rect x="260" y="118" width="86" height="74" rx="12" fill="#ffd447" stroke="#21313b" stroke-width="6"/><path d="M184 250c52-28 94-28 146 0" stroke="#ee334e" stroke-width="10" stroke-linecap="round" fill="none"/>`,
-    rules: `<rect x="128" y="74" width="270" height="194" rx="22" fill="#fff" stroke="#21313b" stroke-width="7"/><circle cx="176" cy="124" r="19" fill="#119fe3"/><circle cx="176" cy="174" r="19" fill="#ffd447"/><circle cx="176" cy="224" r="19" fill="#ee334e"/><path d="M216 124h126M216 174h126M216 224h126" stroke="#21313b" stroke-width="8" stroke-linecap="round"/>`,
-    puzzle: `<rect x="112" y="88" width="116" height="74" rx="16" fill="#119fe3" stroke="#21313b" stroke-width="7"/><rect x="252" y="88" width="116" height="74" rx="16" fill="#ffd447" stroke="#21313b" stroke-width="7"/><rect x="112" y="188" width="116" height="74" rx="16" fill="#fff" stroke="#21313b" stroke-width="7"/><rect x="252" y="188" width="116" height="74" rx="16" fill="#ee334e" stroke="#21313b" stroke-width="7"/>`,
-    upgrade: `<path d="M138 238h248" stroke="#21313b" stroke-width="7" stroke-linecap="round"/><rect x="150" y="94" width="98" height="86" rx="18" fill="#fff" stroke="#21313b" stroke-width="7"/><rect x="284" y="78" width="118" height="126" rx="22" fill="#119fe3" stroke="#21313b" stroke-width="7"/><path d="M252 140h28" stroke="#ee334e" stroke-width="10" stroke-linecap="round"/>`,
-    repair: `<rect x="154" y="78" width="88" height="124" rx="26" fill="#1f2d35" stroke="#21313b" stroke-width="7"/><rect x="288" y="78" width="88" height="124" rx="26" fill="#f7fcff" stroke="#21313b" stroke-width="7"/><path d="M314 96h36" stroke="#119fe3" stroke-width="10" stroke-linecap="round"/><path d="M246 140h34" stroke="#ee334e" stroke-width="10" stroke-linecap="round"/>`,
-    design: `<rect x="134" y="68" width="256" height="218" rx="24" fill="#fff" stroke="#21313b" stroke-width="7"/><path d="M174 122h166M174 166h166M174 210h166M174 254h116" stroke="#119fe3" stroke-width="8" stroke-linecap="round"/><circle cx="344" cy="86" r="23" fill="#ffd447"/>`,
-    duo: `<circle cx="178" cy="156" r="48" fill="#fff" stroke="#21313b" stroke-width="7"/><circle cx="344" cy="156" r="48" fill="#fff" stroke="#21313b" stroke-width="7"/><path d="M150 158q28 30 58 0M316 158q28 30 58 0" stroke="#21313b" stroke-width="7" stroke-linecap="round" fill="none"/><rect x="118" y="236" width="286" height="42" rx="16" fill="#119fe3" stroke="#21313b" stroke-width="7"/>`,
-    summary: `<path d="M142 244l72-92 58 56 78-118 58 154z" fill="#fff" stroke="#21313b" stroke-width="7"/><circle cx="360" cy="92" r="26" fill="#ffd447"/><path d="M180 286h186" stroke="#ee334e" stroke-width="10" stroke-linecap="round"/>`
+function visualScene(scene = "cover") {
+  const labels = {
+    cover: ["想象泡泡", "AI不是读心术"],
+    story: ["未来学校", "第二次更清楚"],
+    rules: ["四件套", "地点 主角 动作 细节"],
+    puzzle: ["拼提示词", "每组点一个"],
+    upgrade: ["升级句子", "从模糊到清楚"],
+    repair: ["修正AI", "改变 + 保留"],
+    design: ["设计卡", "我的完整指令"],
+    duo: ["双人任务", "互相提问"],
+    summary: ["完成复盘", "下次我会这样问"]
+  }[scene] || ["AI课堂", "想清楚再表达"];
+  const sceneBits = {
+    cover: `
+      <div class="thought-cloud cloud-a">未来学校</div>
+      <div class="thought-cloud cloud-b">机器人老师</div>
+      <div class="scene-board board-glow"><b>?</b><span>AI cannot read minds</span></div>
+    `,
+    story: `
+      <div class="school-mini"><span></span><span></span><span></span></div>
+      <div class="scene-board"><b>2</b><span>更清楚的第二次</span></div>
+      <div class="prompt-ribbon">蓝白色 · 发光 · 开心上课</div>
+    `,
+    rules: `
+      <div class="rule-orbit">
+        <span>地点</span><span>主角</span><span>动作</span><span>细节</span>
+      </div>
+      <div class="scene-board board-glow"><b>4</b><span>Picture Parts</span></div>
+    `,
+    puzzle: `
+      <div class="block-stack"><span></span><span></span><span></span><span></span></div>
+      <div class="prompt-ribbon">点选积木，组合指令</div>
+    `,
+    upgrade: `
+      <div class="upgrade-lane">
+        <span>好玩的</span><i></i><b>未来学校</b>
+      </div>
+      <div class="spark-cluster"></div>
+    `,
+    repair: `
+      <div class="robot-pair">
+        <div class="mini-robot wrong-robot"></div>
+        <div class="mini-robot right-robot"></div>
+      </div>
+      <div class="prompt-ribbon">改颜色，保留场景</div>
+    `,
+    design: `
+      <div class="design-sheet">
+        <span></span><span></span><span></span><span></span>
+      </div>
+      <div class="prompt-ribbon">地点 / 主角 / 动作 / 细节</div>
+    `,
+    duo: `
+      <div class="duo-avatars"><span></span><span></span></div>
+      <div class="scene-board"><b>A/B</b><span>两张创意卡</span></div>
+    `,
+    summary: `
+      <div class="badge-ring"><b>✓</b></div>
+      <div class="prompt-ribbon">先想象，再描述，再修改</div>
+    `
   }[scene] || "";
 
   return `
-    <svg viewBox="0 0 520 360" role="img" aria-label="${tr("childView")}">
-      <rect x="18" y="20" width="484" height="318" rx="28" fill="#f9fbff" />
-      <path d="M62 92h56M90 64v56" stroke="#65f3ff" stroke-width="8" stroke-linecap="round"/>
-      <circle cx="434" cy="82" r="25" fill="#ffd447"/>
-      ${prop}
-      <path d="M66 296 C126 232, 190 314, 260 246 S386 234, 456 280" fill="none" stroke="#119fe3" stroke-width="12" stroke-linecap="round" />
-    </svg>
+    <div class="art-scene scene-${scene}" role="img" aria-label="${tr("childView")}">
+      <div class="scene-grid"></div>
+      <div class="scene-sun"></div>
+      <div class="scene-title">
+        <strong>${labels[0]}</strong>
+        <span>${labels[1]}</span>
+      </div>
+      <div class="robot-teacher">
+        <span class="antenna"></span>
+        <span class="eye left"></span>
+        <span class="eye right"></span>
+        <span class="mouth"></span>
+      </div>
+      <div class="student student-a"></div>
+      <div class="student student-b"></div>
+      ${sceneBits}
+    </div>
   `;
 }
 
@@ -479,6 +539,7 @@ function renderLesson() {
   lessonKicker.textContent = lesson.kicker;
   stepTitle.textContent = stepData.title;
   stepCounter.textContent = `${currentStepIndex + 1} / ${lesson.steps.length}`;
+  progressFill.style.width = `${((currentStepIndex + 1) / lesson.steps.length) * 100}%`;
   lectureTitle.textContent = currentStepIndex === 0 ? tr("notesTitle") : stepData.label;
   lectureBody.textContent = buildLectureText(lesson, stepData);
   stepNav.innerHTML = lesson.steps.map((item, index) => `
@@ -511,7 +572,7 @@ function tipsMarkup(lesson) {
 }
 
 function renderStep(stepData, lesson) {
-  const visual = `<div class="visual-card">${illustration(stepData.type)}</div>`;
+  const visual = `<div class="visual-card">${visualScene(stepData.type)}</div>`;
   const tips = tipsMarkup(lesson);
   if (["cover", "story", "rules"].includes(stepData.type)) {
     return `
@@ -545,6 +606,7 @@ function renderStep(stepData, lesson) {
           </div>
         </div>
         <div class="content-card prompt-card">
+          ${visualScene("puzzle")}
           <h3>${languageMode === "zh" ? "生成的清楚指令" : "Clear Prompt"}</h3>
           <div class="prompt-output" data-puzzle-output>${languageMode === "zh" ? "每组点一个，完整指令会出现在这里。" : "Choose one from each group to build the prompt."}</div>
         </div>
@@ -563,6 +625,7 @@ function renderStep(stepData, lesson) {
           </div>
         </div>
         <div class="content-card prompt-card">
+          ${visualScene("upgrade")}
           <h3>${languageMode === "zh" ? "升级后" : "Upgraded"}</h3>
           <div class="prompt-output" data-upgrade-output>${languageMode === "zh" ? "点击补充信息，把模糊句变清楚。" : "Tap details to make it clearer."}</div>
         </div>
@@ -576,7 +639,7 @@ function renderStep(stepData, lesson) {
         <div class="game-card">
           <span class="time-tag">${stepData.minutes}</span>
           <div class="ai-mistake">
-            <div>${illustration("repair")}</div>
+            <div>${visualScene("repair")}</div>
             <p>${stepData.problem}</p>
           </div>
           <div class="chip-grid" data-repair>
@@ -584,6 +647,7 @@ function renderStep(stepData, lesson) {
           </div>
         </div>
         <div class="content-card prompt-card">
+          ${visualScene("repair")}
           <h3>${languageMode === "zh" ? "修改指令" : "Revision Prompt"}</h3>
           <div class="prompt-output" data-repair-output>${stepData.target}</div>
         </div>
@@ -606,6 +670,7 @@ function renderStep(stepData, lesson) {
           </div>
         </div>
         <div class="content-card prompt-card">
+          ${visualScene("design")}
           <h3>${languageMode === "zh" ? "我的完整指令" : "My Full Prompt"}</h3>
           <div class="prompt-output" data-design-output>${languageMode === "zh" ? "填完左边四格，这里会自动组成一句话。" : "Fill the four fields to build one sentence."}</div>
         </div>
@@ -618,6 +683,7 @@ function renderStep(stepData, lesson) {
       <div class="duo-grid">
         ${stepData.kids.map((kid) => `
           <div class="teacher-card kid-card">
+            ${visualScene("duo")}
             <span class="time-tag">${kid.name}</span>
             <h3>${kid.mission}</h3>
             <ul class="rule-list">${kid.starter.map((item) => `<li contenteditable="true">${item}</li>`).join("")}</ul>
