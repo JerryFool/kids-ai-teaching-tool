@@ -19,6 +19,12 @@ const lessonDetails = {
     title: "AI创意画室：把脑袋里的画说清楚",
     kicker: "30分钟家庭课 · 创意表达",
     illustration: "art",
+    englishLine: "First imagine it, then describe it clearly.",
+    parentTips: [
+      "真正训练的是表达力和观察力，不是让孩子追求一张完美图片。",
+      "孩子说不出来时，先问地点、主角、动作、颜色，不要替他决定答案。",
+      "如果AI结果不满意，引导孩子说“我想改哪里”，这是很重要的复盘能力。"
+    ],
     steps: [
       {
         label: "课程封面",
@@ -73,6 +79,12 @@ const lessonDetails = {
         chips: ["请你当儿童插画师", "画一个未来学校", "给7岁小朋友看", "颜色明亮，不要太复杂"]
       },
       {
+        label: "家长Tips",
+        title: "今天重点不是画，是把想法说出来",
+        minutes: "3分钟",
+        type: "tips"
+      },
+      {
         label: "总结",
         title: "想象力先从自己脑袋里出来",
         minutes: "3分钟",
@@ -86,6 +98,12 @@ const lessonDetails = {
     title: "AI真假侦探：AI说的话都对吗",
     kicker: "30分钟家庭课 · 判断力",
     illustration: "detective",
+    englishLine: "AI can help us, but we still need to check.",
+    parentTips: [
+      "真正训练的是判断力，不是让孩子害怕AI。",
+      "孩子答错时不要批评，可以问：这件事会不会影响我们的行动？需不需要再确认？",
+      "医疗、安全、隐私、学校通知这类问题，一定要强调问家长或可靠来源。"
+    ],
     steps: [
       {
         label: "课程封面",
@@ -139,6 +157,12 @@ const lessonDetails = {
         cards: ["身体不舒服怎么办", "家里地址能不能告诉别人", "作业答案是什么", "今天穿什么颜色"]
       },
       {
+        label: "家长Tips",
+        title: "让孩子学会温和地怀疑",
+        minutes: "3分钟",
+        type: "tips"
+      },
+      {
         label: "总结",
         title: "AI答案要过脑子",
         minutes: "3分钟",
@@ -152,6 +176,12 @@ const lessonDetails = {
     title: "AI故事工厂：和AI一起讲故事",
     kicker: "30分钟家庭课 · 表达与创造",
     illustration: "story",
+    englishLine: "You are the director. AI is your helper.",
+    parentTips: [
+      "真正训练的是结构化表达，让孩子知道故事需要角色、地点、麻烦和结尾。",
+      "不要急着帮孩子编完整故事，先让孩子自己给出第一个主意。",
+      "孩子卡住时，用追问推进：谁在里面？在哪里？遇到什么问题？最后希望怎样？"
+    ],
     steps: [
       {
         label: "课程封面",
@@ -206,6 +236,12 @@ const lessonDetails = {
         chips: ["主角是一只小恐龙", "地点在未来图书馆", "麻烦是找不到回家的门", "结尾要开心又有点好笑"]
       },
       {
+        label: "家长Tips",
+        title: "你先听孩子的主意，再让AI帮忙",
+        minutes: "3分钟",
+        type: "tips"
+      },
+      {
         label: "总结",
         title: "你是故事导演，AI是故事助手",
         minutes: "3分钟",
@@ -231,9 +267,19 @@ const backHome = document.querySelector("#backHome");
 const prevStep = document.querySelector("#prevStep");
 const nextStep = document.querySelector("#nextStep");
 const scrollCatalog = document.querySelector("#scrollCatalog");
+const languageSelect = document.querySelector("#languageSelect");
+const musicToggle = document.querySelector("#musicToggle");
+const sfxToggle = document.querySelector("#sfxToggle");
+const lessonMusicToggle = document.querySelector("#lessonMusicToggle");
+const lessonSfxToggle = document.querySelector("#lessonSfxToggle");
 
 let currentLessonId = 5;
 let currentStepIndex = 0;
+let languageMode = "zh";
+let audioContext;
+let musicTimer;
+let musicEnabled = false;
+let sfxEnabled = true;
 
 function renderCatalog() {
   lessonGrid.innerHTML = lessonCatalog.map((lesson) => {
@@ -278,6 +324,97 @@ function illustration(type) {
   `;
 }
 
+function getAudioContext() {
+  if (!audioContext) {
+    audioContext = new (window.AudioContext || window.webkitAudioContext)();
+  }
+  return audioContext;
+}
+
+function playTone(frequency, duration = 0.08, type = "sine", volume = 0.035) {
+  if (!sfxEnabled) return;
+  const ctx = getAudioContext();
+  const oscillator = ctx.createOscillator();
+  const gain = ctx.createGain();
+  oscillator.type = type;
+  oscillator.frequency.value = frequency;
+  gain.gain.setValueAtTime(0, ctx.currentTime);
+  gain.gain.linearRampToValueAtTime(volume, ctx.currentTime + 0.01);
+  gain.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + duration);
+  oscillator.connect(gain);
+  gain.connect(ctx.destination);
+  oscillator.start();
+  oscillator.stop(ctx.currentTime + duration + 0.02);
+}
+
+function playSfx(kind) {
+  if (kind === "correct") {
+    playTone(660, 0.09, "triangle", 0.04);
+    setTimeout(() => playTone(880, 0.1, "triangle", 0.035), 90);
+  } else if (kind === "wrong") {
+    playTone(260, 0.12, "sine", 0.03);
+  } else if (kind === "complete") {
+    playTone(523, 0.08, "triangle", 0.035);
+    setTimeout(() => playTone(784, 0.12, "triangle", 0.035), 90);
+  } else {
+    playTone(440, 0.04, "sine", 0.025);
+  }
+}
+
+function startMusic() {
+  const ctx = getAudioContext();
+  const notes = [392, 440, 523, 587, 523, 440];
+  let index = 0;
+  stopMusic();
+  musicTimer = setInterval(() => {
+    if (!musicEnabled) return;
+    const oscillator = ctx.createOscillator();
+    const gain = ctx.createGain();
+    oscillator.type = "sine";
+    oscillator.frequency.value = notes[index % notes.length];
+    gain.gain.setValueAtTime(0, ctx.currentTime);
+    gain.gain.linearRampToValueAtTime(0.018, ctx.currentTime + 0.03);
+    gain.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + 0.42);
+    oscillator.connect(gain);
+    gain.connect(ctx.destination);
+    oscillator.start();
+    oscillator.stop(ctx.currentTime + 0.45);
+    index += 1;
+  }, 620);
+}
+
+function stopMusic() {
+  if (musicTimer) clearInterval(musicTimer);
+  musicTimer = null;
+}
+
+function syncAudioButtons() {
+  [musicToggle, lessonMusicToggle].forEach((button) => {
+    if (!button) return;
+    button.setAttribute("aria-pressed", String(musicEnabled));
+    button.textContent = musicEnabled ? "音乐开" : button === musicToggle ? "开启音乐" : "音乐";
+  });
+  [sfxToggle, lessonSfxToggle].forEach((button) => {
+    if (!button) return;
+    button.setAttribute("aria-pressed", String(sfxEnabled));
+    button.textContent = sfxEnabled ? "声效开" : "声效关";
+  });
+}
+
+function toggleMusic() {
+  musicEnabled = !musicEnabled;
+  if (musicEnabled) startMusic();
+  else stopMusic();
+  syncAudioButtons();
+  playSfx("click");
+}
+
+function toggleSfx() {
+  sfxEnabled = !sfxEnabled;
+  syncAudioButtons();
+  if (sfxEnabled) playSfx("click");
+}
+
 function openLesson(lessonId) {
   currentLessonId = lessonId;
   currentStepIndex = 0;
@@ -319,6 +456,9 @@ function renderStep(step, lesson) {
           <div class="big-line">${step.headline}</div>
           <p>${step.body}</p>
           <ul class="rule-list">${step.bullets.map((item) => `<li>${item}</li>`).join("")}</ul>
+          <div class="quote-box english-card" ${languageMode === "en" ? "" : "hidden"}>
+            <strong>English Practice</strong><br>${lesson.englishLine}
+          </div>
         </div>
         <div class="visual-card">${illustration(lesson.illustration)}</div>
       </div>
@@ -341,7 +481,15 @@ function renderStep(step, lesson) {
   if (step.type === "story") {
     return `
       <div class="story-grid">
-        <div class="story-visual">${illustration(lesson.illustration)}</div>
+        <div class="story-visual">
+          ${illustration(lesson.illustration)}
+          <div class="demo-scene" aria-label="简单动画演示">
+            <div class="demo-orbit"></div>
+            <div class="demo-child"></div>
+            <div class="demo-bubble">先想一想，再问AI</div>
+            <div class="demo-bot"></div>
+          </div>
+        </div>
         <div class="content-card">
           <span class="time-tag">${step.minutes}</span>
           <p>${step.body}</p>
@@ -417,16 +565,44 @@ function renderStep(step, lesson) {
     `;
   }
 
+  if (step.type === "tips") {
+    return `
+      <div class="summary-grid">
+        <div class="teacher-card tips-card">
+          <span class="time-tag">${step.minutes}</span>
+          <p class="big-line">家长这一节怎么讲</p>
+          <p>这张卡是给爸爸妈妈看的。讲课时慢一点，多追问，少替孩子做决定。</p>
+        </div>
+        <div class="teacher-card">
+          <h3>家长 Tips</h3>
+          <ul class="rule-list">${lesson.parentTips.map((item) => `<li>${item}</li>`).join("")}</ul>
+          <div class="quote-box english-card" ${languageMode === "en" ? "" : "hidden"}>
+            <strong>Parent English Line</strong><br>${lesson.englishLine}
+          </div>
+        </div>
+      </div>
+    `;
+  }
+
   return `
     <div class="summary-grid">
       <div class="teacher-card">
         <span class="time-tag">${step.minutes}</span>
         <p class="big-line">${step.chant}</p>
+        <div class="quote-box">思美奇主理人 Jerry Fu：愿我们和孩子一起学习新工具，也一起保留人的判断、温度和创造力。</div>
       </div>
       <div class="teacher-card">
         <h3>复盘问题</h3>
         <div class="teacher-grid">
           ${step.recap.map((item, index) => `<div><strong>${index + 1}</strong><span>${item}</span></div>`).join("")}
+        </div>
+        <div class="qr-card inline-qr">
+          <div class="qr-placeholder">
+            <span></span><span></span><span></span><span></span>
+            <b>二维码</b>
+          </div>
+          <strong>关注思美奇主理人 Jerry Fu</strong>
+          <p>AI教育 · 体育IP · 儿童创造力</p>
         </div>
       </div>
     </div>
@@ -443,6 +619,7 @@ function bindStepInteractions() {
       button.classList.add(correct ? "correct" : "wrong");
       card.querySelector("span").textContent = correct ? "选得好" : "再想一想";
       card.querySelector("strong").textContent = button.dataset.feedback;
+      playSfx(correct ? "correct" : "wrong");
     });
   });
 
@@ -451,6 +628,7 @@ function bindStepInteractions() {
       button.classList.toggle("selected");
       const chips = Array.from(document.querySelectorAll("[data-builder] .chip.selected")).map((item) => item.textContent.trim());
       document.querySelector("[data-prompt-output]").textContent = chips.length ? `${chips.join("，")}。` : "点选拼图，组成一句完整指令。";
+      playSfx(chips.length >= 4 ? "complete" : "click");
     });
   });
 
@@ -458,6 +636,7 @@ function bindStepInteractions() {
     button.addEventListener("click", () => {
       document.querySelectorAll("[data-builder] .chip").forEach((item) => item.classList.remove("selected"));
       document.querySelector("[data-prompt-output]").textContent = "点选拼图，组成一句完整指令。";
+      playSfx("click");
     });
   });
 
@@ -465,33 +644,55 @@ function bindStepInteractions() {
     button.addEventListener("click", () => {
       button.classList.toggle("revealed");
       button.textContent = button.classList.contains("revealed") ? button.dataset.answer : button.dataset.original;
+      playSfx("click");
     });
   });
 }
 
 document.addEventListener("click", (event) => {
   const opener = event.target.closest("[data-open-lesson]");
-  if (opener) openLesson(Number(opener.dataset.openLesson));
+  if (opener) {
+    playSfx("click");
+    openLesson(Number(opener.dataset.openLesson));
+  }
 
   const stepButton = event.target.closest("[data-step]");
   if (stepButton) {
+    playSfx("click");
     currentStepIndex = Number(stepButton.dataset.step);
     renderLesson();
   }
 });
 
-backHome.addEventListener("click", closeLesson);
+backHome.addEventListener("click", () => {
+  playSfx("click");
+  closeLesson();
+});
 prevStep.addEventListener("click", () => {
   const lesson = lessonDetails[currentLessonId];
   currentStepIndex = Math.max(0, currentStepIndex - 1);
+  playSfx("click");
   renderLesson(lesson);
 });
 nextStep.addEventListener("click", () => {
   const lesson = lessonDetails[currentLessonId];
   currentStepIndex = Math.min(lesson.steps.length - 1, currentStepIndex + 1);
+  playSfx("click");
   renderLesson(lesson);
 });
-scrollCatalog.addEventListener("click", () => document.querySelector("#catalog").scrollIntoView({ behavior: "smooth" }));
+scrollCatalog.addEventListener("click", () => {
+  playSfx("click");
+  document.querySelector("#catalog").scrollIntoView({ behavior: "smooth" });
+});
+
+languageSelect.addEventListener("change", () => {
+  languageMode = languageSelect.value;
+  playSfx("click");
+  if (!lessonView.hidden) renderLesson();
+});
+
+[musicToggle, lessonMusicToggle].forEach((button) => button.addEventListener("click", toggleMusic));
+[sfxToggle, lessonSfxToggle].forEach((button) => button.addEventListener("click", toggleSfx));
 
 document.addEventListener("keydown", (event) => {
   if (lessonView.hidden) return;
@@ -500,3 +701,4 @@ document.addEventListener("keydown", (event) => {
 });
 
 renderCatalog();
+syncAudioButtons();
