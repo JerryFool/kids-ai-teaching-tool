@@ -9,13 +9,43 @@
   <body>
     <main class="site-shell">
       <section class="home-view" id="homeView">
+        <nav class="brand-bar" aria-label="品牌与设置">
+          <div class="brand-lockup">
+            <div class="simars-logo" aria-label="思美奇 Logo">
+              <span>SIMARS</span>
+              <small>思美奇</small>
+            </div>
+            <div>
+              <strong>思美奇主理人作品</strong>
+              <p>Created by Jerry Fu</p>
+            </div>
+          </div>
+          <div class="control-cluster">
+            <label class="select-wrap">
+              <span>语言</span>
+              <select id="languageSelect">
+                <option value="zh">中文</option>
+                <option value="en">English Practice</option>
+              </select>
+            </label>
+            <button class="sound-toggle" id="musicToggle" aria-pressed="false">开启音乐</button>
+            <button class="sound-toggle" id="sfxToggle" aria-pressed="true">声效开</button>
+          </div>
+        </nav>
         <header class="home-hero">
           <div class="hero-copy">
-            <p class="eyebrow">Jerry 家庭 AI 课堂</p>
+            <p class="eyebrow">Jerry 家庭 AI 课堂 · 轻赛博日漫风</p>
             <h1>AI未来家长学校互动课</h1>
             <p class="hero-text">
               31节课网站框架已建立。先完成第5、6、7课样板，每节约30分钟，适合家长用 iPad 横屏带小学生边看边互动。
             </p>
+            <div class="author-note">
+              <strong>作者的话</strong>
+              <p>
+                AI 时代已经来到孩子身边。作为家长，我们不能只把孩子交给工具，也不能站在一旁焦虑观望。
+                真正重要的，是陪孩子学会提问、判断、表达和保护自己。我们一起重新学习，和孩子一起往前走。
+              </p>
+            </div>
             <div class="hero-actions">
               <button class="primary-action" data-open-lesson="5">开始第5课</button>
               <button class="secondary-action" id="scrollCatalog">查看31课目录</button>
@@ -56,6 +86,22 @@
           </div>
         </section>
 
+        <section class="creator-section">
+          <div class="creator-card">
+            <p class="eyebrow">关注主理人</p>
+            <h2>思美奇主理人 Jerry Fu</h2>
+            <p>一起探索 AI 教育、体育 IP 与儿童创造力。后续真实视频号二维码可直接替换这里。</p>
+          </div>
+          <div class="qr-card" aria-label="视频号二维码占位">
+            <div class="qr-placeholder">
+              <span></span><span></span><span></span><span></span>
+              <b>二维码</b>
+            </div>
+            <strong>关注思美奇主理人</strong>
+            <p>Jerry Fu 视频号</p>
+          </div>
+        </section>
+
         <section class="catalog-section" id="catalog">
           <div class="section-heading">
             <p class="eyebrow">课程目录</p>
@@ -64,6 +110,13 @@
           </div>
           <div class="lesson-grid" id="lessonGrid"></div>
         </section>
+        <footer class="site-footer">
+          <div class="simars-logo compact">
+            <span>SIMARS</span>
+            <small>思美奇</small>
+          </div>
+          <p>Created by Jerry Fu, Founder / Curator of SIMARS</p>
+        </footer>
       </section>
 
       <section class="lesson-view" id="lessonView" hidden>
@@ -75,6 +128,10 @@
           <div class="lesson-meta">
             <span id="lessonNumber">第5课</span>
             <strong id="lessonTitle">课程标题</strong>
+          </div>
+          <div class="lesson-tools">
+            <button class="sound-toggle" id="lessonMusicToggle" aria-pressed="false">音乐</button>
+            <button class="sound-toggle" id="lessonSfxToggle" aria-pressed="true">声效</button>
           </div>
           <nav class="step-nav" id="stepNav" aria-label="课程步骤"></nav>
         </aside>
