@@ -2,15 +2,15 @@ const ui = {
   zh: {
     brandWork: "思美奇主理人作品",
     createdBy: "CyberMagic by Jerry Fu",
-    heroKicker: "AI未来家长课堂 · 双样板课",
+    heroKicker: "AI未来家长课堂 · 三节样板课",
     heroTitle: "和孩子一起看见AI时代",
     heroText: "这不是一套“教孩子按按钮”的课，而是训练孩子观察变化、表达想法、判断结果和动手创造的家庭互动课。家长可以打开网页，边看讲义边操作画面，带孩子完成一节约30分钟的AI课。",
     authorTitle: "主理人的一点愿景",
     authorBody: "AI来到孩子身边以后，家长最需要做的不是焦虑，也不是把孩子直接交给工具。我们要陪孩子学会把想法说清楚，学会判断结果好不好，学会在新技术面前保持好奇、审美和独立思考。思美奇做这套课，希望让更多家庭用轻松、温暖、可操作的方式，和孩子一起进入AI时代。",
     startLesson: "开始第1课",
     catalogButton: "查看课程结构",
-    samples: "2节深度样板",
-    samplesNote: "第1课验证课程标准，第5课验证创作互动",
+    samples: "3节深度样板",
+    samplesNote: "第1课看懂时代，第4课学会提问，第5课创作表达",
     entries: "后续31课",
     entriesNote: "确认样板后再批量扩展完整课程",
     minutes: "约30分钟",
@@ -45,15 +45,15 @@ const ui = {
   en: {
     brandWork: "A CyberMagic Curator Project",
     createdBy: "CyberMagic by Jerry Fu",
-    heroKicker: "AI Future Parent Classroom · Two Sample Lessons",
+    heroKicker: "AI Future Parent Classroom · Three Sample Lessons",
     heroTitle: "Help Children See The AI Age",
     heroText: "This is not a button-clicking AI lesson. It trains observation, expression, judgment, and creation. Parents can teach from the notes while children interact with the visual pages.",
     authorTitle: "A Note From The Curator",
     authorBody: "As AI enters children's lives, parents do not need to panic, nor hand children directly to tools. We can help them express ideas clearly, judge results, and keep curiosity, taste, and independent thinking. CyberMagic hopes to make AI learning warmer, lighter, and easier for families to start.",
     startLesson: "Start Lesson 1",
     catalogButton: "View Lesson Flow",
-    samples: "2 Deep Samples",
-    samplesNote: "Lesson 1 validates the teaching model; Lesson 5 validates creative interaction",
+    samples: "3 Deep Samples",
+    samplesNote: "Lesson 1 reads the age; Lesson 4 trains asking; Lesson 5 creates with words",
     entries: "31 Lessons Later",
     entriesNote: "Scale after the sample is confirmed",
     minutes: "About 30 Min",
@@ -266,8 +266,136 @@ const lessonOneDetails = {
   }
 };
 
+const lessonFourDetails = {
+  illustration: "prompt",
+  zh: {
+    title: "提问的艺术：让AI听懂你的话",
+    kicker: "30分钟家庭课 · 提问力与任务表达",
+    prep: "课前家长准备：这节课不是教孩子背复杂提示词，而是训练孩子把需求讲完整。家长可以把AI想象成一个很聪明、但需要说明书的伙伴。好问题不是字多，而是把角色、任务、背景、约束说清楚。讲课时请多让孩子自己读出提示词，因为提问力本质上也是表达力、目标感和判断力。",
+    tips: [
+      "孩子说“帮我写一下”时，不要立刻替他改成完美提示词，先追问：让AI扮演谁？做什么？给谁看？有什么要求？",
+      "这节课请多让孩子读出自己的提示词。家长可以帮忙记录，但不要抢走孩子表达的机会。",
+      "提醒孩子：AI回答不等于最终答案。好提问还要配合检查、追问和修改。"
+    ],
+    steps: [
+      {
+        type: "cover",
+        label: "开场",
+        title: "AI很聪明，但需要说明书",
+        minutes: "2分钟",
+        body: "今天我们练习把一句模糊的话，变成AI听得懂、做得到的任务说明。",
+        quote: "会提问的人，不是把答案交给AI，而是会指挥AI帮自己思考。",
+        bullets: ["角色：让AI扮演谁", "任务：请AI完成什么", "背景：给AI必要情况", "约束：说清楚要求和边界"],
+        guide: "开场可以先问孩子：如果我只说“帮我弄一下”，你知道我要你做什么吗？让孩子发现，人听不懂的模糊话，AI也很容易做偏。"
+      },
+      {
+        type: "story",
+        label: "小故事",
+        title: "小安的万能作业请求",
+        minutes: "5分钟",
+        body: "小安写日记时对AI说：帮我写一下。AI很快写出一篇很漂亮的文章，可是读起来像大人，里面还编了小安没有经历过的事。妈妈没有直接批评AI，而是问小安：你希望AI扮演谁？帮你做什么？要保留什么？不能做什么？小安重新说：请你当小学语文老师，帮我把我写的日记润色得更生动，保留我的语气，不要替我编没发生的事，最后告诉我改了哪三处。第二次，AI终于更像是在帮助小安，而不是替小安完成作业。",
+        quote: "问孩子：第二次提示词比第一次多了哪些关键信息？",
+        guide: "故事重点不是作文技巧，而是让孩子理解：AI很会生成，但孩子要负责表达目标、保留真实经历、判断结果是否合适。"
+      },
+      {
+        type: "rules",
+        label: "方法",
+        title: "黄金提问四件套",
+        minutes: "5分钟",
+        body: "大多数家庭场景里，可以先用四件套把问题讲清楚。",
+        bullets: ["角色：你是谁，比如老师、教练、导演", "任务：你要帮我做什么", "背景：我现在的情况是什么", "约束：请做到什么、不要做什么"],
+        guide: "每讲一个词，都让孩子举一个例子。比如数学题可以让AI当教练，但约束是“不要直接给最终答案”。"
+      },
+      {
+        type: "puzzle",
+        label: "拼词游戏",
+        title: "拼出一条黄金提示词",
+        minutes: "6分钟",
+        prompt: "请孩子从四组里各点一个，拼成一条AI更容易听懂的提示词。",
+        groups: [
+          { name: "角色", options: ["请你当小学语文老师", "请你当耐心的数学教练", "请你当儿童故事导演", "请你当安全上网提醒员"] },
+          { name: "任务", options: ["帮我润色一段日记", "用步骤提示这道题", "把我的想法变成故事大纲", "帮我检查这个回答是否可靠"] },
+          { name: "背景", options: ["我是四年级学生", "我要讲给妹妹听", "我只有10分钟", "这是我第一次学习这个主题"] },
+          { name: "约束", options: ["保留我的原意", "不要直接给最终答案", "用小学生听得懂的话", "最后给我3个修改建议"] }
+        ],
+        guide: "让孩子自己点选。选完以后读出整句，再问：这条提示词有没有说清楚“谁、做什么、在什么情况下、有什么要求”？"
+      },
+      {
+        type: "upgrade",
+        label: "升级练习",
+        title: "把一句模糊话升级",
+        minutes: "4分钟",
+        prompt: "原句：帮我写一下。",
+        choices: ["请你当小学语文老师", "帮我润色我的日记", "保留我的语气和真实经历", "最后告诉我改了哪三处"],
+        guide: "先让孩子说原句哪里模糊，再点按钮一步步升级。升级完成后请孩子解释：每新增一句解决了什么问题？"
+      },
+      {
+        type: "repair",
+        label: "修正AI",
+        title: "当AI答偏了怎么办",
+        minutes: "4分钟",
+        problem: "AI回答太长、像大人、还编了孩子没有经历过的事。",
+        target: "请重新回答：语言更像小学生，控制在150字以内，保留我的真实经历，不要编新情节，最后列出3个修改点。",
+        options: ["变短：150字以内", "语气：像小学生", "保留：真实经历", "禁止：不要编新情节"],
+        guide: "告诉孩子：AI第一次答偏很正常。真正重要的是能说出哪里不对，并用新的要求把它拉回来。"
+      },
+      {
+        type: "design",
+        label: "作品卡",
+        title: "我的黄金提示词",
+        minutes: "6分钟",
+        fields: ["角色", "任务", "背景", "约束"],
+        placeholder: "比如：小学语文老师 / 润色日记 / 四年级学生写给老师看 / 保留真实经历，给3个建议",
+        guide: "这是输出页。家长可以当记录员，帮孩子把话打进去，但核心内容尽量让孩子自己说。"
+      },
+      {
+        type: "duo",
+        label: "双人任务",
+        title: "两种任务，两种问法",
+        minutes: "4分钟",
+        kids: [
+          { name: "孩子A", mission: "作业小教练", starter: ["角色：耐心的数学教练", "任务：用步骤提示我", "背景：我卡在应用题", "约束：不要直接给答案"] },
+          { name: "孩子B", mission: "故事小导演", starter: ["角色：儿童故事导演", "任务：把想法变故事大纲", "背景：主角是蓝白机器人", "约束：适合小学生，结尾温暖"] }
+        ],
+        guide: "如果两个孩子一起上课，让他们互相检查：你的提示词有没有角色、任务、背景、约束？还缺什么？"
+      },
+      {
+        type: "summary",
+        label: "复盘",
+        title: "今天学会了什么",
+        minutes: "4分钟",
+        chant: "角色、任务、背景、约束，说清楚再让AI帮忙。",
+        recap: ["我们知道了AI不是读心术，需要清楚的任务说明。", "我们学会了黄金提问四件套：角色、任务、背景、约束。", "我们把“帮我写一下”升级成了更具体的提示词。", "我们练习了当AI答偏时，怎样提出修改要求。", "孩子完成了一张自己的黄金提示词作品卡，可以去豆包或 DeepSeek 里实测。"],
+        guide: "最后不要只问“会了吗”。请孩子用自己的话说出四件套，并选择一个真实学习任务，准备用AI试一次。"
+      }
+    ]
+  },
+  en: {
+    title: "The Art of Asking: Make AI Understand You",
+    kicker: "30-minute family lesson · Prompting and task expression",
+    prep: "Parent prep: this lesson is not about memorizing long prompt formulas. It trains children to explain a need clearly. Think of AI as a very smart partner that still needs instructions. A good prompt is not just longer; it clearly states role, task, context, and constraints.",
+    tips: [
+      "When the child says, 'help me write it', do not fix it immediately. Ask: who should AI act as, what should it do, who is it for, and what rules should it follow?",
+      "Let the child read the prompt aloud. The parent can record, but should not take over the child's expression.",
+      "Remind the child: AI's answer is not the final answer. Good prompting includes checking, follow-up questions, and revision."
+    ],
+    steps: [
+      { type: "cover", label: "Start", title: "AI is smart, but it needs instructions", minutes: "2 min", body: "Today we turn a vague sentence into a task that AI can understand and complete.", quote: "A good question does not hand thinking to AI. It tells AI how to help us think.", bullets: ["Role: who should AI be?", "Task: what should AI do?", "Context: what situation matters?", "Constraint: what rules and limits matter?"], guide: "Ask: if I only say 'help me do it', do you know what I want? Help the child notice why vague requests go wrong." },
+      { type: "story", label: "Story", title: "An's magic homework request", minutes: "5 min", body: "An tells AI: help me write it. AI quickly writes a polished diary, but it sounds like an adult and even invents things An never experienced. Mom asks: who should AI act as, what should it help with, what must stay true, and what should it avoid? An tries again: please act as a primary-school writing teacher, help me make my diary more vivid, keep my own voice, do not invent events, and tell me the three main changes. The second answer finally helps An instead of replacing An.", quote: "Ask: what key information did the second prompt add?", guide: "The story is about responsibility: the child states the goal, keeps truth, and judges whether the output fits." },
+      { type: "rules", label: "Method", title: "The four-part golden prompt", minutes: "5 min", body: "For most family learning tasks, use these four parts first.", bullets: ["Role: teacher, coach, director, checker", "Task: what you want AI to do", "Context: your current situation", "Constraint: what AI should or should not do"], guide: "For each part, ask the child for one example. For math, AI can be a coach, but the constraint may be: do not give the final answer directly." },
+      { type: "puzzle", label: "Prompt Game", title: "Build a golden prompt", minutes: "6 min", prompt: "Choose one from each group to build a prompt AI can understand.", groups: [{ name: "Role", options: ["Act as a primary-school writing teacher", "Act as a patient math coach", "Act as a children's story director", "Act as an online safety checker"] }, { name: "Task", options: ["polish my diary", "guide me through this problem", "turn my idea into a story outline", "check whether this answer is reliable"] }, { name: "Context", options: ["I am a grade-four student", "I will explain it to my younger sister", "I only have 10 minutes", "this is my first time learning the topic"] }, { name: "Constraint", options: ["keep my original meaning", "do not give the final answer directly", "use words children can understand", "give me three revision suggestions"] }], guide: "Let the child tap choices, read the whole prompt, and check whether it has role, task, context, and constraint." },
+      { type: "upgrade", label: "Upgrade", title: "Upgrade a vague request", minutes: "4 min", prompt: "Original sentence: help me write it.", choices: ["act as a primary-school writing teacher", "polish my diary", "keep my voice and real experience", "tell me the three main changes"], guide: "Ask what is vague in the original. After upgrading, ask what problem each added phrase solved." },
+      { type: "repair", label: "Revise AI", title: "When AI goes off track", minutes: "4 min", problem: "AI's answer is too long, sounds like an adult, and invents events the child never experienced.", target: "Please answer again: sound more like a primary-school student, keep it under 150 words, keep my real experience, do not invent new events, and list three changes.", options: ["Shorter: under 150 words", "Voice: like a student", "Keep: real experience", "Do not: invent new events"], guide: "Explain that a wrong first answer is normal. The key is naming what is wrong and pulling AI back with clearer requirements." },
+      { type: "design", label: "Work Card", title: "My Golden Prompt", minutes: "6 min", fields: ["Role", "Task", "Context", "Constraint"], placeholder: "Example: writing teacher / polish diary / grade-four student writing for teacher / keep real events and give 3 suggestions", guide: "The parent can type for the child, but the main ideas should come from the child." },
+      { type: "duo", label: "Two Kids", title: "Two tasks, two prompts", minutes: "4 min", kids: [{ name: "Child A", mission: "Homework coach", starter: ["Role: patient math coach", "Task: guide me step by step", "Context: I am stuck on a word problem", "Constraint: do not give the final answer"] }, { name: "Child B", mission: "Story director", starter: ["Role: children's story director", "Task: turn my idea into an outline", "Context: the main character is a blue-white robot", "Constraint: for children, with a warm ending"] }], guide: "If two children learn together, let them check each other's prompt: does it include role, task, context, and constraint?" },
+      { type: "summary", label: "Review", title: "What did we learn today?", minutes: "4 min", chant: "Role, task, context, constraint. Explain clearly before asking AI for help.", recap: ["AI cannot read minds. It needs clear task instructions.", "We learned the four-part golden prompt: role, task, context, constraint.", "We upgraded 'help me write it' into a more specific prompt.", "We practiced revising AI when it goes off track.", "The child completed a golden prompt card that can be tested in Doubao or DeepSeek."], guide: "Do not only ask whether the child understands. Ask the child to explain the four parts and choose one real learning task to test with AI." }
+    ]
+  }
+};
+
 const lessonDetails = {
   1: lessonOneDetails,
+  4: lessonFourDetails,
   5: {
     illustration: "art",
     zh: {
@@ -539,23 +667,36 @@ function visualScene(scene = "cover") {
     duo: ["双人任务", "互相提问"],
     summary: ["完成复盘", "下次我会这样问"]
   };
-  const labels = (currentLessonId === 1 ? lessonOneLabels : lessonFiveLabels)[scene] || ["AI课堂", "想清楚再表达"];
+  const lessonFourLabels = {
+    cover: ["提示词雷达", "AI需要说明书"],
+    story: ["万能请求", "帮我写一下？"],
+    rules: ["黄金四件套", "角色 任务 背景 约束"],
+    puzzle: ["拼出好问题", "每组点一个"],
+    upgrade: ["升级请求", "从模糊到具体"],
+    repair: ["修正回答", "拉回真实任务"],
+    design: ["黄金提示词", "我的四件套"],
+    duo: ["双人问法", "互相检查"],
+    summary: ["完成复盘", "会问才会用"]
+  };
+  const sceneLabelMap = currentLessonId === 1 ? lessonOneLabels : currentLessonId === 4 ? lessonFourLabels : lessonFiveLabels;
+  const labels = sceneLabelMap[scene] || ["AI课堂", "想清楚再表达"];
+  const promptScene = currentLessonId === 4;
   const sceneBits = {
     cover: `
-      <div class="thought-cloud cloud-a">未来学校</div>
-      <div class="thought-cloud cloud-b">机器人老师</div>
+      <div class="thought-cloud cloud-a">${promptScene ? "角色" : "未来学校"}</div>
+      <div class="thought-cloud cloud-b">${promptScene ? "约束" : "机器人老师"}</div>
       <div class="scene-board board-glow"><b>?</b><span>AI cannot read minds</span></div>
     `,
     story: `
       <div class="school-mini"><span></span><span></span><span></span></div>
-      <div class="scene-board"><b>2</b><span>更清楚的第二次</span></div>
-      <div class="prompt-ribbon">蓝白色 · 发光 · 开心上课</div>
+      <div class="scene-board"><b>2</b><span>${promptScene ? "第二次更具体" : "更清楚的第二次"}</span></div>
+      <div class="prompt-ribbon">${promptScene ? "保留真实 · 不要编造 · 给3个建议" : "蓝白色 · 发光 · 开心上课"}</div>
     `,
     rules: `
       <div class="rule-orbit">
-        <span>地点</span><span>主角</span><span>动作</span><span>细节</span>
+        ${promptScene ? "<span>角色</span><span>任务</span><span>背景</span><span>约束</span>" : "<span>地点</span><span>主角</span><span>动作</span><span>细节</span>"}
       </div>
-      <div class="scene-board board-glow"><b>4</b><span>Picture Parts</span></div>
+      <div class="scene-board board-glow"><b>4</b><span>${promptScene ? "Prompt Parts" : "Picture Parts"}</span></div>
     `,
     puzzle: `
       <div class="block-stack"><span></span><span></span><span></span><span></span></div>
@@ -563,7 +704,7 @@ function visualScene(scene = "cover") {
     `,
     upgrade: `
       <div class="upgrade-lane">
-        <span>好玩的</span><i></i><b>未来学校</b>
+        <span>${promptScene ? "帮我写一下" : "好玩的"}</span><i></i><b>${promptScene ? "清楚任务" : "未来学校"}</b>
       </div>
       <div class="spark-cluster"></div>
     `,
@@ -572,21 +713,21 @@ function visualScene(scene = "cover") {
         <div class="mini-robot wrong-robot"></div>
         <div class="mini-robot right-robot"></div>
       </div>
-      <div class="prompt-ribbon">改颜色，保留场景</div>
+      <div class="prompt-ribbon">${promptScene ? "变短 · 像我 · 不编" : "改颜色，保留场景"}</div>
     `,
     design: `
       <div class="design-sheet">
         <span></span><span></span><span></span><span></span>
       </div>
-      <div class="prompt-ribbon">地点 / 主角 / 动作 / 细节</div>
+      <div class="prompt-ribbon">${promptScene ? "角色 / 任务 / 背景 / 约束" : "地点 / 主角 / 动作 / 细节"}</div>
     `,
     duo: `
       <div class="duo-avatars"><span></span><span></span></div>
-      <div class="scene-board"><b>A/B</b><span>两张创意卡</span></div>
+      <div class="scene-board"><b>A/B</b><span>${promptScene ? "两种问法" : "两张创意卡"}</span></div>
     `,
     summary: `
       <div class="badge-ring"><b>✓</b></div>
-      <div class="prompt-ribbon">先想象，再描述，再修改</div>
+      <div class="prompt-ribbon">${promptScene ? "先说清楚，再让AI帮忙" : "先想象，再描述，再修改"}</div>
     `
   }[scene] || "";
 
@@ -784,7 +925,19 @@ function buildLectureText(lesson, stepData) {
     duo: zh ? "讲法：适合两个孩子一起上。让他们互相提一个让画面更清楚的问题。" : "Teaching: good for two children. Let them ask each other one clarity question.",
     summary: zh ? "讲法：不要只问“懂了吗”。让孩子完整说出过程、方法、下次怎么用。" : "Teaching: do not only ask 'do you understand'. Ask the child to explain the process, method, and next use."
   };
-  const typeHelp = (currentLessonId === 1 ? lessonOneHelp : lessonFiveHelp)[stepData.type];
+  const lessonFourHelp = {
+    cover: zh ? "讲法：先用“帮我弄一下”这种模糊表达开场，让孩子发现AI也需要清楚说明。" : "Teaching: start with a vague request so the child sees why AI needs clear instructions.",
+    story: zh ? "讲法：故事要讲出AI不是坏，而是任务没说清楚。孩子负责目标、真实和判断。" : "Teaching: show that AI is not the problem; the task was unclear. The child owns goal, truth, and judgment.",
+    rules: zh ? "讲法：四件套不要背概念。每讲一个词，马上换成孩子熟悉的学习场景。" : "Teaching: do not memorize the four parts. Connect each one to a familiar learning task.",
+    puzzle: zh ? "讲法：让孩子自己点选并读出完整提示词，再检查有没有角色、任务、背景、约束。" : "Teaching: let the child choose, read the prompt aloud, and check the four parts.",
+    upgrade: zh ? "讲法：不要直接给标准答案。让孩子说每增加一句，到底减少了哪种误解。" : "Teaching: ask what misunderstanding each new phrase prevents.",
+    repair: zh ? "讲法：把AI答偏当作训练机会。让孩子说清楚要变短、变像自己、保留真实、不编故事。" : "Teaching: treat a poor answer as practice. Ask the child to name what should change and what must stay.",
+    design: zh ? "讲法：这是输出页。家长做打字员，孩子做任务设计师。" : "Teaching: this is the output page. The parent types; the child designs the task.",
+    duo: zh ? "讲法：适合两个孩子互相检查四件套。重点不是谁快，而是谁能问得清楚。" : "Teaching: let two children check each other's four parts. Clarity matters more than speed.",
+    summary: zh ? "讲法：请孩子选择一个真实任务，准备复制到豆包或 DeepSeek 里测试，并学会追问。" : "Teaching: ask the child to choose one real task to test in Doubao or DeepSeek and practice follow-up."
+  };
+  const helpMap = currentLessonId === 1 ? lessonOneHelp : currentLessonId === 4 ? lessonFourHelp : lessonFiveHelp;
+  const typeHelp = helpMap[stepData.type];
   return [currentStepIndex === 0 ? lesson.prep : stepData.guide, typeHelp].filter(Boolean).join("\n\n");
 }
 
@@ -960,24 +1113,32 @@ function workSummaryMarkup() {
   const labels = languageMode === "zh"
     ? (currentLessonId === 1
       ? { puzzle: "未来观察", upgrade: "技能选择", repair: "抗替代判断", design: "我的未来能力卡" }
+      : currentLessonId === 4
+        ? { puzzle: "黄金提示词", upgrade: "升级请求", repair: "修正要求", design: "我的提问作品卡" }
       : { puzzle: "拼图指令", upgrade: "升级指令", repair: "修正指令", design: "我的设计卡" })
     : (currentLessonId === 1
       ? { puzzle: "Future observation", upgrade: "Ability choices", repair: "Replacement judgment", design: "My future ability card" }
+      : currentLessonId === 4
+        ? { puzzle: "Golden prompt", upgrade: "Upgraded request", repair: "Revision request", design: "My prompt card" }
       : { puzzle: "Puzzle prompt", upgrade: "Upgraded prompt", repair: "Revision prompt", design: "My design card" });
   const empty = languageMode === "zh" ? "这一项还没有完成，可以回到对应页面补上。" : "Not completed yet. Go back to this step to finish it.";
   const handoffSteps = languageMode === "zh"
     ? (currentLessonId === 1
       ? ["复制孩子最后的未来能力卡", "打开豆包或 DeepSeek App 的对话入口", "让孩子亲手粘贴，并追问：请帮我设计一个本周能完成的小任务", "一起判断AI建议：是否安全？是否可执行？是否真的适合我？"]
+      : currentLessonId === 4
+        ? ["复制孩子最后的黄金提示词", "打开豆包或 DeepSeek App 的对话入口", "让孩子亲手粘贴并发送", "一起观察AI回答：有没有听懂任务？哪里需要继续追问？"]
       : ["复制孩子最后的设计卡提示词", "打开豆包或 DeepSeek App 的对话/绘图入口", "让孩子亲手粘贴并发送", "一起观察结果：哪里像？哪里不像？下一句怎么改？"])
     : (currentLessonId === 1
       ? ["Copy the child's future ability card", "Open Doubao or DeepSeek chat", "Let the child paste it and ask for one weekly task", "Review together: is it safe, doable, and suitable?"]
+      : currentLessonId === 4
+        ? ["Copy the child's golden prompt", "Open Doubao or DeepSeek chat", "Let the child paste and send it", "Review together: did AI understand the task, and what follow-up is needed?"]
       : ["Copy the child's final design-card prompt", "Open Doubao or DeepSeek and choose chat/image creation", "Let the child paste and send it", "Review together: what matches, what misses, and how should we revise?"]);
   const handoffTitle = languageMode === "zh"
-    ? (currentLessonId === 1 ? "家长带孩子去 App 里优化任务" : "家长带孩子去 App 里生成")
-    : (currentLessonId === 1 ? "Parent-guided task refinement" : "Parent-guided app handoff");
+    ? (currentLessonId === 1 ? "家长带孩子去 App 里优化任务" : currentLessonId === 4 ? "家长带孩子去 App 里实测提问" : "家长带孩子去 App 里生成")
+    : (currentLessonId === 1 ? "Parent-guided task refinement" : currentLessonId === 4 ? "Parent-guided prompt test" : "Parent-guided app handoff");
   const workCardIntro = languageMode === "zh"
-    ? (currentLessonId === 1 ? "下一步不是让AI替孩子决定未来，而是让孩子学会用AI帮助自己制定一个小行动。" : "下一步不是让AI替孩子想，而是让孩子看到自己的表达真的能变成画面。")
-    : (currentLessonId === 1 ? "Next, use AI to help the child turn one ability into a small action, not to decide their future." : "Next, let the child see how their own words can become an image.");
+    ? (currentLessonId === 1 ? "下一步不是让AI替孩子决定未来，而是让孩子学会用AI帮助自己制定一个小行动。" : currentLessonId === 4 ? "下一步不是让AI替孩子完成作业，而是让孩子看到：问题说清楚，AI才更容易帮到自己。" : "下一步不是让AI替孩子想，而是让孩子看到自己的表达真的能变成画面。")
+    : (currentLessonId === 1 ? "Next, use AI to help the child turn one ability into a small action, not to decide their future." : currentLessonId === 4 ? "Next, help the child see that AI works better when the task is clear." : "Next, let the child see how their own words can become an image.");
   return `
     <div class="teacher-card work-card">
       <div class="work-card-head">
@@ -1010,6 +1171,11 @@ function joinPrompt(parts) {
     return languageMode === "zh"
       ? `我的未来观察：${parts.join("；")}。我会先选择一个小任务练习，让自己更会和AI合作。`
       : `My future observation: ${parts.join("; ")}. I will choose one small task to practice working with AI.`;
+  }
+  if (currentLessonId === 4) {
+    return languageMode === "zh"
+      ? `我的黄金提示词：${parts.join("；")}。请按这些要求回答，先解释思路，再给我一个适合小学生的结果。`
+      : `My golden prompt: ${parts.join("; ")}. Please follow these requirements, explain your thinking first, then give a child-friendly result.`;
   }
   return languageMode === "zh"
     ? `请帮我画：${parts.join("，")}。画面适合小学生，明亮、友好、有轻微未来感。`
