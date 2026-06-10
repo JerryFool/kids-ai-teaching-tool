@@ -2,15 +2,15 @@ const ui = {
   zh: {
     brandWork: "思美奇主理人作品",
     createdBy: "CyberMagic by Jerry Fu",
-    heroKicker: "AI未来家长课堂 · 第5课高质量样板",
-    heroTitle: "把脑袋里的画说清楚",
-    heroText: "这不是一节“教孩子按按钮”的课，而是一节训练孩子想象、表达、修改和判断的家庭互动课。家长可以打开网页，边讲义提示边操作画面，带孩子完成一节约30分钟的AI创意表达课。",
+    heroKicker: "AI未来家长课堂 · 双样板课",
+    heroTitle: "和孩子一起看见AI时代",
+    heroText: "这不是一套“教孩子按按钮”的课，而是训练孩子观察变化、表达想法、判断结果和动手创造的家庭互动课。家长可以打开网页，边看讲义边操作画面，带孩子完成一节约30分钟的AI课。",
     authorTitle: "主理人的一点愿景",
     authorBody: "AI来到孩子身边以后，家长最需要做的不是焦虑，也不是把孩子直接交给工具。我们要陪孩子学会把想法说清楚，学会判断结果好不好，学会在新技术面前保持好奇、审美和独立思考。思美奇做这套课，希望让更多家庭用轻松、温暖、可操作的方式，和孩子一起进入AI时代。",
-    startLesson: "开始第5课",
+    startLesson: "开始第1课",
     catalogButton: "查看课程结构",
-    samples: "1节深度样板",
-    samplesNote: "先把第5课做到可讲、可玩、可分享",
+    samples: "2节深度样板",
+    samplesNote: "第1课验证课程标准，第5课验证创作互动",
     entries: "后续31课",
     entriesNote: "确认样板后再批量扩展完整课程",
     minutes: "约30分钟",
@@ -20,9 +20,9 @@ const ui = {
     followBody: "第一阶段目标不是卖课，而是先做出一个让家长愿意打开、孩子愿意参与、朋友愿意转发的样板。",
     followQr: "关注思美奇主理人",
     qrAccount: "Jerry Fu 视频号",
-    catalogKicker: "第5课结构",
-    catalogTitle: "从模糊想法到清楚指令",
-    catalogBody: "孩子不只是点击答案，而是在网页里拼描述、改错误、生成自己的AI画面设计卡。",
+    catalogKicker: "课程样板",
+    catalogTitle: "先把样板做扎实，再扩展31课",
+    catalogBody: "孩子不只是点击答案，而是在网页里观察、判断、组合、输出自己的学习作品。",
     enter: "进入课程",
     waiting: "后续扩展",
     sample: "当前样板",
@@ -45,15 +45,15 @@ const ui = {
   en: {
     brandWork: "A CyberMagic Curator Project",
     createdBy: "CyberMagic by Jerry Fu",
-    heroKicker: "AI Future Parent Classroom · Lesson 5 sample",
-    heroTitle: "Describe The Picture In Your Mind",
-    heroText: "This is not a button-clicking AI lesson. It trains imagination, expression, revision, and judgment. Parents can teach from the notes while children interact with the visual pages.",
+    heroKicker: "AI Future Parent Classroom · Two Sample Lessons",
+    heroTitle: "Help Children See The AI Age",
+    heroText: "This is not a button-clicking AI lesson. It trains observation, expression, judgment, and creation. Parents can teach from the notes while children interact with the visual pages.",
     authorTitle: "A Note From The Curator",
     authorBody: "As AI enters children's lives, parents do not need to panic, nor hand children directly to tools. We can help them express ideas clearly, judge results, and keep curiosity, taste, and independent thinking. CyberMagic hopes to make AI learning warmer, lighter, and easier for families to start.",
-    startLesson: "Start Lesson 5",
+    startLesson: "Start Lesson 1",
     catalogButton: "View Lesson Flow",
-    samples: "1 Deep Sample",
-    samplesNote: "Lesson 5 is built for teaching, playing, and sharing",
+    samples: "2 Deep Samples",
+    samplesNote: "Lesson 1 validates the teaching model; Lesson 5 validates creative interaction",
     entries: "31 Lessons Later",
     entriesNote: "Scale after the sample is confirmed",
     minutes: "About 30 Min",
@@ -63,9 +63,9 @@ const ui = {
     followBody: "Phase one is not about selling a course. It is about making one sample that parents can open, children can enjoy, and friends may want to forward.",
     followQr: "Follow CyberMagic Curator",
     qrAccount: "Jerry Fu Channel",
-    catalogKicker: "Lesson 5 Flow",
-    catalogTitle: "From vague idea to clear prompt",
-    catalogBody: "Children build descriptions, fix wrong AI results, and create their own AI picture design card inside the webpage.",
+    catalogKicker: "Sample Lessons",
+    catalogTitle: "Build the model first, then scale to 31 lessons",
+    catalogBody: "Children observe, judge, combine ideas, and create their own learning output inside the webpage.",
     enter: "Open Lesson",
     waiting: "Later",
     sample: "Sample Ready",
@@ -88,6 +88,7 @@ const ui = {
 };
 
 const lessonCatalog = [
+  { id: 1, zh: "第1课：未来考古，看懂AI时代变局", en: "Lesson 1: Future Archaeology, Reading The AI Age", status: "sample" },
   { id: 5, zh: "第5课：AI创意画室，把脑袋里的画说清楚", en: "Lesson 5: AI Art Studio, Describe Your Picture Clearly", status: "sample" },
   { id: 31, zh: "后续：确认样板后扩展31课完整目录", en: "Next: expand to the full 31-lesson catalog after this sample", status: "pending" }
 ];
@@ -104,7 +105,141 @@ const lessonStepImages = {
   }
 };
 
+const lessonOneDetails = {
+  illustration: "future",
+  zh: {
+    title: "未来考古：看懂AI时代变局",
+    kicker: "30分钟家庭课 · 认知觉醒与未来判断",
+    prep: "课前家长准备：这节课不是制造焦虑，也不是让孩子背职业清单。目标是带孩子看见一个事实：AI会改变很多工作，但人类仍然需要观察、提问、判断、表达、合作和创造。家长可以把这节课讲成一次“未来考古任务”：我们从现在的变化里挖线索，判断未来十年哪些能力会更重要。",
+    tips: [
+      "讲未来变化时，请避免吓孩子。重点不是“会不会被取代”，而是“我们可以提前练什么能力”。",
+      "孩子说出奇怪职业时，不要急着否定。先问：这个职业帮助谁？解决什么问题？需要哪些能力？",
+      "这节课的核心收获不是标准答案，而是让孩子开始用“变化、能力、价值”三个词看世界。"
+    ],
+    steps: [
+      {
+        type: "cover",
+        label: "开场",
+        title: "今天我们当未来考古队",
+        minutes: "2分钟",
+        body: "我们不是去古代挖恐龙，而是从今天的AI变化里，挖出未来十年的线索。",
+        quote: "AI会变强，但孩子更要变强的是：看懂变化、提出问题、做出创造。",
+        bullets: ["看见变化：哪些事正在被AI加速", "找到能力：未来更需要什么本领", "做出选择：我想先练哪一种能力"],
+        guide: "开场可以问孩子：如果十年后你长大了，世界可能会多出哪些新工作？哪些工作会变得不一样？先让孩子大胆猜，不急着纠正。"
+      },
+      {
+        type: "story",
+        label: "小故事",
+        title: "小安收到一张2036年的招聘卡",
+        minutes: "5分钟",
+        body: "小安在抽屉里发现一张来自2036年的招聘卡，上面写着：需要会和AI合作的人。第一份工作叫“机器人伙伴训练师”，要教机器人听懂人类情绪；第二份工作叫“城市问题侦探”，要用AI找出交通、垃圾、能源的问题；第三份工作叫“故事世界设计师”，要把想象变成游戏、动画和体验。小安发现，未来不是只有会写代码的人厉害，会观察、会表达、会判断、会创造的人也很重要。",
+        quote: "问孩子：这三份未来工作，哪一份最吸引你？为什么？",
+        guide: "故事讲完后，请孩子选一个最感兴趣的职业，并说出它帮助了谁。这样能把“职业”从名字拉回到真实价值。"
+      },
+      {
+        type: "rules",
+        label: "方法",
+        title: "未来能力三角形",
+        minutes: "5分钟",
+        body: "看未来职业，不只看名字，要看三种能力。",
+        bullets: ["认知力：看懂问题，提出好问题", "表达力：把想法讲清楚，让别人和AI听懂", "创造力：把想法做成作品、方案或体验"],
+        guide: "这里不要讲得太抽象。每个能力都配一个孩子生活里的例子：认知力是发现玩具为什么总是乱，表达力是说清楚想让AI画什么，创造力是把纸盒变成一个小机器人。"
+      },
+      {
+        type: "puzzle",
+        label: "线索游戏",
+        title: "挖出未来十年的线索",
+        minutes: "6分钟",
+        prompt: "请孩子从四组线索里各点一个，组合成一条“未来观察”。",
+        groups: [
+          { name: "变化", options: ["AI会帮人写作和画图", "机器人会进入更多场景", "很多知识可以快速查询", "视频和游戏会更容易制作"] },
+          { name: "人的优势", options: ["理解人的感受", "提出真正的问题", "做审美判断", "把不同想法连起来"] },
+          { name: "未来能力", options: ["会观察", "会表达", "会判断", "会创造"] },
+          { name: "行动", options: ["每周做一个小作品", "把问题说得更清楚", "学会检查AI答案", "和同伴一起完成任务"] }
+        ],
+        guide: "让孩子自己点。点完后请他读出完整观察，再追问：这条观察和你的生活有什么关系？比如作业、画画、玩具、游戏、运动。"
+      },
+      {
+        type: "upgrade",
+        label: "技能雷达",
+        title: "未来十年紧缺能力",
+        minutes: "4分钟",
+        prompt: "请点出你认为未来最值得练的4种能力。",
+        choices: ["提出好问题", "清楚表达", "判断真假", "动手做作品", "合作分工", "保护隐私"],
+        guide: "如果孩子全都想选，可以让他先选最想练的4个。家长要强调：能力不是天生的，是可以通过小任务慢慢练出来的。"
+      },
+      {
+        type: "repair",
+        label: "判断任务",
+        title: "哪个职业更不容易被AI替代",
+        minutes: "4分钟",
+        problem: "只会重复复制答案的人，容易被AI替代；能理解人、提出问题、做判断和创造作品的人，更不容易被替代。",
+        target: "我选择练习：提出好问题 + 清楚表达 + 判断真假 + 动手创造，因为这些能力能帮助我和AI合作，而不是只依赖AI。",
+        options: ["理解人的感受", "提出真正的问题", "判断结果好不好", "把想法做成作品"],
+        guide: "这页不是让孩子害怕被替代，而是让他知道：未来更重要的是人和AI合作的能力。请孩子说出一个“AI很强但仍需要人判断”的例子。"
+      },
+      {
+        type: "design",
+        label: "能力卡",
+        title: "我的未来能力卡",
+        minutes: "6分钟",
+        fields: ["我感兴趣的未来职业", "它帮助谁", "需要的能力", "我本周可以练的小任务"],
+        placeholder: "比如：机器人伙伴训练师 / 帮助老人和孩子 / 表达、判断、同理心 / 设计一个机器人对话",
+        guide: "这是孩子的输出页。家长只做提问者，不做代答者。填完后请孩子完整读一遍，并选一个本周能完成的小任务。"
+      },
+      {
+        type: "duo",
+        label: "双人任务",
+        title: "两个孩子组建未来小队",
+        minutes: "4分钟",
+        kids: [
+          { name: "孩子A", mission: "未来职业观察员", starter: ["我发现的变化：AI会帮助更多人", "人的优势：提出问题", "我想练：判断真假", "本周任务：检查一个AI答案"] },
+          { name: "孩子B", mission: "未来作品创造者", starter: ["我发现的变化：视频更容易制作", "人的优势：想象和审美", "我想练：清楚表达", "本周任务：做一张未来职业卡"] }
+        ],
+        guide: "如果两个孩子一起上课，让他们互相采访：你为什么选这个未来职业？你准备怎么练？采访比抢答更能训练表达。"
+      },
+      {
+        type: "summary",
+        label: "复盘",
+        title: "今天我们看懂了什么",
+        minutes: "4分钟",
+        chant: "不怕AI变强，先让自己会观察、会判断、会创造。",
+        recap: [
+          "今天我们把自己变成未来考古队，从AI变化里寻找未来线索。",
+          "我们知道未来不是背职业清单，而是看懂变化背后的能力需求。",
+          "我们学习了未来能力三角形：认知力、表达力、创造力。",
+          "我们通过网页选择线索，组合出自己的未来观察。",
+          "最后孩子完成了未来能力卡，知道自己本周可以先练一个小任务。"
+        ],
+        guide: "总结时请孩子回答三句话：我发现未来会有什么变化；我觉得人最重要的能力是什么；我本周准备做哪一个小任务。"
+      }
+    ]
+  },
+  en: {
+    title: "Future Archaeology: Reading The AI Age",
+    kicker: "30-minute family lesson · Awareness and future judgment",
+    prep: "Parent prep: this lesson is not meant to scare children or make them memorize job lists. The goal is to help them see that AI will change many jobs, while humans still need observation, questioning, judgment, expression, collaboration, and creation. Treat the lesson as a future archaeology mission: we dig clues from today's changes and decide which abilities will matter.",
+    tips: [
+      "When talking about future change, avoid fear. The focus is not replacement; it is what abilities we can practice early.",
+      "If the child invents a strange job, do not reject it. Ask: who does it help, what problem does it solve, and what abilities does it need?",
+      "The core outcome is not one correct answer. It is helping the child see the world through change, ability, and value."
+    ],
+    steps: [
+      { type: "cover", label: "Start", title: "Today we are future archaeologists", minutes: "2 min", body: "We are not digging dinosaurs. We are digging clues about the next ten years from today's AI changes.", quote: "AI will become stronger, but children can become stronger at seeing change, asking questions, and creating.", bullets: ["See change: what is AI accelerating?", "Find abilities: what will people need?", "Choose action: what ability should I practice first?"], guide: "Ask: ten years from now, what new jobs might exist? What jobs may change?" },
+      { type: "story", label: "Story", title: "An receives a job card from 2036", minutes: "5 min", body: "An finds a job card from 2036. It says: people who can work with AI are needed. One job is Robot Partner Trainer, helping robots understand human emotions. Another is City Problem Detective, using AI to find traffic, waste, and energy problems. A third is Story World Designer, turning imagination into games, animation, and experiences. An learns that the future is not only for coders. People who observe, express, judge, and create will also matter.", quote: "Ask: which future job attracts you most, and why?", guide: "Ask the child to choose one job and explain who it helps." },
+      { type: "rules", label: "Method", title: "The Future Ability Triangle", minutes: "5 min", body: "To read future jobs, look at three abilities.", bullets: ["Thinking: see problems and ask good questions", "Expression: make ideas clear for people and AI", "Creation: turn ideas into works, plans, or experiences"], guide: "Use daily-life examples: noticing why toys are messy, describing a picture clearly, or turning a box into a robot." },
+      { type: "puzzle", label: "Clues", title: "Dig clues about the next ten years", minutes: "6 min", prompt: "Choose one clue from each group to build a future observation.", groups: [{ name: "Change", options: ["AI helps people write and draw", "robots enter more places", "knowledge becomes easier to search", "videos and games become easier to make"] }, { name: "Human strength", options: ["understanding feelings", "asking real questions", "making taste judgments", "connecting different ideas"] }, { name: "Future ability", options: ["observation", "expression", "judgment", "creation"] }, { name: "Action", options: ["make one small work each week", "describe problems more clearly", "check AI answers", "finish tasks with teammates"] }], guide: "After the child taps choices, ask how the observation connects to school, art, toys, games, or sports." },
+      { type: "upgrade", label: "Radar", title: "Abilities worth practicing", minutes: "4 min", prompt: "Tap four abilities you think are most worth practicing.", choices: ["ask good questions", "express clearly", "judge truth", "make real works", "work with others", "protect privacy"], guide: "If the child wants all abilities, ask them to pick four first. Abilities are practiced through small tasks." },
+      { type: "repair", label: "Judge", title: "Which work is harder for AI to replace?", minutes: "4 min", problem: "People who only copy repeated answers are easier to replace. People who understand humans, ask questions, judge results, and create works are harder to replace.", target: "I choose to practice: asking good questions + clear expression + judging truth + making works, because these help me work with AI instead of only relying on AI.", options: ["understand human feelings", "ask real questions", "judge whether results are good", "turn ideas into works"], guide: "This is not about fear. Ask for one example where AI is strong but humans still need to judge." },
+      { type: "design", label: "Ability Card", title: "My Future Ability Card", minutes: "6 min", fields: ["Future job I like", "Who it helps", "Abilities it needs", "Small task I can do this week"], placeholder: "Example: robot partner trainer / helps kids and elders / expression, judgment, empathy / design one robot dialogue", guide: "The parent asks questions but does not answer for the child. End with one doable weekly task." },
+      { type: "duo", label: "Two Kids", title: "Build a future team", minutes: "4 min", kids: [{ name: "Child A", mission: "Future job observer", starter: ["Change: AI helps more people", "Human strength: asking questions", "I practice: judging truth", "This week: check one AI answer"] }, { name: "Child B", mission: "Future work creator", starter: ["Change: videos become easier to make", "Human strength: imagination and taste", "I practice: clear expression", "This week: make one future job card"] }], guide: "Let children interview each other: why did you choose this future job, and how will you practice?" },
+      { type: "summary", label: "Review", title: "What did we understand today?", minutes: "4 min", chant: "Do not fear stronger AI. Practice observation, judgment, and creation.", recap: ["We became future archaeologists and found clues from AI change.", "We learned that the future is not a job list; it is about abilities.", "We learned the ability triangle: thinking, expression, creation.", "We built our own future observation through the webpage.", "The child completed a future ability card and chose one weekly task."], guide: "Ask the child to say: what change I noticed, what human ability matters, and what small task I will do this week." }
+    ]
+  }
+};
+
 const lessonDetails = {
+  1: lessonOneDetails,
   5: {
     illustration: "art",
     zh: {
@@ -264,7 +399,7 @@ const lectureTitle = document.querySelector("#lectureTitle");
 const lectureBody = document.querySelector("#lectureBody");
 const progressFill = document.querySelector("#progressFill");
 
-let currentLessonId = 5;
+let currentLessonId = 1;
 let currentStepIndex = 0;
 let languageMode = "zh";
 let audioContext;
@@ -301,7 +436,7 @@ function updateStaticLanguage() {
   document.querySelector(".hero-text").textContent = tr("heroText");
   document.querySelector(".author-note strong").textContent = tr("authorTitle");
   document.querySelector(".author-note p").textContent = tr("authorBody");
-  document.querySelector('[data-open-lesson="5"]').textContent = tr("startLesson");
+  document.querySelector(".hero-actions [data-open-lesson]").textContent = tr("startLesson");
   scrollCatalog.textContent = tr("catalogButton");
   const statusItems = document.querySelectorAll(".status-band div");
   statusItems[0].querySelector("strong").textContent = tr("samples");
@@ -333,7 +468,7 @@ function renderCatalog() {
     const available = Boolean(lessonDetails[lesson.id]);
     const statusText = available ? tr("sample") : tr("pending");
     const note = available
-      ? (languageMode === "zh" ? "当前可完整体验的第5课样板" : "The current complete sample lesson")
+      ? (languageMode === "zh" ? "当前可完整体验的高质量样板课" : "A complete sample lesson you can try now")
       : (languageMode === "zh" ? "先不急着做满，等样板确认后再扩展" : "Will expand after this sample is confirmed");
     return `
       <button class="lesson-card ${available ? "available" : "disabled"}" ${available ? `data-open-lesson="${lesson.id}"` : "disabled"}>
@@ -351,7 +486,18 @@ function renderCatalog() {
 }
 
 function visualScene(scene = "cover") {
-  const labels = {
+  const lessonOneLabels = {
+    cover: ["未来考古", "挖出时代线索"],
+    story: ["2036招聘卡", "未来职业从价值开始"],
+    rules: ["能力三角形", "认知 表达 创造"],
+    puzzle: ["未来线索", "每组点一个"],
+    upgrade: ["技能雷达", "选择优先练习"],
+    repair: ["抗替代判断", "人和AI合作"],
+    design: ["能力卡", "我的本周行动"],
+    duo: ["未来小队", "互相采访"],
+    summary: ["完成复盘", "一个变化 一个行动"]
+  };
+  const lessonFiveLabels = {
     cover: ["想象泡泡", "AI不是读心术"],
     story: ["未来学校", "第二次更清楚"],
     rules: ["四件套", "地点 主角 动作 细节"],
@@ -361,7 +507,8 @@ function visualScene(scene = "cover") {
     design: ["设计卡", "我的完整指令"],
     duo: ["双人任务", "互相提问"],
     summary: ["完成复盘", "下次我会这样问"]
-  }[scene] || ["AI课堂", "想清楚再表达"];
+  };
+  const labels = (currentLessonId === 1 ? lessonOneLabels : lessonFiveLabels)[scene] || ["AI课堂", "想清楚再表达"];
   const sceneBits = {
     cover: `
       <div class="thought-cloud cloud-a">未来学校</div>
@@ -584,7 +731,18 @@ function renderLesson() {
 
 function buildLectureText(lesson, stepData) {
   const zh = languageMode === "zh";
-  const typeHelp = {
+  const lessonOneHelp = {
+    cover: zh ? "讲法：先让孩子猜未来十年会出现什么新变化，再把目标说出来：不是害怕AI，而是提前练能力。" : "Teaching: ask the child to guess changes in the next ten years, then explain that the goal is ability practice, not fear.",
+    story: zh ? "讲法：故事要讲出未来职业背后的价值：帮助谁、解决什么问题、需要什么能力。" : "Teaching: focus on the value behind future jobs: who they help, what problem they solve, and what abilities they need.",
+    rules: zh ? "讲法：三角形不用背，必须马上联系生活例子。让孩子说一个学校或家庭里的真实问题。" : "Teaching: connect the triangle to real daily examples instead of memorizing it.",
+    puzzle: zh ? "讲法：让孩子自己点选线索。选完以后读完整观察，并说这和自己的生活有什么关系。" : "Teaching: let the child choose clues, read the observation, and connect it to their own life.",
+    upgrade: zh ? "讲法：这是技能雷达。让孩子选择优先练的能力，并说为什么这个能力未来重要。" : "Teaching: this is an ability radar. Ask why each chosen ability matters.",
+    repair: zh ? "讲法：把“替代焦虑”转成“能力判断”。重点是哪些人类能力让我们能和AI合作。" : "Teaching: turn replacement anxiety into ability judgment. Focus on human abilities for working with AI.",
+    design: zh ? "讲法：这是输出页。请家长用问题帮助孩子想清楚，不要替孩子设计人生。" : "Teaching: this is the output page. Use questions; do not design the child's life for them.",
+    duo: zh ? "讲法：适合两个孩子一起上。让他们互相采访，而不是比谁答案更快。" : "Teaching: good for two children. Let them interview each other instead of racing for answers.",
+    summary: zh ? "讲法：不要只问“懂了吗”。让孩子说出一个变化、一个能力、一个本周行动。" : "Teaching: ask for one change, one ability, and one weekly action."
+  };
+  const lessonFiveHelp = {
     cover: zh ? "讲法：先让孩子看画面并猜今天学什么，再把目标说出来：不是学画画软件，而是学会说清楚。" : "Teaching: let the child look and guess first, then explain that the goal is clear expression.",
     story: zh ? "讲法：故事要讲出第一次为什么失败、爸爸怎么追问、第二次为什么更接近想象。" : "Teaching: show why the first prompt failed, how the parent asked, and why the second became clearer.",
     rules: zh ? "讲法：四件套不用背，必须马上用。每讲一个词，请孩子立刻举自己的例子。" : "Teaching: do not memorize. Use each part immediately with the child's examples.",
@@ -594,7 +752,8 @@ function buildLectureText(lesson, stepData) {
     design: zh ? "讲法：这是输出页。请家长做记录员，不要抢孩子的答案。" : "Teaching: this is the output page. The parent records but does not take over.",
     duo: zh ? "讲法：适合两个孩子一起上。让他们互相提一个让画面更清楚的问题。" : "Teaching: good for two children. Let them ask each other one clarity question.",
     summary: zh ? "讲法：不要只问“懂了吗”。让孩子完整说出过程、方法、下次怎么用。" : "Teaching: do not only ask 'do you understand'. Ask the child to explain the process, method, and next use."
-  }[stepData.type];
+  };
+  const typeHelp = (currentLessonId === 1 ? lessonOneHelp : lessonFiveHelp)[stepData.type];
   return [currentStepIndex === 0 ? lesson.prep : stepData.guide, typeHelp].filter(Boolean).join("\n\n");
 }
 
@@ -768,25 +927,39 @@ function outputActionsMarkup(kind) {
 
 function workSummaryMarkup() {
   const labels = languageMode === "zh"
-    ? { puzzle: "拼图指令", upgrade: "升级指令", repair: "修正指令", design: "我的设计卡" }
-    : { puzzle: "Puzzle prompt", upgrade: "Upgraded prompt", repair: "Revision prompt", design: "My design card" };
+    ? (currentLessonId === 1
+      ? { puzzle: "未来观察", upgrade: "技能选择", repair: "抗替代判断", design: "我的未来能力卡" }
+      : { puzzle: "拼图指令", upgrade: "升级指令", repair: "修正指令", design: "我的设计卡" })
+    : (currentLessonId === 1
+      ? { puzzle: "Future observation", upgrade: "Ability choices", repair: "Replacement judgment", design: "My future ability card" }
+      : { puzzle: "Puzzle prompt", upgrade: "Upgraded prompt", repair: "Revision prompt", design: "My design card" });
   const empty = languageMode === "zh" ? "这一项还没有完成，可以回到对应页面补上。" : "Not completed yet. Go back to this step to finish it.";
   const handoffSteps = languageMode === "zh"
-    ? ["复制孩子最后的设计卡提示词", "打开豆包或 DeepSeek App 的对话/绘图入口", "让孩子亲手粘贴并发送", "一起观察结果：哪里像？哪里不像？下一句怎么改？"]
-    : ["Copy the child's final design-card prompt", "Open Doubao or DeepSeek and choose chat/image creation", "Let the child paste and send it", "Review together: what matches, what misses, and how should we revise?"];
+    ? (currentLessonId === 1
+      ? ["复制孩子最后的未来能力卡", "打开豆包或 DeepSeek App 的对话入口", "让孩子亲手粘贴，并追问：请帮我设计一个本周能完成的小任务", "一起判断AI建议：是否安全？是否可执行？是否真的适合我？"]
+      : ["复制孩子最后的设计卡提示词", "打开豆包或 DeepSeek App 的对话/绘图入口", "让孩子亲手粘贴并发送", "一起观察结果：哪里像？哪里不像？下一句怎么改？"])
+    : (currentLessonId === 1
+      ? ["Copy the child's future ability card", "Open Doubao or DeepSeek chat", "Let the child paste it and ask for one weekly task", "Review together: is it safe, doable, and suitable?"]
+      : ["Copy the child's final design-card prompt", "Open Doubao or DeepSeek and choose chat/image creation", "Let the child paste and send it", "Review together: what matches, what misses, and how should we revise?"]);
+  const handoffTitle = languageMode === "zh"
+    ? (currentLessonId === 1 ? "家长带孩子去 App 里优化任务" : "家长带孩子去 App 里生成")
+    : (currentLessonId === 1 ? "Parent-guided task refinement" : "Parent-guided app handoff");
+  const workCardIntro = languageMode === "zh"
+    ? (currentLessonId === 1 ? "下一步不是让AI替孩子决定未来，而是让孩子学会用AI帮助自己制定一个小行动。" : "下一步不是让AI替孩子想，而是让孩子看到自己的表达真的能变成画面。")
+    : (currentLessonId === 1 ? "Next, use AI to help the child turn one ability into a small action, not to decide their future." : "Next, let the child see how their own words can become an image.");
   return `
     <div class="teacher-card work-card">
       <div class="work-card-head">
         <span class="time-tag">${languageMode === "zh" ? "作品卡" : "Work Card"}</span>
         <h3>${languageMode === "zh" ? "孩子今天完成了什么" : "What the child made today"}</h3>
-        <p>${languageMode === "zh" ? "下一步不是让AI替孩子想，而是让孩子看到自己的表达真的能变成画面。" : "Next, let the child see how their own words can become an image."}</p>
+        <p>${workCardIntro}</p>
       </div>
       <div class="app-handoff">
-        <strong>${languageMode === "zh" ? "家长带孩子去 App 里生成" : "Parent-guided app handoff"}</strong>
+        <strong>${handoffTitle}</strong>
         <ol>
           ${handoffSteps.map((item) => `<li>${item}</li>`).join("")}
         </ol>
-        <button class="secondary-action compact-action" data-copy-work="design">${languageMode === "zh" ? "复制最后设计卡" : "Copy final prompt"}</button>
+        <button class="secondary-action compact-action" data-copy-work="design">${languageMode === "zh" ? "复制最后作品卡" : "Copy final card"}</button>
       </div>
       <div class="work-list">
         ${Object.keys(labels).map((key) => `
@@ -802,6 +975,11 @@ function workSummaryMarkup() {
 
 function joinPrompt(parts) {
   if (!parts.length) return languageMode === "zh" ? "点击补充信息，把指令变清楚。" : "Tap details to make the prompt clearer.";
+  if (currentLessonId === 1) {
+    return languageMode === "zh"
+      ? `我的未来观察：${parts.join("；")}。我会先选择一个小任务练习，让自己更会和AI合作。`
+      : `My future observation: ${parts.join("; ")}. I will choose one small task to practice working with AI.`;
+  }
   return languageMode === "zh"
     ? `请帮我画：${parts.join("，")}。画面适合小学生，明亮、友好、有轻微未来感。`
     : `Please draw: ${parts.join(", ")}. Make it bright, friendly, lightly futuristic, and suitable for children.`;
@@ -892,7 +1070,7 @@ document.addEventListener("click", (event) => {
     copyWorkButton.textContent = languageMode === "zh" ? "已复制，去App粘贴" : "Copied";
     playSfx("complete");
     setTimeout(() => {
-      copyWorkButton.textContent = languageMode === "zh" ? "复制最后设计卡" : "Copy final prompt";
+      copyWorkButton.textContent = languageMode === "zh" ? "复制最后作品卡" : "Copy final card";
     }, 1400);
   }
 });
