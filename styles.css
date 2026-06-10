@@ -729,15 +729,15 @@ span {
 
 .lesson-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 16px;
+  grid-template-columns: repeat(auto-fit, minmax(245px, 1fr));
+  gap: 14px;
 }
 
 .lesson-card {
   display: flex;
   flex-direction: column;
-  min-height: 300px;
-  padding: 18px;
+  min-height: 238px;
+  padding: 16px;
   border: 1px solid rgba(31, 45, 53, 0.11);
   border-radius: 8px;
   background: rgba(255, 255, 255, 0.86);
@@ -813,15 +813,31 @@ span {
 
 .lesson-card h3 {
   margin: 0 0 10px;
+  font-size: 18px;
+  line-height: 1.35;
 }
 
 .lesson-card p {
   margin-bottom: 16px;
   color: var(--muted);
+  font-size: 14px;
+  line-height: 1.65;
 }
 
 .lesson-card .mini-action {
   margin-top: auto;
+}
+
+.lesson-unit {
+  display: inline-flex;
+  width: fit-content;
+  margin-bottom: 10px;
+  padding: 5px 8px;
+  border-radius: 8px;
+  color: #0b67b2;
+  background: rgba(93, 190, 226, 0.12);
+  font-size: 12px;
+  font-weight: 900;
 }
 
 .lesson-view {

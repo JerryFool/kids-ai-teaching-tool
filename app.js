@@ -88,9 +88,37 @@ const ui = {
 };
 
 const lessonCatalog = [
-  { id: 1, zh: "第1课：未来考古，看懂AI时代变局", en: "Lesson 1: Future Archaeology, Reading The AI Age", status: "sample" },
-  { id: 5, zh: "第5课：AI创意画室，把脑袋里的画说清楚", en: "Lesson 5: AI Art Studio, Describe Your Picture Clearly", status: "sample" },
-  { id: 31, zh: "后续：确认样板后扩展31课完整目录", en: "Next: expand to the full 31-lesson catalog after this sample", status: "pending" }
+  { id: 1, unitZh: "认知觉醒", unitEn: "Awareness", zh: "未来考古：看懂AI时代变局", en: "Future Archaeology: Reading The AI Age", noteZh: "识别未来10年紧缺技能，寻找不可替代的能力。", noteEn: "Spot future skills and abilities that are harder to replace." },
+  { id: 2, unitZh: "认知觉醒", unitEn: "Awareness", zh: "工具祛魅：AI军火库", en: "Demystifying Tools: The AI Toolkit", noteZh: "认识 DeepSeek、Gemini 等工具的不同能力。", noteEn: "Understand different AI tools and what each one is good at." },
+  { id: 3, unitZh: "认知觉醒", unitEn: "Awareness", zh: "数字守门人", en: "Digital Gatekeeper", noteZh: "从刷视频到做视频，建立安全和判断意识。", noteEn: "Move from watching videos to making them with judgment and safety." },
+  { id: 4, unitZh: "掌控指令", unitEn: "Prompting", zh: "提问的艺术：让AI听懂你的话", en: "The Art of Asking: Make AI Understand You", noteZh: "学习角色、任务、背景、约束的提问公式。", noteEn: "Learn the role, task, context, and constraint prompt structure." },
+  { id: 5, unitZh: "掌控指令", unitEn: "Prompting", zh: "感官觉醒：AI创意画室", en: "Multimodal Senses: AI Art Studio", noteZh: "用听觉、视觉和描述训练孩子把想象说清楚。", noteEn: "Use visual and audio clues to describe ideas clearly." },
+  { id: 6, unitZh: "掌控指令", unitEn: "Prompting", zh: "知识管理：家庭大脑", en: "Knowledge Management: Family Brain", noteZh: "用 NotebookLM 把课本变成双人播客。", noteEn: "Use NotebookLM to turn learning material into a two-person podcast." },
+  { id: 7, unitZh: "AI私人数学老师", unitEn: "AI Tutor", zh: "数学救星：DeepSeek R1", en: "Math Helper: DeepSeek R1", noteZh: "用深度推理帮助孩子反向讲解题目。", noteEn: "Use reasoning tools and let children explain solutions back." },
+  { id: 8, unitZh: "AI私人写作老师", unitEn: "AI Tutor", zh: "作文神笔：Gemini", en: "Writing Brush: Gemini", noteZh: "创意润色，不只是简单改错。", noteEn: "Improve writing with creative refinement, not just correction." },
+  { id: 9, unitZh: "AI私人英语老师", unitEn: "AI Tutor", zh: "英语私教：Gemini Pro", en: "English Coach: Gemini Pro", noteZh: "用沉浸式听说读写和图片批改练英语。", noteEn: "Practice English through immersive listening, speaking, reading, and writing." },
+  { id: 10, unitZh: "知识具象化", unitEn: "Visible Knowledge", zh: "错题消灭", en: "Mistake Destroyer", noteZh: "把一道题生成多种变式练习。", noteEn: "Turn one mistake into several practice variations." },
+  { id: 11, unitZh: "知识具象化", unitEn: "Visible Knowledge", zh: "科学可视化", en: "Science Visualization", noteZh: "用物理、地理模拟理解太阳系与电路。", noteEn: "Use simulations to understand science and geography." },
+  { id: 12, unitZh: "知识具象化", unitEn: "Visible Knowledge", zh: "艺术启蒙", en: "Art Awakening", noteZh: "用神笔马良式任务把涂鸦变绘本。", noteEn: "Turn doodles into picture-book ideas." },
+  { id: 13, unitZh: "知识具象化", unitEn: "Visible Knowledge", zh: "历史穿越", en: "History Time Travel", noteZh: "结合 NotebookLM 与漫画生成制作历史剧本。", noteEn: "Create historical scripts with NotebookLM and comic generation." },
+  { id: 14, unitZh: "情感与创造", unitEn: "Emotion & Creation", zh: "心理树洞", en: "Emotion Tree Hole", noteZh: "把AI当成烦恼粉碎机，学习表达情绪。", noteEn: "Use AI as a safe helper for naming and expressing feelings." },
+  { id: 15, unitZh: "情感与创造", unitEn: "Emotion & Creation", zh: "动态视界：Gemini + Veo", en: "Moving Worlds: Gemini + Veo", noteZh: "让绘本角色动起来。", noteEn: "Bring picture-book characters to life." },
+  { id: 16, unitZh: "情感与创造", unitEn: "Emotion & Creation", zh: "阶段大作业：PBL动画短片", en: "PBL Project: Animated Short", noteZh: "综合应用剧本、画面、配音与剪辑。", noteEn: "Combine script, visuals, voice, and editing into one project." },
+  { id: 17, unitZh: "商业启蒙", unitEn: "Business Basics", zh: "赚钱的基本路径", en: "How Value Becomes Money", noteZh: "理解流量 × 产品 = 价值。", noteEn: "Understand traffic, product, and value." },
+  { id: 18, unitZh: "商业启蒙", unitEn: "Business Basics", zh: "表情包经济", en: "Sticker Economy", noteZh: "把情绪价值变成可分享的小产品。", noteEn: "Turn emotional value into shareable small products." },
+  { id: 19, unitZh: "谷子实战（上）", unitEn: "Goods Lab I", zh: "吧唧制作：Badges", en: "Badge Making", noteZh: "学习痛包文化、圆形构图和高清马口铁徽章产出。", noteEn: "Learn badge culture, circular composition, and badge output." },
+  { id: 20, unitZh: "谷子实战（上）", unitEn: "Goods Lab I", zh: "自制AI手串", en: "DIY AI Bracelet", noteZh: "用几何珠子和IP挂坠理解3D打印。", noteEn: "Explore 3D printed beads and IP charms." },
+  { id: 21, unitZh: "谷子实战（上）", unitEn: "Goods Lab I", zh: "时尚设计师：T-shirt", en: "Fashion Designer: T-shirt", noteZh: "了解POD按需打印，做亲子装设计与打样。", noteEn: "Learn print-on-demand and create family T-shirt samples." },
+  { id: 22, unitZh: "谷子实战（下）", unitEn: "Goods Lab II", zh: "爱的礼物：手机壳", en: "Gift of Love: Phone Case", noteZh: "做用户调研，定制妈妈喜欢的风格。", noteEn: "Practice user research and design for a real person." },
+  { id: 23, unitZh: "谷子实战（下）", unitEn: "Goods Lab II", zh: "友情见证：卡套", en: "Friendship Card Holder", noteZh: "为好朋友设计校园交通卡套。", noteEn: "Design a school card holder for a close friend." },
+  { id: 24, unitZh: "实体进阶", unitEn: "Physical IP", zh: "3D建模：公仔诞生", en: "3D Modeling: Figure Birth", noteZh: "AI辅助生成三维模型数据。", noteEn: "Use AI to support 3D model data creation." },
+  { id: 25, unitZh: "实体进阶", unitEn: "Physical IP", zh: "匠人精神：涂装", en: "Craft Spirit: Painting", noteZh: "体验白模手工上色与成品制作。", noteEn: "Paint a blank model and understand craft finishing." },
+  { id: 26, unitZh: "实体进阶", unitEn: "Physical IP", zh: "IP孵化：角色宇宙", en: "IP Incubation: Character Universe", noteZh: "为角色设计上学、运动、太空等系列场景。", noteEn: "Build character scenes for school, sports, space, and more." },
+  { id: 27, unitZh: "数字化变现", unitEn: "Digital Products", zh: "音乐制作：Suno", en: "Music Making: Suno", noteZh: "发行家庭主题曲。", noteEn: "Create and publish a family theme song." },
+  { id: 28, unitZh: "数字化变现", unitEn: "Digital Products", zh: "MV导演：即梦AI", en: "MV Director: Jimeng AI", noteZh: "制作虚拟MV。", noteEn: "Direct a virtual music video." },
+  { id: 29, unitZh: "数字化变现", unitEn: "Digital Products", zh: "游戏设计：无代码", en: "Game Design: No Code", noteZh: "开发网页背单词游戏。", noteEn: "Build a simple vocabulary web game." },
+  { id: 30, unitZh: "数字化变现", unitEn: "Digital Products", zh: "实用工具APP", en: "Useful Tool App", noteZh: "开发专注力计时工具。", noteEn: "Build a focus timer tool." },
+  { id: 31, unitZh: "结业路演", unitEn: "Final Showcase", zh: "第一桶金：未来创客市集", en: "First Revenue: Future Maker Market", noteZh: "整理学期产出，定价摆摊，向陌生人推销创意。", noteEn: "Package work, price it, set up a market, and pitch ideas." }
 ];
 
 const lessonCoverImages = {
@@ -469,7 +497,9 @@ function renderCatalog() {
     const statusText = available ? tr("sample") : tr("pending");
     const note = available
       ? (languageMode === "zh" ? "当前可完整体验的高质量样板课" : "A complete sample lesson you can try now")
-      : (languageMode === "zh" ? "先不急着做满，等样板确认后再扩展" : "Will expand after this sample is confirmed");
+      : lesson[`note${languageMode === "zh" ? "Zh" : "En"}`];
+    const unit = lesson[`unit${languageMode === "zh" ? "Zh" : "En"}`];
+    const titlePrefix = languageMode === "zh" ? `第${lesson.id}课：` : `Lesson ${lesson.id}: `;
     return `
       <button class="lesson-card ${available ? "available" : "disabled"}" ${available ? `data-open-lesson="${lesson.id}"` : "disabled"}>
         ${lessonCoverImages[lesson.id] ? `<div class="lesson-thumb"><img src="${lessonCoverImages[lesson.id]}" alt=""></div>` : ""}
@@ -477,7 +507,8 @@ function renderCatalog() {
           <span class="lesson-badge">${lesson.id}</span>
           <span class="status-chip ${available ? "" : "pending"}">${statusText}</span>
         </div>
-        <h3>${lesson[languageMode]}</h3>
+        <span class="lesson-unit">${unit}</span>
+        <h3>${titlePrefix}${lesson[languageMode]}</h3>
         <p>${note}</p>
         <span class="mini-action">${available ? tr("enter") : tr("waiting")}</span>
       </button>
