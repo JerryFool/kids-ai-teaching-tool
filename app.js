@@ -273,6 +273,7 @@ let musicAudio;
 let musicEnabled = false;
 let sfxEnabled = true;
 let lectureCollapsed = false;
+let lessonWork = {};
 
 function tr(key) {
   return ui[languageMode][key];
@@ -280,6 +281,15 @@ function tr(key) {
 
 function localLesson(id = currentLessonId) {
   return lessonDetails[id][languageMode];
+}
+
+function resetLessonWork() {
+  lessonWork = {
+    puzzle: "",
+    upgrade: "",
+    repair: "",
+    design: ""
+  };
 }
 
 function updateStaticLanguage() {
@@ -534,6 +544,7 @@ function toggleSfx() {
 function openLesson(lessonId) {
   currentLessonId = lessonId;
   currentStepIndex = 0;
+  resetLessonWork();
   homeView.hidden = true;
   lessonView.hidden = false;
   renderLesson();
@@ -640,7 +651,8 @@ function renderStep(stepData, lesson) {
         <div class="content-card prompt-card">
           ${visualScene("puzzle")}
           <h3>${languageMode === "zh" ? "生成的清楚指令" : "Clear Prompt"}</h3>
-          <div class="prompt-output" data-puzzle-output>${languageMode === "zh" ? "每组点一个，完整指令会出现在这里。" : "Choose one from each group to build the prompt."}</div>
+          <div class="prompt-output" data-puzzle-output>${lessonWork.puzzle || (languageMode === "zh" ? "每组点一个，完整指令会出现在这里。" : "Choose one from each group to build the prompt.")}</div>
+          ${outputActionsMarkup("puzzle")}
         </div>
       </div>
       ${tips}
@@ -659,7 +671,8 @@ function renderStep(stepData, lesson) {
         <div class="content-card prompt-card">
           ${visualScene("upgrade")}
           <h3>${languageMode === "zh" ? "升级后" : "Upgraded"}</h3>
-          <div class="prompt-output" data-upgrade-output>${languageMode === "zh" ? "点击补充信息，把模糊句变清楚。" : "Tap details to make it clearer."}</div>
+          <div class="prompt-output" data-upgrade-output>${lessonWork.upgrade || (languageMode === "zh" ? "点击补充信息，把模糊句变清楚。" : "Tap details to make it clearer.")}</div>
+          ${outputActionsMarkup("upgrade")}
         </div>
       </div>
       ${tips}
@@ -681,7 +694,8 @@ function renderStep(stepData, lesson) {
         <div class="content-card prompt-card">
           ${visual}
           <h3>${languageMode === "zh" ? "修改指令" : "Revision Prompt"}</h3>
-          <div class="prompt-output" data-repair-output>${stepData.target}</div>
+          <div class="prompt-output" data-repair-output>${lessonWork.repair || stepData.target}</div>
+          ${outputActionsMarkup("repair")}
         </div>
       </div>
       ${tips}
@@ -704,7 +718,8 @@ function renderStep(stepData, lesson) {
         <div class="content-card prompt-card">
           ${visual}
           <h3>${languageMode === "zh" ? "我的完整指令" : "My Full Prompt"}</h3>
-          <div class="prompt-output" data-design-output>${languageMode === "zh" ? "填完左边四格，这里会自动组成一句话。" : "Fill the four fields to build one sentence."}</div>
+          <div class="prompt-output" data-design-output>${lessonWork.design || (languageMode === "zh" ? "填完左边四格，这里会自动组成一句话。" : "Fill the four fields to build one sentence.")}</div>
+          ${outputActionsMarkup("design")}
         </div>
       </div>
       ${tips}
@@ -736,8 +751,41 @@ function renderStep(stepData, lesson) {
         <h3>${languageMode === "zh" ? "完整复盘" : "Full Review"}</h3>
         <div class="teacher-grid review-grid">${stepData.recap.map((item, index) => `<div><strong>${index + 1}</strong><span>${item}</span></div>`).join("")}</div>
       </div>
+      ${workSummaryMarkup()}
     </div>
     ${tips}
+  `;
+}
+
+function outputActionsMarkup(kind) {
+  return `
+    <div class="prompt-actions">
+      <button class="secondary-action compact-action" data-copy-output="${kind}">${languageMode === "zh" ? "复制指令" : "Copy"}</button>
+      <span data-work-status="${kind}">${lessonWork[kind] ? (languageMode === "zh" ? "已放入作品卡" : "Saved") : (languageMode === "zh" ? "完成后自动放入作品卡" : "Saved after completion")}</span>
+    </div>
+  `;
+}
+
+function workSummaryMarkup() {
+  const labels = languageMode === "zh"
+    ? { puzzle: "拼图指令", upgrade: "升级指令", repair: "修正指令", design: "我的设计卡" }
+    : { puzzle: "Puzzle prompt", upgrade: "Upgraded prompt", repair: "Revision prompt", design: "My design card" };
+  const empty = languageMode === "zh" ? "这一项还没有完成，可以回到对应页面补上。" : "Not completed yet. Go back to this step to finish it.";
+  return `
+    <div class="teacher-card work-card">
+      <div class="work-card-head">
+        <span class="time-tag">${languageMode === "zh" ? "作品卡" : "Work Card"}</span>
+        <h3>${languageMode === "zh" ? "孩子今天完成了什么" : "What the child made today"}</h3>
+      </div>
+      <div class="work-list">
+        ${Object.keys(labels).map((key) => `
+          <section>
+            <strong>${labels[key]}</strong>
+            <p>${lessonWork[key] || empty}</p>
+          </section>
+        `).join("")}
+      </div>
+    </div>
   `;
 }
 
@@ -748,6 +796,17 @@ function joinPrompt(parts) {
     : `Please draw: ${parts.join(", ")}. Make it bright, friendly, lightly futuristic, and suitable for children.`;
 }
 
+function recordWork(kind, value) {
+  const clean = value.trim();
+  lessonWork[kind] = clean;
+  const status = document.querySelector(`[data-work-status="${kind}"]`);
+  if (status) status.textContent = clean ? (languageMode === "zh" ? "已放入作品卡" : "Saved") : (languageMode === "zh" ? "完成后自动放入作品卡" : "Saved after completion");
+}
+
+function outputSelector(kind) {
+  return `[data-${kind}-output]`;
+}
+
 function bindStepInteractions() {
   document.querySelectorAll("[data-puzzle-group] .chip").forEach((button) => {
     button.addEventListener("click", () => {
@@ -756,6 +815,7 @@ function bindStepInteractions() {
       button.classList.add("selected");
       const pieces = Array.from(document.querySelectorAll("[data-puzzle-group] .chip.selected")).map((item) => item.dataset.piece);
       document.querySelector("[data-puzzle-output]").textContent = joinPrompt(pieces);
+      recordWork("puzzle", pieces.length >= 4 ? joinPrompt(pieces) : "");
       playSfx(pieces.length >= 4 ? "complete" : "click");
     });
   });
@@ -764,6 +824,7 @@ function bindStepInteractions() {
       button.classList.toggle("selected");
       const pieces = Array.from(document.querySelectorAll("[data-upgrade] .chip.selected")).map((item) => item.dataset.piece);
       document.querySelector("[data-upgrade-output]").textContent = joinPrompt(pieces);
+      recordWork("upgrade", pieces.length >= 4 ? joinPrompt(pieces) : "");
       playSfx(pieces.length >= 4 ? "complete" : "click");
     });
   });
@@ -772,6 +833,7 @@ function bindStepInteractions() {
       button.classList.toggle("selected");
       const pieces = Array.from(document.querySelectorAll("[data-repair] .chip.selected")).map((item) => item.dataset.piece);
       document.querySelector("[data-repair-output]").textContent = pieces.length ? joinPrompt(pieces) : localLesson().steps[currentStepIndex].target;
+      recordWork("repair", pieces.length >= 4 ? joinPrompt(pieces) : "");
       playSfx(pieces.length >= 4 ? "complete" : "click");
     });
   });
@@ -779,6 +841,7 @@ function bindStepInteractions() {
     input.addEventListener("input", () => {
       const values = Array.from(document.querySelectorAll("[data-design-field]")).map((field) => field.value.trim()).filter(Boolean);
       document.querySelector("[data-design-output]").textContent = values.length ? joinPrompt(values) : (languageMode === "zh" ? "填完左边四格，这里会自动组成一句话。" : "Fill the four fields to build one sentence.");
+      recordWork("design", values.length >= 4 ? joinPrompt(values) : "");
     });
   });
 }
@@ -795,6 +858,19 @@ document.addEventListener("click", (event) => {
     currentStepIndex = Number(stepButton.dataset.step);
     renderLesson();
     focusLessonTop();
+  }
+  const copyButton = event.target.closest("[data-copy-output]");
+  if (copyButton) {
+    const kind = copyButton.dataset.copyOutput;
+    const output = document.querySelector(outputSelector(kind));
+    const text = output?.textContent?.trim();
+    if (!text) return;
+    navigator.clipboard?.writeText(text);
+    copyButton.textContent = languageMode === "zh" ? "已复制" : "Copied";
+    playSfx("complete");
+    setTimeout(() => {
+      copyButton.textContent = languageMode === "zh" ? "复制指令" : "Copy";
+    }, 1200);
   }
 });
 
