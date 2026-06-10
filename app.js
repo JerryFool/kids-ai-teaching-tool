@@ -133,6 +133,13 @@ const lessonStepImages = {
   }
 };
 
+lessonCoverImages[4] = "./assets/images/lesson-04-cover-v1.jpg";
+lessonStepImages[4] = {
+  story: "./assets/images/lesson-04-story-v1.jpg",
+  rules: "./assets/images/lesson-04-rules-v1.jpg",
+  design: "./assets/images/lesson-04-design-card-v1.jpg"
+};
+
 const lessonOneDetails = {
   illustration: "future",
   zh: {

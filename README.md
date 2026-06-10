@@ -31,6 +31,8 @@
 - 首页风格样板图源文件：`assets/images/home-hero-future-school-v1.png`，网页中使用压缩后的内置 JPEG 版本，方便 GitHub Pages 稳定显示。
 - 第5课封面样板图源文件：`assets/images/lesson-05-cover-v1.png`，网页中使用压缩后的内置 JPEG 版本，作为后续课程封面模板参考。
 - 第5课课内配套插图：`lesson-05-story-v1`、`lesson-05-repair-v1`、`lesson-05-design-card-v1`，分别服务小故事、AI修正、设计卡三个关键教学环节。
+- 第4课封面样板图源文件：`assets/images/lesson-04-cover-v1.png`，网页中使用压缩后的 JPEG 文件版本。
+- 第4课课内配套插图：`lesson-04-story-v1`、`lesson-04-rules-v1`、`lesson-04-design-card-v1`，分别服务小故事、黄金四件套、作品卡三个关键教学环节。
 
 封面图模板规则：
 
