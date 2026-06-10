@@ -771,11 +771,22 @@ function workSummaryMarkup() {
     ? { puzzle: "拼图指令", upgrade: "升级指令", repair: "修正指令", design: "我的设计卡" }
     : { puzzle: "Puzzle prompt", upgrade: "Upgraded prompt", repair: "Revision prompt", design: "My design card" };
   const empty = languageMode === "zh" ? "这一项还没有完成，可以回到对应页面补上。" : "Not completed yet. Go back to this step to finish it.";
+  const handoffSteps = languageMode === "zh"
+    ? ["复制孩子最后的设计卡提示词", "打开豆包或 DeepSeek App 的对话/绘图入口", "让孩子亲手粘贴并发送", "一起观察结果：哪里像？哪里不像？下一句怎么改？"]
+    : ["Copy the child's final design-card prompt", "Open Doubao or DeepSeek and choose chat/image creation", "Let the child paste and send it", "Review together: what matches, what misses, and how should we revise?"];
   return `
     <div class="teacher-card work-card">
       <div class="work-card-head">
         <span class="time-tag">${languageMode === "zh" ? "作品卡" : "Work Card"}</span>
         <h3>${languageMode === "zh" ? "孩子今天完成了什么" : "What the child made today"}</h3>
+        <p>${languageMode === "zh" ? "下一步不是让AI替孩子想，而是让孩子看到自己的表达真的能变成画面。" : "Next, let the child see how their own words can become an image."}</p>
+      </div>
+      <div class="app-handoff">
+        <strong>${languageMode === "zh" ? "家长带孩子去 App 里生成" : "Parent-guided app handoff"}</strong>
+        <ol>
+          ${handoffSteps.map((item) => `<li>${item}</li>`).join("")}
+        </ol>
+        <button class="secondary-action compact-action" data-copy-work="design">${languageMode === "zh" ? "复制最后设计卡" : "Copy final prompt"}</button>
       </div>
       <div class="work-list">
         ${Object.keys(labels).map((key) => `
@@ -871,6 +882,18 @@ document.addEventListener("click", (event) => {
     setTimeout(() => {
       copyButton.textContent = languageMode === "zh" ? "复制指令" : "Copy";
     }, 1200);
+  }
+  const copyWorkButton = event.target.closest("[data-copy-work]");
+  if (copyWorkButton) {
+    const kind = copyWorkButton.dataset.copyWork;
+    const text = lessonWork[kind] || "";
+    if (!text) return;
+    navigator.clipboard?.writeText(text);
+    copyWorkButton.textContent = languageMode === "zh" ? "已复制，去App粘贴" : "Copied";
+    playSfx("complete");
+    setTimeout(() => {
+      copyWorkButton.textContent = languageMode === "zh" ? "复制最后设计卡" : "Copy final prompt";
+    }, 1400);
   }
 });
 
