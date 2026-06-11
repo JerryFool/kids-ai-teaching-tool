@@ -2,30 +2,30 @@ const ui = {
   zh: {
     brandWork: "思美奇主理人作品",
     createdBy: "CyberMagic by Jerry Fu",
-    heroKicker: "AI未来家长课堂 · 五节样板课",
+    heroKicker: "AI未来家长课堂 · 31节家庭互动课",
     heroTitle: "和孩子一起看见AI时代",
     heroText: "这不是一套“教孩子按按钮”的课，而是训练孩子观察变化、表达想法、判断结果和动手创造的家庭互动课。家长可以打开网页，边看讲义边操作画面，带孩子完成一节约30分钟的AI课。",
     authorTitle: "主理人的一点愿景",
     authorBody: "AI来到孩子身边以后，家长最需要做的不是焦虑，也不是把孩子直接交给工具。我们要陪孩子学会把想法说清楚，学会判断结果好不好，学会在新技术面前保持好奇、审美和独立思考。思美奇做这套课，希望让更多家庭用轻松、温暖、可操作的方式，和孩子一起进入AI时代。",
     startLesson: "开始第1课",
     catalogButton: "查看课程结构",
-    samples: "5节深度样板",
-    samplesNote: "第1-5课形成完整开篇学习体验",
-    entries: "后续31课",
-    entriesNote: "确认样板后再批量扩展完整课程",
+    samples: "31节课程",
+    samplesNote: "全部课程已按模板接入，可逐课审核优化",
+    entries: "家庭共学",
+    entriesNote: "家长边讲边操作，孩子边看边参与",
     minutes: "约30分钟",
-    minutesNote: "按家庭讲课节奏拆成9个环节",
+    minutesNote: "按家庭讲课节奏拆成8个环节",
     followKicker: "项目定位",
     followTitle: "给朋友免费分享的家庭AI课",
     followBody: "第一阶段目标不是卖课，而是先做出一个让家长愿意打开、孩子愿意参与、朋友愿意转发的样板。",
     followQr: "关注思美奇主理人",
     qrAccount: "Jerry Fu 视频号",
-    catalogKicker: "课程样板",
-    catalogTitle: "先把样板做扎实，再扩展31课",
-    catalogBody: "孩子不只是点击答案，而是在网页里观察、判断、组合、输出自己的学习作品。",
+    catalogKicker: "31课目录",
+    catalogTitle: "每节课都可以打开讲",
+    catalogBody: "孩子不只是点击答案，而是在网页里观察、判断、组合、填写，并输出自己的学习作品。",
     enter: "进入课程",
     waiting: "后续扩展",
-    sample: "当前样板",
+    sample: "可进入",
     done: "已完成线下",
     pending: "后续扩展",
     back: "首页",
@@ -45,30 +45,30 @@ const ui = {
   en: {
     brandWork: "A CyberMagic Curator Project",
     createdBy: "CyberMagic by Jerry Fu",
-    heroKicker: "AI Future Parent Classroom · Five Sample Lessons",
+    heroKicker: "AI Future Parent Classroom · 31 Family Lessons",
     heroTitle: "Help Children See The AI Age",
     heroText: "This is not a button-clicking AI lesson. It trains observation, expression, judgment, and creation. Parents can teach from the notes while children interact with the visual pages.",
     authorTitle: "A Note From The Curator",
     authorBody: "As AI enters children's lives, parents do not need to panic, nor hand children directly to tools. We can help them express ideas clearly, judge results, and keep curiosity, taste, and independent thinking. CyberMagic hopes to make AI learning warmer, lighter, and easier for families to start.",
     startLesson: "Start Lesson 1",
     catalogButton: "View Lesson Flow",
-    samples: "5 Deep Samples",
-    samplesNote: "Lessons 1-5 now form a complete opening experience",
-    entries: "31 Lessons Later",
-    entriesNote: "Scale after the sample is confirmed",
+    samples: "31 Lessons",
+    samplesNote: "All lessons are connected and ready for review",
+    entries: "Family Learning",
+    entriesNote: "Parents teach and operate; children watch and join",
     minutes: "About 30 Min",
-    minutesNote: "Nine parent-led teaching moments",
+    minutesNote: "Eight parent-led teaching moments",
     followKicker: "Project Position",
     followTitle: "A free family AI lesson to share",
     followBody: "Phase one is not about selling a course. It is about making one sample that parents can open, children can enjoy, and friends may want to forward.",
     followQr: "Follow CyberMagic Curator",
     qrAccount: "Jerry Fu Channel",
-    catalogKicker: "Sample Lessons",
-    catalogTitle: "Build the model first, then scale to 31 lessons",
-    catalogBody: "Children observe, judge, combine ideas, and create their own learning output inside the webpage.",
+    catalogKicker: "31-Lesson Catalog",
+    catalogTitle: "Every lesson can now be opened",
+    catalogBody: "Children observe, judge, combine, fill in, and create their own learning output inside the webpage.",
     enter: "Open Lesson",
     waiting: "Later",
-    sample: "Sample Ready",
+    sample: "Ready",
     done: "Offline",
     pending: "Later",
     back: "Home",
@@ -456,6 +456,740 @@ const lessonFourDetails = {
   }
 };
 
+const expandedLessonConfigs = [
+  {
+    id: 6,
+    focusZh: "把课本、笔记和资料整理成可以提问的家庭大脑",
+    focusEn: "Turn books, notes, and materials into a family brain that can be questioned",
+    storyZh: "小安复习科学课时，把课本、手写笔记和老师发的资料混在一起。每次想找“水循环为什么会下雨”，都要翻很久。爸爸说：AI不是替你记所有东西，而是帮你把资料整理成更容易提问的知识库。小安先给资料起标题，再标出重点，最后问AI：请根据这些资料，用小学生能听懂的话解释水循环，并告诉我答案来自哪一段。小安发现，资料越清楚，AI越像一个会陪自己复习的家庭大脑。",
+    storyEn: "An mixes textbooks, notes, and handouts while reviewing science. Dad explains that AI should not replace memory; it can organize materials into a knowledge base. An names the files, marks key points, and asks AI to explain the water cycle from the provided material. Clear materials make AI a better study partner.",
+    methodZh: ["先整理材料：标题、来源、重点段落", "再提出问题：不要只问“讲一下”，要问具体点", "最后回到原文：答案要能找到资料依据"],
+    methodEn: ["Organize material: title, source, key passages", "Ask specific questions, not just explain it", "Return to the source and check evidence"],
+    groupsZh: [["科学课本第3章", "错题本里的一页", "旅行攻略资料", "读书摘抄"], ["提取重点", "生成问答", "做复习提纲", "模拟播客讲解"], ["标明资料来源", "用孩子听得懂的话", "不要编资料里没有的内容", "最后给3个复习问题"], ["看答案是否来自资料", "检查有没有漏重点", "让孩子复述一遍", "补充不懂的问题"]],
+    groupsEn: [["science textbook chapter", "one mistake notebook page", "travel notes", "reading excerpts"], ["extract key points", "make Q&A", "build a review outline", "simulate a podcast"], ["cite the source", "use child-friendly words", "do not invent outside material", "give three review questions"], ["check source match", "check missing points", "retell it", "add follow-up questions"]],
+    upgradeZh: "原句：帮我复习这篇课文。",
+    upgradeEn: "Original: help me review this text.",
+    upgradeChoicesZh: ["请只根据我提供的资料", "先列出5个重点", "用小学生能听懂的话解释", "最后问我3个问题"],
+    upgradeChoicesEn: ["use only my material", "list five key points first", "explain in child-friendly words", "ask me three questions at the end"],
+    repairZh: "AI回答得很像百科，但没有说明来自哪份资料。",
+    repairTargetZh: "请重新回答：只根据我提供的资料，标明每个重点来自哪一段，不确定的地方请说不知道。",
+    repairEn: "AI answers like an encyclopedia but does not show which material it used.",
+    repairTargetEn: "Answer again using only my material, mark where each point comes from, and say unsure when the material is not enough.",
+    fieldsZh: ["我要整理的资料", "我想问的问题", "AI必须遵守的规则", "我怎么检查答案"],
+    fieldsEn: ["Material to organize", "Question I want to ask", "Rules AI must follow", "How I check the answer"],
+    placeholderZh: "比如：科学课本水循环 / 为什么会下雨 / 只根据资料回答 / 找到对应段落",
+    placeholderEn: "Example: water cycle text / why rain happens / answer from material only / find the matching paragraph"
+  },
+  {
+    id: 7,
+    focusZh: "用AI做耐心数学教练，训练孩子反向讲题",
+    focusEn: "Use AI as a patient math coach and let children explain back",
+    storyZh: "小安做应用题时，总想让AI直接告诉答案。妈妈说：如果AI直接给答案，你只会抄；如果AI当教练，你会学会思考。于是小安把题目发给AI，并加上一句：不要直接给最终答案，请一步一步提示我，并在最后让我用自己的话讲一遍。AI没有马上报答案，而是问他已知条件是什么、要求什么、可以先画什么图。小安讲回去的时候，才发现自己真正懂了。",
+    storyEn: "An wants AI to give the math answer. Mom asks AI to act as a coach instead: do not give the final answer, guide step by step, and ask me to explain back. An discovers he understands better after explaining the solution in his own words.",
+    methodZh: ["不直接要答案：先要提示和思路", "把题目拆开：已知、要求、关系、步骤", "必须讲回去：能讲明白才是真的会"],
+    methodEn: ["Do not ask for the answer first", "Break the problem into knowns, goal, relation, steps", "Explain back to prove understanding"],
+    groupsZh: [["应用题看不懂", "计算总出错", "几何图形不会想", "验算不知道怎么做"], ["请当数学教练", "不要直接给答案", "一次只提示一步", "让我自己尝试"], ["已知条件", "要求的问题", "可以画图", "容易错的地方"], ["我复述解题思路", "我重新做一题", "我检查单位", "我讲给家长听"]],
+    groupsEn: [["word problem", "calculation mistakes", "geometry stuck", "checking unknown"], ["act as math coach", "do not give final answer", "one hint at a time", "let me try"], ["known information", "question asked", "draw a diagram", "common mistake"], ["retell steps", "solve a similar one", "check units", "teach parent"]],
+    upgradeZh: "原句：这题答案是多少？",
+    upgradeEn: "Original: what is the answer?",
+    upgradeChoicesZh: ["请当耐心数学教练", "不要直接给最终答案", "先问我已知条件", "最后让我复述思路"],
+    upgradeChoicesEn: ["act as a patient math coach", "do not give the final answer", "ask me the known information first", "let me retell the method"],
+    repairZh: "AI直接给了答案，孩子看起来会了，其实没有理解。",
+    repairTargetZh: "请不要直接给答案。请用三个提示引导我自己做，并在最后检查我的讲解。",
+    repairEn: "AI gives the answer directly, so the child looks done but may not understand.",
+    repairTargetEn: "Do not give the final answer. Use three hints to guide me and then check my explanation.",
+    fieldsZh: ["题目类型", "我卡住的地方", "AI怎么提示我", "我如何讲回去"],
+    fieldsEn: ["Problem type", "Where I am stuck", "How AI should hint", "How I explain back"],
+    placeholderZh: "比如：应用题 / 不知道先算什么 / 一次提示一步 / 讲出已知和步骤",
+    placeholderEn: "Example: word problem / first step unclear / one hint at a time / explain knowns and steps"
+  },
+  {
+    id: 8,
+    focusZh: "用AI帮孩子润色作文，但保留真实经历和孩子自己的声音",
+    focusEn: "Use AI to improve writing while keeping truth and the child's own voice",
+    storyZh: "小安写了一篇春游日记，觉得句子很平。AI一改，文字变得很漂亮，却出现了他没见过的瀑布和没发生过的比赛。爸爸说：作文不是让AI替你编，而是让AI帮你把真实经历说得更清楚。小安重新要求：保留我的经历，不增加没发生的事，只帮我把三个句子写得更有画面感，并说明为什么这样改。第二次，作文变好了，也还是小安自己的故事。",
+    storyEn: "AI makes An's diary prettier but invents events. Dad reminds him that writing help should keep real experience. An asks AI to keep truth, improve three sentences, and explain each change.",
+    methodZh: ["先保留真实：不编没发生的事", "再增强画面：动作、声音、感受更具体", "最后学会修改：知道AI为什么这样改"],
+    methodEn: ["Keep truth first", "Add vivid details: action, sound, feeling", "Learn the revision reason"],
+    groupsZh: [["春游日记", "读后感", "想象作文", "给朋友的信"], ["保留真实经历", "让句子更有画面", "检查语句通顺", "给我修改理由"], ["不要替我编情节", "保留小学生语气", "只改3处重点", "先指出优点"], ["我读一遍是否像自己", "检查有没有假经历", "选一句自己再改", "把好句积累下来"]],
+    groupsEn: [["outing diary", "book response", "imagination story", "letter to friend"], ["keep real experience", "make sentences vivid", "check fluency", "give reasons"], ["do not invent events", "keep child voice", "revise only three key parts", "praise strengths first"], ["read if it sounds like me", "check fake events", "revise one sentence myself", "save good sentences"]],
+    upgradeZh: "原句：帮我把作文改好。",
+    upgradeEn: "Original: make my essay better.",
+    upgradeChoicesZh: ["保留我的真实经历", "不要替我编新情节", "只帮我润色3处", "告诉我每处为什么这样改"],
+    upgradeChoicesEn: ["keep my real experience", "do not invent new events", "polish only three parts", "explain why each change helps"],
+    repairZh: "AI把作文写得像大人，还增加了孩子没有经历过的内容。",
+    repairTargetZh: "请改回小学生语气，删除没有发生的内容，只在原文基础上让动作和感受更具体。",
+    repairEn: "AI makes the essay sound adult and adds things that never happened.",
+    repairTargetEn: "Return to a child voice, remove invented content, and only make actions and feelings more specific from my original text.",
+    fieldsZh: ["我的作文类型", "我想改好的地方", "AI不能做什么", "我学到的修改方法"],
+    fieldsEn: ["Writing type", "Part to improve", "What AI must not do", "Revision method I learned"],
+    placeholderZh: "比如：春游日记 / 开头太平 / 不编情节 / 加动作、声音和感受",
+    placeholderEn: "Example: outing diary / flat opening / do not invent / add action, sound, feeling"
+  },
+  {
+    id: 9,
+    focusZh: "用AI做英语陪练，训练听说读写而不是只背答案",
+    focusEn: "Use AI as an English coach for listening, speaking, reading, and writing",
+    storyZh: "小安背单词总是今天会、明天忘。妈妈让AI当英语陪练：先用图片里的物品造句，再用简单对话问小安，最后让小安把错句改回来。小安发现，英语不是只背中文意思，而是在场景里听、说、读、写。AI可以陪练很多次，但发音、意思和真实表达还要自己判断和练习。",
+    storyEn: "An forgets English words quickly. Mom uses AI as a coach: make sentences from a picture, ask simple questions, and let An fix wrong sentences. English becomes practice in context, not only memorization.",
+    methodZh: ["放进场景：图片、人物、动作", "多轮练习：听、说、读、写轮流来", "及时纠错：知道错在哪里再改"],
+    methodEn: ["Use scenes: picture, people, action", "Practice in rounds: listen, speak, read, write", "Correct with reasons"],
+    groupsZh: [["今天的10个单词", "一张房间图片", "一段英语小短文", "一次旅行情境"], ["帮我造句", "和我角色扮演", "检查我的句子", "出3道小题"], ["使用简单英语", "每次只问一个问题", "错了先提示不要直接给答案", "解释中文意思"], ["我大声读出来", "我改正错句", "我用新词造句", "我录音再听一次"]],
+    groupsEn: [["today's 10 words", "a room picture", "a short English text", "a travel scene"], ["make sentences", "role-play with me", "check my sentence", "make three questions"], ["use simple English", "ask one question at a time", "hint before answer", "explain in Chinese"], ["read aloud", "fix the wrong sentence", "make a new sentence", "record and listen"]],
+    upgradeZh: "原句：帮我学英语。",
+    upgradeEn: "Original: help me learn English.",
+    upgradeChoicesZh: ["请当英语陪练", "用今天的10个单词", "每次问我一个问题", "错了先给提示再解释"],
+    upgradeChoicesEn: ["act as my English coach", "use today's ten words", "ask one question at a time", "hint before explaining mistakes"],
+    repairZh: "AI一次给了太多英文，孩子还没开口就看晕了。",
+    repairTargetZh: "请降低难度，每次只问一个简单问题，等我回答后再纠正，并给一个鼓励。",
+    repairEn: "AI gives too much English at once and the child gets overwhelmed.",
+    repairTargetEn: "Lower the level. Ask one simple question at a time, wait for my answer, then correct and encourage me.",
+    fieldsZh: ["我要练的英语内容", "练习场景", "AI提问方式", "我怎么复述或开口"],
+    fieldsEn: ["English content", "Practice scene", "How AI asks", "How I speak or retell"],
+    placeholderZh: "比如：10个食物单词 / 点餐场景 / 一次问一句 / 我用英语回答",
+    placeholderEn: "Example: ten food words / ordering food / one question at a time / I answer in English"
+  },
+  {
+    id: 10,
+    focusZh: "把一道错题变成一组变式练习，真正消灭错误",
+    focusEn: "Turn one mistake into variation practice and truly fix it",
+    storyZh: "小安每次订正错题，只把正确答案抄一遍。过几天遇到类似题，还是错。爸爸说：错题像一个信号，它告诉我们哪里没懂。小安把错题拍给AI，要求它先判断错误原因，再生成三道同类型但数字不同的变式题，并且不要直接给答案。练完以后，小安发现自己不是记住了那一道题，而是学会了那一类题。",
+    storyEn: "An copies the correct answer but repeats the mistake later. Dad asks AI to find the mistake reason and make three similar practice problems without direct answers. An learns the type, not only one problem.",
+    methodZh: ["找错因：看是概念、计算、审题还是步骤", "做变式：换数字、换情境、换问法", "再讲解：孩子说出为什么这次不会错"],
+    methodEn: ["Find the reason: concept, calculation, reading, or steps", "Make variations with changed numbers and scenes", "Explain why the mistake is fixed"],
+    groupsZh: [["计算错", "审题错", "概念不懂", "步骤漏了"], ["请分析错因", "生成3道变式题", "先给提示不要给答案", "最后让我总结规律"], ["难度和原题接近", "数字不同", "情境不同", "保留同一知识点"], ["我说出错误原因", "我独立做一题", "我检查步骤", "我写下提醒语"]],
+    groupsEn: [["calculation mistake", "reading mistake", "concept unclear", "missing step"], ["analyze reason", "make three variations", "hint before answer", "ask me to summarize rule"], ["similar difficulty", "different numbers", "different scene", "same knowledge point"], ["state mistake reason", "solve one alone", "check steps", "write a reminder"]],
+    upgradeZh: "原句：这道题我错了，给我答案。",
+    upgradeEn: "Original: I got this wrong; give me the answer.",
+    upgradeChoicesZh: ["先帮我分析错因", "不要直接给答案", "生成3道同类变式题", "最后让我总结规律"],
+    upgradeChoicesEn: ["analyze my mistake first", "do not give the answer directly", "make three similar problems", "ask me to summarize the rule"],
+    repairZh: "AI只讲了正确步骤，没有指出孩子到底错在哪里。",
+    repairTargetZh: "请先判断我的错误类型，再用提示引导我重做，最后给我一道同类题检验。",
+    repairEn: "AI only explains the correct steps but does not identify the child's mistake.",
+    repairTargetEn: "Identify my mistake type first, guide me to redo it, then give one similar problem to check.",
+    fieldsZh: ["错题类型", "我错在哪里", "我要生成的变式", "我如何证明自己会了"],
+    fieldsEn: ["Mistake type", "Where I went wrong", "Variation I need", "How I prove I understand"],
+    placeholderZh: "比如：应用题 / 没看清单位 / 三道同类题 / 我讲出规律",
+    placeholderEn: "Example: word problem / missed units / three similar ones / I explain the rule"
+  },
+  {
+    id: 11,
+    focusZh: "把科学知识变成可视化模拟，帮助孩子看见看不见的过程",
+    focusEn: "Turn science knowledge into visual simulations",
+    storyZh: "小安背太阳系顺序背得很熟，却不明白为什么地球有白天黑夜。妈妈让AI帮他们设计一个纸上模拟：手电筒当太阳，球当地球，贴纸当城市。小安一边转球一边观察，终于看到光照变化。AI还帮他把电路、水循环、火山这些看不见或很大的过程，拆成可演示的小实验。科学一下子从背诵变成了看见和操作。",
+    storyEn: "An memorizes the solar system but does not understand day and night. Mom asks AI to design a paper-and-flashlight simulation. Science becomes visible and hands-on.",
+    methodZh: ["把大概念变小模型", "用生活材料演示", "观察现象后再说原理"],
+    methodEn: ["Turn big concepts into small models", "Use everyday materials", "Observe before explaining theory"],
+    groupsZh: [["太阳系", "简单电路", "水循环", "火山喷发"], ["纸上模型", "桌面小实验", "动画分镜", "对比图"], ["用家里常见材料", "步骤不超过5步", "先观察再解释", "提醒安全事项"], ["我画出过程", "我说出现象", "我解释原因", "我提出新问题"]],
+    groupsEn: [["solar system", "simple circuit", "water cycle", "volcano"], ["paper model", "table experiment", "animation storyboard", "comparison chart"], ["home materials", "under five steps", "observe first", "safety reminder"], ["draw process", "state observation", "explain reason", "ask new question"]],
+    upgradeZh: "原句：给我讲一下太阳系。",
+    upgradeEn: "Original: tell me about the solar system.",
+    upgradeChoicesZh: ["请设计一个小学生可做的模型", "材料用家里常见物品", "先演示现象再解释原理", "最后问我一个观察问题"],
+    upgradeChoicesEn: ["design a child-friendly model", "use home materials", "show phenomenon before theory", "ask one observation question"],
+    repairZh: "AI解释很多术语，孩子听完还是没有画面。",
+    repairTargetZh: "请把这个知识点改成一个可视化小实验，列材料、步骤、观察点和安全提醒。",
+    repairEn: "AI uses many terms and the child still has no picture.",
+    repairTargetEn: "Turn this concept into a visual experiment with materials, steps, observation points, and safety reminders.",
+    fieldsZh: ["科学主题", "可视化方式", "需要材料", "我要观察什么"],
+    fieldsEn: ["Science topic", "Visualization method", "Materials needed", "What to observe"],
+    placeholderZh: "比如：水循环 / 桌面模型 / 透明杯、保鲜膜 / 水珠怎么形成",
+    placeholderEn: "Example: water cycle / table model / cup and wrap / how droplets form"
+  },
+  {
+    id: 12,
+    focusZh: "把孩子的涂鸦变成绘本创意，训练审美和叙事",
+    focusEn: "Turn doodles into picture-book ideas and train taste plus storytelling",
+    storyZh: "小安随手画了一个圆圆的小怪物，觉得不好看想扔掉。爸爸说：涂鸦不是废纸，它可能是一个角色的种子。小安把涂鸦描述给AI：圆圆身体、蓝色耳朵、害羞但喜欢帮助别人。AI帮他想出角色名字、性格和三页绘本情节。小安再自己挑选、修改，发现AI不是替他画完，而是帮他把小小的灵感长大。",
+    storyEn: "An wants to throw away a doodle. Dad treats it as a character seed. AI helps create a name, personality, and three-page picture-book idea, while An chooses and revises.",
+    methodZh: ["先保护灵感：不要急着说画得好不好", "补角色设定：外形、性格、愿望、困难", "做三页故事：开始、遇到问题、解决"],
+    methodEn: ["Protect the idea first", "Add character design: look, personality, wish, problem", "Build a three-page story"],
+    groupsZh: [["圆圆小怪物", "会飞的书包", "害羞机器人", "云朵小店"], ["外形特点", "性格特点", "想完成的愿望", "遇到的困难"], ["第一页介绍角色", "第二页出现麻烦", "第三页找到办法", "结尾留一个温暖瞬间"], ["孩子自己选名字", "保留原始涂鸦元素", "不要太复杂", "画面适合绘本"]],
+    groupsEn: [["round little monster", "flying backpack", "shy robot", "cloud shop"], ["look", "personality", "wish", "difficulty"], ["page one introduces", "page two problem", "page three solution", "warm ending"], ["child names it", "keep doodle elements", "not too complex", "picture-book style"]],
+    upgradeZh: "原句：这个画不好看。",
+    upgradeEn: "Original: this drawing is not good.",
+    upgradeChoicesZh: ["把它当成角色种子", "说出外形特点", "补充性格和愿望", "设计三页绘本故事"],
+    upgradeChoicesEn: ["treat it as a character seed", "describe its look", "add personality and wish", "design a three-page picture book"],
+    repairZh: "AI把涂鸦改得太完美，原来孩子画的特点都不见了。",
+    repairTargetZh: "请保留原始涂鸦的主要形状和孩子气，只做角色设定和故事建议，不要替我改成商业海报。",
+    repairEn: "AI makes the doodle too perfect and loses the child's original features.",
+    repairTargetEn: "Keep the original shape and childlike feeling. Only suggest character design and story, not a commercial poster.",
+    fieldsZh: ["我的涂鸦主角", "它的性格", "它想做什么", "三页绘本情节"],
+    fieldsEn: ["My doodle character", "Its personality", "What it wants", "Three-page story"],
+    placeholderZh: "比如：蓝耳朵小怪物 / 害羞善良 / 找朋友 / 介绍、迷路、被帮助",
+    placeholderEn: "Example: blue-eared monster / shy and kind / find friends / intro, lost, helped"
+  },
+  {
+    id: 13,
+    focusZh: "把历史知识变成穿越剧本，训练资料理解和时代判断",
+    focusEn: "Turn history knowledge into time-travel scripts",
+    storyZh: "小安背历史年代总觉得枯燥。妈妈提议：我们不是死记硬背，而是当一次历史穿越编剧。小安选择唐朝集市，AI帮助他整理人物、地点、物品和不能乱写的历史事实。剧本里可以有想象，但衣服、交通、称呼、重要事件不能胡编。小安发现，历史创作不是乱穿越，而是在尊重资料的基础上把时代讲活。",
+    storyEn: "An finds dates boring. Mom turns history into a time-travel script. AI helps organize characters, places, objects, and facts that must not be invented.",
+    methodZh: ["先查时代事实：地点、人物、生活方式", "再写穿越任务：我来到哪里，要完成什么", "最后标注虚构：哪些是想象，哪些有资料"],
+    methodEn: ["Check period facts first", "Create a time-travel mission", "Mark fiction and evidence"],
+    groupsZh: [["唐朝集市", "宋代书院", "长城边关", "古代航海"], ["穿越小记者", "学徒工匠", "小小商人", "历史侦探"], ["采访一个人物", "寻找一件物品", "记录一天生活", "解决一个小问题"], ["不能乱写年代", "服装交通要合理", "标明参考资料", "虚构内容要说明"]],
+    groupsEn: [["Tang market", "Song academy", "Great Wall frontier", "ancient voyage"], ["time-travel reporter", "craft apprentice", "young merchant", "history detective"], ["interview a person", "find an object", "record one day", "solve a small problem"], ["do not mix dates", "clothes and transport fit", "cite material", "mark fiction"]],
+    upgradeZh: "原句：写一个古代故事。",
+    upgradeEn: "Original: write an ancient story.",
+    upgradeChoicesZh: ["先确定历史时期和地点", "列出3个真实资料点", "设计一个穿越任务", "标明哪些内容是虚构"],
+    upgradeChoicesEn: ["set period and place first", "list three facts", "design a time-travel mission", "mark fictional parts"],
+    repairZh: "AI把不同朝代的人物和物品混在一起，故事热闹但不准确。",
+    repairTargetZh: "请检查剧本中的历史错误，按资料改正朝代、物品、称呼，并保留合理的想象情节。",
+    repairEn: "AI mixes people and objects from different periods.",
+    repairTargetEn: "Check historical errors, correct period, objects, and titles by evidence, and keep reasonable imagination.",
+    fieldsZh: ["历史时期", "穿越角色", "任务目标", "必须核对的事实"],
+    fieldsEn: ["Historical period", "Time-travel role", "Mission", "Facts to check"],
+    placeholderZh: "比如：唐朝集市 / 小记者 / 采访商人 / 衣服、货币、交通",
+    placeholderEn: "Example: Tang market / reporter / interview merchant / clothes, money, transport"
+  },
+  {
+    id: 14,
+    focusZh: "把AI当情绪表达练习伙伴，而不是替代家人朋友",
+    focusEn: "Use AI as an emotion-expression practice partner, not a replacement for family and friends",
+    storyZh: "小安因为和同学吵架很难过，却只说“我烦死了”。爸爸没有急着讲道理，而是带他用AI做情绪树洞练习：先说发生了什么，再说身体有什么感觉，再给情绪起名字，最后想一个可以和真人沟通的小行动。AI帮小安整理语言，但爸爸提醒：真正重要的事情，要和家长、老师或朋友说，AI只能帮你练习表达。",
+    storyEn: "An is upset after arguing with a classmate. Dad uses AI to help him name feelings and prepare a real conversation. AI helps expression, but important matters still go to trusted people.",
+    methodZh: ["说事实：发生了什么", "说感受：我身体和心里怎么了", "想行动：我可以找谁、怎么说"],
+    methodEn: ["State facts", "Name feelings", "Choose a real action and person"],
+    groupsZh: [["和朋友吵架", "考试没考好", "被误会了", "不想参加活动"], ["委屈", "生气", "紧张", "失落"], ["请帮我把感受说清楚", "不要批评任何人", "给我3种温和表达", "提醒我找可信任的大人"], ["我和家长说", "我写一张小纸条", "我先冷静10分钟", "我练习道歉或说明"]],
+    groupsEn: [["argued with friend", "bad test result", "misunderstood", "do not want activity"], ["wronged", "angry", "nervous", "sad"], ["help me express feelings", "do not blame anyone", "give three gentle expressions", "remind me to find trusted adult"], ["talk to parent", "write a note", "cool down ten minutes", "practice apology or explanation"]],
+    upgradeZh: "原句：我烦死了。",
+    upgradeEn: "Original: I am so annoyed.",
+    upgradeChoicesZh: ["发生的事情是", "我的感受可能是", "我希望别人理解", "我可以找家长一起想办法"],
+    upgradeChoicesEn: ["what happened is", "my feeling may be", "I hope others understand", "I can ask a parent to help"],
+    repairZh: "AI像朋友一样让孩子一直倾诉，却没有提醒找真实可信的人。",
+    repairTargetZh: "请帮我整理情绪表达，但提醒我重要问题要找家长、老师或可信任的人一起处理。",
+    repairEn: "AI keeps chatting like a friend but does not remind the child to seek real trusted help.",
+    repairTargetEn: "Help organize my feelings, but remind me to handle important issues with a parent, teacher, or trusted person.",
+    fieldsZh: ["发生了什么", "我的情绪", "我想怎么表达", "我要找谁一起处理"],
+    fieldsEn: ["What happened", "My feeling", "How I express it", "Who I ask for help"],
+    placeholderZh: "比如：和同学误会 / 委屈 / 我想说明原因 / 找爸爸妈妈一起想",
+    placeholderEn: "Example: misunderstanding / wronged / explain my reason / ask parents"
+  },
+  {
+    id: 15,
+    focusZh: "让绘本角色动起来，理解动画分镜和动作表达",
+    focusEn: "Bring picture-book characters to life through storyboard and motion",
+    storyZh: "小安画了一个会发光的小书包，想让它动起来。AI第一次生成的视频很炫，但小书包乱飞，看不出故事。妈妈说：动画不是让画面乱动，而是让角色完成一个小动作。小安改成三格分镜：书包醒来、跳到桌上、发光提醒主人带作业。AI再生成时，画面清楚多了。小安学会了，动起来之前要先想清楚镜头和动作。",
+    storyEn: "An wants a glowing backpack to move. The first video is chaotic. Mom helps him write a three-shot storyboard: wake up, jump onto desk, glow to remind the owner. Clear action makes better animation.",
+    methodZh: ["先定角色：谁动起来", "再定动作：开始、变化、结果", "最后定镜头：近景、全景、节奏"],
+    methodEn: ["Choose the moving character", "Set action: start, change, result", "Set shots and pacing"],
+    groupsZh: [["会发光的小书包", "绘本里的机器人", "云朵小店", "海底小鱼"], ["醒来", "跳一下", "发光提醒", "挥手告别"], ["三格分镜", "慢慢移动", "镜头不要乱切", "画面明亮友好"], ["我检查动作是否清楚", "角色有没有变样", "故事是否看得懂", "时长控制在5秒"]],
+    groupsEn: [["glowing backpack", "storybook robot", "cloud shop", "underwater fish"], ["wake up", "jump", "glow reminder", "wave goodbye"], ["three-shot storyboard", "slow movement", "no chaotic cuts", "bright and friendly"], ["clear action", "consistent character", "understandable story", "five seconds"]],
+    upgradeZh: "原句：让这个角色动起来。",
+    upgradeEn: "Original: make this character move.",
+    upgradeChoicesZh: ["角色是会发光的小书包", "动作分三步", "镜头慢一点不要乱切", "5秒内完成一个小故事"],
+    upgradeChoicesEn: ["character is a glowing backpack", "action has three steps", "slow camera and no chaotic cuts", "finish one tiny story in five seconds"],
+    repairZh: "AI动画很炫，但角色变形、动作混乱、看不懂发生了什么。",
+    repairTargetZh: "请保留角色外形，只做一个简单动作：醒来、跳到桌上、发光提醒，镜头稳定，5秒内完成。",
+    repairEn: "The AI animation is flashy but the character changes and action is unclear.",
+    repairTargetEn: "Keep the character shape and make one simple action: wake up, jump onto desk, glow reminder. Stable camera, within five seconds.",
+    fieldsZh: ["角色", "三步动作", "镜头要求", "我要检查什么"],
+    fieldsEn: ["Character", "Three actions", "Camera rule", "What I check"],
+    placeholderZh: "比如：小书包 / 醒来、跳起、发光 / 镜头稳定 / 角色别变形",
+    placeholderEn: "Example: backpack / wake, jump, glow / stable shot / no character change"
+  },
+  {
+    id: 16,
+    focusZh: "综合完成一个PBL动画短片：剧本、画面、配音、剪辑",
+    focusEn: "Create a PBL animated short with script, visuals, voice, and editing",
+    storyZh: "小安想做一个一分钟动画短片，刚开始只说“我要做个很酷的视频”。爸爸把任务拆成四块：故事讲什么、需要哪些画面、谁来配音、最后怎么剪。小安先写一句主题，再做三幕剧情，然后为每一幕写画面提示词。AI帮他提建议，但小安自己决定删掉太复杂的镜头。短片不一定完美，但它变成了一个真正可以完成的项目。",
+    storyEn: "An wants a cool video. Dad breaks it into story, visuals, voice, and editing. AI suggests ideas, but An chooses what to keep and simplify.",
+    methodZh: ["一句主题：短片到底想表达什么", "三幕结构：开始、遇到问题、解决", "四类素材：画面、文字、声音、剪辑"],
+    methodEn: ["One theme", "Three acts: start, problem, solution", "Four materials: visuals, text, voice, edit"],
+    groupsZh: [["环保小卫士", "未来学校一天", "机器人朋友", "情绪小怪兽"], ["开头介绍世界", "中间遇到问题", "结尾找到办法", "最后一句感受"], ["画面提示词", "角色台词", "背景音乐", "剪辑顺序"], ["任务太大就缩小", "每幕只做一个动作", "孩子自己配音", "先完成60秒以内"]],
+    groupsEn: [["eco helper", "future school day", "robot friend", "emotion monster"], ["opening world", "middle problem", "ending solution", "final feeling"], ["image prompts", "dialogue", "music", "edit order"], ["shrink big task", "one action per act", "child voiceover", "under 60 seconds first"]],
+    upgradeZh: "原句：我要做一个很酷的视频。",
+    upgradeEn: "Original: I want to make a cool video.",
+    upgradeChoicesZh: ["先写一句主题", "拆成三幕剧情", "每幕一个画面动作", "最后由孩子自己配音"],
+    upgradeChoicesEn: ["write one theme", "split into three acts", "one visual action per act", "child records voiceover"],
+    repairZh: "AI给的短片方案太大，角色太多，家里一天根本做不完。",
+    repairTargetZh: "请把方案缩小成60秒以内、3个镜头、1个主角、家长和孩子今天能完成的版本。",
+    repairEn: "AI's plan is too large with too many characters.",
+    repairTargetEn: "Shrink it into a version under 60 seconds, three shots, one main character, doable today.",
+    fieldsZh: ["短片主题", "三幕剧情", "需要的素材", "今天完成标准"],
+    fieldsEn: ["Short theme", "Three acts", "Materials needed", "Today's finish standard"],
+    placeholderZh: "比如：机器人朋友 / 相遇、困难、帮忙 / 3张图+配音 / 60秒以内",
+    placeholderEn: "Example: robot friend / meet, problem, help / three images plus voice / under 60 seconds"
+  },
+  {
+    id: 17,
+    focusZh: "理解价值如何变成钱：流量、产品、信任和复购",
+    focusEn: "Understand how value becomes money: attention, product, trust, repeat purchase",
+    storyZh: "小安看到有人卖自己设计的贴纸，觉得赚钱很简单：发到网上就有人买。爸爸说：钱不是凭空来的，别人愿意付钱，是因为产品解决了需求或带来了喜欢。小安用AI帮自己拆解：谁会喜欢我的贴纸？它提供什么情绪价值？我怎么让别人看见？我如何让别人相信质量？小安第一次明白，商业不是骗别人买，而是认真创造价值。",
+    storyEn: "An thinks selling stickers online is easy. Dad explains that money comes from value, trust, and real needs. AI helps An identify audience, value, visibility, and quality.",
+    methodZh: ["价值：别人为什么需要或喜欢", "看见：怎样让合适的人知道", "信任：质量、承诺、真实展示", "复购：别人为什么还想再买"],
+    methodEn: ["Value: why people need or like it", "Visibility: how the right people see it", "Trust: quality and honest display", "Repeat: why they return"],
+    groupsZh: [["手绘贴纸", "学习计时器", "班级徽章", "节日小礼物"], ["让人开心", "帮人省时间", "表达身份", "送礼有心意"], ["朋友圈展示", "同学体验", "小海报说明", "作品故事"], ["质量清楚", "价格合理", "真实照片", "售后承诺"]],
+    groupsEn: [["hand-drawn stickers", "study timer", "class badge", "holiday gift"], ["make people happy", "save time", "show identity", "thoughtful gift"], ["share with friends", "classmate trial", "small poster", "work story"], ["clear quality", "fair price", "real photos", "service promise"]],
+    upgradeZh: "原句：我想赚钱。",
+    upgradeEn: "Original: I want to make money.",
+    upgradeChoicesZh: ["先说我要帮助谁", "我的产品提供什么价值", "别人怎么知道它", "别人凭什么信任我"],
+    upgradeChoicesEn: ["who I help first", "what value my product gives", "how people see it", "why people trust me"],
+    repairZh: "AI只让孩子想卖什么，没有讨论用户、价值和信任。",
+    repairTargetZh: "请帮我从用户、价值、展示、信任四个角度检查这个小产品，而不是只想价格。",
+    repairEn: "AI only asks what to sell, without audience, value, and trust.",
+    repairTargetEn: "Check this small product from user, value, display, and trust, not only price.",
+    fieldsZh: ["我的小产品", "它帮助谁", "它的价值", "我如何获得信任"],
+    fieldsEn: ["My small product", "Who it helps", "Its value", "How I earn trust"],
+    placeholderZh: "比如：贴纸 / 喜欢可爱文具的同学 / 开心和装饰 / 真实展示质量",
+    placeholderEn: "Example: stickers / classmates who like cute stationery / joy and decoration / honest quality display"
+  },
+  {
+    id: 18,
+    focusZh: "把情绪价值变成表情包小产品，理解传播和版权边界",
+    focusEn: "Turn emotional value into sticker products while respecting copyright",
+    storyZh: "小安想做一套“考试加油”表情包，第一反应是模仿热门卡通人物。妈妈提醒：喜欢别人的角色，不代表可以直接拿来用。小安改成原创角色：一颗会鼓励人的小星星。AI帮他设计不同情绪：加油、收到、我懂你、休息一下。小安发现，表情包能传播，是因为它替人说出一句想说的话，而不是因为抄了一个熟悉的形象。",
+    storyEn: "An wants exam stickers and first copies a popular character. Mom reminds him to make an original character. AI helps design emotions like cheer up, got it, I understand, take a rest.",
+    methodZh: ["先找情绪场景：别人什么时候会用", "再做原创角色：不抄现有IP", "最后做一组话术：短、准、好转发"],
+    methodEn: ["Find emotion scenes", "Create original characters", "Write short shareable phrases"],
+    groupsZh: [["考试加油", "朋友安慰", "作业完成", "运动鼓励"], ["原创小星星", "蓝白机器人", "云朵同学", "能量小电池"], ["加油我在", "收到马上来", "你已经很棒", "休息一下再冲"], ["不使用现有IP", "文字短一点", "表情要清楚", "适合朋友转发"]],
+    groupsEn: [["exam cheer", "friend comfort", "homework done", "sports support"], ["original star", "blue-white robot", "cloud classmate", "energy battery"], ["I'm with you", "got it", "you are doing well", "rest then go"], ["no existing IP", "short text", "clear emotion", "shareable"]],
+    upgradeZh: "原句：做一套好玩的表情包。",
+    upgradeEn: "Original: make fun stickers.",
+    upgradeChoicesZh: ["先确定使用场景", "设计原创角色", "每张表达一个情绪", "避免使用现有IP形象"],
+    upgradeChoicesEn: ["set use scene", "design original character", "one emotion per sticker", "avoid existing IP"],
+    repairZh: "AI生成的角色太像现有卡通形象，可能有版权风险。",
+    repairTargetZh: "请重新设计为原创蓝白小机器人，不模仿任何现有IP，每张表情只表达一个清楚情绪。",
+    repairEn: "AI's character looks too similar to an existing cartoon and may be risky.",
+    repairTargetEn: "Redesign as an original blue-white robot, not imitating any existing IP, with one clear emotion per sticker.",
+    fieldsZh: ["表情包场景", "原创角色", "4句短文案", "版权安全提醒"],
+    fieldsEn: ["Sticker scene", "Original character", "Four short phrases", "Copyright safety"],
+    placeholderZh: "比如：考试加油 / 小星星 / 加油、收到、我懂、休息 / 不抄IP",
+    placeholderEn: "Example: exam cheer / little star / cheer, got it, I understand, rest / no IP copying"
+  },
+  {
+    id: 19,
+    focusZh: "设计吧唧徽章，学习圆形构图、主题表达和打样检查",
+    focusEn: "Design badges with circular composition, theme, and sample checking",
+    storyZh: "小安想做一个属于自己的吧唧徽章，第一次把很多元素全塞进圆里：名字、口号、机器人、星星、背景，结果什么都看不清。爸爸拿出硬币说：圆形空间很小，主题要集中。小安用AI帮他整理：一个主角、一个动作、两种主色、一句短口号。再设计时，徽章清楚多了。小安明白，产品设计不是越多越好，而是让别人一眼看懂。",
+    storyEn: "An stuffs too many elements into a badge. Dad explains that circular space needs focus. AI helps choose one character, one action, two colors, and one short slogan.",
+    methodZh: ["圆形构图：中心主角要清楚", "信息克制：不要塞太多字", "打样检查：边缘、清晰度、颜色"],
+    methodEn: ["Circular layout with clear center", "Limit text and details", "Check edge, clarity, color"],
+    groupsZh: [["班级徽章", "机器人朋友徽章", "运动加油徽章", "生日纪念徽章"], ["一个主角", "一个动作", "两种主色", "一句短口号"], ["中心放大", "边缘留白", "文字沿圆弧", "背景不要太乱"], ["缩小后能看清", "颜色不糊", "没有侵权角色", "适合打印"]],
+    groupsEn: [["class badge", "robot friend badge", "sports cheer badge", "birthday badge"], ["one character", "one action", "two main colors", "one short slogan"], ["center enlarged", "edge space", "arc text", "simple background"], ["clear when small", "clean color", "no copied character", "printable"]],
+    upgradeZh: "原句：做一个很酷的吧唧。",
+    upgradeEn: "Original: make a cool badge.",
+    upgradeChoicesZh: ["确定徽章主题", "中心只放一个主角", "控制两种主色", "缩小后也要看清"],
+    upgradeChoicesEn: ["set badge theme", "one center character", "use two main colors", "clear when small"],
+    repairZh: "AI把徽章画得像海报，细节太多，圆形边缘也被裁掉。",
+    repairTargetZh: "请改成圆形徽章构图：中心主角清楚，边缘留白，文字少，适合马口铁徽章打印。",
+    repairEn: "AI makes it like a poster with too many details and cropped edges.",
+    repairTargetEn: "Change to circular badge composition: clear center character, safe edge space, little text, suitable for tin badge printing.",
+    fieldsZh: ["徽章主题", "中心主角", "颜色和文字", "打样检查点"],
+    fieldsEn: ["Badge theme", "Center character", "Colors and text", "Sample checks"],
+    placeholderZh: "比如：运动加油 / 蓝白机器人 / 蓝白红+加油 / 缩小看清、边缘留白",
+    placeholderEn: "Example: sports cheer / blue-white robot / blue-white-red + cheer / clear small and safe edge"
+  },
+  {
+    id: 20,
+    focusZh: "设计AI手串，理解几何、节奏、配色和3D打印边界",
+    focusEn: "Design an AI bracelet with geometry, rhythm, color, and 3D-print limits",
+    storyZh: "小安想做一串未来感手串，把每颗珠子都设计得不一样。妈妈提醒：太复杂不一定好看，也不一定能打印。小安用AI帮他做三种珠子：圆形能量珠、方形数据珠、一个小机器人挂坠，并用蓝白黄形成节奏。AI还提醒孔洞大小、边缘不要太尖、挂坠不能太薄。小安第一次把创意和制作限制联系起来。",
+    storyEn: "An designs a futuristic bracelet. AI helps make three bead types and reminds him about hole size, sharp edges, and print thickness.",
+    methodZh: ["造型有节奏：重复和变化结合", "配色有主次：不超过三种主色", "制作有限制：孔洞、厚度、安全边缘"],
+    methodEn: ["Use rhythm: repeat and variation", "Limit main colors", "Respect making limits: holes, thickness, safe edges"],
+    groupsZh: [["能量珠", "数据珠", "机器人挂坠", "幸运星挂坠"], ["圆形", "方形", "六边形", "小图标"], ["蓝白黄", "蓝白红", "银白蓝", "彩虹点缀"], ["孔洞够大", "边缘圆润", "挂坠不太薄", "适合孩子佩戴"]],
+    groupsEn: [["energy bead", "data bead", "robot charm", "lucky star charm"], ["round", "square", "hexagon", "small icon"], ["blue white yellow", "blue white red", "silver white blue", "rainbow accent"], ["large enough hole", "rounded edge", "not too thin", "child-safe"]],
+    upgradeZh: "原句：做一个未来感手串。",
+    upgradeEn: "Original: make a futuristic bracelet.",
+    upgradeChoicesZh: ["设计3种珠子", "颜色不超过3种", "考虑孔洞和厚度", "边缘要圆润安全"],
+    upgradeChoicesEn: ["design three bead types", "use no more than three colors", "consider holes and thickness", "round safe edges"],
+    repairZh: "AI设计太复杂，珠子没有孔，挂坠很薄，实际做不出来。",
+    repairTargetZh: "请改成可制作的手串方案：每颗珠子有孔洞，边缘圆润，挂坠有足够厚度，图案不要太细。",
+    repairEn: "AI design is too complex, with no holes and thin charms.",
+    repairTargetEn: "Make a producible bracelet: each bead has a hole, edges are rounded, charm is thick enough, details are not too tiny.",
+    fieldsZh: ["手串主题", "珠子形状", "配色节奏", "制作限制"],
+    fieldsEn: ["Bracelet theme", "Bead shapes", "Color rhythm", "Making limits"],
+    placeholderZh: "比如：未来能量 / 圆珠+六边形+机器人 / 蓝白黄 / 孔洞、厚度、安全",
+    placeholderEn: "Example: future energy / round + hexagon + robot / blue white yellow / hole, thickness, safety"
+  },
+  {
+    id: 21,
+    focusZh: "设计T-shirt，理解穿着场景、图案位置和POD打样",
+    focusEn: "Design a T-shirt with wearing scene, graphic placement, and POD sampling",
+    storyZh: "小安想做亲子T恤，第一次让AI把图案铺满整件衣服。爸爸问：这件衣服穿去哪里？远看能不能看懂？印出来会不会太花？小安重新选择胸前小图案加背后一行口号，颜色控制在蓝白红。AI帮他做了正面、背面、袖口三个位置建议。小安明白，T恤设计不只是画图，还要考虑人穿上以后好不好看、好不好印。",
+    storyEn: "An wants a family T-shirt and first covers it with patterns. Dad asks where it will be worn and whether it is readable. An simplifies to a chest icon and back slogan.",
+    methodZh: ["先定穿着场景", "再定图案位置", "最后检查印刷：颜色、尺寸、清晰度"],
+    methodEn: ["Set wearing scene", "Choose graphic placement", "Check printing: color, size, clarity"],
+    groupsZh: [["亲子出游", "班级活动", "运动日", "生日派对"], ["胸前小图", "背后口号", "袖口小标", "下摆编号"], ["蓝白红", "黑白加一点蓝", "明亮黄点缀", "不超过三色"], ["远看清楚", "文字少", "不使用侵权图案", "适合POD印刷"]],
+    groupsEn: [["family outing", "class activity", "sports day", "birthday party"], ["chest icon", "back slogan", "sleeve mark", "hem number"], ["blue white red", "black white plus blue", "yellow accent", "under three colors"], ["clear from distance", "little text", "no copied art", "POD friendly"]],
+    upgradeZh: "原句：设计一件好看的T恤。",
+    upgradeEn: "Original: design a nice T-shirt.",
+    upgradeChoicesZh: ["说明穿着场景", "确定正反面位置", "控制颜色数量", "考虑印刷清晰度"],
+    upgradeChoicesEn: ["state wearing scene", "set front and back placement", "limit colors", "consider print clarity"],
+    repairZh: "AI图案太满，文字太多，印在衣服上会乱。",
+    repairTargetZh: "请改成适合T恤印刷的简洁方案：胸前一个图标，背后一行短口号，颜色不超过三种。",
+    repairEn: "AI design is crowded and text-heavy.",
+    repairTargetEn: "Make it a simple T-shirt print: one chest icon, one short back slogan, no more than three colors.",
+    fieldsZh: ["T恤场景", "图案位置", "颜色和口号", "打样检查"],
+    fieldsEn: ["T-shirt scene", "Graphic placement", "Colors and slogan", "Sample check"],
+    placeholderZh: "比如：亲子出游 / 胸前机器人、背后口号 / 蓝白红 / 远看清楚",
+    placeholderEn: "Example: family outing / chest robot, back slogan / blue white red / clear from distance"
+  },
+  {
+    id: 22,
+    focusZh: "为妈妈设计手机壳，学习用户调研和真实需求",
+    focusEn: "Design a phone case for mom through user research and real needs",
+    storyZh: "小安想送妈妈一个手机壳，刚开始只按自己喜欢的机甲风设计。妈妈笑着说：这是你喜欢，不一定是我喜欢。小安开始做用户调研：妈妈喜欢什么颜色？平时拿手机做什么？需要防摔还是轻薄？能不能放一张家庭小暗号？AI帮他把采访答案整理成设计要求。小安发现，给别人做产品，第一步不是炫技，而是理解对方。",
+    storyEn: "An designs a mecha phone case for mom, but mom asks whether it is her style. An interviews her about color, usage, protection, and personal details.",
+    methodZh: ["先问用户：喜欢什么、担心什么", "再转设计：颜色、材质、图案、功能", "最后让用户确认：不是设计师自己说了算"],
+    methodEn: ["Ask the user first", "Translate answers into design", "Let the user confirm"],
+    groupsZh: [["妈妈手机壳", "爸爸钥匙扣", "老师感谢卡", "朋友生日礼"], ["喜欢的颜色", "常用场景", "担心的问题", "想保留的纪念"], ["防摔边框", "轻薄手感", "低调图案", "家庭小暗号"], ["给用户看草图", "问是否喜欢", "修改一处重点", "确认后再制作"]],
+    groupsEn: [["mom phone case", "dad keychain", "teacher card", "friend birthday gift"], ["favorite color", "usage scene", "worry", "memory to keep"], ["protective edge", "thin feel", "subtle pattern", "family secret symbol"], ["show sketch", "ask preference", "revise one key part", "confirm before making"]],
+    upgradeZh: "原句：我给妈妈做个漂亮手机壳。",
+    upgradeEn: "Original: I will make mom a pretty phone case.",
+    upgradeChoicesZh: ["先采访妈妈喜欢什么", "记录使用场景和需求", "把答案变成设计要求", "给妈妈确认后再做"],
+    upgradeChoicesEn: ["interview mom first", "record use scene and needs", "turn answers into design rules", "confirm before making"],
+    repairZh: "AI方案很好看，但完全不像妈妈会用的风格。",
+    repairTargetZh: "请根据用户调研改设计：妈妈喜欢简洁、耐脏、防摔、低调温暖，不要做成孩子自己喜欢的机甲风。",
+    repairEn: "AI design looks good but does not match mom's style.",
+    repairTargetEn: "Revise by user research: mom likes simple, stain-resistant, protective, warm and subtle, not a child's mecha style.",
+    fieldsZh: ["用户是谁", "采访到的需求", "设计方案", "确认和修改"],
+    fieldsEn: ["User", "Needs from interview", "Design plan", "Confirmation and revision"],
+    placeholderZh: "比如：妈妈 / 喜欢简洁防摔 / 米白小图案 / 给妈妈看后改颜色",
+    placeholderEn: "Example: mom / simple and protective / off-white small pattern / show mom and revise color"
+  },
+  {
+    id: 23,
+    focusZh: "为朋友设计卡套，学习礼物中的身份、场景和情感表达",
+    focusEn: "Design a card holder for a friend with identity, scene, and emotion",
+    storyZh: "小安想给好朋友设计校园卡套，一开始只写了朋友的名字。爸爸问：这个礼物希望朋友每天看到时想起什么？小安想到朋友喜欢篮球、爱笑、经常忘带卡。AI帮他把这些线索变成设计：耐磨卡套、篮球小图标、一句短短鼓励语、一个防丢挂绳。小安发现，友情礼物不是越贵越好，而是越懂对方越有意义。",
+    storyEn: "An designs a school card holder for a friend. AI helps turn clues like basketball, cheerful personality, and often forgetting the card into a useful and meaningful design.",
+    methodZh: ["了解朋友：兴趣、习惯、使用场景", "表达心意：一句短话或小符号", "考虑实用：耐用、防丢、好拿"],
+    methodEn: ["Know the friend: interests, habits, scene", "Express care with a phrase or symbol", "Make it practical: durable, easy, safe"],
+    groupsZh: [["校园卡套", "书包挂件", "友情贴纸", "桌面姓名牌"], ["篮球爱好", "喜欢画画", "经常忘带东西", "很会鼓励人"], ["一句暗号", "一个小图标", "喜欢的颜色", "共同回忆"], ["耐磨材料", "挂绳防丢", "名字不暴露太多", "每天都能用"]],
+    groupsEn: [["school card holder", "bag charm", "friendship sticker", "desk name sign"], ["basketball fan", "likes drawing", "forgets things", "encouraging"], ["secret phrase", "small icon", "favorite color", "shared memory"], ["durable material", "anti-loss strap", "not too much personal info", "daily use"]],
+    upgradeZh: "原句：给朋友做个卡套。",
+    upgradeEn: "Original: make a card holder for my friend.",
+    upgradeChoicesZh: ["先写朋友的兴趣和习惯", "加入一个友情暗号", "考虑每天使用是否方便", "注意不要暴露隐私"],
+    upgradeChoicesEn: ["write friend's interests and habits", "add a friendship symbol", "consider daily use", "protect privacy"],
+    repairZh: "AI把朋友的全名、学校和班级都放到卡套上，隐私不安全。",
+    repairTargetZh: "请删掉学校、班级和完整姓名，只保留昵称、小图标和友情暗号，让卡套安全又有心意。",
+    repairEn: "AI puts full name, school, and class on the card holder, which is unsafe.",
+    repairTargetEn: "Remove school, class, and full name. Keep nickname, small icon, and friendship phrase only.",
+    fieldsZh: ["朋友特点", "礼物场景", "设计元素", "隐私安全检查"],
+    fieldsEn: ["Friend traits", "Gift scene", "Design elements", "Privacy check"],
+    placeholderZh: "比如：喜欢篮球 / 校园卡套 / 篮球+暗号 / 不放学校班级全名",
+    placeholderEn: "Example: likes basketball / school card holder / ball plus phrase / no school, class, full name"
+  },
+  {
+    id: 24,
+    focusZh: "把角色变成3D公仔设定，理解三视图、比例和结构",
+    focusEn: "Turn a character into a 3D figure concept with views, proportion, and structure",
+    storyZh: "小安想把自己的机器人角色做成公仔，第一次只给AI一张正面图。爸爸说：公仔不是平面贴纸，需要正面、侧面、背面，还要考虑头身比例、站立是否稳定、手脚会不会太细。小安用AI整理三视图说明，并把角色改成大头、短腿、脚掌稍宽。虽然还不能马上生产，但他已经开始用立体产品的方式思考角色。",
+    storyEn: "An wants a robot figure but only has a front image. Dad explains figures need front, side, back, stable feet, and safe proportions.",
+    methodZh: ["三视图：正面、侧面、背面", "比例：头身、手脚、重心", "结构：能站稳、能制作、不太细"],
+    methodEn: ["Three views: front, side, back", "Proportion and balance", "Structure: stable and producible"],
+    groupsZh: [["蓝白机器人", "运动小英雄", "云朵店长", "未来学生"], ["正面设定", "侧面设定", "背面设定", "表情配件"], ["大头短腿", "脚掌稍宽", "手臂不要太细", "重心靠下"], ["能站稳", "细节不过密", "没有尖锐边缘", "适合后续建模"]],
+    groupsEn: [["blue-white robot", "sports hero", "cloud shopkeeper", "future student"], ["front view", "side view", "back view", "expression accessory"], ["big head short legs", "wide feet", "not thin arms", "low center"], ["stable", "not too detailed", "no sharp edge", "modeling friendly"]],
+    upgradeZh: "原句：把这个角色做成公仔。",
+    upgradeEn: "Original: make this character a figure.",
+    upgradeChoicesZh: ["补充正侧背三视图", "说明头身比例", "脚掌要能站稳", "细节适合建模制作"],
+    upgradeChoicesEn: ["add front side back views", "state body proportion", "feet must stand", "details suitable for modeling"],
+    repairZh: "AI只给了漂亮正面图，侧面和背面不清楚，手脚太细。",
+    repairTargetZh: "请补充三视图设定，调整为大头短腿、脚掌更宽、手脚更结实，适合3D建模。",
+    repairEn: "AI only gives a pretty front view; side/back are unclear and limbs are too thin.",
+    repairTargetEn: "Add three-view design, change to big head short legs, wider feet, stronger limbs, suitable for 3D modeling.",
+    fieldsZh: ["角色名称", "三视图重点", "比例结构", "建模注意事项"],
+    fieldsEn: ["Character name", "Three-view points", "Proportion", "Modeling notes"],
+    placeholderZh: "比如：蓝白机器人 / 正侧背都有背包 / 大头短腿 / 脚宽、边缘圆润",
+    placeholderEn: "Example: blue-white robot / backpack in all views / big head short legs / wide feet and rounded edges"
+  },
+  {
+    id: 25,
+    focusZh: "学习白模涂装，理解配色计划、耐心和手工修正",
+    focusEn: "Learn blank-model painting with color plan, patience, and hand correction",
+    storyZh: "小安拿到一个白模，立刻想把所有颜色都涂上去。妈妈说：涂装像给角色穿衣服，先要有配色计划。小安用AI做了三种方案：未来蓝白、运动红蓝、温暖奶黄。AI还提醒先大面积、后小细节，先浅色、后深色，涂错了可以等干后修正。小安发现，手工不是AI一键生成，而是需要慢慢观察和调整。",
+    storyEn: "An wants to paint every color on a blank model. Mom uses AI to make color plans and painting steps: big areas before details, light before dark, fix after drying.",
+    methodZh: ["先定配色：主色、辅助色、点缀色", "再定顺序：大面到细节、浅色到深色", "最后修正：等干、补边、检查整体"],
+    methodEn: ["Set colors: main, support, accent", "Set order: large to detail, light to dark", "Fix: dry, edge, overall check"],
+    groupsZh: [["未来蓝白", "运动红蓝", "温暖奶黄", "夜光科技"], ["主色", "辅助色", "点缀色", "眼睛发光色"], ["先涂大面积", "再涂小细节", "等干后补边", "最后整体检查"], ["不要急", "颜色不要太多", "涂错可以修", "保护桌面和衣服"]],
+    groupsEn: [["future blue-white", "sports red-blue", "warm cream-yellow", "glow tech"], ["main color", "support color", "accent color", "eye glow color"], ["large area first", "small details later", "fix edges after dry", "final check"], ["do not rush", "not too many colors", "mistakes can be fixed", "protect table and clothes"]],
+    upgradeZh: "原句：我要把白模涂得很酷。",
+    upgradeEn: "Original: I want to paint the blank model cool.",
+    upgradeChoicesZh: ["先选主色辅助色点缀色", "写出涂装顺序", "提醒等干后再修边", "最后检查整体是否协调"],
+    upgradeChoicesEn: ["choose main support accent colors", "write painting order", "wait to dry before edges", "check overall harmony"],
+    repairZh: "AI配色太多，孩子照着涂会很乱，也很难完成。",
+    repairTargetZh: "请把配色缩减为主色、辅助色、点缀色三类，并给出适合孩子操作的涂装顺序。",
+    repairEn: "AI gives too many colors, making painting messy.",
+    repairTargetEn: "Reduce colors to main, support, and accent, and give child-friendly painting steps.",
+    fieldsZh: ["白模角色", "三类颜色", "涂装顺序", "修正提醒"],
+    fieldsEn: ["Blank model", "Three color types", "Painting order", "Fix reminders"],
+    placeholderZh: "比如：机器人 / 蓝、白、黄 / 大面、眼睛、边线 / 等干再补",
+    placeholderEn: "Example: robot / blue, white, yellow / big areas, eyes, lines / dry then fix"
+  },
+  {
+    id: 26,
+    focusZh: "为原创角色建立角色宇宙：系列场景、性格和边界",
+    focusEn: "Build a character universe with scenes, personality, and boundaries",
+    storyZh: "小安设计了一个机器人角色，想让它出现在所有地方：学校、太空、海底、足球场。爸爸提醒：角色宇宙不是乱换衣服，而是同一个角色在不同场景里保持核心性格。小安用AI列出角色的三条不变设定：好奇、乐于帮助、蓝白能量灯；再设计四个系列场景。这样每个新作品都不同，但别人一看就知道还是同一个角色。",
+    storyEn: "An wants his robot everywhere. Dad explains that a character universe keeps core personality while changing scenes.",
+    methodZh: ["不变核心：性格、颜色、标志物", "变化场景：学校、运动、太空、海底", "系列命名：让每个场景有主题"],
+    methodEn: ["Stable core: personality, color, symbol", "Changing scenes", "Series naming"],
+    groupsZh: [["好奇机器人", "勇敢小星星", "云朵店长", "运动小英雄"], ["核心性格", "代表颜色", "标志道具", "口头禅"], ["上学系列", "运动系列", "太空系列", "海底系列"], ["保持角色一致", "每个场景一个任务", "不抄现有IP", "能持续扩展"]],
+    groupsEn: [["curious robot", "brave little star", "cloud shopkeeper", "sports hero"], ["core personality", "main color", "symbol prop", "catchphrase"], ["school series", "sports series", "space series", "undersea series"], ["keep consistency", "one mission per scene", "no existing IP", "expandable"]],
+    upgradeZh: "原句：让角色去很多地方。",
+    upgradeEn: "Original: let the character go many places.",
+    upgradeChoicesZh: ["先写角色不变设定", "再设计4个系列场景", "每个场景一个任务", "保持颜色和标志物一致"],
+    upgradeChoicesEn: ["write stable character settings", "design four scene series", "one mission per scene", "keep colors and symbols consistent"],
+    repairZh: "AI每个场景都把角色改得不一样，看起来像四个不同角色。",
+    repairTargetZh: "请保持同一个角色的颜色、性格和标志物，只改变场景、服装小配件和任务。",
+    repairEn: "AI changes the character so much that each scene looks like a different character.",
+    repairTargetEn: "Keep the same colors, personality, and symbol. Only change scene, small accessories, and mission.",
+    fieldsZh: ["角色核心设定", "4个系列场景", "每个场景任务", "一致性检查"],
+    fieldsEn: ["Character core", "Four scene series", "Mission per scene", "Consistency check"],
+    placeholderZh: "比如：蓝白机器人好奇助人 / 学校运动太空海底 / 每场景帮人 / 颜色标志不变",
+    placeholderEn: "Example: blue-white helpful robot / school sports space sea / helps in each / colors stable"
+  },
+  {
+    id: 27,
+    focusZh: "创作家庭主题曲，理解歌词、情绪、风格和版权意识",
+    focusEn: "Create a family theme song with lyrics, emotion, style, and copyright awareness",
+    storyZh: "小安想给家里做一首主题曲，第一次只说“要好听”。妈妈问：这首歌想表达什么？是温暖、勇敢还是搞笑？小安写下家庭关键词：周末早餐、一起旅行、犯错也互相鼓励。AI帮他整理成简短歌词和轻快曲风建议，并提醒不要模仿某位歌手的声音。小安发现，音乐不是只追求像谁，而是把自己的故事唱出来。",
+    storyEn: "An wants a family theme song. Mom asks what it should express. AI helps turn family memories into short lyrics and style ideas, without copying a singer's voice.",
+    methodZh: ["先定情绪：温暖、勇敢、快乐", "再写画面：真实家庭瞬间", "最后定风格：不模仿具体歌手"],
+    methodEn: ["Set emotion", "Write real family moments", "Choose style without copying a singer"],
+    groupsZh: [["家庭主题曲", "生日歌", "班级加油歌", "旅行纪念歌"], ["温暖轻快", "勇敢热血", "梦幻安静", "搞笑活泼"], ["周末早餐", "一起旅行", "互相鼓励", "共同完成作品"], ["不模仿具体歌手", "歌词孩子能唱", "副歌容易记", "表达真实故事"]],
+    groupsEn: [["family theme", "birthday song", "class cheer", "travel memory"], ["warm upbeat", "brave energetic", "dreamy calm", "funny lively"], ["weekend breakfast", "family travel", "encourage each other", "make work together"], ["do not copy singer", "child-singable lyrics", "memorable chorus", "true story"]],
+    upgradeZh: "原句：帮我做一首好听的歌。",
+    upgradeEn: "Original: make me a good song.",
+    upgradeChoicesZh: ["说明歌曲主题和情绪", "加入真实家庭画面", "歌词要短且孩子能唱", "不要模仿具体歌手声音"],
+    upgradeChoicesEn: ["state theme and emotion", "add real family scenes", "short child-singable lyrics", "do not imitate a singer"],
+    repairZh: "AI建议模仿某位歌手声音，这可能有版权和肖像风险。",
+    repairTargetZh: "请改成原创风格描述：温暖轻快、钢琴和木吉他、适合家庭合唱，不模仿任何具体歌手。",
+    repairEn: "AI suggests imitating a singer, which may be risky.",
+    repairTargetEn: "Use original style description: warm upbeat, piano and acoustic guitar, family chorus, no specific singer imitation.",
+    fieldsZh: ["歌曲主题", "情绪风格", "真实画面", "版权安全提醒"],
+    fieldsEn: ["Song theme", "Emotion and style", "Real scenes", "Copyright safety"],
+    placeholderZh: "比如：家庭主题曲 / 温暖轻快 / 周末早餐旅行 / 不模仿歌手",
+    placeholderEn: "Example: family theme / warm upbeat / breakfast and travel / no singer copying"
+  },
+  {
+    id: 28,
+    focusZh: "制作虚拟MV，学习歌词分镜、镜头节奏和画面一致性",
+    focusEn: "Make a virtual MV with lyric storyboard, pacing, and visual consistency",
+    storyZh: "小安有了家庭主题曲，想做MV。AI第一次给他很多炫酷画面：宇宙、海浪、赛车、城堡，全都出现了。爸爸说：MV不是把所有好看的画面堆起来，而是让画面跟歌词一起讲故事。小安把副歌拆成四句，每句配一个家庭画面：早餐、出发、拥抱、合唱。画面变简单后，情感反而更清楚。",
+    storyEn: "An's first MV plan has too many flashy scenes. Dad teaches him to match each lyric line with one meaningful image.",
+    methodZh: ["歌词拆句：一句配一个画面", "镜头有节奏：远景、中景、特写", "风格一致：颜色和角色不要乱变"],
+    methodEn: ["Split lyrics into lines", "Use shot rhythm", "Keep style consistent"],
+    groupsZh: [["家庭主题曲副歌", "生日歌副歌", "班级加油歌", "旅行歌"], ["早餐特写", "出发远景", "一起奔跑", "最后合唱"], ["暖色阳光", "蓝白未来感", "手绘动画", "轻赛博卡通"], ["角色一致", "镜头稳定", "不要堆太多场景", "每句歌词一个画面"]],
+    groupsEn: [["family chorus", "birthday chorus", "class cheer", "travel song"], ["breakfast close-up", "departure wide shot", "running together", "final chorus"], ["warm sunlight", "blue-white future", "hand-drawn animation", "light cyber cartoon"], ["consistent characters", "stable shots", "not too many scenes", "one image per lyric line"]],
+    upgradeZh: "原句：给这首歌做一个MV。",
+    upgradeEn: "Original: make an MV for this song.",
+    upgradeChoicesZh: ["先把副歌拆成4句", "每句配一个画面", "镜头不要乱切", "保持角色和颜色一致"],
+    upgradeChoicesEn: ["split chorus into four lines", "one image per line", "no chaotic cuts", "keep characters and colors consistent"],
+    repairZh: "AI画面太跳跃，每个镜头像不同视频，孩子看不出故事。",
+    repairTargetZh: "请改成四个连续镜头，角色、颜色和场景保持一致，每个镜头只服务一句歌词。",
+    repairEn: "AI scenes jump too much and feel like different videos.",
+    repairTargetEn: "Change to four connected shots with consistent character, color, and scene. Each shot serves one lyric line.",
+    fieldsZh: ["歌曲片段", "4个镜头", "统一风格", "检查重点"],
+    fieldsEn: ["Song part", "Four shots", "Unified style", "Check points"],
+    placeholderZh: "比如：副歌 / 早餐、出发、奔跑、合唱 / 暖色动画 / 角色不变",
+    placeholderEn: "Example: chorus / breakfast, departure, run, sing / warm animation / same characters"
+  },
+  {
+    id: 29,
+    focusZh: "设计无代码网页背单词游戏，理解规则、反馈和难度",
+    focusEn: "Design a no-code vocabulary web game with rules, feedback, and difficulty",
+    storyZh: "小安想做一个背单词游戏，最开始只说“点对就加分”。爸爸问：玩家先看到什么？怎么知道自己错了？难度会不会变化？小安用AI帮他设计规则：看图片选英文、答对星星加一、答错给提示、连续答对进入下一关。小安发现，游戏不是只有奖励，还要让玩家愿意继续练习。",
+    storyEn: "An wants a vocabulary game. Dad asks what players see, how mistakes are corrected, and how difficulty changes. AI helps design rules and feedback.",
+    methodZh: ["目标清楚：练哪些词", "规则简单：玩家做什么", "反馈及时：对了、错了、下一步"],
+    methodEn: ["Clear goal", "Simple rule", "Immediate feedback"],
+    groupsZh: [["动物单词", "食物单词", "颜色单词", "运动单词"], ["看图选词", "听音选词", "拼写补空", "限时挑战"], ["答对加星", "答错给提示", "连续正确升级", "结束显示错词"], ["第一关5个词", "每次只加一点难度", "按钮适合小孩点", "不要让失败太挫败"]],
+    groupsEn: [["animal words", "food words", "color words", "sports words"], ["picture choice", "sound choice", "spelling blanks", "timed challenge"], ["stars for correct", "hint for wrong", "level up streak", "show wrong words"], ["five words first", "small difficulty steps", "child-friendly buttons", "not too punishing"]],
+    upgradeZh: "原句：做一个背单词游戏。",
+    upgradeEn: "Original: make a vocabulary game.",
+    upgradeChoicesZh: ["说明练习词库", "写出玩家操作", "设计对错反馈", "设置第一关难度"],
+    upgradeChoicesEn: ["state word set", "write player action", "design right/wrong feedback", "set first level"],
+    repairZh: "AI设计的游戏规则太复杂，孩子还没开始就看不懂。",
+    repairTargetZh: "请把游戏缩小成第一关：5个单词、看图选英文、答对加星、答错给提示。",
+    repairEn: "AI's game rules are too complex.",
+    repairTargetEn: "Shrink to level one: five words, choose English from picture, star for correct, hint for wrong.",
+    fieldsZh: ["词库主题", "游戏规则", "反馈方式", "第一关标准"],
+    fieldsEn: ["Word theme", "Game rule", "Feedback", "Level one standard"],
+    placeholderZh: "比如：动物词 / 看图选英文 / 对加星错提示 / 第一关5个词",
+    placeholderEn: "Example: animals / choose English from picture / star or hint / five words"
+  },
+  {
+    id: 30,
+    focusZh: "开发专注力计时工具，理解用户需求、界面和提醒节奏",
+    focusEn: "Build a focus timer with user needs, interface, and reminder rhythm",
+    storyZh: "小安写作业总是被打断，想做一个专注计时器。妈妈问：这个工具是给谁用？要解决什么问题？小安设计了25分钟专注、5分钟休息、完成后获得一颗星。AI帮他整理界面：开始按钮、剩余时间、任务名称、休息提醒。小安发现，实用工具不需要很花哨，重要的是让人更容易完成一件事。",
+    storyEn: "An wants a focus timer for homework. Mom asks who uses it and what problem it solves. AI helps design 25-minute focus, 5-minute rest, task name, and star reward.",
+    methodZh: ["用户是谁：孩子、家长还是全家", "核心功能：计时、提醒、记录", "界面简洁：一眼知道下一步"],
+    methodEn: ["Who is the user", "Core functions: timer, reminder, record", "Simple interface"],
+    groupsZh: [["作业专注", "阅读计时", "运动打卡", "练琴计时"], ["开始/暂停", "剩余时间", "休息提醒", "完成星星"], ["25分钟专注", "5分钟休息", "任务名称", "今日完成次数"], ["按钮大一点", "颜色不刺眼", "提醒不吓人", "数据只存在本地"]],
+    groupsEn: [["homework focus", "reading timer", "exercise check-in", "piano timer"], ["start/pause", "time left", "rest reminder", "finish star"], ["25 min focus", "5 min rest", "task name", "today count"], ["large buttons", "soft colors", "gentle reminder", "local data only"]],
+    upgradeZh: "原句：做一个专注APP。",
+    upgradeEn: "Original: make a focus app.",
+    upgradeChoicesZh: ["说明使用场景", "只保留3个核心功能", "按钮适合孩子操作", "提醒温和不打扰"],
+    upgradeChoicesEn: ["state use scene", "keep three core functions", "child-friendly buttons", "gentle reminders"],
+    repairZh: "AI把工具做得像复杂后台，有很多孩子用不上的设置。",
+    repairTargetZh: "请改成孩子可用的简单计时器：首页只有任务名、开始按钮、剩余时间和完成星星。",
+    repairEn: "AI makes a complex dashboard with many unnecessary settings.",
+    repairTargetEn: "Make a simple child-friendly timer: task name, start button, time left, and completion stars.",
+    fieldsZh: ["工具要解决的问题", "核心功能", "界面元素", "提醒方式"],
+    fieldsEn: ["Problem solved", "Core functions", "Interface elements", "Reminder style"],
+    placeholderZh: "比如：写作业分心 / 计时提醒记录 / 大按钮+时间 / 温和铃声",
+    placeholderEn: "Example: homework distraction / timer reminder record / big button and time / gentle sound"
+  },
+  {
+    id: 31,
+    focusZh: "整理学期作品，完成未来创客市集路演",
+    focusEn: "Package semester works and present at a future maker market",
+    storyZh: "课程结束时，小安面前有很多作品：提示词卡、绘本角色、徽章设计、歌曲、小游戏。爸爸说：创客市集不是把东西摆出来就结束，而是要讲清楚作品帮助谁、有什么价值、价格为什么合理、别人体验后怎么反馈。小安用AI帮自己整理展位介绍和一分钟路演稿，但每件作品的故事都由自己讲。第一次面对陌生人介绍作品时，他紧张又骄傲。",
+    storyEn: "At the end, An has many works. Dad helps him prepare a maker market pitch: who it helps, value, price, and feedback. AI organizes the pitch, but An tells the story.",
+    methodZh: ["整理作品：选3件最能代表自己的", "说明价值：帮助谁、为什么有用", "练习路演：一分钟讲清楚"],
+    methodEn: ["Select three representative works", "Explain value and audience", "Practice a one-minute pitch"],
+    groupsZh: [["AI画面设计卡", "原创表情包", "吧唧徽章", "小游戏工具"], ["我为什么做它", "它帮助谁", "别人怎么使用", "我想听什么反馈"], ["一分钟介绍", "展位小海报", "体验流程", "价格或交换规则"], ["不夸大效果", "标明原创部分", "礼貌介绍", "记录真实反馈"]],
+    groupsEn: [["AI image card", "original stickers", "badge design", "small game tool"], ["why I made it", "who it helps", "how people use it", "feedback I want"], ["one-minute pitch", "booth poster", "trial flow", "price or exchange rule"], ["do not exaggerate", "mark original work", "polite pitch", "record real feedback"]],
+    upgradeZh: "原句：我要去摆摊。",
+    upgradeEn: "Original: I will set up a stall.",
+    upgradeChoicesZh: ["先选3件代表作品", "写清楚每件作品帮助谁", "准备一分钟介绍", "记录别人真实反馈"],
+    upgradeChoicesEn: ["choose three works", "write who each helps", "prepare one-minute pitch", "record real feedback"],
+    repairZh: "AI把路演稿写得太夸张，像广告，孩子讲出来不真实。",
+    repairTargetZh: "请改成孩子真实能说的一分钟介绍：我做了什么、为什么做、适合谁、希望得到什么建议。",
+    repairEn: "AI writes an exaggerated sales pitch that does not sound like the child.",
+    repairTargetEn: "Make it a truthful one-minute child pitch: what I made, why, for whom, and what advice I want.",
+    fieldsZh: ["我选择的作品", "作品价值", "一分钟介绍", "我想收集的反馈"],
+    fieldsEn: ["Works I choose", "Work value", "One-minute pitch", "Feedback I want"],
+    placeholderZh: "比如：徽章+表情包+游戏 / 帮同学表达和学习 / 讲制作故事 / 问哪里可改进",
+    placeholderEn: "Example: badge + stickers + game / help classmates express and learn / tell making story / ask improvements"
+  }
+];
+
+function configGroups(config, lang) {
+  const source = lang === "zh" ? config.groupsZh : config.groupsEn;
+  const names = lang === "zh"
+    ? ["任务", "AI可以帮什么", "要求", "检查"]
+    : ["Task", "AI Help", "Rules", "Check"];
+  return source.map((options, index) => ({ name: names[index], options }));
+}
+
+function buildExpandedLesson(config) {
+  const catalogItem = lessonCatalog.find((item) => item.id === config.id);
+  const zhTitle = catalogItem.zh;
+  const enTitle = catalogItem.en;
+  const zhNote = catalogItem.noteZh;
+  const enNote = catalogItem.noteEn;
+  return {
+    illustration: "expanded",
+    zh: {
+      title: zhTitle,
+      kicker: "30分钟家庭课 · 按模板扩展课程",
+      prep: `课前家长准备：这节课围绕“${config.focusZh}”。家长不需要讲成专业课，重点是带孩子完成一个可操作的小任务：先理解场景，再用AI辅助整理，最后由孩子自己判断和表达。请继续坚持三个原则：孩子先说，家长追问，AI只做辅助。`,
+      tips: [
+        "先让孩子说自己的想法，再打开AI或点击页面，不要一开始就把标准答案给出来。",
+        "遇到AI回答很完整时，也要追问孩子：哪里有用？哪里要检查？哪里不像我自己的想法？",
+        "本节课的目标不是一次做完美作品，而是完成一张孩子能带到豆包或 DeepSeek 继续实测的作品卡。"
+      ],
+      steps: [
+        {
+          type: "cover",
+          label: "开场",
+          title: zhTitle,
+          minutes: "2分钟",
+          body: zhNote,
+          quote: "今天的重点不是让AI替我们完成，而是学会把任务想清楚、讲清楚、检查清楚。",
+          bullets: ["看懂场景：这个任务发生在哪里", "说清目标：我到底想完成什么", "检查结果：AI帮到哪里，还要人判断哪里"],
+          guide: `开场可以问孩子：如果今天只练一个能力，你觉得“${config.focusZh}”最难的地方是什么？先听孩子回答，再进入故事。`
+        },
+        {
+          type: "story",
+          label: "小故事",
+          title: "小安把想法变成可执行任务",
+          minutes: "5分钟",
+          body: config.storyZh,
+          quote: "问孩子：故事里，小安一开始哪里想得太简单？后来多做了哪一步，结果变好了？",
+          guide: "故事页请慢一点讲。讲完后让孩子用自己的话复述“问题、方法、变化”三个点，帮助他从听故事进入做任务。"
+        },
+        {
+          type: "rules",
+          label: "方法",
+          title: "今天的三步方法",
+          minutes: "5分钟",
+          body: "家长带孩子记住一个简单方法，不需要背复杂概念。",
+          bullets: config.methodZh,
+          guide: "每讲一条方法，都请孩子举一个生活里的例子。孩子举不出来时，家长可以给两个选项让他选择。"
+        },
+        {
+          type: "puzzle",
+          label: "互动游戏",
+          title: "组合一张任务判断卡",
+          minutes: "6分钟",
+          prompt: "请孩子从四组里各点一个，拼成一张今天的任务判断卡。",
+          groups: configGroups(config, "zh"),
+          guide: "选完后让孩子大声读出组合结果。重点不是选得是否标准，而是能不能说明：为什么这样选？还需要检查什么？"
+        },
+        {
+          type: "upgrade",
+          label: "升级练习",
+          title: "把模糊想法升级成清楚任务",
+          minutes: "4分钟",
+          prompt: config.upgradeZh,
+          choices: config.upgradeChoicesZh,
+          guide: "让孩子先指出原句哪里模糊，再逐个点击补充条件。每点击一个，都问：这句话让AI更明白了什么？"
+        },
+        {
+          type: "repair",
+          label: "修正任务",
+          title: "当AI答偏了怎么办",
+          minutes: "4分钟",
+          problem: config.repairZh,
+          target: config.repairTargetZh,
+          options: ["说清问题在哪里", "保留有用部分", "补充新的限制", "请AI重新输出"],
+          guide: "这里训练孩子修正AI，而不是放弃或全盘接受。家长可以示范一句：这个回答有一部分有用，但我要把它拉回我的任务。"
+        },
+        {
+          type: "design",
+          label: "作品卡",
+          title: "我的本课作品卡",
+          minutes: "6分钟",
+          fields: config.fieldsZh,
+          placeholder: config.placeholderZh,
+          guide: "这是孩子的最终输出。家长可以帮忙打字，但内容尽量由孩子说。完成后可以复制到豆包或 DeepSeek，让孩子亲手粘贴实测。"
+        },
+        {
+          type: "summary",
+          label: "复盘",
+          title: "今天我们完成了什么",
+          minutes: "4分钟",
+          chant: "先想清楚，再请AI帮忙；先检查清楚，再变成作品。",
+          recap: [
+            `今天我们围绕“${zhTitle}”完成了一次家庭AI练习。`,
+            "孩子通过故事理解：AI不是万能按钮，人要先把任务和目标讲清楚。",
+            "我们学习了三步方法，并用网页互动组合出一张任务判断卡。",
+            "孩子练习了把模糊句升级成清楚任务，也练习了当AI答偏时如何修正。",
+            "最后孩子完成了本课作品卡，可以带到豆包或 DeepSeek 中继续验证。"
+          ],
+          guide: "复盘时请孩子回答三句话：我今天学到的方法是什么；我完成的作品卡是什么；下次用AI时我要先检查什么。"
+        }
+      ]
+    },
+    en: {
+      title: enTitle,
+      kicker: "30-minute family lesson · Expanded course",
+      prep: `Parent prep: this lesson focuses on "${config.focusEn}". Keep it practical: understand the scene, use AI for support, and let the child judge and express.`,
+      tips: [
+        "Let the child speak first before opening AI or tapping the page.",
+        "When AI gives a complete answer, ask what is useful, what needs checking, and what still does not sound like the child.",
+        "The goal is a usable work card that can be tested in Doubao or DeepSeek."
+      ],
+      steps: [
+        { type: "cover", label: "Start", title: enTitle, minutes: "2 min", body: enNote, quote: "AI should support our thinking, not replace it.", bullets: ["Understand the scene", "State the goal clearly", "Check the result"], guide: `Ask what feels hardest about "${config.focusEn}".` },
+        { type: "story", label: "Story", title: "An turns an idea into a doable task", minutes: "5 min", body: config.storyEn, quote: "Ask: what was too simple at first, and what extra step improved the result?", guide: "Let the child retell problem, method, and change." },
+        { type: "rules", label: "Method", title: "Today's three-step method", minutes: "5 min", body: "Keep one simple method in mind.", bullets: config.methodEn, guide: "Ask the child for one daily-life example for each rule." },
+        { type: "puzzle", label: "Game", title: "Build a task judgment card", minutes: "6 min", prompt: "Choose one from each group to build today's task card.", groups: configGroups(config, "en"), guide: "Ask why the child chose these items and what must be checked." },
+        { type: "upgrade", label: "Upgrade", title: "Upgrade a vague idea", minutes: "4 min", prompt: config.upgradeEn, choices: config.upgradeChoicesEn, guide: "Ask what each added phrase makes clearer." },
+        { type: "repair", label: "Repair", title: "When AI goes off track", minutes: "4 min", problem: config.repairEn, target: config.repairTargetEn, options: ["name the problem", "keep useful parts", "add limits", "ask AI to redo"], guide: "Train revision instead of blind acceptance." },
+        { type: "design", label: "Work Card", title: "My Lesson Work Card", minutes: "6 min", fields: config.fieldsEn, placeholder: config.placeholderEn, guide: "The parent may type, but the child's ideas should lead." },
+        { type: "summary", label: "Review", title: "What did we complete today?", minutes: "4 min", chant: "Think clearly, ask AI for support, then check and create.", recap: [`We completed a family AI lesson about "${enTitle}".`, "The child saw that AI is not a magic button.", "We learned a three-step method and built a task card.", "The child upgraded a vague request and repaired an off-track AI answer.", "The final work card can be tested in Doubao or DeepSeek."], guide: "Ask the child: what method did I learn, what card did I make, and what should I check next time?" }
+      ]
+    }
+  };
+}
+
+const expandedLessonDetails = Object.fromEntries(expandedLessonConfigs.map((config) => [config.id, buildExpandedLesson(config)]));
+
 const lessonDetails = {
   1: lessonOneDetails,
   2: lessonTwoDetails,
@@ -580,7 +1314,8 @@ const lessonDetails = {
         { type: "summary", label: "Review", title: "What did we learn today?", minutes: "4 min", chant: "Imagine first, describe clearly, revise when AI gets it wrong.", recap: ["We found that 'draw something fun' is too vague.", "We learned four picture parts: place, character, action, details.", "We built prompts by combining words.", "We practiced revision: say what to change and what to keep.", "The child completed an AI picture design card."], guide: "Ask the child to say three sentences: my picture is..., I used four parts..., if AI gets it wrong I will..." }
       ]
     }
-  }
+  },
+  ...expandedLessonDetails
 };
 
 const homeView = document.querySelector("#homeView");
@@ -677,7 +1412,7 @@ function renderCatalog() {
     const available = Boolean(lessonDetails[lesson.id]);
     const statusText = available ? tr("sample") : tr("pending");
     const note = available
-      ? (languageMode === "zh" ? "当前可完整体验的高质量样板课" : "A complete sample lesson you can try now")
+      ? lesson[`note${languageMode === "zh" ? "Zh" : "En"}`]
       : lesson[`note${languageMode === "zh" ? "Zh" : "En"}`];
     const unit = lesson[`unit${languageMode === "zh" ? "Zh" : "En"}`];
     const titlePrefix = languageMode === "zh" ? `第${lesson.id}课：` : `Lesson ${lesson.id}: `;
@@ -695,6 +1430,14 @@ function renderCatalog() {
       </button>
     `;
   }).join("");
+}
+
+function currentCatalogItem() {
+  return lessonCatalog.find((item) => item.id === currentLessonId) || lessonCatalog[0];
+}
+
+function isExpandedLesson() {
+  return currentLessonId > 5;
 }
 
 function visualScene(scene = "cover") {
@@ -748,7 +1491,19 @@ function visualScene(scene = "cover") {
     design: ["黄金提示词", "我的四件套"],
     summary: ["完成复盘", "会问才会用"]
   };
-  const sceneLabelMap = currentLessonId === 1
+  const expandedLabels = {
+    cover: [currentCatalogItem()[languageMode], languageMode === "zh" ? "任务想清楚" : "Clear Task"],
+    story: [languageMode === "zh" ? "小安的任务" : "An's Task", languageMode === "zh" ? "从模糊到可执行" : "Vague To Doable"],
+    rules: [languageMode === "zh" ? "三步方法" : "Three Steps", languageMode === "zh" ? "场景 目标 检查" : "Scene Goal Check"],
+    puzzle: [languageMode === "zh" ? "任务卡" : "Task Card", languageMode === "zh" ? "每组点一个" : "Choose One Each"],
+    upgrade: [languageMode === "zh" ? "升级表达" : "Upgrade", languageMode === "zh" ? "把话说清楚" : "Make It Clear"],
+    repair: [languageMode === "zh" ? "修正AI" : "Repair AI", languageMode === "zh" ? "拉回任务" : "Back To Task"],
+    design: [languageMode === "zh" ? "作品卡" : "Work Card", languageMode === "zh" ? "我的本课输出" : "My Output"],
+    summary: [languageMode === "zh" ? "完成复盘" : "Review", languageMode === "zh" ? "方法变作品" : "Method To Work"]
+  };
+  const sceneLabelMap = isExpandedLesson()
+    ? expandedLabels
+    : currentLessonId === 1
     ? lessonOneLabels
     : currentLessonId === 2
       ? lessonTwoLabels
@@ -759,22 +1514,23 @@ function visualScene(scene = "cover") {
           : lessonFiveLabels;
   const labels = sceneLabelMap[scene] || ["AI课堂", "想清楚再表达"];
   const promptScene = currentLessonId === 4;
+  const expandedScene = isExpandedLesson();
   const sceneBits = {
     cover: `
-      <div class="thought-cloud cloud-a">${promptScene ? "角色" : "未来学校"}</div>
-      <div class="thought-cloud cloud-b">${promptScene ? "约束" : "机器人老师"}</div>
+      <div class="thought-cloud cloud-a">${expandedScene ? (languageMode === "zh" ? "任务" : "Task") : promptScene ? "角色" : "未来学校"}</div>
+      <div class="thought-cloud cloud-b">${expandedScene ? (languageMode === "zh" ? "检查" : "Check") : promptScene ? "约束" : "机器人老师"}</div>
       <div class="scene-board board-glow"><b>?</b><span>AI cannot read minds</span></div>
     `,
     story: `
       <div class="school-mini"><span></span><span></span><span></span></div>
       <div class="scene-board"><b>2</b><span>${promptScene ? "第二次更具体" : "更清楚的第二次"}</span></div>
-      <div class="prompt-ribbon">${promptScene ? "保留真实 · 不要编造 · 给3个建议" : "蓝白色 · 发光 · 开心上课"}</div>
+      <div class="prompt-ribbon">${expandedScene ? (languageMode === "zh" ? "听故事 · 找方法 · 做作品" : "Story · Method · Work") : promptScene ? "保留真实 · 不要编造 · 给3个建议" : "蓝白色 · 发光 · 开心上课"}</div>
     `,
     rules: `
       <div class="rule-orbit">
-        ${promptScene ? "<span>角色</span><span>任务</span><span>背景</span><span>约束</span>" : "<span>地点</span><span>主角</span><span>动作</span><span>细节</span>"}
+        ${expandedScene ? "<span>场景</span><span>目标</span><span>方法</span><span>检查</span>" : promptScene ? "<span>角色</span><span>任务</span><span>背景</span><span>约束</span>" : "<span>地点</span><span>主角</span><span>动作</span><span>细节</span>"}
       </div>
-      <div class="scene-board board-glow"><b>4</b><span>${promptScene ? "Prompt Parts" : "Picture Parts"}</span></div>
+      <div class="scene-board board-glow"><b>${expandedScene ? "3" : "4"}</b><span>${expandedScene ? "Action Parts" : promptScene ? "Prompt Parts" : "Picture Parts"}</span></div>
     `,
     puzzle: `
       <div class="block-stack"><span></span><span></span><span></span><span></span></div>
@@ -782,7 +1538,7 @@ function visualScene(scene = "cover") {
     `,
     upgrade: `
       <div class="upgrade-lane">
-        <span>${promptScene ? "帮我写一下" : "好玩的"}</span><i></i><b>${promptScene ? "清楚任务" : "未来学校"}</b>
+        <span>${expandedScene ? (languageMode === "zh" ? "帮我做" : "Help me") : promptScene ? "帮我写一下" : "好玩的"}</span><i></i><b>${expandedScene ? (languageMode === "zh" ? "清楚任务" : "Clear task") : promptScene ? "清楚任务" : "未来学校"}</b>
       </div>
       <div class="spark-cluster"></div>
     `,
@@ -791,13 +1547,13 @@ function visualScene(scene = "cover") {
         <div class="mini-robot wrong-robot"></div>
         <div class="mini-robot right-robot"></div>
       </div>
-      <div class="prompt-ribbon">${promptScene ? "变短 · 像我 · 不编" : "改颜色，保留场景"}</div>
+      <div class="prompt-ribbon">${expandedScene ? (languageMode === "zh" ? "指出问题 · 补充限制 · 重新输出" : "Problem · Limit · Redo") : promptScene ? "变短 · 像我 · 不编" : "改颜色，保留场景"}</div>
     `,
     design: `
       <div class="design-sheet">
         <span></span><span></span><span></span><span></span>
       </div>
-      <div class="prompt-ribbon">${promptScene ? "角色 / 任务 / 背景 / 约束" : "地点 / 主角 / 动作 / 细节"}</div>
+      <div class="prompt-ribbon">${expandedScene ? (languageMode === "zh" ? "场景 / 目标 / 方法 / 检查" : "Scene / Goal / Method / Check") : promptScene ? "角色 / 任务 / 背景 / 约束" : "地点 / 主角 / 动作 / 细节"}</div>
     `,
     duo: `
       <div class="duo-avatars"><span></span><span></span></div>
@@ -805,7 +1561,7 @@ function visualScene(scene = "cover") {
     `,
     summary: `
       <div class="badge-ring"><b>✓</b></div>
-      <div class="prompt-ribbon">${promptScene ? "先说清楚，再让AI帮忙" : "先想象，再描述，再修改"}</div>
+      <div class="prompt-ribbon">${expandedScene ? (languageMode === "zh" ? "先想清楚，再让AI帮忙" : "Think first, then use AI") : promptScene ? "先说清楚，再让AI帮忙" : "先想象，再描述，再修改"}</div>
     `
   }[scene] || "";
 
@@ -1255,7 +2011,9 @@ function workSummaryMarkup() {
         ? { puzzle: "守门判断卡", upgrade: "主动创造计划", repair: "夸张内容判断", design: "我的安全守门卡" }
       : currentLessonId === 4
         ? { puzzle: "黄金提示词", upgrade: "升级请求", repair: "修正要求", design: "我的提问作品卡" }
-      : { puzzle: "拼图指令", upgrade: "升级指令", repair: "修正指令", design: "我的设计卡" })
+      : currentLessonId === 5
+        ? { puzzle: "拼图指令", upgrade: "升级指令", repair: "修正指令", design: "我的设计卡" }
+      : { puzzle: "任务判断卡", upgrade: "升级后的任务说明", repair: "AI修正要求", design: "我的本课作品卡" })
     : (currentLessonId === 1
       ? { puzzle: "Future observation", upgrade: "Ability choices", repair: "Replacement judgment", design: "My future ability card" }
       : currentLessonId === 2
@@ -1264,7 +2022,9 @@ function workSummaryMarkup() {
         ? { puzzle: "Gatekeeper card", upgrade: "Active creation plan", repair: "Exaggeration check", design: "My safety gate card" }
       : currentLessonId === 4
         ? { puzzle: "Golden prompt", upgrade: "Upgraded request", repair: "Revision request", design: "My prompt card" }
-      : { puzzle: "Puzzle prompt", upgrade: "Upgraded prompt", repair: "Revision prompt", design: "My design card" });
+      : currentLessonId === 5
+        ? { puzzle: "Puzzle prompt", upgrade: "Upgraded prompt", repair: "Revision prompt", design: "My design card" }
+      : { puzzle: "Task card", upgrade: "Upgraded task", repair: "AI revision request", design: "My lesson work card" });
   const empty = languageMode === "zh" ? "这一项还没有完成，可以回到对应页面补上。" : "Not completed yet. Go back to this step to finish it.";
   const handoffSteps = languageMode === "zh"
     ? (currentLessonId === 1
@@ -1275,7 +2035,9 @@ function workSummaryMarkup() {
         ? ["复制孩子最后的数字安全守门卡", "打开豆包或 DeepSeek App 的对话入口", "让孩子粘贴，并追问：这个场景还有哪些风险我没想到？", "一起判断AI建议：是否保护隐私？是否避免恐吓？是否可执行？"]
       : currentLessonId === 4
         ? ["复制孩子最后的黄金提示词", "打开豆包或 DeepSeek App 的对话入口", "让孩子亲手粘贴并发送", "一起观察AI回答：有没有听懂任务？哪里需要继续追问？"]
-      : ["复制孩子最后的设计卡提示词", "打开豆包或 DeepSeek App 的对话/绘图入口", "让孩子亲手粘贴并发送", "一起观察结果：哪里像？哪里不像？下一句怎么改？"])
+      : currentLessonId === 5
+        ? ["复制孩子最后的设计卡提示词", "打开豆包或 DeepSeek App 的对话/绘图入口", "让孩子亲手粘贴并发送", "一起观察结果：哪里像？哪里不像？下一句怎么改？"]
+      : ["复制孩子最后的本课作品卡", "打开豆包或 DeepSeek App 的对话入口", "让孩子亲手粘贴，并追问：请帮我把这张卡变成一个今天能完成的小任务", "一起判断AI建议：是否安全？是否真实？是否适合孩子自己执行？"])
     : (currentLessonId === 1
       ? ["Copy the child's future ability card", "Open Doubao or DeepSeek chat", "Let the child paste it and ask for one weekly task", "Review together: is it safe, doable, and suitable?"]
       : currentLessonId === 2
@@ -1284,13 +2046,15 @@ function workSummaryMarkup() {
         ? ["Copy the child's digital safety gate card", "Open Doubao or DeepSeek chat", "Let the child paste it and ask what risks may be missing", "Review together: does it protect privacy, avoid fear, and stay doable?"]
       : currentLessonId === 4
         ? ["Copy the child's golden prompt", "Open Doubao or DeepSeek chat", "Let the child paste and send it", "Review together: did AI understand the task, and what follow-up is needed?"]
-      : ["Copy the child's final design-card prompt", "Open Doubao or DeepSeek and choose chat/image creation", "Let the child paste and send it", "Review together: what matches, what misses, and how should we revise?"]);
+      : currentLessonId === 5
+        ? ["Copy the child's final design-card prompt", "Open Doubao or DeepSeek and choose chat/image creation", "Let the child paste and send it", "Review together: what matches, what misses, and how should we revise?"]
+      : ["Copy the child's final lesson work card", "Open Doubao or DeepSeek chat", "Let the child paste it and ask for one doable task today", "Review together: is it safe, truthful, and suitable for the child?"]);
   const handoffTitle = languageMode === "zh"
-    ? (currentLessonId === 1 ? "家长带孩子去 App 里优化任务" : currentLessonId === 2 ? "家长带孩子去 App 里验证工具选择" : currentLessonId === 3 ? "家长带孩子去 App 里做安全判断" : currentLessonId === 4 ? "家长带孩子去 App 里实测提问" : "家长带孩子去 App 里生成")
-    : (currentLessonId === 1 ? "Parent-guided task refinement" : currentLessonId === 2 ? "Parent-guided tool check" : currentLessonId === 3 ? "Parent-guided safety check" : currentLessonId === 4 ? "Parent-guided prompt test" : "Parent-guided app handoff");
+    ? (currentLessonId === 1 ? "家长带孩子去 App 里优化任务" : currentLessonId === 2 ? "家长带孩子去 App 里验证工具选择" : currentLessonId === 3 ? "家长带孩子去 App 里做安全判断" : currentLessonId === 4 ? "家长带孩子去 App 里实测提问" : currentLessonId === 5 ? "家长带孩子去 App 里生成" : "家长带孩子去 App 里继续实测")
+    : (currentLessonId === 1 ? "Parent-guided task refinement" : currentLessonId === 2 ? "Parent-guided tool check" : currentLessonId === 3 ? "Parent-guided safety check" : currentLessonId === 4 ? "Parent-guided prompt test" : currentLessonId === 5 ? "Parent-guided app handoff" : "Parent-guided app test");
   const workCardIntro = languageMode === "zh"
-    ? (currentLessonId === 1 ? "下一步不是让AI替孩子决定未来，而是让孩子学会用AI帮助自己制定一个小行动。" : currentLessonId === 2 ? "下一步不是追逐更多工具，而是让孩子用一个真实任务验证：任务、工具、材料、检查是否匹配。" : currentLessonId === 3 ? "下一步不是吓唬孩子远离网络，而是让孩子在真实场景里练习保护、判断和创造。" : currentLessonId === 4 ? "下一步不是让AI替孩子完成作业，而是让孩子看到：问题说清楚，AI才更容易帮到自己。" : "下一步不是让AI替孩子想，而是让孩子看到自己的表达真的能变成画面。")
-    : (currentLessonId === 1 ? "Next, use AI to help the child turn one ability into a small action, not to decide their future." : currentLessonId === 2 ? "Next, test whether task, tool, material, and checking method match." : currentLessonId === 3 ? "Next, practice protection, judgment, and creation in a real digital scene." : currentLessonId === 4 ? "Next, help the child see that AI works better when the task is clear." : "Next, let the child see how their own words can become an image.");
+    ? (currentLessonId === 1 ? "下一步不是让AI替孩子决定未来，而是让孩子学会用AI帮助自己制定一个小行动。" : currentLessonId === 2 ? "下一步不是追逐更多工具，而是让孩子用一个真实任务验证：任务、工具、材料、检查是否匹配。" : currentLessonId === 3 ? "下一步不是吓唬孩子远离网络，而是让孩子在真实场景里练习保护、判断和创造。" : currentLessonId === 4 ? "下一步不是让AI替孩子完成作业，而是让孩子看到：问题说清楚，AI才更容易帮到自己。" : currentLessonId === 5 ? "下一步不是让AI替孩子想，而是让孩子看到自己的表达真的能变成画面。" : "下一步不是让AI替孩子完成任务，而是让孩子用作品卡继续验证、修改和表达。")
+    : (currentLessonId === 1 ? "Next, use AI to help the child turn one ability into a small action, not to decide their future." : currentLessonId === 2 ? "Next, test whether task, tool, material, and checking method match." : currentLessonId === 3 ? "Next, practice protection, judgment, and creation in a real digital scene." : currentLessonId === 4 ? "Next, help the child see that AI works better when the task is clear." : currentLessonId === 5 ? "Next, let the child see how their own words can become an image." : "Next, let the child test, revise, and express with the work card instead of outsourcing the task to AI.");
   return `
     <div class="teacher-card work-card">
       <div class="work-card-head">
@@ -1338,6 +2102,11 @@ function joinPrompt(parts) {
     return languageMode === "zh"
       ? `我的黄金提示词：${parts.join("；")}。请按这些要求回答，先解释思路，再给我一个适合小学生的结果。`
       : `My golden prompt: ${parts.join("; ")}. Please follow these requirements, explain your thinking first, then give a child-friendly result.`;
+  }
+  if (currentLessonId > 5) {
+    return languageMode === "zh"
+      ? `我的${currentCatalogItem().zh}作品卡：${parts.join("；")}。请帮我把它整理成一个适合小学生今天继续完成的小任务，并提醒我需要检查什么。`
+      : `My ${currentCatalogItem().en} work card: ${parts.join("; ")}. Please turn it into one child-friendly task I can continue today and remind me what to check.`;
   }
   return languageMode === "zh"
     ? `请帮我画：${parts.join("，")}。画面适合小学生，明亮、友好、有轻微未来感。`
