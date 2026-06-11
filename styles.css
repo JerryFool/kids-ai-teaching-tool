@@ -1156,6 +1156,68 @@ span {
   font-size: 21px;
 }
 
+.story-card {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.story-card-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.story-card-head strong {
+  color: var(--blue);
+  font-size: 18px;
+  font-weight: 900;
+}
+
+.story-body {
+  display: grid;
+  gap: 12px;
+}
+
+.story-paragraph {
+  display: grid;
+  grid-template-columns: 34px minmax(0, 1fr);
+  gap: 12px;
+  align-items: start;
+  margin: 0;
+  padding: 14px 16px;
+  border: 1px solid rgba(40, 126, 195, 0.12);
+  border-radius: 8px;
+  background: linear-gradient(135deg, rgba(239, 250, 255, 0.96), rgba(255, 255, 255, 0.9));
+  color: #25435f;
+  font-size: clamp(18px, 1.5vw, 22px);
+  line-height: 1.62;
+  font-weight: 650;
+}
+
+.story-paragraph span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 999px;
+  color: #ffffff;
+  background: linear-gradient(135deg, var(--blue), var(--cyan));
+  box-shadow: 0 8px 18px rgba(40, 126, 195, 0.22);
+  font-size: 14px;
+  font-weight: 900;
+}
+
+.story-question {
+  margin-top: 2px;
+  color: #5b341c;
+  font-size: clamp(17px, 1.35vw, 20px);
+  line-height: 1.55;
+  font-weight: 850;
+}
+
 .page-tips {
   display: flex;
   align-items: flex-start;

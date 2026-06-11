@@ -1060,10 +1060,43 @@ function visualMarkup(stepData) {
   return `<div class="visual-card">${visualScene(stepData.type)}</div>`;
 }
 
+function storyBodyMarkup(body) {
+  const parts = (body.match(/[^。！？.!?]+[。！？.!?]?/g) || [body])
+    .map((part) => part.trim())
+    .filter(Boolean);
+  const paragraphs = parts.length > 1 ? parts : [body];
+  return `
+    <div class="story-body">
+      ${paragraphs.map((part, index) => `
+        <p class="story-paragraph">
+          <span>${index + 1}</span>
+          ${part}
+        </p>
+      `).join("")}
+    </div>
+  `;
+}
+
 function renderStep(stepData, lesson) {
   const visual = visualMarkup(stepData);
   const tips = tipsMarkup(lesson);
-  if (["cover", "story", "rules"].includes(stepData.type)) {
+  if (stepData.type === "story") {
+    return `
+      <div class="panel-grid story-panel-grid">
+        <div class="content-card child-card story-card">
+          <div class="story-card-head">
+            <span class="time-tag">${stepData.minutes}</span>
+            <strong>${languageMode === "zh" ? "小故事" : "Story"}</strong>
+          </div>
+          ${storyBodyMarkup(stepData.body)}
+          ${stepData.quote ? `<div class="quote-box story-question">${stepData.quote}</div>` : ""}
+        </div>
+        ${visual}
+      </div>
+      ${tips}
+    `;
+  }
+  if (["cover", "rules"].includes(stepData.type)) {
     return `
       <div class="panel-grid">
         <div class="content-card child-card">
