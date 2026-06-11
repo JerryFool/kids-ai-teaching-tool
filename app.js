@@ -2,15 +2,15 @@ const ui = {
   zh: {
     brandWork: "思美奇主理人作品",
     createdBy: "CyberMagic by Jerry Fu",
-    heroKicker: "AI未来家长课堂 · 三节样板课",
+    heroKicker: "AI未来家长课堂 · 五节样板课",
     heroTitle: "和孩子一起看见AI时代",
     heroText: "这不是一套“教孩子按按钮”的课，而是训练孩子观察变化、表达想法、判断结果和动手创造的家庭互动课。家长可以打开网页，边看讲义边操作画面，带孩子完成一节约30分钟的AI课。",
     authorTitle: "主理人的一点愿景",
     authorBody: "AI来到孩子身边以后，家长最需要做的不是焦虑，也不是把孩子直接交给工具。我们要陪孩子学会把想法说清楚，学会判断结果好不好，学会在新技术面前保持好奇、审美和独立思考。思美奇做这套课，希望让更多家庭用轻松、温暖、可操作的方式，和孩子一起进入AI时代。",
     startLesson: "开始第1课",
     catalogButton: "查看课程结构",
-    samples: "3节深度样板",
-    samplesNote: "第1课看懂时代，第4课学会提问，第5课创作表达",
+    samples: "5节深度样板",
+    samplesNote: "第1-5课形成完整开篇学习体验",
     entries: "后续31课",
     entriesNote: "确认样板后再批量扩展完整课程",
     minutes: "约30分钟",
@@ -45,15 +45,15 @@ const ui = {
   en: {
     brandWork: "A CyberMagic Curator Project",
     createdBy: "CyberMagic by Jerry Fu",
-    heroKicker: "AI Future Parent Classroom · Three Sample Lessons",
+    heroKicker: "AI Future Parent Classroom · Five Sample Lessons",
     heroTitle: "Help Children See The AI Age",
     heroText: "This is not a button-clicking AI lesson. It trains observation, expression, judgment, and creation. Parents can teach from the notes while children interact with the visual pages.",
     authorTitle: "A Note From The Curator",
     authorBody: "As AI enters children's lives, parents do not need to panic, nor hand children directly to tools. We can help them express ideas clearly, judge results, and keep curiosity, taste, and independent thinking. CyberMagic hopes to make AI learning warmer, lighter, and easier for families to start.",
     startLesson: "Start Lesson 1",
     catalogButton: "View Lesson Flow",
-    samples: "3 Deep Samples",
-    samplesNote: "Lesson 1 reads the age; Lesson 4 trains asking; Lesson 5 creates with words",
+    samples: "5 Deep Samples",
+    samplesNote: "Lessons 1-5 now form a complete opening experience",
     entries: "31 Lessons Later",
     entriesNote: "Scale after the sample is confirmed",
     minutes: "About 30 Min",
@@ -223,17 +223,6 @@ const lessonOneDetails = {
         guide: "这是孩子的输出页。家长只做提问者，不做代答者。填完后请孩子完整读一遍，并选一个本周能完成的小任务。"
       },
       {
-        type: "duo",
-        label: "双人任务",
-        title: "两个孩子组建未来小队",
-        minutes: "4分钟",
-        kids: [
-          { name: "孩子A", mission: "未来职业观察员", starter: ["我发现的变化：AI会帮助更多人", "人的优势：提出问题", "我想练：判断真假", "本周任务：检查一个AI答案"] },
-          { name: "孩子B", mission: "未来作品创造者", starter: ["我发现的变化：视频更容易制作", "人的优势：想象和审美", "我想练：清楚表达", "本周任务：做一张未来职业卡"] }
-        ],
-        guide: "如果两个孩子一起上课，让他们互相采访：你为什么选这个未来职业？你准备怎么练？采访比抢答更能训练表达。"
-      },
-      {
         type: "summary",
         label: "复盘",
         title: "今天我们看懂了什么",
@@ -267,8 +256,87 @@ const lessonOneDetails = {
       { type: "upgrade", label: "Radar", title: "Abilities worth practicing", minutes: "4 min", prompt: "Tap four abilities you think are most worth practicing.", choices: ["ask good questions", "express clearly", "judge truth", "make real works", "work with others", "protect privacy"], guide: "If the child wants all abilities, ask them to pick four first. Abilities are practiced through small tasks." },
       { type: "repair", label: "Judge", title: "Which work is harder for AI to replace?", minutes: "4 min", problem: "People who only copy repeated answers are easier to replace. People who understand humans, ask questions, judge results, and create works are harder to replace.", target: "I choose to practice: asking good questions + clear expression + judging truth + making works, because these help me work with AI instead of only relying on AI.", options: ["understand human feelings", "ask real questions", "judge whether results are good", "turn ideas into works"], guide: "This is not about fear. Ask for one example where AI is strong but humans still need to judge." },
       { type: "design", label: "Ability Card", title: "My Future Ability Card", minutes: "6 min", fields: ["Future job I like", "Who it helps", "Abilities it needs", "Small task I can do this week"], placeholder: "Example: robot partner trainer / helps kids and elders / expression, judgment, empathy / design one robot dialogue", guide: "The parent asks questions but does not answer for the child. End with one doable weekly task." },
-      { type: "duo", label: "Two Kids", title: "Build a future team", minutes: "4 min", kids: [{ name: "Child A", mission: "Future job observer", starter: ["Change: AI helps more people", "Human strength: asking questions", "I practice: judging truth", "This week: check one AI answer"] }, { name: "Child B", mission: "Future work creator", starter: ["Change: videos become easier to make", "Human strength: imagination and taste", "I practice: clear expression", "This week: make one future job card"] }], guide: "Let children interview each other: why did you choose this future job, and how will you practice?" },
       { type: "summary", label: "Review", title: "What did we understand today?", minutes: "4 min", chant: "Do not fear stronger AI. Practice observation, judgment, and creation.", recap: ["We became future archaeologists and found clues from AI change.", "We learned that the future is not a job list; it is about abilities.", "We learned the ability triangle: thinking, expression, creation.", "We built our own future observation through the webpage.", "The child completed a future ability card and chose one weekly task."], guide: "Ask the child to say: what change I noticed, what human ability matters, and what small task I will do this week." }
+    ]
+  }
+};
+
+const lessonTwoDetails = {
+  illustration: "tools",
+  zh: {
+    title: "工具祛魅：AI不是一个按钮",
+    kicker: "30分钟家庭课 · 工具选择与结果判断",
+    prep: "课前家长准备：这节课的重点不是让孩子记住很多AI产品名字，而是理解“不同工具擅长不同任务”。家长可以准备手机或iPad，打开一个常用AI对话工具作为演示。讲课时请避免把AI说成万能机器，重点训练孩子先想清楚任务，再选择工具，最后检查结果。",
+    tips: [
+      "不要让孩子以为“打开AI就会变聪明”。AI只是工具，真正重要的是人先明确任务。",
+      "工具名称会变化，但工具分类和判断方法更稳定：聊天、搜索、写作、画图、学习、整理。",
+      "让孩子说出为什么选这个工具，而不是只点一个看起来厉害的选项。"
+    ],
+    steps: [
+      { type: "cover", label: "开场", title: "AI工具箱里不只有一把锤子", minutes: "2分钟", body: "今天我们认识AI工具箱：不同工具像不同文具，有的适合问问题，有的适合画图，有的适合整理资料。", quote: "会用AI的人，不是见到工具就点，而是先想：我要完成什么任务？", bullets: ["先看任务：我要做什么", "再选工具：哪个工具更合适", "最后检查：结果能不能相信"], guide: "可以问孩子：写作文、查资料、画海报、整理错题，能不能都用同一个工具解决？让孩子先说直觉。" },
+      { type: "story", label: "小故事", title: "小安的万能AI按钮", minutes: "5分钟", body: "小安以为AI只有一个按钮。他想查恐龙资料，随手问了一个聊天工具；想画海底城市，也问同一个工具；想整理读书笔记，还是问同一个工具。结果有些回答能用，有些图画不出来，有些资料还需要核对。爸爸拿出一个工具箱说：螺丝刀、剪刀、尺子都很有用，但不能互相代替。AI也是一样，先看任务，再选工具。", quote: "问孩子：如果AI是工具箱，你最常用的三种工具会是什么？", guide: "故事讲完后，不要急着讲软件名。先让孩子理解“工具服务任务”，不是“任务迁就工具”。" },
+      { type: "rules", label: "方法", title: "AI工具选择三步法", minutes: "5分钟", body: "选择AI工具时，可以先问自己三个问题。", bullets: ["任务是什么：问答、写作、画图、翻译、整理、计算", "材料是什么：一句话、图片、文档、网页、课本", "检查什么：事实、逻辑、语气、安全、是否适合我"], guide: "每讲一步都举家庭例子：比如整理旅行计划需要地点和时间；画图需要画面描述；查事实需要多来源核对。" },
+      { type: "puzzle", label: "工具拼图", title: "帮任务找到合适工具", minutes: "6分钟", prompt: "请孩子从四组里各点一个，拼出一张AI工具选择卡。", groups: [{ name: "任务", options: ["查一个知识点", "润色一段作文", "画一张未来学校", "整理一份读书笔记"] }, { name: "工具类型", options: ["搜索/问答工具", "写作修改工具", "AI绘图工具", "资料整理工具"] }, { name: "需要材料", options: ["清楚的问题", "自己的原文", "地点主角动作细节", "书名和重点段落"] }, { name: "检查重点", options: ["事实是否可靠", "有没有保留我的语气", "画面是否符合描述", "重点有没有漏掉"] }], guide: "选完后让孩子读出整张卡。重点追问：为什么这个任务适合这个工具？结果出来后你会检查什么？" },
+      { type: "upgrade", label: "升级练习", title: "从“帮我学习”变成任务说明", minutes: "4分钟", prompt: "原句：我想用AI学习。", choices: ["我要理解一个科学概念", "请用小学生听得懂的话解释", "如果有事实请提醒我核对来源", "最后给我3个复习问题"], guide: "让孩子发现，“学习”太大了。AI更适合处理具体任务：解释、举例、出题、检查、总结。" },
+      { type: "repair", label: "判断任务", title: "工具选错了怎么办", minutes: "4分钟", problem: "你想确认一个新闻是否真实，但AI只给了一个听起来很肯定的答案。", target: "请帮我列出需要核对的3个来源和判断步骤，不要只给结论。", options: ["不要只听一个答案", "找来源：官网/教材/可靠媒体", "看日期：是不是最新", "问家长：不确定时一起判断"], guide: "这里训练孩子不迷信AI。请强调：AI可以帮我们列检查步骤，但不能替我们负责真假判断。" },
+      { type: "design", label: "工具卡", title: "我的AI工具选择卡", minutes: "6分钟", fields: ["我想完成的任务", "适合的AI工具类型", "我需要提供的材料", "我如何检查结果"], placeholder: "比如：整理读书笔记 / 资料整理工具 / 书名和重点段落 / 看有没有漏掉重点、有没有编造", guide: "家长可以帮孩子把任务缩小。比如不要写“学英语”，改成“练习今天的10个单词并出3道小题”。" },
+      { type: "summary", label: "复盘", title: "今天学会了选工具", minutes: "4分钟", chant: "先看任务，再选工具，最后检查结果。", recap: ["我们知道AI不是一个万能按钮，而是一个工具箱。", "我们学会了选择工具前先看任务和材料。", "我们用工具拼图把任务、工具、材料、检查点连起来。", "我们练习了当AI回答太肯定时，怎样要求它给检查步骤。", "孩子完成了自己的AI工具选择卡，可以拿一个真实学习任务去试用。"], guide: "最后请孩子说：我今天想完成什么任务、适合哪类工具、我会怎么检查结果。" }
+    ]
+  },
+  en: {
+    title: "Demystifying Tools: AI Is Not One Button",
+    kicker: "30-minute family lesson · Tool choice and result checking",
+    prep: "Parent prep: this lesson is not about memorizing AI product names. It helps children understand that different tools fit different tasks. The stable ability is choosing a tool by task, giving the right material, and checking the result.",
+    tips: ["Do not let the child think AI makes people smart by itself. People define the task first.", "Tool names change, but tool categories stay useful: chat, search, writing, image, learning, organizing.", "Ask the child why a tool fits the task."],
+    steps: [
+      { type: "cover", label: "Start", title: "The AI toolbox has more than one tool", minutes: "2 min", body: "Today we explore the AI toolbox. Some tools answer questions, some draw, some organize information.", quote: "A good AI user asks: what task am I trying to finish?", bullets: ["See the task", "Choose the tool", "Check the result"], guide: "Ask whether writing, searching, drawing, and organizing mistakes should all use the same tool." },
+      { type: "story", label: "Story", title: "An's magic AI button", minutes: "5 min", body: "An thinks AI is one magic button. He uses the same tool to search dinosaur facts, draw an underwater city, and organize reading notes. Some results help, some do not. Dad opens a toolbox and says: scissors, rulers, and screwdrivers are all useful, but they are not the same. AI tools are like that too.", quote: "Ask: if AI is a toolbox, what three tools would you use most?", guide: "Focus on the idea that tools serve tasks." },
+      { type: "rules", label: "Method", title: "Three steps for choosing AI tools", minutes: "5 min", body: "Before choosing an AI tool, ask three questions.", bullets: ["What is the task: ask, write, draw, translate, organize, calculate", "What material do I have: sentence, image, document, webpage, textbook", "What should I check: facts, logic, tone, safety, fit"], guide: "Use family examples for each step." },
+      { type: "puzzle", label: "Tool Puzzle", title: "Match task and tool", minutes: "6 min", prompt: "Choose one from each group to build an AI tool choice card.", groups: [{ name: "Task", options: ["learn a knowledge point", "polish a paragraph", "draw a future school", "organize reading notes"] }, { name: "Tool type", options: ["search/question tool", "writing tool", "AI image tool", "organizing tool"] }, { name: "Material", options: ["a clear question", "my original text", "place, character, action, details", "book title and key passages"] }, { name: "Check", options: ["whether facts are reliable", "whether my voice is kept", "whether image matches prompt", "whether key points are missing"] }], guide: "Ask why this tool fits and what must be checked." },
+      { type: "upgrade", label: "Upgrade", title: "Turn 'help me learn' into a task", minutes: "4 min", prompt: "Original: I want to use AI to learn.", choices: ["I want to understand a science concept", "explain it in child-friendly words", "remind me to check sources for facts", "give me three review questions"], guide: "Help the child see that learning becomes useful when it is broken into tasks." },
+      { type: "repair", label: "Judge", title: "What if the tool is wrong?", minutes: "4 min", problem: "You want to check whether a piece of news is true, but AI gives one confident answer.", target: "Please list three sources and checking steps. Do not only give a conclusion.", options: ["Do not trust one answer", "Find sources: official, textbook, reliable media", "Check the date", "Ask a parent when unsure"], guide: "AI can help list checks, but humans still judge reliability." },
+      { type: "design", label: "Tool Card", title: "My AI Tool Choice Card", minutes: "6 min", fields: ["Task I want to finish", "Best AI tool type", "Material I need to provide", "How I will check the result"], placeholder: "Example: organize reading notes / organizing tool / book title and key passages / check missing points and invented facts", guide: "Help the child make the task concrete." },
+      { type: "summary", label: "Review", title: "Today we learned to choose tools", minutes: "4 min", chant: "See the task, choose the tool, check the result.", recap: ["AI is not one magic button; it is a toolbox.", "We choose tools by task and material.", "We matched task, tool, material, and check points.", "We practiced asking for checking steps instead of one confident answer.", "The child completed an AI tool choice card."], guide: "Ask the child to name one real task, one fitting tool type, and one check method." }
+    ]
+  }
+};
+
+const lessonThreeDetails = {
+  illustration: "safety",
+  zh: {
+    title: "数字守门人：从刷视频到做视频",
+    kicker: "30分钟家庭课 · 安全意识与判断力",
+    prep: "课前家长准备：这节课不是批评孩子刷视频，而是帮助孩子从“被内容推着走”变成“能判断、会保护、会创造”的数字小主人。请提前和孩子约定：我们讨论的不是禁止使用，而是学会保护隐私、识别诱导、判断真假，并把注意力用在创造上。",
+    tips: [
+      "不要把安全课讲成恐吓。孩子越害怕，越可能不愿意和家长说真实情况。",
+      "重点不是让孩子背规则，而是遇到具体场景时能做出安全选择。",
+      "把“少刷一点”升级成“我也能做出有价值的内容”。"
+    ],
+    steps: [
+      { type: "cover", label: "开场", title: "我不是被算法推着走的小孩", minutes: "2分钟", body: "今天我们学习做数字守门人：保护自己、判断内容、把注意力用来创造。", quote: "会用数字世界的人，不只是会刷，更会选择和创造。", bullets: ["保护隐私：什么不能随便给", "判断内容：真假和诱导要看清", "主动创造：从看视频到做作品"], guide: "开场可以问孩子：你有没有刷着刷着停不下来？这不是责备，而是引出算法会抓住人的注意力。" },
+      { type: "story", label: "小故事", title: "小安差点把信息发出去", minutes: "5分钟", body: "小安看到一个很酷的AI头像生成活动，页面提示他输入姓名、学校、生日，还让他上传自己的照片。小安觉得很好玩，差点点发送。妈妈没有立刻骂他，而是问：这些信息如果被陌生人看到，会不会有风险？这个活动是谁做的？有没有必要给这么多信息？小安停下来，决定只使用不包含真实身份的昵称，也不上传正脸照片。", quote: "问孩子：哪些信息属于隐私？遇到不确定时应该找谁一起判断？", guide: "故事要讲得平和。核心是让孩子知道：停一下、想一下、问一下，是数字世界里的重要能力。" },
+      { type: "rules", label: "方法", title: "数字守门三道门", minutes: "5分钟", body: "进入数字世界前，可以先过三道门。", bullets: ["隐私门：姓名、学校、住址、电话、正脸照片要谨慎", "真假门：看来源、日期、证据，不只看标题", "注意力门：我是在学习创造，还是被一直吸住"], guide: "每一道门都让孩子举例。比如“学校名字+校服照片”组合起来，可能比单独一项更容易暴露身份。" },
+      { type: "puzzle", label: "守门游戏", title: "遇到场景怎么选", minutes: "6分钟", prompt: "请孩子从四组里各点一个，组成一张数字守门判断卡。", groups: [{ name: "场景", options: ["陌生链接要填资料", "短视频说某事一定是真的", "AI让你上传正脸照", "刷视频停不下来"] }, { name: "风险", options: ["暴露隐私", "被错误信息误导", "照片被别人使用", "注意力被吸走"] }, { name: "安全动作", options: ["先不提交，问家长", "查来源和日期", "改用不露脸素材", "设定时间，转去做作品"] }, { name: "我能创造", options: ["做一张安全提醒卡", "把事实核对过程讲清楚", "设计一个虚拟头像", "剪一个学习小视频"] }], guide: "选完后请孩子说：这个场景有什么风险？我第一步会做什么？我能不能把它变成创造任务？" },
+      { type: "upgrade", label: "升级练习", title: "从被动刷到主动做", minutes: "4分钟", prompt: "原句：我想再刷一会儿视频。", choices: ["我先设定10分钟", "看完记录一个有用知识点", "不点陌生链接、不填真实信息", "最后做一张自己的学习卡"], guide: "不要只说“不许刷”。让孩子看到：同样是视频，可以从消耗注意力变成收集灵感和表达作品。" },
+      { type: "repair", label: "判断任务", title: "看到夸张内容怎么办", minutes: "4分钟", problem: "短视频标题说：所有小学生都必须马上学会这个AI技巧，否则会落后。", target: "请帮我判断这个说法是否夸张：它的来源是什么？有没有证据？是不是在制造焦虑？我应该怎么向家长确认？", options: ["看来源：谁说的", "看证据：有没有事实", "看情绪：是不是制造焦虑", "问家长：一起判断"], guide: "这页训练孩子识别夸张、焦虑、诱导。不是所有看起来专业的内容都值得相信。" },
+      { type: "design", label: "守门卡", title: "我的数字安全守门卡", minutes: "6分钟", fields: ["我遇到的数字场景", "可能的风险", "我的安全动作", "我可以创造的作品"], placeholder: "比如：AI头像活动 / 可能泄露照片和学校信息 / 不上传正脸，问家长 / 设计一个虚拟头像安全提醒卡", guide: "家长帮助孩子把守门卡写成真实可用的话。下次遇到类似情况，可以直接照着做。" },
+      { type: "summary", label: "复盘", title: "今天成为数字守门人", minutes: "4分钟", chant: "隐私先保护，真假要判断，注意力用来创造。", recap: ["我们知道了数字世界不只是好玩，也需要守门。", "我们学会三道门：隐私门、真假门、注意力门。", "我们练习了遇到陌生链接、夸张标题、上传照片时怎么判断。", "我们把“刷视频”升级成了“收集灵感、做作品”。", "孩子完成了自己的数字安全守门卡。"], guide: "最后请孩子说：我最要保护的一项信息是什么？我看到夸张内容会怎么查？我想做一个什么小作品？" }
+    ]
+  },
+  en: {
+    title: "Digital Gatekeeper: From Watching To Creating",
+    kicker: "30-minute family lesson · Safety and judgment",
+    prep: "Parent prep: this lesson is not about scolding screen time. It helps children become active digital users who protect privacy, judge content, and turn attention into creation.",
+    tips: ["Do not teach safety through fear. Children should feel safe telling parents what happened.", "The goal is making safe choices in real situations.", "Turn 'watch less' into 'create something valuable'."],
+    steps: [
+      { type: "cover", label: "Start", title: "I am not pushed around by algorithms", minutes: "2 min", body: "Today we become digital gatekeepers: protect ourselves, judge content, and create with attention.", quote: "Digital ability is not only watching. It is choosing and creating.", bullets: ["Protect privacy", "Judge truth and persuasion", "Create instead of only watching"], guide: "Ask whether the child has ever kept watching longer than planned. Keep the tone calm." },
+      { type: "story", label: "Story", title: "An almost sends his information", minutes: "5 min", body: "An sees a cool AI avatar activity. It asks for name, school, birthday, and a face photo. Mom asks: what if strangers see this? Who made the activity? Is all this information necessary? An pauses and uses a nickname, not a real face photo.", quote: "Ask: what information is private, and who should we ask when unsure?", guide: "Teach pause, think, ask." },
+      { type: "rules", label: "Method", title: "Three digital gates", minutes: "5 min", body: "Before entering a digital activity, pass three gates.", bullets: ["Privacy gate: name, school, address, phone, face photo", "Truth gate: source, date, evidence", "Attention gate: am I learning/creating or being pulled in?"], guide: "Ask for examples. Combined information can reveal more than one item alone." },
+      { type: "puzzle", label: "Gate Game", title: "Choose a safe action", minutes: "6 min", prompt: "Choose one from each group to build a digital gatekeeper card.", groups: [{ name: "Scene", options: ["unknown link asks for info", "short video says something is definitely true", "AI asks for a face photo", "videos are hard to stop"] }, { name: "Risk", options: ["privacy leak", "wrong information", "photo misuse", "attention trap"] }, { name: "Safe action", options: ["do not submit; ask parent", "check source and date", "use non-face material", "set a timer and create"] }, { name: "Creation", options: ["make a safety reminder card", "explain the fact-checking process", "design a virtual avatar", "make a learning mini-video"] }], guide: "Ask: what is the risk, what is the first safe action, and how can this become a creation task?" },
+      { type: "upgrade", label: "Upgrade", title: "From passive watching to active making", minutes: "4 min", prompt: "Original: I want to watch more videos.", choices: ["set a 10-minute timer", "record one useful idea", "do not click unknown links or share real info", "make my own learning card"], guide: "Do not only ban watching. Show how video can become inspiration and expression." },
+      { type: "repair", label: "Judge", title: "What about exaggerated content?", minutes: "4 min", problem: "A video title says: every student must learn this AI trick immediately or fall behind.", target: "Please help me judge whether this is exaggerated: what is the source, what evidence exists, is it creating anxiety, and how should I confirm with a parent?", options: ["Source: who said it", "Evidence: what facts", "Emotion: anxiety or persuasion", "Ask parent: judge together"], guide: "Help children spot exaggeration and anxiety." },
+      { type: "design", label: "Gate Card", title: "My Digital Safety Gate Card", minutes: "6 min", fields: ["Digital scene I may meet", "Possible risk", "My safe action", "Something I can create"], placeholder: "Example: AI avatar activity / photo and school privacy / do not upload face photo, ask parent / make a virtual-avatar safety card", guide: "Make the card practical for a real future situation." },
+      { type: "summary", label: "Review", title: "Today I became a digital gatekeeper", minutes: "4 min", chant: "Protect privacy, judge truth, create with attention.", recap: ["Digital spaces are fun but need gates.", "We learned privacy, truth, and attention gates.", "We practiced judging links, titles, photos, and videos.", "We upgraded watching into creating.", "The child completed a digital safety gate card."], guide: "Ask the child to name one private item, one checking action, and one small creation idea." }
     ]
   }
 };
@@ -356,17 +424,6 @@ const lessonFourDetails = {
         guide: "这是输出页。家长可以当记录员，帮孩子把话打进去，但核心内容尽量让孩子自己说。"
       },
       {
-        type: "duo",
-        label: "双人任务",
-        title: "两种任务，两种问法",
-        minutes: "4分钟",
-        kids: [
-          { name: "孩子A", mission: "作业小教练", starter: ["角色：耐心的数学教练", "任务：用步骤提示我", "背景：我卡在应用题", "约束：不要直接给答案"] },
-          { name: "孩子B", mission: "故事小导演", starter: ["角色：儿童故事导演", "任务：把想法变故事大纲", "背景：主角是蓝白机器人", "约束：适合小学生，结尾温暖"] }
-        ],
-        guide: "如果两个孩子一起上课，让他们互相检查：你的提示词有没有角色、任务、背景、约束？还缺什么？"
-      },
-      {
         type: "summary",
         label: "复盘",
         title: "今天学会了什么",
@@ -394,7 +451,6 @@ const lessonFourDetails = {
       { type: "upgrade", label: "Upgrade", title: "Upgrade a vague request", minutes: "4 min", prompt: "Original sentence: help me write it.", choices: ["act as a primary-school writing teacher", "polish my diary", "keep my voice and real experience", "tell me the three main changes"], guide: "Ask what is vague in the original. After upgrading, ask what problem each added phrase solved." },
       { type: "repair", label: "Revise AI", title: "When AI goes off track", minutes: "4 min", problem: "AI's answer is too long, sounds like an adult, and invents events the child never experienced.", target: "Please answer again: sound more like a primary-school student, keep it under 150 words, keep my real experience, do not invent new events, and list three changes.", options: ["Shorter: under 150 words", "Voice: like a student", "Keep: real experience", "Do not: invent new events"], guide: "Explain that a wrong first answer is normal. The key is naming what is wrong and pulling AI back with clearer requirements." },
       { type: "design", label: "Work Card", title: "My Golden Prompt", minutes: "6 min", fields: ["Role", "Task", "Context", "Constraint"], placeholder: "Example: writing teacher / polish diary / grade-four student writing for teacher / keep real events and give 3 suggestions", guide: "The parent can type for the child, but the main ideas should come from the child." },
-      { type: "duo", label: "Two Kids", title: "Two tasks, two prompts", minutes: "4 min", kids: [{ name: "Child A", mission: "Homework coach", starter: ["Role: patient math coach", "Task: guide me step by step", "Context: I am stuck on a word problem", "Constraint: do not give the final answer"] }, { name: "Child B", mission: "Story director", starter: ["Role: children's story director", "Task: turn my idea into an outline", "Context: the main character is a blue-white robot", "Constraint: for children, with a warm ending"] }], guide: "If two children learn together, let them check each other's prompt: does it include role, task, context, and constraint?" },
       { type: "summary", label: "Review", title: "What did we learn today?", minutes: "4 min", chant: "Role, task, context, constraint. Explain clearly before asking AI for help.", recap: ["AI cannot read minds. It needs clear task instructions.", "We learned the four-part golden prompt: role, task, context, constraint.", "We upgraded 'help me write it' into a more specific prompt.", "We practiced revising AI when it goes off track.", "The child completed a golden prompt card that can be tested in Doubao or DeepSeek."], guide: "Do not only ask whether the child understands. Ask the child to explain the four parts and choose one real learning task to test with AI." }
     ]
   }
@@ -402,6 +458,8 @@ const lessonFourDetails = {
 
 const lessonDetails = {
   1: lessonOneDetails,
+  2: lessonTwoDetails,
+  3: lessonThreeDetails,
   4: lessonFourDetails,
   5: {
     illustration: "art",
@@ -486,17 +544,6 @@ const lessonDetails = {
           guide: "这是孩子真正输出的一页。让孩子自己填，你只负责追问和记录。填完后请孩子完整读一遍，这就是他的AI画图指令。"
         },
         {
-          type: "duo",
-          label: "双人任务",
-          title: "两个孩子各做一张创意卡",
-          minutes: "4分钟",
-          kids: [
-            { name: "孩子A", mission: "设计未来学校", starter: ["地点：未来学校", "主角：机器人老师", "动作：正在上课", "细节：蓝白色、发光、开心"] },
-            { name: "孩子B", mission: "设计机器人朋友", starter: ["地点：儿童房", "主角：蓝白机器人朋友", "动作：整理玩具", "细节：温暖、明亮、像动画片"] }
-          ],
-          guide: "如果两个孩子一起上课，这页可以分工。让他们互相听对方的描述，并各提一个“还能更清楚吗”的问题。"
-        },
-        {
           type: "summary",
           label: "复盘",
           title: "今天到底学会了什么",
@@ -530,7 +577,6 @@ const lessonDetails = {
         { type: "upgrade", label: "Upgrade", title: "Upgrade a vague sentence", minutes: "4 min", prompt: "Original: draw something fun.", choices: ["future school", "robot teacher", "two children happily learning", "blue-white, glowing, bright, futuristic"], guide: "Ask why the original sentence is unclear. The key is that the child can explain what each added part does." },
         { type: "repair", label: "Fix AI", title: "What if AI gets it wrong?", minutes: "4 min", problem: "You wanted a blue-white robot, but AI made a black robot.", target: "Please change the robot to blue-white, and keep the children's room and toy-cleaning scene.", options: ["Change color: blue-white", "Keep place: children's room", "Keep action: cleaning toys", "Keep mood: happy, bright, cartoon"], guide: "This trains revision. Say what to change and what to keep." },
         { type: "design", label: "Design Card", title: "My AI Picture Design Card", minutes: "6 min", fields: ["Place", "Character", "Action", "Details"], placeholder: "Example: future school / robot teacher / teaching class / blue-white, glowing, happy", guide: "This is the child's output page. Let the child fill it. Then ask them to read the whole prompt aloud." },
-        { type: "duo", label: "Two Kids", title: "Two children, two creative cards", minutes: "4 min", kids: [{ name: "Child A", mission: "Design a future school", starter: ["Place: future school", "Character: robot teacher", "Action: teaching class", "Details: blue-white, glowing, happy"] }, { name: "Child B", mission: "Design a robot friend", starter: ["Place: children's room", "Character: blue-white robot friend", "Action: cleaning up toys", "Details: warm, bright, cartoon style"] }], guide: "If two children join, let them ask each other one question: how can this be clearer?" },
         { type: "summary", label: "Review", title: "What did we learn today?", minutes: "4 min", chant: "Imagine first, describe clearly, revise when AI gets it wrong.", recap: ["We found that 'draw something fun' is too vague.", "We learned four picture parts: place, character, action, details.", "We built prompts by combining words.", "We practiced revision: say what to change and what to keep.", "The child completed an AI picture design card."], guide: "Ask the child to say three sentences: my picture is..., I used four parts..., if AI gets it wrong I will..." }
       ]
     }
@@ -660,8 +706,27 @@ function visualScene(scene = "cover") {
     upgrade: ["技能雷达", "选择优先练习"],
     repair: ["抗替代判断", "人和AI合作"],
     design: ["能力卡", "我的本周行动"],
-    duo: ["未来小队", "互相采访"],
     summary: ["完成复盘", "一个变化 一个行动"]
+  };
+  const lessonTwoLabels = {
+    cover: ["AI工具箱", "不是一个万能按钮"],
+    story: ["万能按钮", "先看任务再选工具"],
+    rules: ["选择三步法", "任务 材料 检查"],
+    puzzle: ["工具拼图", "任务找到工具"],
+    upgrade: ["任务说明", "从学习到具体任务"],
+    repair: ["结果检查", "不要只听一个答案"],
+    design: ["工具选择卡", "我的真实任务"],
+    summary: ["完成复盘", "先选工具再检查"]
+  };
+  const lessonThreeLabels = {
+    cover: ["数字守门人", "保护 判断 创造"],
+    story: ["隐私暂停键", "先想一下再提交"],
+    rules: ["三道门", "隐私 真假 注意力"],
+    puzzle: ["守门游戏", "场景 风险 动作"],
+    upgrade: ["主动创造", "从刷到做"],
+    repair: ["识别夸张", "来源 证据 情绪"],
+    design: ["安全守门卡", "我的安全动作"],
+    summary: ["完成复盘", "安全地创造"]
   };
   const lessonFiveLabels = {
     cover: ["想象泡泡", "AI不是读心术"],
@@ -671,7 +736,6 @@ function visualScene(scene = "cover") {
     upgrade: ["升级句子", "从模糊到清楚"],
     repair: ["修正AI", "改变 + 保留"],
     design: ["设计卡", "我的完整指令"],
-    duo: ["双人任务", "互相提问"],
     summary: ["完成复盘", "下次我会这样问"]
   };
   const lessonFourLabels = {
@@ -682,10 +746,17 @@ function visualScene(scene = "cover") {
     upgrade: ["升级请求", "从模糊到具体"],
     repair: ["修正回答", "拉回真实任务"],
     design: ["黄金提示词", "我的四件套"],
-    duo: ["双人问法", "互相检查"],
     summary: ["完成复盘", "会问才会用"]
   };
-  const sceneLabelMap = currentLessonId === 1 ? lessonOneLabels : currentLessonId === 4 ? lessonFourLabels : lessonFiveLabels;
+  const sceneLabelMap = currentLessonId === 1
+    ? lessonOneLabels
+    : currentLessonId === 2
+      ? lessonTwoLabels
+      : currentLessonId === 3
+        ? lessonThreeLabels
+        : currentLessonId === 4
+          ? lessonFourLabels
+          : lessonFiveLabels;
   const labels = sceneLabelMap[scene] || ["AI课堂", "想清楚再表达"];
   const promptScene = currentLessonId === 4;
   const sceneBits = {
@@ -918,8 +989,27 @@ function buildLectureText(lesson, stepData) {
     upgrade: zh ? "讲法：这是技能雷达。让孩子选择优先练的能力，并说为什么这个能力未来重要。" : "Teaching: this is an ability radar. Ask why each chosen ability matters.",
     repair: zh ? "讲法：把“替代焦虑”转成“能力判断”。重点是哪些人类能力让我们能和AI合作。" : "Teaching: turn replacement anxiety into ability judgment. Focus on human abilities for working with AI.",
     design: zh ? "讲法：这是输出页。请家长用问题帮助孩子想清楚，不要替孩子设计人生。" : "Teaching: this is the output page. Use questions; do not design the child's life for them.",
-    duo: zh ? "讲法：适合两个孩子一起上。让他们互相采访，而不是比谁答案更快。" : "Teaching: good for two children. Let them interview each other instead of racing for answers.",
     summary: zh ? "讲法：不要只问“懂了吗”。让孩子说出一个变化、一个能力、一个本周行动。" : "Teaching: ask for one change, one ability, and one weekly action."
+  };
+  const lessonTwoHelp = {
+    cover: zh ? "讲法：先把AI比作工具箱。重点不是介绍软件清单，而是让孩子知道任务不同，工具也不同。" : "Teaching: compare AI to a toolbox. The focus is choosing by task, not memorizing software names.",
+    story: zh ? "讲法：故事要讲出“同一个按钮解决所有问题”为什么不靠谱。让孩子说出生活里的工具类比。" : "Teaching: show why one magic button cannot solve every task. Ask for real-life tool examples.",
+    rules: zh ? "讲法：三步法要马上联系学习任务：任务是什么、材料是什么、检查什么。" : "Teaching: connect the three steps to learning tasks: task, material, and check.",
+    puzzle: zh ? "讲法：让孩子自己匹配任务和工具。选完后一定追问：为什么选它？你会检查什么？" : "Teaching: let the child match task and tool, then ask why and what to check.",
+    upgrade: zh ? "讲法：把“我要学习”拆成具体动作，孩子会更容易真正用AI帮助自己。" : "Teaching: break 'I want to learn' into concrete actions.",
+    repair: zh ? "讲法：这是反迷信AI的一页。AI可以给检查步骤，但不能替孩子负责真假判断。" : "Teaching: this page prevents blind trust. AI can list checks, but people judge reliability.",
+    design: zh ? "讲法：这是输出页。请孩子拿一个真实学习任务来填，不要写太大的目标。" : "Teaching: use one real learning task, not a vague large goal.",
+    summary: zh ? "讲法：让孩子复述三句话：我要做什么、用哪类工具、怎么检查。" : "Teaching: ask for three sentences: task, tool type, and check method."
+  };
+  const lessonThreeHelp = {
+    cover: zh ? "讲法：语气要平和。不是批评刷视频，而是让孩子从被动观看变成主动选择和创造。" : "Teaching: keep a calm tone. This is not scolding screen time; it is training choice and creation.",
+    story: zh ? "讲法：隐私故事要讲得具体。让孩子知道“停一下、想一下、问一下”就是能力。" : "Teaching: make privacy concrete. Pause, think, ask is a real ability.",
+    rules: zh ? "讲法：三道门都要举例，尤其是组合信息的风险，例如学校名加校服照片。" : "Teaching: give examples for all three gates, especially combined privacy clues.",
+    puzzle: zh ? "讲法：让孩子做场景判断。重点不是标准答案，而是能说出风险和第一步安全动作。" : "Teaching: let the child judge scenes. The key is naming risk and first safe action.",
+    upgrade: zh ? "讲法：不要只说不许刷。引导孩子把看内容变成记录灵感、做作品。" : "Teaching: do not only ban watching. Turn watching into collecting ideas and making something.",
+    repair: zh ? "讲法：训练识别夸张和焦虑营销。让孩子看来源、证据和情绪。" : "Teaching: train children to spot exaggeration and anxiety marketing.",
+    design: zh ? "讲法：这是输出页。请写一个孩子真的可能遇到的场景，越具体越有用。" : "Teaching: use a realistic situation the child may actually meet.",
+    summary: zh ? "讲法：请孩子说出一个隐私、一个判断动作、一个想做的小作品。" : "Teaching: ask for one private item, one checking action, and one creation idea."
   };
   const lessonFiveHelp = {
     cover: zh ? "讲法：先让孩子看画面并猜今天学什么，再把目标说出来：不是学画画软件，而是学会说清楚。" : "Teaching: let the child look and guess first, then explain that the goal is clear expression.",
@@ -929,7 +1019,6 @@ function buildLectureText(lesson, stepData) {
     upgrade: zh ? "讲法：先让孩子说原句哪里模糊，再点按钮一点点升级。重点是孩子能解释升级原因。" : "Teaching: ask why the original is vague, then upgrade it step by step.",
     repair: zh ? "讲法：告诉孩子，AI画错不是失败，而是进入第二轮表达。修改时说清楚改变和保留。" : "Teaching: AI mistakes begin the second round of expression. Say what to change and what to keep.",
     design: zh ? "讲法：这是输出页。请家长做记录员，不要抢孩子的答案。" : "Teaching: this is the output page. The parent records but does not take over.",
-    duo: zh ? "讲法：适合两个孩子一起上。让他们互相提一个让画面更清楚的问题。" : "Teaching: good for two children. Let them ask each other one clarity question.",
     summary: zh ? "讲法：不要只问“懂了吗”。让孩子完整说出过程、方法、下次怎么用。" : "Teaching: do not only ask 'do you understand'. Ask the child to explain the process, method, and next use."
   };
   const lessonFourHelp = {
@@ -940,10 +1029,17 @@ function buildLectureText(lesson, stepData) {
     upgrade: zh ? "讲法：不要直接给标准答案。让孩子说每增加一句，到底减少了哪种误解。" : "Teaching: ask what misunderstanding each new phrase prevents.",
     repair: zh ? "讲法：把AI答偏当作训练机会。让孩子说清楚要变短、变像自己、保留真实、不编故事。" : "Teaching: treat a poor answer as practice. Ask the child to name what should change and what must stay.",
     design: zh ? "讲法：这是输出页。家长做打字员，孩子做任务设计师。" : "Teaching: this is the output page. The parent types; the child designs the task.",
-    duo: zh ? "讲法：适合两个孩子互相检查四件套。重点不是谁快，而是谁能问得清楚。" : "Teaching: let two children check each other's four parts. Clarity matters more than speed.",
     summary: zh ? "讲法：请孩子选择一个真实任务，准备复制到豆包或 DeepSeek 里测试，并学会追问。" : "Teaching: ask the child to choose one real task to test in Doubao or DeepSeek and practice follow-up."
   };
-  const helpMap = currentLessonId === 1 ? lessonOneHelp : currentLessonId === 4 ? lessonFourHelp : lessonFiveHelp;
+  const helpMap = currentLessonId === 1
+    ? lessonOneHelp
+    : currentLessonId === 2
+      ? lessonTwoHelp
+      : currentLessonId === 3
+        ? lessonThreeHelp
+        : currentLessonId === 4
+          ? lessonFourHelp
+          : lessonFiveHelp;
   const typeHelp = helpMap[stepData.type];
   return [currentStepIndex === 0 ? lesson.prep : stepData.guide, typeHelp].filter(Boolean).join("\n\n");
 }
@@ -1120,11 +1216,19 @@ function workSummaryMarkup() {
   const labels = languageMode === "zh"
     ? (currentLessonId === 1
       ? { puzzle: "未来观察", upgrade: "技能选择", repair: "抗替代判断", design: "我的未来能力卡" }
+      : currentLessonId === 2
+        ? { puzzle: "工具选择卡", upgrade: "任务说明", repair: "结果检查", design: "我的AI工具卡" }
+      : currentLessonId === 3
+        ? { puzzle: "守门判断卡", upgrade: "主动创造计划", repair: "夸张内容判断", design: "我的安全守门卡" }
       : currentLessonId === 4
         ? { puzzle: "黄金提示词", upgrade: "升级请求", repair: "修正要求", design: "我的提问作品卡" }
       : { puzzle: "拼图指令", upgrade: "升级指令", repair: "修正指令", design: "我的设计卡" })
     : (currentLessonId === 1
       ? { puzzle: "Future observation", upgrade: "Ability choices", repair: "Replacement judgment", design: "My future ability card" }
+      : currentLessonId === 2
+        ? { puzzle: "Tool choice card", upgrade: "Task instruction", repair: "Result check", design: "My AI tool card" }
+      : currentLessonId === 3
+        ? { puzzle: "Gatekeeper card", upgrade: "Active creation plan", repair: "Exaggeration check", design: "My safety gate card" }
       : currentLessonId === 4
         ? { puzzle: "Golden prompt", upgrade: "Upgraded request", repair: "Revision request", design: "My prompt card" }
       : { puzzle: "Puzzle prompt", upgrade: "Upgraded prompt", repair: "Revision prompt", design: "My design card" });
@@ -1132,20 +1236,28 @@ function workSummaryMarkup() {
   const handoffSteps = languageMode === "zh"
     ? (currentLessonId === 1
       ? ["复制孩子最后的未来能力卡", "打开豆包或 DeepSeek App 的对话入口", "让孩子亲手粘贴，并追问：请帮我设计一个本周能完成的小任务", "一起判断AI建议：是否安全？是否可执行？是否真的适合我？"]
+      : currentLessonId === 2
+        ? ["复制孩子最后的AI工具选择卡", "打开豆包或 DeepSeek App 的对话入口", "让孩子粘贴，并追问：请帮我把这个任务拆成3步", "一起检查AI建议：工具是否合适？材料是否够？有没有需要核对的地方？"]
+      : currentLessonId === 3
+        ? ["复制孩子最后的数字安全守门卡", "打开豆包或 DeepSeek App 的对话入口", "让孩子粘贴，并追问：这个场景还有哪些风险我没想到？", "一起判断AI建议：是否保护隐私？是否避免恐吓？是否可执行？"]
       : currentLessonId === 4
         ? ["复制孩子最后的黄金提示词", "打开豆包或 DeepSeek App 的对话入口", "让孩子亲手粘贴并发送", "一起观察AI回答：有没有听懂任务？哪里需要继续追问？"]
       : ["复制孩子最后的设计卡提示词", "打开豆包或 DeepSeek App 的对话/绘图入口", "让孩子亲手粘贴并发送", "一起观察结果：哪里像？哪里不像？下一句怎么改？"])
     : (currentLessonId === 1
       ? ["Copy the child's future ability card", "Open Doubao or DeepSeek chat", "Let the child paste it and ask for one weekly task", "Review together: is it safe, doable, and suitable?"]
+      : currentLessonId === 2
+        ? ["Copy the child's AI tool choice card", "Open Doubao or DeepSeek chat", "Let the child paste it and ask to break the task into three steps", "Review together: is the tool suitable, is the material enough, and what needs checking?"]
+      : currentLessonId === 3
+        ? ["Copy the child's digital safety gate card", "Open Doubao or DeepSeek chat", "Let the child paste it and ask what risks may be missing", "Review together: does it protect privacy, avoid fear, and stay doable?"]
       : currentLessonId === 4
         ? ["Copy the child's golden prompt", "Open Doubao or DeepSeek chat", "Let the child paste and send it", "Review together: did AI understand the task, and what follow-up is needed?"]
       : ["Copy the child's final design-card prompt", "Open Doubao or DeepSeek and choose chat/image creation", "Let the child paste and send it", "Review together: what matches, what misses, and how should we revise?"]);
   const handoffTitle = languageMode === "zh"
-    ? (currentLessonId === 1 ? "家长带孩子去 App 里优化任务" : currentLessonId === 4 ? "家长带孩子去 App 里实测提问" : "家长带孩子去 App 里生成")
-    : (currentLessonId === 1 ? "Parent-guided task refinement" : currentLessonId === 4 ? "Parent-guided prompt test" : "Parent-guided app handoff");
+    ? (currentLessonId === 1 ? "家长带孩子去 App 里优化任务" : currentLessonId === 2 ? "家长带孩子去 App 里验证工具选择" : currentLessonId === 3 ? "家长带孩子去 App 里做安全判断" : currentLessonId === 4 ? "家长带孩子去 App 里实测提问" : "家长带孩子去 App 里生成")
+    : (currentLessonId === 1 ? "Parent-guided task refinement" : currentLessonId === 2 ? "Parent-guided tool check" : currentLessonId === 3 ? "Parent-guided safety check" : currentLessonId === 4 ? "Parent-guided prompt test" : "Parent-guided app handoff");
   const workCardIntro = languageMode === "zh"
-    ? (currentLessonId === 1 ? "下一步不是让AI替孩子决定未来，而是让孩子学会用AI帮助自己制定一个小行动。" : currentLessonId === 4 ? "下一步不是让AI替孩子完成作业，而是让孩子看到：问题说清楚，AI才更容易帮到自己。" : "下一步不是让AI替孩子想，而是让孩子看到自己的表达真的能变成画面。")
-    : (currentLessonId === 1 ? "Next, use AI to help the child turn one ability into a small action, not to decide their future." : currentLessonId === 4 ? "Next, help the child see that AI works better when the task is clear." : "Next, let the child see how their own words can become an image.");
+    ? (currentLessonId === 1 ? "下一步不是让AI替孩子决定未来，而是让孩子学会用AI帮助自己制定一个小行动。" : currentLessonId === 2 ? "下一步不是追逐更多工具，而是让孩子用一个真实任务验证：任务、工具、材料、检查是否匹配。" : currentLessonId === 3 ? "下一步不是吓唬孩子远离网络，而是让孩子在真实场景里练习保护、判断和创造。" : currentLessonId === 4 ? "下一步不是让AI替孩子完成作业，而是让孩子看到：问题说清楚，AI才更容易帮到自己。" : "下一步不是让AI替孩子想，而是让孩子看到自己的表达真的能变成画面。")
+    : (currentLessonId === 1 ? "Next, use AI to help the child turn one ability into a small action, not to decide their future." : currentLessonId === 2 ? "Next, test whether task, tool, material, and checking method match." : currentLessonId === 3 ? "Next, practice protection, judgment, and creation in a real digital scene." : currentLessonId === 4 ? "Next, help the child see that AI works better when the task is clear." : "Next, let the child see how their own words can become an image.");
   return `
     <div class="teacher-card work-card">
       <div class="work-card-head">
@@ -1178,6 +1290,16 @@ function joinPrompt(parts) {
     return languageMode === "zh"
       ? `我的未来观察：${parts.join("；")}。我会先选择一个小任务练习，让自己更会和AI合作。`
       : `My future observation: ${parts.join("; ")}. I will choose one small task to practice working with AI.`;
+  }
+  if (currentLessonId === 2) {
+    return languageMode === "zh"
+      ? `我的AI工具选择卡：${parts.join("；")}。请帮我判断这个工具选择是否合适，并提醒我需要检查哪些结果。`
+      : `My AI tool choice card: ${parts.join("; ")}. Please help me judge whether this tool choice fits and what results I should check.`;
+  }
+  if (currentLessonId === 3) {
+    return languageMode === "zh"
+      ? `我的数字安全守门卡：${parts.join("；")}。请帮我判断风险、补充安全步骤，并提醒我不要泄露隐私。`
+      : `My digital safety gate card: ${parts.join("; ")}. Please help me judge the risks, add safe steps, and remind me not to share private information.`;
   }
   if (currentLessonId === 4) {
     return languageMode === "zh"
