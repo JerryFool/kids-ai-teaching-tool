@@ -133,6 +133,7 @@ const lessonStepImages = {
   }
 };
 
+lessonCoverImages[1] = "./assets/images/lesson-01-cover-future-archaeology-v1.jpg";
 lessonCoverImages[4] = "./assets/images/lesson-04-cover-v1.jpg";
 lessonStepImages[4] = {
   story: "./assets/images/lesson-04-story-v1.jpg",
