@@ -1871,7 +1871,7 @@ function renderLesson() {
   stepCounter.textContent = `${currentStepIndex + 1} / ${lesson.steps.length}`;
   progressFill.style.width = `${((currentStepIndex + 1) / lesson.steps.length) * 100}%`;
   lectureTitle.textContent = currentStepIndex === 0 ? tr("notesTitle") : stepData.label;
-  lectureBody.textContent = buildLectureText(lesson, stepData);
+  lectureBody.innerHTML = renderLectureMarkup(buildLectureText(lesson, stepData));
   stepNav.innerHTML = lesson.steps.map((item, index) => `
     <button class="step-button ${index === currentStepIndex ? "active" : ""}" data-step="${index}">
       <span>${index + 1}</span>${item.label}
@@ -1956,6 +1956,65 @@ function buildLectureText(lesson, stepData) {
           : lessonFiveHelp;
   const typeHelp = helpMap[stepData.type];
   return [currentStepIndex === 0 ? lesson.prep : stepData.guide, typeHelp].filter(Boolean).join("\n\n");
+}
+
+function escapeHtml(value) {
+  return String(value)
+    .replaceAll("&", "&amp;")
+    .replaceAll("<", "&lt;")
+    .replaceAll(">", "&gt;")
+    .replaceAll('"', "&quot;")
+    .replaceAll("'", "&#039;");
+}
+
+function formatLectureLine(line) {
+  const escaped = escapeHtml(line);
+  const match = escaped.match(/^([^：:]{2,18}[：:])(.*)$/);
+  if (!match) return escaped;
+  return `<strong>${match[1]}</strong>${match[2]}`;
+}
+
+function renderLectureMarkup(text) {
+  const lines = String(text).split("\n");
+  const blocks = [];
+  let currentSection = [];
+
+  const flushSection = () => {
+    if (!currentSection.length) return;
+    blocks.push(`<section class="lecture-section">${currentSection.join("")}</section>`);
+    currentSection = [];
+  };
+
+  lines.forEach((rawLine) => {
+    const line = rawLine.trim();
+    if (!line) {
+      flushSection();
+      return;
+    }
+    if (/^第\d+课/.test(line)) {
+      flushSection();
+      blocks.push(`<h3 class="lecture-main-title">${escapeHtml(line)}</h3>`);
+      return;
+    }
+    if (line.startsWith("副标题：")) {
+      blocks.push(`<p class="lecture-subtitle">${formatLectureLine(line)}</p>`);
+      return;
+    }
+    if (line.startsWith("使用方式：")) {
+      flushSection();
+      blocks.push(`<div class="lecture-prep-banner"><strong>上课前准备 5 分钟</strong><span>${formatLectureLine(line)}</span></div>`);
+      return;
+    }
+    if (/^第\d+页\s/.test(line)) {
+      flushSection();
+      currentSection.push(`<h4>${escapeHtml(line)}</h4>`);
+      return;
+    }
+    currentSection.push(`<p>${formatLectureLine(line)}</p>`);
+  });
+  flushSection();
+
+  return blocks.join("");
 }
 
 function tipsMarkup(lesson) {

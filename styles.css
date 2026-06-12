@@ -1034,6 +1034,75 @@ span {
   font-size: 15px;
 }
 
+.lecture-main-title {
+  margin: 4px 0 6px;
+  color: var(--ink);
+  font-size: 21px;
+  line-height: 1.25;
+}
+
+.lecture-subtitle {
+  margin: 0 0 12px;
+  color: #40505a;
+}
+
+.lecture-prep-banner {
+  display: grid;
+  gap: 6px;
+  margin: 8px 0 12px;
+  padding: 12px 14px;
+  border: 1px solid rgba(243, 194, 70, 0.42);
+  border-radius: 8px;
+  background: rgba(255, 247, 220, 0.78);
+}
+
+.lecture-prep-banner > strong {
+  margin: 0;
+  color: #855b00;
+  font-size: 16px;
+}
+
+.lecture-prep-banner span {
+  color: #4d4b42;
+  font-size: 14px;
+  line-height: 1.65;
+}
+
+.lecture-section {
+  margin: 10px 0;
+  padding: 12px 14px;
+  border: 1px solid rgba(17, 159, 227, 0.14);
+  border-radius: 8px;
+  background: rgba(247, 252, 255, 0.82);
+}
+
+.lecture-section h4 {
+  margin: 0 0 8px;
+  color: var(--blue);
+  font-size: 16px;
+  line-height: 1.35;
+}
+
+.lecture-section p {
+  margin: 7px 0 0;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.lecture-section p:first-of-type {
+  margin-top: 0;
+}
+
+.lecture-section p strong,
+.lecture-prep-banner span strong,
+.lecture-subtitle strong {
+  display: inline;
+  margin: 0;
+  color: var(--ink);
+  font-size: inherit;
+  font-weight: 900;
+}
+
 .lecture-panel.collapsed {
   max-height: 0;
   margin: 0;
