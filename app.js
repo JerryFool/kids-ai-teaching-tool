@@ -134,6 +134,15 @@ const lessonStepImages = {
 };
 
 lessonCoverImages[1] = "./assets/images/lesson-01-cover-future-archaeology-v1.jpg";
+lessonStepImages[1] = {
+  story: "./assets/images/lesson-01-story-career-card-v1.jpg",
+  rules: "./assets/images/lesson-01-rules-ability-triangle-v1.jpg",
+  puzzle: "./assets/images/lesson-01-puzzle-future-map-v1.jpg",
+  upgrade: "./assets/images/lesson-01-upgrade-action-plan-v1.jpg",
+  repair: "./assets/images/lesson-01-repair-ability-choice-v1.jpg",
+  design: "./assets/images/lesson-01-design-ability-card-v1.jpg",
+  summary: "./assets/images/lesson-01-summary-future-road-v1.jpg"
+};
 lessonCoverImages[4] = "./assets/images/lesson-04-cover-v1.jpg";
 lessonStepImages[4] = {
   story: "./assets/images/lesson-04-story-v1.jpg",
