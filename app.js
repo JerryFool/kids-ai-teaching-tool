@@ -1065,6 +1065,88 @@ function configGroups(config, lang) {
   return source.map((options, index) => ({ name: names[index], options }));
 }
 
+const courseFrameworks = {
+  1: { goal: "理解AI正在改变生活，但人依然要练观察、判断、表达和创造。", parent: "不要制造焦虑，用“未来有哪些新工作”引发好奇。", child: "未来职业卡、未来能力选择。", interaction: "未来职业卡、未来能力选择。", tool: "豆包", alternatives: "DeepSeek / 通义千问", output: "我的未来能力卡" },
+  2: { goal: "知道AI不是万能按钮，不同任务要选不同工具。", parent: "把AI比作文具盒，铅笔、尺子、剪刀各有用途。", child: "任务和工具匹配小游戏。", interaction: "任务和工具匹配小游戏。", tool: "Kimi", alternatives: "豆包 / 通义千问 / DeepSeek", output: "AI工具选择卡" },
+  3: { goal: "学会保护隐私、判断真假、管理注意力。", parent: "用孩子刷视频、上传照片、填写资料的场景讲。", child: "哪些信息不能给AI、安全判断题。", interaction: "哪些信息不能给AI、安全判断题。", tool: "DeepSeek", alternatives: "豆包 / 讯飞星火", output: "儿童数字安全清单" },
+  4: { goal: "学会把模糊想法变成清楚问题。", parent: "告诉孩子AI听不懂“帮我弄好一点”，但听得懂具体要求。", child: "角色、任务、背景、要求四件套拼词。", interaction: "角色、任务、背景、要求四件套拼词。", tool: "豆包", alternatives: "DeepSeek / 通义千问", output: "我的黄金提示词卡" },
+  5: { goal: "学会描述画面：地点、主角、动作、细节。", parent: "让孩子先说画面，再看AI生成是否符合想象。", child: "画面描述卡、AI画错修正。", interaction: "画面描述卡、AI画错修正。", tool: "即梦AI", alternatives: "通义万相 / 豆包图片生成", output: "一张AI创意画" },
+  6: { goal: "把零散知识整理成自己的知识卡。", parent: "从“看过”升级到“能分类、能复述、能复习”。", child: "知识卡整理器。", interaction: "知识卡整理器。", tool: "Kimi", alternatives: "豆包 / 通义千问", output: "一张知识整理卡" },
+  7: { goal: "用AI讲思路，不直接抄答案。", parent: "重点问“为什么这样做”，而不是“答案是多少”。", child: "题目条件、问题、步骤拆解。", interaction: "题目条件、问题、步骤拆解。", tool: "DeepSeek", alternatives: "豆包 / 通义千问", output: "一道题的解题思路卡" },
+  8: { goal: "用AI启发作文，不让AI代写。", parent: "孩子先说自己的故事，AI只帮补细节和改表达。", child: "人物、地点、事件、感受故事骨架。", interaction: "人物、地点、事件、感受故事骨架。", tool: "豆包", alternatives: "Kimi / 讯飞星火", output: "一段孩子自己的小作文" },
+  9: { goal: "让AI陪孩子练单词、句子和简单对话。", parent: "英语不是只背，是能在场景里说出来。", child: "情景对话选择和句子补全。", interaction: "情景对话选择和句子补全。", tool: "讯飞星火", alternatives: "豆包 / 通义千问", output: "5句英文小对话" },
+  10: { goal: "把错题变成复习资源。", parent: "错题不是失败，是告诉我们哪里还没懂。", child: "错因分析、变式题生成。", interaction: "错因分析、变式题生成。", tool: "DeepSeek", alternatives: "豆包 / Kimi", output: "错题诊断卡" },
+  11: { goal: "把抽象科学概念变成画面和步骤。", parent: "用太阳系、电路、水循环这类孩子能想象的例子。", child: "科学概念图解拼图。", interaction: "科学概念图解拼图。", tool: "通义千问", alternatives: "豆包 / DeepSeek", output: "科学图解说明卡" },
+  12: { goal: "用AI打开艺术想象，理解风格、颜色和构图。", parent: "不评价像不像，重点看孩子有没有表达自己的想法。", child: "风格选择、颜色搭配、构图选择。", interaction: "风格选择、颜色搭配、构图选择。", tool: "即梦AI", alternatives: "通义万相 / 豆包图片生成", output: "一张绘本风格画面" },
+  13: { goal: "进入历史场景，理解人物和时代。", parent: "让孩子想象“如果我在现场，我会看到什么”。", child: "历史人物、地点、事件场景卡。", interaction: "历史人物、地点、事件场景卡。", tool: "Kimi", alternatives: "豆包 / 通义千问", output: "一段历史小剧本" },
+  14: { goal: "学会表达情绪，但不把AI当真人替代。", parent: "AI可以帮我们整理语言，真正的陪伴来自家人。", child: "我现在的感受、原因、需要。", interaction: "我现在的感受、原因、需要。", tool: "豆包", alternatives: "讯飞星火 / 通义千问", output: "一张情绪表达卡" },
+  15: { goal: "理解图片变动画需要角色、动作、镜头稳定。", parent: "不要追求炫酷，先让一个角色完成一个简单动作。", child: "动作分镜卡。", interaction: "动作分镜卡。", tool: "即梦AI", alternatives: "可灵 / 剪映AI", output: "5秒动画方案" },
+  16: { goal: "完成《动物园历险记》AI动画短片方案。", parent: "这是阶段大作业，重点是完整流程，不追求完美。", child: "三幕剧情、角色、镜头、配音规划。", interaction: "三幕剧情、角色、镜头、配音规划。", tool: "即梦AI + 剪映", alternatives: "可灵 / 豆包 / 通义万相", output: "60秒动画短片方案或分镜脚本" },
+  17: { goal: "理解别人愿意付费，是因为作品有价值。", parent: "不讲复杂赚钱，只讲“帮助谁、有什么用、别人为什么喜欢”。", child: "小产品价值卡。", interaction: "小产品价值卡。", tool: "DeepSeek", alternatives: "豆包 / Kimi", output: "一个小产品价值说明" },
+  18: { goal: "把情绪表达做成原创表情包。", parent: "强调原创，不模仿现有IP。", child: "4种情绪、4句短文案。", interaction: "4种情绪、4句短文案。", tool: "即梦AI", alternatives: "通义万相 / 豆包图片生成", output: "原创表情包设定" },
+  19: { goal: "设计一枚圆形徽章。", parent: "告诉孩子产品设计要清楚，不是元素越多越好。", child: "主题、主角、颜色、口号。", interaction: "主题、主角、颜色、口号。", tool: "即梦AI", alternatives: "通义万相 / 豆包图片生成", output: "吧唧徽章设计图" },
+  20: { goal: "设计几何珠子和IP挂坠。", parent: "让孩子理解漂亮、佩戴安全、能制作要同时考虑。", child: "珠子排列、配色节奏、挂坠选择。", interaction: "珠子排列、配色节奏、挂坠选择。", tool: "豆包", alternatives: "DeepSeek / 通义千问", output: "AI手串设计卡" },
+  21: { goal: "设计一件适合穿的T恤。", parent: "图案要考虑位置、大小、远看效果。", child: "胸前、背后、袖口版式选择。", interaction: "胸前、背后、袖口版式选择。", tool: "即梦AI", alternatives: "通义万相 / 豆包图片生成", output: "T恤图案方案" },
+  22: { goal: "为妈妈设计手机壳，学习用户需求。", parent: "先采访妈妈，不要只按孩子自己喜欢设计。", child: "用户调研卡、需求转设计。", interaction: "用户调研卡、需求转设计。", tool: "DeepSeek", alternatives: "豆包 / Kimi", output: "妈妈手机壳设计方案" },
+  23: { goal: "为朋友设计校园卡套。", parent: "礼物设计要考虑对方是谁、在哪里用、喜欢什么。", child: "朋友画像、符号、颜色、功能。", interaction: "朋友画像、符号、颜色、功能。", tool: "豆包", alternatives: "DeepSeek / 通义千问", output: "校园卡套设计卡" },
+  24: { goal: "轻量理解平面角色如何变成立体公仔。", parent: "第一阶段不要求真建模，先做正面、侧面、背面三视图。", child: "三视图、公仔比例、结构说明。", interaction: "三视图、公仔比例、结构说明。", tool: "腾讯混元3D", alternatives: "即梦AI / 通义万相生成三视图参考", output: "公仔三视图概念卡" },
+  25: { goal: "给白模公仔设计配色方案。", parent: "涂装训练耐心和观察，不是AI一键完成。", child: "主色、辅助色、点缀色选择。", interaction: "主色、辅助色、点缀色选择。", tool: "即梦AI", alternatives: "通义万相 / 豆包图片生成", output: "公仔涂装参考图" },
+  26: { goal: "让一个原创角色发展成系列。", parent: "角色要保持核心一致，只改变场景和任务。", child: "上学、运动、太空场景卡。", interaction: "上学、运动、太空场景卡。", tool: "豆包", alternatives: "DeepSeek / Kimi", output: "原创IP角色设定集" },
+  27: { goal: "把家庭记忆写成一首歌。", parent: "先写真实画面和情绪，再让AI生成音乐。", child: "主题、歌词、副歌、曲风。", interaction: "主题、歌词、副歌、曲风。", tool: "天工音乐", alternatives: "网易天音 / 剪映AI音乐", output: "家庭主题曲歌词和音乐方案" },
+  28: { goal: "把歌曲变成画面分镜。", parent: "一句歌词配一个镜头，画面服务故事。", child: "4格MV分镜。", interaction: "4格MV分镜。", tool: "即梦AI + 剪映", alternatives: "可灵 / 通义万相", output: "MV分镜脚本" },
+  29: { goal: "设计一个背单词小游戏。", parent: "先讲游戏规则，不要求孩子懂复杂代码。", child: "词库、玩法、奖励、提示。", interaction: "词库、玩法、奖励、提示。", tool: "DeepSeek", alternatives: "豆包 / 通义千问", output: "小游戏规则卡，进阶可生成简单网页代码" },
+  30: { goal: "设计一个帮助自己专注的小工具。", parent: "工具不是越复杂越好，而是解决真实问题。", child: "任务名、计时、提醒、完成星星。", interaction: "任务名、计时、提醒、完成星星。", tool: "豆包", alternatives: "DeepSeek / Kimi", output: "专注计时器界面草图，进阶可生成简单代码" },
+  31: { goal: "整理前面作品，完成一次展示表达。", parent: "重点不是卖多少钱，而是讲清楚作品价值并接受反馈。", child: "选择3件作品、一分钟介绍、反馈记录。", interaction: "选择3件作品、一分钟介绍、反馈记录。", tool: "Kimi", alternatives: "DeepSeek / 豆包", output: "创客市集路演卡" }
+};
+
+function frameworkPrep(id, originalPrep = "") {
+  const item = courseFrameworks[id];
+  if (!item) return originalPrep;
+  return [
+    `课程目标：${item.goal}`,
+    `家长怎么讲：${item.parent}`,
+    `孩子看到什么：${item.child}`,
+    `网页互动：${item.interaction}`,
+    `推荐国产AI工具：${item.tool}`,
+    `可替代工具：${item.alternatives}`,
+    `最终作品：${item.output}`,
+    "统一原则：本课只围绕一个最终作品展开；商业相关课程只讲价值、用户、表达和反馈，不讲复杂赚钱。"
+  ].join("\n");
+}
+
+function applyCourseFramework(id, lesson) {
+  const item = courseFrameworks[id];
+  if (!item || !lesson?.zh) return lesson;
+  lesson.zh.prep = frameworkPrep(id, lesson.zh.prep);
+  lesson.zh.tips = [
+    `本课最终作品只有一个：${item.output}。不要把一节课塞成多个任务。`,
+    `推荐工具是 ${item.tool}；如果家长手机里没有，可以换成 ${item.alternatives}。工具只是辅助，孩子的表达和判断最重要。`,
+    id >= 17 ? "作品体验篇不强调复杂赚钱，只让孩子理解作品帮助谁、有什么价值、怎样表达、如何接受反馈。" : "先让孩子说自己的想法，再打开AI或操作网页。家长负责追问，不替孩子完成。"
+  ];
+  const cover = lesson.zh.steps.find((step) => step.type === "cover");
+  if (cover) {
+    cover.body = item.goal;
+    cover.quote = `今天最后要完成：${item.output}`;
+    cover.bullets = [`家长讲法：${item.parent}`, `网页互动：${item.interaction}`, `工具：${item.tool}；可替代：${item.alternatives}`];
+  }
+  const design = lesson.zh.steps.find((step) => step.type === "design");
+  if (design) {
+    design.title = item.output;
+    design.guide = `这是本课唯一最终作品。家长可以帮孩子打字和整理，但作品内容尽量由孩子自己说。完成后可用 ${item.tool} 继续实测；没有这个工具时，可换用 ${item.alternatives}。`;
+  }
+  const summary = lesson.zh.steps.find((step) => step.type === "summary");
+  if (summary) {
+    summary.recap = [
+      `课程目标：${item.goal}`,
+      `家长讲法：${item.parent}`,
+      `孩子在网页里完成：${item.interaction}`,
+      `本课推荐工具：${item.tool}；可替代：${item.alternatives}`,
+      `最终作品：${item.output}`
+    ];
+  }
+  return lesson;
+}
+
 function buildExpandedLesson(config) {
   const catalogItem = lessonCatalog.find((item) => item.id === config.id);
   const zhTitle = catalogItem.zh;
@@ -1317,6 +1399,8 @@ const lessonDetails = {
   },
   ...expandedLessonDetails
 };
+
+Object.keys(lessonDetails).forEach((id) => applyCourseFramework(Number(id), lessonDetails[id]));
 
 const homeView = document.querySelector("#homeView");
 const lessonView = document.querySelector("#lessonView");
@@ -1787,7 +1871,19 @@ function buildLectureText(lesson, stepData) {
     design: zh ? "讲法：这是输出页。家长做打字员，孩子做任务设计师。" : "Teaching: this is the output page. The parent types; the child designs the task.",
     summary: zh ? "讲法：请孩子选择一个真实任务，准备复制到豆包或 DeepSeek 里测试，并学会追问。" : "Teaching: ask the child to choose one real task to test in Doubao or DeepSeek and practice follow-up."
   };
-  const helpMap = currentLessonId === 1
+  const expandedHelp = {
+    cover: zh ? "讲法：先读课程目标、推荐工具和最终作品，让孩子知道今天只完成一个清楚的小作品。" : "Teaching: read the goal, tool, and final work first. Keep the lesson focused on one small work.",
+    story: zh ? "讲法：故事只服务今天的作品任务。请孩子听完后说出：主角遇到什么问题，后来多做了哪一步。" : "Teaching: let the story serve the work task. Ask what problem appeared and what extra step helped.",
+    rules: zh ? "讲法：三步方法要讲得像操作步骤，不讲成理论。每一步都请孩子说一个自己的例子。" : "Teaching: treat the method as action steps, not theory. Ask for one child example.",
+    puzzle: zh ? "讲法：让孩子自己点选组合。选完后追问：这个选择如何帮助最终作品？哪里还需要检查？" : "Teaching: let the child choose, then ask how it helps the final work and what needs checking.",
+    upgrade: zh ? "讲法：把模糊想法变成清楚任务。孩子每补充一项，都要说出它减少了哪种误解。" : "Teaching: upgrade a vague idea into a clear task. Ask what each detail prevents.",
+    repair: zh ? "讲法：训练孩子修正AI，不盲目接受。请他说清楚保留什么、改变什么、为什么。" : "Teaching: train revision, not blind acceptance. Ask what to keep, change, and why.",
+    design: zh ? "讲法：这是唯一最终作品页。家长可以帮忙记录，但作品判断和表达尽量让孩子完成。" : "Teaching: this is the one final work page. Parent may record; child should decide and express.",
+    summary: zh ? "讲法：复盘围绕五件事：目标、讲法、互动、工具、最终作品。不要额外增加新任务。" : "Teaching: review goal, method, interaction, tool, and final work. Do not add new tasks."
+  };
+  const helpMap = currentLessonId > 5
+    ? expandedHelp
+    : currentLessonId === 1
     ? lessonOneHelp
     : currentLessonId === 2
       ? lessonTwoHelp
