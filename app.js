@@ -143,7 +143,7 @@ lessonStepImages[1] = {
   design: "./assets/images/lesson-01-design-ability-card-v1.jpg",
   summary: "./assets/images/lesson-01-summary-future-road-v1.jpg"
 };
-[2, 3, 4, 5].forEach((lessonId) => {
+Array.from({ length: 30 }, (_, index) => index + 2).forEach((lessonId) => {
   lessonCoverImages[lessonId] = lessonCoverImages[1];
   lessonStepImages[lessonId] = lessonStepImages[1];
 });
@@ -1362,26 +1362,69 @@ Object.keys(enhancedCourseLectures).forEach((id) => {
   if (courseFrameworks[id]) courseFrameworks[id].lecture = enhancedCourseLectures[id];
 });
 
-function frameworkPrep(id, originalPrep = "") {
+function buildStandardLecture(id, lesson, item, originalPrep = "") {
+  const steps = lesson?.zh?.steps || [];
+  const title = lesson?.zh?.title || `第${id}课`;
+  const subtitle = lesson?.zh?.kicker || "30分钟家庭课";
+  const stepLines = steps.map((step, index) => {
+    const page = index + 1;
+    const label = step.label || `第${page}页`;
+    const titleText = step.title || label;
+    const goalLine = step.guide || step.body || "家长带孩子先说自己的想法，再进入网页操作。";
+    const interactionLine = step.prompt
+      ? `网页操作：${step.prompt}`
+      : step.fields
+        ? `网页操作：孩子填写${step.fields.join("、")}。`
+        : step.choices
+          ? `网页操作：孩子点击选项，把模糊想法升级成更清楚的表达。`
+          : step.problem
+            ? `网页操作：先看AI可能出错的地方，再选择如何修正。`
+            : "网页操作：家长边讲边让孩子看画面，说出自己的理解。";
+    const parentLine = page === 1
+      ? `家长可以这样说：今天我们只围绕一个目标：${item.goal}。最后会完成${item.output}，工具可以用${item.tool}，也可以换成${item.alternatives}。`
+      : `家长可以这样讲：${goalLine}`;
+    const childLine = page === steps.length
+      ? `孩子复盘：请孩子说出今天学了什么、做出了什么、下次使用AI时要检查什么。`
+      : `追问孩子：为什么这样选？哪里还不够清楚？如果AI给出结果，你会先检查哪里？`;
+    return [
+      `第${page}页 ${label}：${titleText}`,
+      parentLine,
+      interactionLine,
+      childLine,
+      `本页目的：让孩子把“听懂”推进到“能说、能选、能检查”。`
+    ].join("\n");
+  });
+  return [
+    `第${id}课：${title}`,
+    `副标题：${subtitle}`,
+    "",
+    "使用方式：家长先用5分钟通读这份讲义，理解每一页要讲什么。正式上课时可以收起讲义，让孩子看画面、点按钮、读出自己的选择。家长负责追问和记录，不替孩子完成。",
+    "",
+    `课程定位：这节课围绕“${item.goal}”。重点不是讲成专业课，而是带孩子完成一个可操作的小作品：先理解场景，再用AI辅助整理，最后由孩子自己判断和表达。`,
+    "",
+    `课程目标：1. ${item.goal} 2. 孩子能说出任务场景和关键要求。3. 孩子能用网页完成${item.interaction}。4. 孩子能形成最终作品：${item.output}。`,
+    "",
+    `推荐工具：${item.tool}。可替代工具：${item.alternatives}。最终作品：${item.output}。`,
+    "",
+    originalPrep ? `原始备课提示：${originalPrep}` : "",
+    "",
+    ...stepLines,
+    "",
+    "总结提醒：不要把AI讲成万能答案机。每节课都坚持三句话：孩子先说，AI再帮，最后人来判断。作品体验课只讲价值、用户、表达和反馈，不讲复杂赚钱。"
+  ].filter(Boolean).join("\n\n");
+}
+
+function frameworkPrep(id, lesson, originalPrep = "") {
   const item = courseFrameworks[id];
   if (!item) return originalPrep;
   if (item.lecture) return item.lecture;
-  return [
-    `课程目标：${item.goal}`,
-    `家长怎么讲：${item.parent}`,
-    `孩子看到什么：${item.child}`,
-    `网页互动：${item.interaction}`,
-    `推荐国产AI工具：${item.tool}`,
-    `可替代工具：${item.alternatives}`,
-    `最终作品：${item.output}`,
-    "统一原则：本课只围绕一个最终作品展开；商业相关课程只讲价值、用户、表达和反馈，不讲复杂赚钱。"
-  ].join("\n");
+  return buildStandardLecture(id, lesson, item, originalPrep);
 }
 
 function applyCourseFramework(id, lesson) {
   const item = courseFrameworks[id];
   if (!item || !lesson?.zh) return lesson;
-  lesson.zh.prep = frameworkPrep(id, lesson.zh.prep);
+  lesson.zh.prep = frameworkPrep(id, lesson, lesson.zh.prep);
   lesson.zh.tips = [
     `本课最终作品只有一个：${item.output}。不要把一节课塞成多个任务。`,
     `推荐工具是 ${item.tool}；如果家长手机里没有，可以换成 ${item.alternatives}。工具只是辅助，孩子的表达和判断最重要。`,
