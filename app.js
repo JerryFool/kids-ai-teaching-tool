@@ -93,11 +93,11 @@ const lessonCatalog = [
   { id: 3, unitZh: "认知觉醒", unitEn: "Awareness", zh: "数字守门人", en: "Digital Gatekeeper", noteZh: "从刷视频到做视频，建立安全和判断意识。", noteEn: "Move from watching videos to making them with judgment and safety." },
   { id: 4, unitZh: "掌控指令", unitEn: "Prompting", zh: "提问的艺术：让AI听懂你的话", en: "The Art of Asking: Make AI Understand You", noteZh: "学习角色、任务、背景、约束的提问公式。", noteEn: "Learn the role, task, context, and constraint prompt structure." },
   { id: 5, unitZh: "掌控指令", unitEn: "Prompting", zh: "感官觉醒：AI创意画室", en: "Multimodal Senses: AI Art Studio", noteZh: "用听觉、视觉和描述训练孩子把想象说清楚。", noteEn: "Use visual and audio clues to describe ideas clearly." },
-  { id: 6, unitZh: "掌控指令", unitEn: "Prompting", zh: "知识管理：家庭大脑", en: "Knowledge Management: Family Brain", noteZh: "用 NotebookLM 把课本变成双人播客。", noteEn: "Use NotebookLM to turn learning material into a two-person podcast." },
-  { id: 7, unitZh: "AI私人数学老师", unitEn: "AI Tutor", zh: "数学救星：DeepSeek R1", en: "Math Helper: DeepSeek R1", noteZh: "用深度推理帮助孩子反向讲解题目。", noteEn: "Use reasoning tools and let children explain solutions back." },
-  { id: 8, unitZh: "AI私人写作老师", unitEn: "AI Tutor", zh: "作文神笔：Gemini", en: "Writing Brush: Gemini", noteZh: "创意润色，不只是简单改错。", noteEn: "Improve writing with creative refinement, not just correction." },
-  { id: 9, unitZh: "AI私人英语老师", unitEn: "AI Tutor", zh: "英语私教：Gemini Pro", en: "English Coach: Gemini Pro", noteZh: "用沉浸式听说读写和图片批改练英语。", noteEn: "Practice English through immersive listening, speaking, reading, and writing." },
-  { id: 10, unitZh: "知识具象化", unitEn: "Visible Knowledge", zh: "错题消灭", en: "Mistake Destroyer", noteZh: "把一道题生成多种变式练习。", noteEn: "Turn one mistake into several practice variations." },
+  { id: 6, unitZh: "掌控指令", unitEn: "Prompting", zh: "知识管理：家庭大脑", en: "Knowledge Management: Family Brain", noteZh: "把课本、笔记和资料整理成可以提问的知识卡。", noteEn: "Turn books, notes, and materials into question-ready knowledge cards." },
+  { id: 7, unitZh: "AI私人数学老师", unitEn: "AI Tutor", zh: "数学教练：讲思路不抄答案", en: "Math Coach: Explain, Do Not Copy", noteZh: "用AI提示步骤，让孩子反向讲解题目。", noteEn: "Use AI hints and let children explain solutions back." },
+  { id: 8, unitZh: "AI私人写作老师", unitEn: "AI Tutor", zh: "作文润色：保留孩子自己的声音", en: "Writing Polish: Keep The Child's Voice", noteZh: "用AI补细节和改表达，但不代写、不编假经历。", noteEn: "Use AI to add detail and improve wording without ghostwriting or inventing events." },
+  { id: 9, unitZh: "AI私人英语老师", unitEn: "AI Tutor", zh: "英语陪练：开口说出来", en: "English Coach: Speak In Context", noteZh: "用场景对话练单词、句子和简单表达。", noteEn: "Practice words, sentences, and simple dialogue in real scenes." },
+  { id: 10, unitZh: "知识具象化", unitEn: "Visible Knowledge", zh: "错题消灭：从错因到变式", en: "Mistake Fixer: From Cause To Variation", noteZh: "把一道错题变成错因分析和同类变式练习。", noteEn: "Turn one mistake into cause analysis and similar practice variations." },
   { id: 11, unitZh: "知识具象化", unitEn: "Visible Knowledge", zh: "科学可视化", en: "Science Visualization", noteZh: "用物理、地理模拟理解太阳系与电路。", noteEn: "Use simulations to understand science and geography." },
   { id: 12, unitZh: "知识具象化", unitEn: "Visible Knowledge", zh: "艺术启蒙", en: "Art Awakening", noteZh: "用神笔马良式任务把涂鸦变绘本。", noteEn: "Turn doodles into picture-book ideas." },
   { id: 13, unitZh: "知识具象化", unitEn: "Visible Knowledge", zh: "历史穿越", en: "History Time Travel", noteZh: "结合 NotebookLM 与漫画生成制作历史剧本。", noteEn: "Create historical scripts with NotebookLM and comic generation." },
@@ -1073,6 +1073,10 @@ function configGroups(config, lang) {
   return source.map((options, index) => ({ name: names[index], options }));
 }
 
+function trimSentenceEnd(text = "") {
+  return String(text).replace(/[。！？.!?]+$/g, "");
+}
+
 const courseFrameworks = {
   1: {
     goal: "理解AI正在改变生活，但人依然要练观察、判断、表达和创造。",
@@ -1366,32 +1370,68 @@ function buildStandardLecture(id, lesson, item, originalPrep = "") {
   const steps = lesson?.zh?.steps || [];
   const title = lesson?.zh?.title || `第${id}课`;
   const subtitle = lesson?.zh?.kicker || "30分钟家庭课";
+  const goalText = trimSentenceEnd(item.goal);
+  const interactionText = trimSentenceEnd(item.interaction);
   const stepLines = steps.map((step, index) => {
     const page = index + 1;
     const label = step.label || `第${page}页`;
     const titleText = step.title || label;
-    const goalLine = step.guide || step.body || "家长带孩子先说自己的想法，再进入网页操作。";
+    const methodText = Array.isArray(step.bullets) ? step.bullets.join("；") : "";
     const interactionLine = step.prompt
       ? `网页操作：${step.prompt}`
       : step.fields
-        ? `网页操作：孩子填写${step.fields.join("、")}。`
+        ? `网页操作：孩子填写${step.fields.join("、")}。这些字段就是本课最终作品的骨架。`
         : step.choices
-          ? `网页操作：孩子点击选项，把模糊想法升级成更清楚的表达。`
+          ? `网页操作：孩子点击选项，把原来的模糊说法升级成更清楚的任务说明。`
           : step.problem
-            ? `网页操作：先看AI可能出错的地方，再选择如何修正。`
+            ? `网页操作：先看AI可能出错的地方，再让孩子说出要修改什么、保留什么。`
             : "网页操作：家长边讲边让孩子看画面，说出自己的理解。";
-    const parentLine = page === 1
-      ? `家长可以这样说：今天我们只围绕一个目标：${item.goal}。最后会完成${item.output}，工具可以用${item.tool}，也可以换成${item.alternatives}。`
-      : `家长可以这样讲：${goalLine}`;
-    const childLine = page === steps.length
-      ? `孩子复盘：请孩子说出今天学了什么、做出了什么、下次使用AI时要检查什么。`
-      : `追问孩子：为什么这样选？哪里还不够清楚？如果AI给出结果，你会先检查哪里？`;
+    let parentLine = "";
+    let childLine = "";
+    let purposeLine = "";
+    if (step.type === "cover") {
+      parentLine = `家长可以这样说：今天这节课只练一个能力：${goalText}。我们不是追求工具多厉害，而是完成一个孩子能带走的小作品：${item.output}。`;
+      childLine = `开场提问：你觉得这个任务最难的是哪里？是不会开始、说不清楚、不会检查，还是怕AI直接替你做？`;
+      purposeLine = "本页目的：让孩子知道本课只解决一个具体问题，降低理解压力。";
+    } else if (step.type === "story") {
+      parentLine = `故事讲法：${step.body || step.guide}`;
+      childLine = `故事后追问：小安一开始哪里做得太简单？后来补了哪一步？这个变化和今天的课题有什么关系？`;
+      purposeLine = "本页目的：用故事把抽象方法落到一个孩子能理解的场景里。";
+    } else if (step.type === "rules") {
+      parentLine = `家长可以这样讲：今天的方法不是背概念，而是三步操作：${methodText || step.body}`;
+      childLine = `追问孩子：这三步里你觉得哪一步最容易忘？如果今天真实使用AI，哪一步必须由人来判断？`;
+      purposeLine = "本页目的：把课程方法讲成可执行步骤，避免变成空泛道理。";
+    } else if (step.type === "puzzle") {
+      parentLine = `玩法讲法：这一页不是做选择题，而是让孩子把任务、AI能帮什么、要求和检查点连起来。`;
+      childLine = `追问孩子：你为什么这样组合？如果换一个任务，工具和检查点要不要变？`;
+      purposeLine = "本页目的：让孩子完成一次完整的任务判断。";
+    } else if (step.type === "upgrade") {
+      parentLine = `家长可以这样讲：原句“${step.prompt || "帮我做一下"}”太大或太模糊，AI容易做偏。我们要把它补成能执行、能检查的表达。`;
+      childLine = `追问孩子：每新增一个要求，解决了什么问题？它让AI更清楚了什么？`;
+      purposeLine = "本页目的：训练孩子把模糊需求拆成清楚指令。";
+    } else if (step.type === "repair") {
+      parentLine = `场景讲法：${step.problem || "AI第一次回答不一定合适。"} 修正时不要只说“不对”，要明确告诉AI：${step.target || "哪里要改、哪里要保留、边界是什么。"}`;
+      childLine = `追问孩子：这次AI错在哪里？如果你来改提示词，第一句话会怎么说？`;
+      purposeLine = "本页目的：训练孩子不盲信AI，学会二次修正。";
+    } else if (step.type === "design") {
+      parentLine = `作品讲法：这是本课输出页。家长可以帮忙打字，但${item.output}的内容要尽量由孩子自己说。`;
+      childLine = `实操引导：完成后打开${item.tool}；没有这个工具时用${item.alternatives}。把作品卡内容发给AI，再一起检查结果是否符合孩子原意。`;
+      purposeLine = "本页目的：让课程落到一个可保存、可复用的小作品。";
+    } else if (step.type === "summary") {
+      parentLine = `家长总结：今天不是学会一个按钮，而是完成了“${item.goal}”的完整练习。`;
+      childLine = `孩子复盘三句话：我今天学的方法是……我完成的作品是……下次用AI时我要检查……`;
+      purposeLine = "本页目的：把一次操作沉淀成孩子下次还会用的方法。";
+    } else {
+      parentLine = `家长可以这样讲：${step.guide || step.body || "先让孩子说自己的想法，再进入网页操作。"}`;
+      childLine = `追问孩子：为什么这样选？哪里还不够清楚？如果AI给出结果，你会先检查哪里？`;
+      purposeLine = `本页目的：让孩子把“听懂”推进到“能说、能选、能检查”。`;
+    }
     return [
       `第${page}页 ${label}：${titleText}`,
       parentLine,
       interactionLine,
       childLine,
-      `本页目的：让孩子把“听懂”推进到“能说、能选、能检查”。`
+      purposeLine
     ].join("\n");
   });
   return [
@@ -1400,13 +1440,13 @@ function buildStandardLecture(id, lesson, item, originalPrep = "") {
     "",
     "使用方式：家长先用5分钟通读这份讲义，理解每一页要讲什么。正式上课时可以收起讲义，让孩子看画面、点按钮、读出自己的选择。家长负责追问和记录，不替孩子完成。",
     "",
-    `课程定位：这节课围绕“${item.goal}”。重点不是讲成专业课，而是带孩子完成一个可操作的小作品：先理解场景，再用AI辅助整理，最后由孩子自己判断和表达。`,
+    `课程定位：这节课围绕“${goalText}”。重点不是讲成专业课，而是带孩子完成一个可操作的小作品：先理解场景，再用AI辅助整理，最后由孩子自己判断和表达。`,
     "",
-    `课程目标：1. ${item.goal} 2. 孩子能说出任务场景和关键要求。3. 孩子能用网页完成${item.interaction}。4. 孩子能形成最终作品：${item.output}。`,
+    `课程目标：1. ${goalText}。2. 孩子能说出任务场景和关键要求。3. 孩子能用网页完成${interactionText}。4. 孩子能形成最终作品：${item.output}。`,
     "",
     `推荐工具：${item.tool}。可替代工具：${item.alternatives}。最终作品：${item.output}。`,
     "",
-    originalPrep ? `原始备课提示：${originalPrep}` : "",
+    originalPrep ? `课前准备补充：${String(originalPrep).replace(/^课前家长准备：/, "")}` : "",
     "",
     ...stepLines,
     "",
@@ -1456,15 +1496,18 @@ function applyCourseFramework(id, lesson) {
 
 function buildExpandedLesson(config) {
   const catalogItem = lessonCatalog.find((item) => item.id === config.id);
+  const frameworkItem = courseFrameworks[config.id];
   const zhTitle = catalogItem.zh;
   const enTitle = catalogItem.en;
   const zhNote = catalogItem.noteZh;
   const enNote = catalogItem.noteEn;
+  const zhOutput = frameworkItem?.output || "我的本课作品卡";
+  const enOutput = frameworkItem?.output || "My Lesson Work Card";
   return {
     illustration: "expanded",
     zh: {
       title: zhTitle,
-      kicker: "30分钟家庭课 · 按模板扩展课程",
+      kicker: "30分钟家庭课 · 主题实践课",
       prep: `课前家长准备：这节课围绕“${config.focusZh}”。家长不需要讲成专业课，重点是带孩子完成一个可操作的小任务：先理解场景，再用AI辅助整理，最后由孩子自己判断和表达。请继续坚持三个原则：孩子先说，家长追问，AI只做辅助。`,
       tips: [
         "先让孩子说自己的想法，再打开AI或点击页面，不要一开始就把标准答案给出来。",
@@ -1485,7 +1528,7 @@ function buildExpandedLesson(config) {
         {
           type: "story",
           label: "小故事",
-          title: "小安把想法变成可执行任务",
+          title: `${zhTitle}的小故事`,
           minutes: "5分钟",
           body: config.storyZh,
           quote: "问孩子：故事里，小安一开始哪里想得太简单？后来多做了哪一步，结果变好了？",
@@ -1494,7 +1537,7 @@ function buildExpandedLesson(config) {
         {
           type: "rules",
           label: "方法",
-          title: "今天的三步方法",
+          title: `${zhTitle}三步法`,
           minutes: "5分钟",
           body: "家长带孩子记住一个简单方法，不需要背复杂概念。",
           bullets: config.methodZh,
@@ -1503,7 +1546,7 @@ function buildExpandedLesson(config) {
         {
           type: "puzzle",
           label: "互动游戏",
-          title: "组合一张任务判断卡",
+          title: `组合${zhOutput}`,
           minutes: "6分钟",
           prompt: "请孩子从四组里各点一个，拼成一张今天的任务判断卡。",
           groups: configGroups(config, "zh"),
@@ -1531,7 +1574,7 @@ function buildExpandedLesson(config) {
         {
           type: "design",
           label: "作品卡",
-          title: "我的本课作品卡",
+          title: zhOutput,
           minutes: "6分钟",
           fields: config.fieldsZh,
           placeholder: config.placeholderZh,
@@ -1556,7 +1599,7 @@ function buildExpandedLesson(config) {
     },
     en: {
       title: enTitle,
-      kicker: "30-minute family lesson · Expanded course",
+      kicker: "30-minute family lesson · Themed practice",
       prep: `Parent prep: this lesson focuses on "${config.focusEn}". Keep it practical: understand the scene, use AI for support, and let the child judge and express.`,
       tips: [
         "Let the child speak first before opening AI or tapping the page.",
@@ -1565,12 +1608,12 @@ function buildExpandedLesson(config) {
       ],
       steps: [
         { type: "cover", label: "Start", title: enTitle, minutes: "2 min", body: enNote, quote: "AI should support our thinking, not replace it.", bullets: ["Understand the scene", "State the goal clearly", "Check the result"], guide: `Ask what feels hardest about "${config.focusEn}".` },
-        { type: "story", label: "Story", title: "An turns an idea into a doable task", minutes: "5 min", body: config.storyEn, quote: "Ask: what was too simple at first, and what extra step improved the result?", guide: "Let the child retell problem, method, and change." },
-        { type: "rules", label: "Method", title: "Today's three-step method", minutes: "5 min", body: "Keep one simple method in mind.", bullets: config.methodEn, guide: "Ask the child for one daily-life example for each rule." },
-        { type: "puzzle", label: "Game", title: "Build a task judgment card", minutes: "6 min", prompt: "Choose one from each group to build today's task card.", groups: configGroups(config, "en"), guide: "Ask why the child chose these items and what must be checked." },
+        { type: "story", label: "Story", title: `${enTitle} Story`, minutes: "5 min", body: config.storyEn, quote: "Ask: what was too simple at first, and what extra step improved the result?", guide: "Let the child retell problem, method, and change." },
+        { type: "rules", label: "Method", title: `${enTitle} Three-step Method`, minutes: "5 min", body: "Keep one simple method in mind.", bullets: config.methodEn, guide: "Ask the child for one daily-life example for each rule." },
+        { type: "puzzle", label: "Game", title: `Build ${enOutput}`, minutes: "6 min", prompt: "Choose one from each group to build today's task card.", groups: configGroups(config, "en"), guide: "Ask why the child chose these items and what must be checked." },
         { type: "upgrade", label: "Upgrade", title: "Upgrade a vague idea", minutes: "4 min", prompt: config.upgradeEn, choices: config.upgradeChoicesEn, guide: "Ask what each added phrase makes clearer." },
         { type: "repair", label: "Repair", title: "When AI goes off track", minutes: "4 min", problem: config.repairEn, target: config.repairTargetEn, options: ["name the problem", "keep useful parts", "add limits", "ask AI to redo"], guide: "Train revision instead of blind acceptance." },
-        { type: "design", label: "Work Card", title: "My Lesson Work Card", minutes: "6 min", fields: config.fieldsEn, placeholder: config.placeholderEn, guide: "The parent may type, but the child's ideas should lead." },
+        { type: "design", label: "Work Card", title: enOutput, minutes: "6 min", fields: config.fieldsEn, placeholder: config.placeholderEn, guide: "The parent may type, but the child's ideas should lead." },
         { type: "summary", label: "Review", title: "What did we complete today?", minutes: "4 min", chant: "Think clearly, ask AI for support, then check and create.", recap: [`We completed a family AI lesson about "${enTitle}".`, "The child saw that AI is not a magic button.", "We learned a three-step method and built a task card.", "The child upgraded a vague request and repaired an off-track AI answer.", "The final work card can be tested in Doubao or DeepSeek."], guide: "Ask the child: what method did I learn, what card did I make, and what should I check next time?" }
       ]
     }
