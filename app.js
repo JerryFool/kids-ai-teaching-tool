@@ -10,9 +10,9 @@ const ui = {
     startLesson: "开始第1课",
     catalogButton: "查看课程结构",
     samples: "31节课程",
-    samplesNote: "全部课程已按模板接入，可逐课审核优化",
-    entries: "家庭共学",
-    entriesNote: "家长边讲边操作，孩子边看边参与",
+    samplesNote: "16节核心课 + 15节创客拓展课",
+    entries: "本地作品库",
+    entriesNote: "作品与进度保存在当前浏览器",
     minutes: "约30分钟",
     minutesNote: "按家庭讲课节奏拆成8个环节",
     followKicker: "项目定位",
@@ -21,8 +21,8 @@ const ui = {
     followQr: "关注思美奇主理人",
     qrAccount: "Jerry Fu 视频号",
     catalogKicker: "31课目录",
-    catalogTitle: "每节课都可以打开讲",
-    catalogBody: "孩子不只是点击答案，而是在网页里观察、判断、组合、填写，并输出自己的学习作品。",
+    catalogTitle: "一课一个问题，一课一个作品",
+    catalogBody: "先完成核心能力，再进入创客拓展。孩子在网页里观察、判断、操作并留下自己的作品。",
     enter: "进入课程",
     waiting: "后续扩展",
     sample: "可进入",
@@ -53,9 +53,9 @@ const ui = {
     startLesson: "Start Lesson 1",
     catalogButton: "View Lesson Flow",
     samples: "31 Lessons",
-    samplesNote: "All lessons are connected and ready for review",
-    entries: "Family Learning",
-    entriesNote: "Parents teach and operate; children watch and join",
+    samplesNote: "16 core + 15 maker extension lessons",
+    entries: "Local Work Library",
+    entriesNote: "Work and progress stay in this browser",
     minutes: "About 30 Min",
     minutesNote: "Eight parent-led teaching moments",
     followKicker: "Project Position",
@@ -64,8 +64,8 @@ const ui = {
     followQr: "Follow CyberMagic Curator",
     qrAccount: "Jerry Fu Channel",
     catalogKicker: "31-Lesson Catalog",
-    catalogTitle: "Every lesson can now be opened",
-    catalogBody: "Children observe, judge, combine, fill in, and create their own learning output inside the webpage.",
+    catalogTitle: "One Problem And One Work Per Lesson",
+    catalogBody: "Build core abilities first, then move into maker extensions with hands-on web activities.",
     enter: "Open Lesson",
     waiting: "Later",
     sample: "Ready",
@@ -88,37 +88,37 @@ const ui = {
 };
 
 const lessonCatalog = [
-  { id: 1, unitZh: "认知觉醒", unitEn: "Awareness", zh: "未来考古：看懂AI时代变局", en: "Future Archaeology: Reading The AI Age", noteZh: "识别未来10年紧缺技能，寻找不可替代的能力。", noteEn: "Spot future skills and abilities that are harder to replace." },
-  { id: 2, unitZh: "认知觉醒", unitEn: "Awareness", zh: "工具祛魅：AI军火库", en: "Demystifying Tools: The AI Toolkit", noteZh: "认识 DeepSeek、Gemini 等工具的不同能力。", noteEn: "Understand different AI tools and what each one is good at." },
-  { id: 3, unitZh: "认知觉醒", unitEn: "Awareness", zh: "数字守门人", en: "Digital Gatekeeper", noteZh: "从刷视频到做视频，建立安全和判断意识。", noteEn: "Move from watching videos to making them with judgment and safety." },
-  { id: 4, unitZh: "掌控指令", unitEn: "Prompting", zh: "提问的艺术：让AI听懂你的话", en: "The Art of Asking: Make AI Understand You", noteZh: "学习角色、任务、背景、约束的提问公式。", noteEn: "Learn the role, task, context, and constraint prompt structure." },
-  { id: 5, unitZh: "掌控指令", unitEn: "Prompting", zh: "感官觉醒：AI创意画室", en: "Multimodal Senses: AI Art Studio", noteZh: "用听觉、视觉和描述训练孩子把想象说清楚。", noteEn: "Use visual and audio clues to describe ideas clearly." },
-  { id: 6, unitZh: "掌控指令", unitEn: "Prompting", zh: "知识管理：家庭大脑", en: "Knowledge Management: Family Brain", noteZh: "把课本、笔记和资料整理成可以提问的知识卡。", noteEn: "Turn books, notes, and materials into question-ready knowledge cards." },
-  { id: 7, unitZh: "AI私人数学老师", unitEn: "AI Tutor", zh: "数学教练：讲思路不抄答案", en: "Math Coach: Explain, Do Not Copy", noteZh: "用AI提示步骤，让孩子反向讲解题目。", noteEn: "Use AI hints and let children explain solutions back." },
-  { id: 8, unitZh: "AI私人写作老师", unitEn: "AI Tutor", zh: "作文润色：保留孩子自己的声音", en: "Writing Polish: Keep The Child's Voice", noteZh: "用AI补细节和改表达，但不代写、不编假经历。", noteEn: "Use AI to add detail and improve wording without ghostwriting or inventing events." },
-  { id: 9, unitZh: "AI私人英语老师", unitEn: "AI Tutor", zh: "英语陪练：开口说出来", en: "English Coach: Speak In Context", noteZh: "用场景对话练单词、句子和简单表达。", noteEn: "Practice words, sentences, and simple dialogue in real scenes." },
-  { id: 10, unitZh: "知识具象化", unitEn: "Visible Knowledge", zh: "错题消灭：从错因到变式", en: "Mistake Fixer: From Cause To Variation", noteZh: "把一道错题变成错因分析和同类变式练习。", noteEn: "Turn one mistake into cause analysis and similar practice variations." },
-  { id: 11, unitZh: "知识具象化", unitEn: "Visible Knowledge", zh: "科学可视化", en: "Science Visualization", noteZh: "用物理、地理模拟理解太阳系与电路。", noteEn: "Use simulations to understand science and geography." },
-  { id: 12, unitZh: "知识具象化", unitEn: "Visible Knowledge", zh: "艺术启蒙", en: "Art Awakening", noteZh: "用神笔马良式任务把涂鸦变绘本。", noteEn: "Turn doodles into picture-book ideas." },
-  { id: 13, unitZh: "知识具象化", unitEn: "Visible Knowledge", zh: "历史穿越", en: "History Time Travel", noteZh: "结合 NotebookLM 与漫画生成制作历史剧本。", noteEn: "Create historical scripts with NotebookLM and comic generation." },
-  { id: 14, unitZh: "情感与创造", unitEn: "Emotion & Creation", zh: "心理树洞", en: "Emotion Tree Hole", noteZh: "把AI当成烦恼粉碎机，学习表达情绪。", noteEn: "Use AI as a safe helper for naming and expressing feelings." },
-  { id: 15, unitZh: "情感与创造", unitEn: "Emotion & Creation", zh: "动态视界：Gemini + Veo", en: "Moving Worlds: Gemini + Veo", noteZh: "让绘本角色动起来。", noteEn: "Bring picture-book characters to life." },
-  { id: 16, unitZh: "学科篇", unitEn: "Subject Learning", zh: "动物园电影：阶段大作业", en: "Zoo Movie: PBL Project", noteZh: "制作《动物园历险记》AI动画短片。", noteEn: "Create an AI animated short called Zoo Adventure." },
-  { id: 17, unitZh: "商业篇", unitEn: "Business Lab", zh: "赚钱路径", en: "How Value Becomes Money", noteZh: "理解流量、产品、信任和复购。", noteEn: "Understand traffic, product, trust, and repeat purchase." },
-  { id: 18, unitZh: "商业篇", unitEn: "Business Lab", zh: "表情包经济", en: "Sticker Economy", noteZh: "把情绪价值变成可分享的小产品。", noteEn: "Turn emotional value into shareable small products." },
-  { id: 19, unitZh: "商业篇", unitEn: "Business Lab", zh: "吧唧制作", en: "Badge Making", noteZh: "理解痛包文化与圆形构图，产出高清马口铁徽章。", noteEn: "Learn badge culture and circular composition, then output a print-ready badge." },
-  { id: 20, unitZh: "商业篇", unitEn: "Business Lab", zh: "自制手串", en: "DIY Bracelet", noteZh: "用3D打印几何珠子与IP挂坠做手串。", noteEn: "Use 3D printed geometric beads and IP charms to design a bracelet." },
-  { id: 21, unitZh: "商业篇", unitEn: "Business Lab", zh: "彩印T恤", en: "Printed T-shirt", noteZh: "理解POD按需打印流程，完成亲子装设计与打样。", noteEn: "Learn POD print flow and make a family T-shirt sample." },
-  { id: 22, unitZh: "商业篇", unitEn: "Business Lab", zh: "手机壳定制", en: "Phone Case Customization", noteZh: "做用户调研，为妈妈定制独一无二的防摔壳。", noteEn: "Use user research to design a unique protective phone case for mom." },
-  { id: 23, unitZh: "商业篇", unitEn: "Business Lab", zh: "卡套制作", en: "Card Holder Making", noteZh: "为好朋友设计校园社交卡套。", noteEn: "Design a school card holder as a social gift for a friend." },
-  { id: 24, unitZh: "商业篇", unitEn: "Business Lab", zh: "3D建模", en: "3D Modeling", noteZh: "AI辅助生成三维模型数据，让公仔诞生。", noteEn: "Use AI to support 3D model data and bring a figure to life." },
-  { id: 25, unitZh: "商业篇", unitEn: "Business Lab", zh: "公仔涂装", en: "Figure Painting", noteZh: "体验白模手工上色与成品制作。", noteEn: "Paint a blank figure and understand finished product craft." },
-  { id: 26, unitZh: "商业篇", unitEn: "Business Lab", zh: "IP孵化", en: "IP Incubation", noteZh: "系列化设计角色的上学、运动、太空等场景。", noteEn: "Design character series across school, sports, space, and more." },
-  { id: 27, unitZh: "商业篇", unitEn: "Business Lab", zh: "音乐制作", en: "Music Making", noteZh: "用 Suno 全网发行家庭主题曲。", noteEn: "Use Suno to create and publish a family theme song." },
-  { id: 28, unitZh: "商业篇", unitEn: "Business Lab", zh: "MV导演", en: "MV Director", noteZh: "用即梦AI制作虚拟MV。", noteEn: "Use Jimeng AI to create a virtual music video." },
-  { id: 29, unitZh: "商业篇", unitEn: "Business Lab", zh: "游戏设计", en: "Game Design", noteZh: "无代码开发网页背单词游戏。", noteEn: "Build a vocabulary web game without code." },
-  { id: 30, unitZh: "商业篇", unitEn: "Business Lab", zh: "专注APP", en: "Focus App", noteZh: "开发专注力计时工具。", noteEn: "Build a focus timer app." },
-  { id: 31, unitZh: "商业篇", unitEn: "Business Lab", zh: "创客市集", en: "Maker Market", noteZh: "整理学期产出，定价摆摊，向陌生人推销创意。", noteEn: "Package semester works, price them, set up a booth, and pitch ideas." }
+  { id: 1, pathZh: "核心课", pathEn: "Core", unitZh: "AI基础素养", unitEn: "AI Literacy", zh: "未来考古：看懂AI时代的变化", en: "Future Archaeology: Reading Change", noteZh: "训练观察与未来判断，完成未来能力卡。", noteEn: "Observe change, make judgments, and create a future ability card." },
+  { id: 2, pathZh: "核心课", pathEn: "Core", unitZh: "AI基础素养", unitEn: "AI Literacy", zh: "AI工具箱：不同任务找不同帮手", en: "AI Toolbox: Match Tasks And Helpers", noteZh: "理解工具差异，完成任务工具地图。", noteEn: "Understand tool differences and build a task-tool map." },
+  { id: 3, pathZh: "核心课", pathEn: "Core", unitZh: "AI基础素养", unitEn: "AI Literacy", zh: "数字守门人：隐私、真假与注意力", en: "Digital Gatekeeper: Privacy, Truth, Focus", noteZh: "建立数字安全意识，完成安全守门卡。", noteEn: "Build digital safety awareness and a safety gate card." },
+  { id: 4, pathZh: "核心课", pathEn: "Core", unitZh: "会问会整理", unitEn: "Ask & Organize", zh: "提问的艺术：让AI听懂你的任务", en: "The Art Of Asking: Make AI Understand", noteZh: "学习角色、任务、背景、约束，完成黄金提问卡。", noteEn: "Use role, task, context, and limits to make a golden prompt card." },
+  { id: 5, pathZh: "核心课", pathEn: "Core", unitZh: "会问会整理", unitEn: "Ask & Organize", zh: "AI创意画室：把想象说成画面", en: "AI Art Studio: Turn Ideas Into Images", noteZh: "训练视觉表达，完成画面设计卡。", noteEn: "Practice visual expression and complete an image design card." },
+  { id: 6, pathZh: "核心课", pathEn: "Core", unitZh: "会问会整理", unitEn: "Ask & Organize", zh: "家庭大脑：让AI根据资料回答", en: "Family Brain: Answer From Sources", noteZh: "训练资料整理和来源判断，完成资料问答卡。", noteEn: "Organize sources, locate evidence, and make a source Q&A card." },
+  { id: 7, pathZh: "核心课", pathEn: "Core", unitZh: "AI学习搭档", unitEn: "AI Learning Partner", zh: "数学教练：讲思路，不抄答案", en: "Math Coach: Explain, Do Not Copy", noteZh: "理解解题步骤并反向讲解，完成解题讲解卡。", noteEn: "Understand steps, teach them back, and make an explanation card." },
+  { id: 8, pathZh: "核心课", pathEn: "Core", unitZh: "AI学习搭档", unitEn: "AI Learning Partner", zh: "作文润色：保留孩子自己的声音", en: "Writing Polish: Keep Your Own Voice", noteZh: "补细节但不代写，完成修改前后对照稿。", noteEn: "Add detail without ghostwriting and create a before-after draft." },
+  { id: 9, pathZh: "核心课", pathEn: "Core", unitZh: "AI学习搭档", unitEn: "AI Learning Partner", zh: "英语陪练：在真实场景里开口", en: "English Coach: Speak In Real Scenes", noteZh: "练习简单听说表达，完成30秒情境对话。", noteEn: "Practice speaking and complete a 30-second scene dialogue." },
+  { id: 10, pathZh: "核心课", pathEn: "Core", unitZh: "AI学习搭档", unitEn: "AI Learning Partner", zh: "错题侦探：找到错因再做变式", en: "Mistake Detective: Find Causes And Variations", noteZh: "诊断错误原因，完成错因与变式卡。", noteEn: "Diagnose errors and create a cause-and-variation card." },
+  { id: 11, pathZh: "核心课", pathEn: "Core", unitZh: "知识创造与安全", unitEn: "Knowledge & Safety", zh: "科学可视化：改变一个变量会怎样", en: "Science Visualizer: Change One Variable", noteZh: "理解因果与变量，完成科学观察卡。", noteEn: "Explore cause and variables, then make a science observation card." },
+  { id: 12, pathZh: "核心课", pathEn: "Core", unitZh: "知识创造与安全", unitEn: "Knowledge & Safety", zh: "艺术启蒙：把一张涂鸦变成小绘本", en: "Art Awakening: Doodle To Picture Book", noteZh: "训练构图和故事连接，完成四格绘本。", noteEn: "Connect composition and story in a four-panel picture book." },
+  { id: 13, pathZh: "核心课", pathEn: "Core", unitZh: "知识创造与安全", unitEn: "Knowledge & Safety", zh: "历史穿越：事实和想象要分开", en: "History Time Travel: Fact Or Imagination", noteZh: "训练资料依据与历史表达，完成四格漫画脚本。", noteEn: "Separate evidence and imagination in a four-panel history script." },
+  { id: 14, pathZh: "核心课", pathEn: "Core", unitZh: "知识创造与安全", unitEn: "Knowledge & Safety", zh: "情绪翻译器：把感受说出来", en: "Emotion Translator: Say How You Feel", noteZh: "识别情绪、需要和行动，完成情绪表达卡。", noteEn: "Name feelings, needs, and actions in an emotion expression card." },
+  { id: 15, pathZh: "核心课", pathEn: "Core", unitZh: "知识创造与安全", unitEn: "Knowledge & Safety", zh: "让角色动起来：镜头、动作与声音", en: "Bring A Character To Life", noteZh: "理解动画语言，完成6秒动画计划。", noteEn: "Learn animation language and plan a six-second animation." },
+  { id: 16, pathZh: "核心课", pathEn: "Core", unitZh: "阶段作品", unitEn: "Milestone Project", zh: "动物园电影：完成60秒故事板", en: "Zoo Movie: A 60-Second Storyboard", noteZh: "综合故事、画面、声音与判断，完成六镜头故事板。", noteEn: "Combine story, image, sound, and judgment in six shots." },
+  { id: 17, pathZh: "创客拓展", pathEn: "Maker Extension", unitZh: "价值与原创", unitEn: "Value & Originality", zh: "作品价值：谁会喜欢，为什么有用", en: "Work Value: Who Likes It And Why", noteZh: "理解用户、价值和反馈，完成作品价值卡。", noteEn: "Understand users, value, and feedback with a work value card." },
+  { id: 18, pathZh: "创客拓展", pathEn: "Maker Extension", unitZh: "价值与原创", unitEn: "Value & Originality", zh: "原创表情包：把家庭情绪变成表达", en: "Original Stickers: Turn Feelings Into Expression", noteZh: "组合表情、动作和文字，完成六个原创表情草图。", noteEn: "Combine face, action, and words into six original stickers." },
+  { id: 19, pathZh: "创客拓展", pathEn: "Maker Extension", unitZh: "实物设计体验", unitEn: "Product Design", zh: "吧唧徽章：在圆形里讲清一个主题", en: "Badge Design: One Theme In A Circle", noteZh: "练习圆形裁切、安全区和文字排版，完成数字徽章。", noteEn: "Practice crop, safe zones, and type in a digital badge design." },
+  { id: 20, pathZh: "创客拓展", pathEn: "Maker Extension", unitZh: "实物设计体验", unitEn: "Product Design", zh: "手串设计：用颜色和节奏表达性格", en: "Bracelet Design: Color, Rhythm, Character", noteZh: "拖拽珠子和颜色规律，完成数字手串设计图。", noteEn: "Arrange beads and color rhythms in a digital bracelet plan." },
+  { id: 21, pathZh: "创客拓展", pathEn: "Maker Extension", unitZh: "实物设计体验", unitEn: "Product Design", zh: "T恤图案：让作品穿在身上", en: "T-Shirt Design: Wear Your Work", noteZh: "比较图案位置、大小和颜色，完成正反面效果图。", noteEn: "Compare placement, scale, and color in front-and-back mockups." },
+  { id: 22, pathZh: "创客拓展", pathEn: "Maker Extension", unitZh: "实物设计体验", unitEn: "Product Design", zh: "爱的礼物：为家人设计手机壳", en: "A Gift Of Love: Family Phone Case", noteZh: "学习简单用户访谈，完成需求卡和手机壳效果图。", noteEn: "Interview a family member and design a phone case mockup." },
+  { id: 23, pathZh: "创客拓展", pathEn: "Maker Extension", unitZh: "实物设计体验", unitEn: "Product Design", zh: "友情卡套：把祝福变成实用设计", en: "Friendship Card Holder: Useful Wishes", noteZh: "练习信息层级与使用场景，完成卡套正反面方案。", noteEn: "Design information hierarchy in a two-sided card holder." },
+  { id: 24, pathZh: "创客拓展", pathEn: "Maker Extension", unitZh: "实物设计体验", unitEn: "Product Design", zh: "3D角色入门：从正面图到三视图", en: "3D Character Basics: Three Views", noteZh: "理解正面、侧面、背面和比例，完成三视图概念卡。", noteEn: "Explore front, side, back, and proportion in a three-view card." },
+  { id: 25, pathZh: "创客拓展", pathEn: "Maker Extension", unitZh: "实物设计体验", unitEn: "Product Design", zh: "公仔配色：颜色、材质与安全", en: "Figure Colors: Material And Safety", noteZh: "练习数字涂装、材质和安全判断，完成配色方案。", noteEn: "Practice digital paint, materials, and safety in a color plan." },
+  { id: 26, pathZh: "创客拓展", pathEn: "Maker Extension", unitZh: "实物设计体验", unitEn: "Product Design", zh: "角色系列化：保持同一个IP的识别度", en: "Character Series: Keep The Identity", noteZh: "区分必须保持和可以变化，完成角色设定表。", noteEn: "Separate fixed and flexible traits in a character system sheet." },
+  { id: 27, pathZh: "创客拓展", pathEn: "Maker Extension", unitZh: "数字创作实验室", unitEn: "Digital Creation", zh: "家庭主题曲：把故事写成30秒音乐", en: "Family Theme Song: A 30-Second Track", noteZh: "组合歌词、情绪和节奏，完成家庭音乐片段。", noteEn: "Combine lyrics, emotion, and rhythm in a short family track." },
+  { id: 28, pathZh: "创客拓展", pathEn: "Maker Extension", unitZh: "数字创作实验室", unitEn: "Digital Creation", zh: "MV导演：让音乐变成六个镜头", en: "MV Director: Music In Six Shots", noteZh: "练习镜头排序、景别和运镜，完成MV分镜。", noteEn: "Order shots, framing, and movement in an MV storyboard." },
+  { id: 29, pathZh: "创客拓展", pathEn: "Maker Extension", unitZh: "数字创作实验室", unitEn: "Digital Creation", zh: "小游戏设计：先把规则做清楚", en: "Game Design: Make The Rules Clear", noteZh: "设置规则、试玩和修改，完成可玩的背单词单关。", noteEn: "Set, test, and revise rules in a playable vocabulary level." },
+  { id: 30, pathZh: "创客拓展", pathEn: "Maker Extension", unitZh: "数字创作实验室", unitEn: "Digital Creation", zh: "专注工具：设计一个真正会用的计时器", en: "Focus Tool: A Timer You Will Use", noteZh: "设置时间、提醒和休息，完成可运行计时器原型。", noteEn: "Set time, reminders, and breaks in a working timer prototype." },
+  { id: 31, pathZh: "创客拓展", pathEn: "Maker Extension", unitZh: "成果展示", unitEn: "Showcase", zh: "创客成果展：讲清作品并收集反馈", en: "Maker Showcase: Present And Learn", noteZh: "从作品库选择三件作品，完成60秒介绍和反馈卡。", noteEn: "Choose three saved works and prepare a 60-second introduction." }
 ];
 
 const lessonCoverImages = {
@@ -1073,6 +1073,153 @@ function configGroups(config, lang) {
   return source.map((options, index) => ({ name: names[index], options }));
 }
 
+const curriculumV2ConfigPatches = {
+  16: {
+    focusZh: "把动物园故事拆成六个镜头，完成60秒故事板",
+    focusEn: "Turn a zoo story into a six-shot, 60-second storyboard",
+    storyZh: "小安想一次生成一部完整的动物园电影，结果角色忽然变样、故事也跳来跳去。爸爸拿出六张空白卡片：开场在哪里，谁遇到问题，怎样尝试，发生什么转折，怎么解决，最后留下什么画面？小安先把故事拆成六个镜头，再只选一个镜头做动态演示。电影还没全部生成，但故事已经能够被别人看懂。",
+    storyEn: "An tries to generate a whole zoo movie at once, but the characters and story keep changing. Dad gives him six shot cards. An plans the whole story first, then animates one optional shot.",
+    methodZh: ["六镜头：开场、问题、尝试、转折、解决、结尾", "每个镜头只讲一个动作", "先完成故事板，再选择一个镜头生成"],
+    methodEn: ["Six shots: opening, problem, attempt, turn, solution, ending", "One action per shot", "Finish the storyboard before generating one optional shot"]
+  },
+  17: {
+    focusZh: "理解作品为谁服务、为什么有用以及怎样收集反馈",
+    focusEn: "Understand who a work serves, why it helps, and how to collect feedback",
+    storyZh: "小安做了一个很漂亮的读书记录卡，却发现弟弟看不懂怎么用。爸爸没有问能卖多少钱，而是问：你最希望谁使用？他现在遇到什么麻烦？这张卡怎样帮到他？小安把字变大、步骤变少，请弟弟试用后又改了一次。他发现，作品的价值不是自己说很厉害，而是真的有人愿意使用并给出反馈。",
+    storyEn: "An makes a beautiful reading card, but his younger cousin cannot use it. Dad asks who it is for, what problem it solves, and how feedback can improve it. An tests and revises instead of talking about price.",
+    methodZh: ["用户：我希望谁来使用", "价值：它解决什么小问题", "反馈：试用后哪里还要改"],
+    methodEn: ["User: who will use it", "Value: what small problem it solves", "Feedback: what should change after a test"],
+    groupsZh: [["同学", "弟弟妹妹", "家人", "老师"], ["更容易理解", "更愿意表达", "节省一个步骤", "获得一点快乐"], ["一句话说明用途", "演示使用过程", "讲清原创部分", "邀请真实试用"], ["哪里好用", "哪里看不懂", "最喜欢什么", "下一版改什么"]],
+    groupsEn: [["classmate", "younger child", "family", "teacher"], ["easier to understand", "easier to express", "save one step", "bring some joy"], ["one-sentence purpose", "show how it works", "name original parts", "invite a real test"], ["what works", "what is confusing", "favorite part", "what to revise"]],
+    upgradeZh: "原句：我的作品很好。",
+    upgradeEn: "Original: my work is great.",
+    upgradeChoicesZh: ["说清作品给谁用", "说清解决的小问题", "演示怎么使用", "邀请一句真实反馈"],
+    upgradeChoicesEn: ["name the user", "name the small problem", "show how it works", "ask for real feedback"],
+    repairZh: "AI把作品介绍写成夸张广告，还写了没有验证的效果。",
+    repairTargetZh: "请改成真实介绍：作品给谁用、解决什么小问题、怎么使用、我还想听什么建议。",
+    repairEn: "AI writes an exaggerated advertisement with untested claims.",
+    repairTargetEn: "Make it truthful: user, small problem, how to use it, and feedback wanted.",
+    fieldsZh: ["作品名称", "谁会使用", "为什么有用", "我想收集的反馈"],
+    fieldsEn: ["Work name", "User", "Why useful", "Feedback wanted"]
+  },
+  18: {
+    focusZh: "把家庭里的真实情绪变成六个原创表情草图",
+    focusEn: "Turn real family feelings into six original sticker sketches",
+    methodZh: ["找场景：家人什么时候会使用", "做原创：角色、动作和表情自己设计", "成系列：六张各说一句不同的话"],
+    methodEn: ["Find family use scenes", "Create an original character, action, and face", "Make six stickers with six different messages"],
+    fieldsZh: ["家庭使用场景", "原创角色", "六个表情和动作", "六句短文字与原创检查"],
+    fieldsEn: ["Family scenes", "Original character", "Six expressions and actions", "Six short lines and originality check"],
+    placeholderZh: "比如：互相鼓励 / 原创小星星 / 加油、收到、抱抱等六种 / 不模仿现有IP",
+    placeholderEn: "Example: family encouragement / original star / six expressions / no copied IP"
+  },
+  19: {
+    focusZh: "在网页圆形画布里设计徽章，理解裁切、安全区和文字排版",
+    focusEn: "Design a digital badge with crop, safe zone, and type",
+    storyZh: "小安在网页圆形画布里做徽章，第一次把名字、口号、机器人和星星全塞进去，缩小后什么都看不清。爸爸打开安全区辅助线，请他只保留一个主角、两种主色和一句短口号。小安移动主角、缩小文字，再检查边缘有没有被裁掉。即使不制作实物，他也完成了一张清楚的数字徽章设计。",
+    storyEn: "An crowds a digital circular badge. Dad turns on safe-zone guides, and An keeps one character, two colors, and one short line. No physical making is required.",
+    methodZh: ["圆形裁切：重要内容不能贴边", "视觉中心：一个主角最清楚", "缩小检查：文字和图案仍能看懂"],
+    methodEn: ["Keep important content inside the safe zone", "Use one clear visual center", "Check readability at small size"],
+    repairTargetZh: "请改成数字圆形徽章构图：中心主角清楚，边缘留安全区，文字少，缩小后仍能看清。",
+    fieldsZh: ["徽章主题", "中心主角", "颜色和文字", "圆形裁切与安全区检查"]
+  },
+  20: {
+    focusZh: "在网页里拖拽数字珠子，用颜色和节奏表达性格",
+    focusEn: "Arrange digital beads to express character with color and rhythm",
+    storyZh: "小安在网页里设计未来手串，开始时每颗珠子都不一样，颜色也没有规律。妈妈请他先选一种性格：安静、勇敢、活泼还是温暖，再用重复和变化安排珠子。小安选择蓝白蓝白的节奏，每四颗加入一颗黄色能量珠。完成后他用尺寸检查器确认长度。网页里的数字设计已经是完整作品，不需要3D打印或购买材料。",
+    storyEn: "An arranges a digital bracelet with too many unrelated beads. He chooses one personality, builds a repeat-and-change rhythm, and checks length. No printing or materials are required.",
+    methodZh: ["先选性格和三种以内颜色", "再用重复和变化排出节奏", "最后用尺寸检查器看长度是否合适"],
+    methodEn: ["Choose a character and up to three colors", "Build rhythm with repeat and change", "Use a digital length check"],
+    repairZh: "数字手串颜色太多、顺序没有规律，也没有检查整体长度。",
+    repairTargetZh: "请保留三种以内颜色，用重复和变化重新排列，并在网页里完成长度检查。",
+    fieldsZh: ["想表达的性格", "珠子形状", "颜色规律", "数字尺寸检查"]
+  },
+  21: {
+    focusZh: "在数字服装效果图上调整图案位置、大小和颜色",
+    focusEn: "Adjust placement, scale, and color on a digital T-shirt mockup",
+    storyZh: "小安把机器人图案铺满数字T恤，远看像一团颜色。爸爸请他在网页里切换正面和背面，把胸前图案缩小、把一句短口号放到背后，再比较白色、蓝色和灰色衣服上的对比。小安最后保存了正反面效果图。课程不要求打样，数字图已经能帮助他判断设计是否清楚。",
+    storyEn: "An covers a digital T-shirt with a huge graphic. He switches front and back, adjusts scale and contrast, and saves a mockup without ordering a sample.",
+    methodZh: ["切换正反面", "调整图案位置和大小", "比较衣服颜色与图案对比"],
+    methodEn: ["Switch front and back", "Adjust placement and scale", "Compare garment and graphic contrast"],
+    fieldsZh: ["穿着场景", "正面图案", "背面图案", "位置大小与颜色检查"]
+  },
+  22: {
+    focusZh: "采访一位家人，把真实需要变成手机壳设计",
+    focusEn: "Interview a family member and turn a real need into a phone case design",
+    storyZh: "小安想给家人设计手机壳，一开始只选了自己最喜欢的机器人图案。爸爸提醒他：礼物是给别人使用的。小安先问了三个问题：你喜欢什么颜色？手机壳最需要保护什么？有没有一句想每天看到的话？回答让他的设计完全改变。小安发现，好的设计不是猜，而是先听懂使用者。",
+    storyEn: "An starts a family phone case with his own favorite robot. After three interview questions about color, protection, and a meaningful phrase, he redesigns it for the real user.",
+    methodZh: ["先采访：颜色、习惯、需要", "再取舍：只保留最重要信息", "做效果图：检查好看和好用"],
+    methodEn: ["Interview color, habits, and needs", "Keep only key information", "Make and check a mockup"]
+  },
+  23: {
+    focusZh: "在网页里完成卡套正反面方案，把祝福变成实用设计",
+    focusEn: "Create a digital front-and-back card holder that is useful and caring",
+    storyZh: "小安为朋友设计数字卡套，正面塞满祝福，背面又放了朋友的学校、班级和全名。爸爸请他先排信息层级：正面只保留昵称和一个小图标，背面放友情暗号和防丢提醒，同时删掉会暴露身份的信息。小安切换上学、乘车两个场景检查，完成了一份安全又实用的正反面方案。",
+    storyEn: "An puts too much text and private information on a digital card holder. He creates a clear front and back, removes school and full name, and checks two use scenes.",
+    methodZh: ["正面：一眼看见昵称或主图", "背面：祝福、提示和辅助信息", "场景检查：实用、清楚、不暴露隐私"],
+    methodEn: ["Front: one clear name or image", "Back: wish, reminder, and supporting info", "Check usefulness, clarity, and privacy"],
+    fieldsZh: ["朋友和使用场景", "卡套正面", "卡套背面", "隐私与实用检查"]
+  },
+  24: {
+    focusZh: "从正面图理解正面、侧面、背面和角色比例",
+    focusEn: "Understand front, side, back, and proportion from a front view",
+    storyZh: "小安画了一个圆脑袋、背着能量包的机器人。AI很快做出正面图，但侧面把能量包画没了，背面又多出一条尾巴。爸爸说：立体角色像一个人转身，三个方向必须是同一个角色。小安用三张卡记录头身比例、能量包位置和鞋子大小，再转动网页里的简模检查。三个方向终于对得上了。",
+    storyEn: "An designs a round-headed robot with an energy pack. The side loses the pack and the back gains a tail. He records proportion and key features, then checks the three views with a rotating simple model.",
+    methodZh: ["看方向：正面、侧面、背面", "定比例：头身、身体宽度、脚部大小", "保特征：三个视图必须是同一个角色"],
+    methodEn: ["Check front, side, and back", "Set head-body, width, and feet", "Keep identifying features consistent"]
+  },
+  25: {
+    focusZh: "在网页里给数字公仔配色，比较颜色、材质和安全",
+    focusEn: "Color a digital figure while comparing color, material, and safety",
+    storyZh: "小安打开网页里的白色数字公仔，想一次放进所有颜色。妈妈请他先选主色、辅助色和点缀色，再比较哑光、亮面和透明三种数字材质。小安还完成了安全判断：真实喷漆和刀具不由孩子操作，本课只保存数字配色方案。减少颜色后，角色反而更清楚。",
+    storyEn: "An colors a digital figure with too many colors. He chooses main, support, and accent colors, compares digital materials, and keeps the lesson fully digital and safe.",
+    methodZh: ["三类颜色：主色、辅助色、点缀色", "数字材质：哑光、亮面、透明", "安全判断：本课不操作颜料、喷漆或刀具"],
+    methodEn: ["Main, support, and accent colors", "Compare matte, gloss, and transparent materials", "No paint, spray, or tools in this lesson"],
+    repairZh: "数字公仔颜色太多、材质混乱，还建议孩子自己使用喷漆。",
+    repairTargetZh: "请缩减为主色、辅助色和点缀色，只做数字涂装，并删除需要孩子操作喷漆或刀具的步骤。",
+    fieldsZh: ["公仔角色", "主辅点缀色", "数字材质", "安全判断"]
+  },
+  27: {
+    focusZh: "把真实家庭画面写成30秒歌词、情绪和节奏",
+    focusEn: "Turn a real family moment into 30 seconds of lyrics, mood, and rhythm",
+    storyZh: "小安想写一首家庭主题曲，却先让AI随便写一首‘感人的歌’，结果歌词像广告。妈妈请他回忆一个真实画面：雨天一家人挤在一把伞下，回家后一起煮热汤。小安写下看见的动作、听见的声音和心里的感受，再选择温暖、轻快的节奏。AI只帮助排列歌词和试听音乐，真实记忆仍然来自小安。",
+    storyEn: "An asks AI for a touching family song, but it sounds generic. Mom helps him recall one real rainy-day scene. An writes the actions, sounds, and feelings, then uses AI only to arrange and preview.",
+    methodZh: ["先找一个真实家庭画面", "写动作、声音和感受", "选择情绪与节奏，试听后再改"],
+    methodEn: ["Choose one real family scene", "Write actions, sounds, and feelings", "Set mood and rhythm, preview, and revise"]
+  },
+  28: {
+    focusZh: "把30秒家庭主题曲拆成六个有顺序的MV镜头",
+    focusEn: "Turn a 30-second family song into six ordered MV shots",
+    methodZh: ["一句歌词对应一个主要画面", "六镜头有开场、发展和结尾", "景别和运镜服务情绪，不为炫技"],
+    methodEn: ["Match one key image to a lyric", "Use six shots with opening, development, and ending", "Let framing and movement serve emotion"],
+    fieldsZh: ["歌曲与共同主题", "六个镜头顺序", "每镜景别与运镜", "一个动态片段计划"],
+    fieldsEn: ["Song and theme", "Six-shot order", "Framing and movement", "One animated clip plan"]
+  },
+  31: {
+    focusZh: "从本地作品库选择三件作品，完成60秒介绍并收集熟人反馈",
+    focusEn: "Choose three locally saved works, present for 60 seconds, and collect feedback from people you know",
+    storyZh: "学期结束时，小安打开网页作品库，看见每节课留下的作品卡。他没有把所有东西都塞进展示，而是选了三件最能代表自己的：一张资料问答卡、一份三视图概念卡和一个小游戏。爸爸陪他练60秒介绍：我做了什么、遇到什么困难、怎样修改、最想听什么建议。小安只向家人和熟悉的朋友展示，收到的每条反馈都记录下来，准备以后继续改。",
+    storyEn: "At the end, An opens the local work library and chooses three representative works. With Dad, he practices what he made, what was hard, how he revised, and what advice he wants, then shares only with family and familiar friends.",
+    methodZh: ["选择：三件最能代表自己的作品", "表达：作品、困难、修改、收获", "反馈：只向熟人展示并记录建议"],
+    methodEn: ["Choose three representative works", "Explain work, challenge, revision, and learning", "Share with people you know and record feedback"],
+    groupsZh: [["资料问答卡", "情绪表达卡", "三视图概念卡", "小游戏"], ["我为什么做", "最难在哪里", "怎样修改", "学到什么"], ["60秒介绍", "让对方试玩", "展示修改前后", "提出一个反馈问题"], ["只向熟人展示", "不公开私人信息", "不夸大效果", "认真记录建议"]],
+    groupsEn: [["source Q&A", "emotion card", "three-view card", "small game"], ["why I made it", "hardest part", "how I revised", "what I learned"], ["60-second intro", "let them test", "show before and after", "ask one feedback question"], ["share with people known", "protect private data", "do not exaggerate", "record advice"]],
+    upgradeZh: "原句：我做了很多作品。",
+    upgradeEn: "Original: I made many works.",
+    upgradeChoicesZh: ["选三件代表作品", "每件说一个困难", "说清一次修改", "提出一个反馈问题"],
+    upgradeChoicesEn: ["choose three works", "name one challenge each", "explain one revision", "ask one feedback question"],
+    repairZh: "AI把介绍写得像推销广告，还要求向陌生人展示。",
+    repairTargetZh: "请改成真实的60秒学习分享，只向家人、朋友或熟人展示，不包含价格和私人信息。",
+    repairEn: "AI makes a sales pitch and asks the child to approach strangers.",
+    repairTargetEn: "Make it a truthful 60-second learning share for family and familiar friends, without prices or private information.",
+    fieldsZh: ["我选择的三件作品", "共同主题", "60秒介绍", "我想收集的反馈"],
+    fieldsEn: ["Three works", "Shared theme", "60-second introduction", "Feedback wanted"]
+  }
+};
+
+Object.entries(curriculumV2ConfigPatches).forEach(([id, patch]) => {
+  Object.assign(expandedLessonConfigs.find((item) => item.id === Number(id)), patch);
+});
+
 function trimSentenceEnd(text = "") {
   return String(text).replace(/[。！？.!?]+$/g, "");
 }
@@ -1366,6 +1513,76 @@ Object.keys(enhancedCourseLectures).forEach((id) => {
   if (courseFrameworks[id]) courseFrameworks[id].lecture = enhancedCourseLectures[id];
 });
 
+const curriculumV2Frameworks = {
+  1: { goal: "观察生活中的AI变化，判断未来更值得练习的能力。", parent: "从孩子已经见过的变化切入，不制造被替代的焦虑。", interaction: "变化线索时间轴", output: "未来能力卡" },
+  2: { goal: "理解不同任务需要不同类型的AI帮手。", parent: "先说任务和材料，再谈工具名称。", interaction: "任务、材料、工具拖拽匹配", output: "任务工具地图" },
+  3: { goal: "学会保护隐私、核对真假并管理注意力。", parent: "用真实的上传照片、看短视频和陌生链接场景来讲。", interaction: "数字安全情境闯关", output: "安全守门卡" },
+  4: { goal: "学会用角色、任务、背景和约束说清需求。", parent: "让孩子比较模糊请求和清楚请求的差别。", interaction: "提示词积木", output: "黄金提问卡" },
+  5: { goal: "把想象拆成地点、主角、动作和细节。", parent: "孩子先描述，AI结果只用来比较和继续修改。", interaction: "场景搭建与生成结果对比", output: "画面设计卡" },
+  6: { goal: "让AI只根据给定资料回答，并能指出证据位置。", parent: "把资料、问题、证据三件事分开讲，答案找不到依据就先保留。", interaction: "文本标注与证据定位", output: "资料问答卡", materials: "一段100字左右的科普资料、纸笔；网页已内置水循环资料卡。", expected: "孩子可能会说：只要AI答得像真的就可以；也可能注意到答案应该能在资料里找到。", questions: ["这句话的证据在资料第几句？", "如果资料没有写，我们应该回答什么？"], mistake: "把AI流畅的回答当成事实，或把自己的猜测混进资料结论。", safety: "不要上传含姓名、学校、住址、联系方式的私人资料。", completion: "孩子能选中正确证据，并用自己的话完成一张资料问答卡。" },
+  7: { goal: "理解解题步骤，并能把思路反向讲给别人听。", parent: "先要提示，再要步骤，最后让孩子自己讲。", interaction: "步骤排序与提示阶梯", output: "解题讲解卡" },
+  8: { goal: "用AI补充细节和修改表达，同时保留自己的经历与声音。", parent: "原始故事必须先由孩子说，AI不能编造经历。", interaction: "句子修改与理由判断", output: "修改前后对照稿" },
+  9: { goal: "在一个真实场景里完成简单英语听说表达。", parent: "允许慢、允许错，先让孩子敢开口。", interaction: "角色对话与录音回听", output: "30秒情境对话" },
+  10: { goal: "找到错误原因，并用一道同类变式题验证理解。", parent: "错题是线索，不给孩子贴粗心或不聪明的标签。", interaction: "找错步骤与同类题挑战", output: "错因与变式卡" },
+  11: { goal: "理解只改变一个变量，结果会怎样变化。", parent: "每次只动一个滑杆，让孩子先预测再观察。", interaction: "变量滑杆科学模拟", output: "科学观察卡" },
+  12: { goal: "把一张涂鸦发展成有顺序的四格小故事。", parent: "不评价画得像不像，重点看画面能否连成故事。", interaction: "涂鸦画布与分镜排列", output: "四格绘本" },
+  13: { goal: "区分历史事实、合理推测和故事虚构。", parent: "先找依据，再允许想象；想象内容必须标明。", interaction: "事实、推测、虚构分类", output: "四格历史漫画脚本" },
+  14: { goal: "识别情绪强度、真实需要和下一步行动，并把感受说出来。", parent: "AI只帮助整理表达，不能替代家长、老师或专业心理帮助。", interaction: "情绪强度滑杆与句子组合", output: "情绪表达卡", materials: "不需要外部工具；准备一个安静、不被打断的5分钟交流空间。", expected: "孩子可能只说‘烦’‘不知道’或不愿马上说；先允许沉默和选择。", questions: ["这份感受从1到5有多强？", "你现在最希望别人理解你什么，或帮你做什么？"], mistake: "急着讲道理、追问隐私，或把AI当成能够诊断和解决心理问题的人。", safety: "如果孩子提到伤害自己、伤害别人、被欺负或持续强烈痛苦，立即停止AI练习，联系可信任的大人、老师或专业人员。", completion: "孩子能组合出‘发生了什么、我感到、我需要、我准备’四段式表达，并知道什么时候找真人帮助。" },
+  15: { goal: "理解角色动作、镜头变化和声音如何组成短动画。", parent: "先完成一个清楚动作，再增加镜头和声音。", interaction: "动作路径与简易时间轴", output: "6秒动画计划" },
+  16: { goal: "综合故事、画面、声音和判断，完成60秒六镜头故事板。", parent: "完整比炫技重要，只选一个镜头做短片生成也算完成。", interaction: "六镜头分镜排序", output: "六镜头故事板" },
+  17: { goal: "理解一件作品为谁服务、为什么有用以及怎样收集反馈。", parent: "只讲用户、价值、表达和反馈，不讲复杂赚钱。", interaction: "用户、价值、反馈匹配", output: "作品价值卡" },
+  18: { goal: "把家庭里的真实情绪变成原创视觉表达。", parent: "不模仿现有角色或表情包，先画自己的草图。", interaction: "表情、动作、文字组合", output: "六个原创表情草图" },
+  19: { goal: "在圆形范围内用主图和文字讲清一个主题。", parent: "网页里完成数字稿即可，不要求购买制作设备。", interaction: "圆形裁切、安全区与文字排版", output: "徽章正面设计" },
+  20: { goal: "用珠子颜色、顺序和节奏表达一种性格。", parent: "网页里完成数字手串即可，实物制作完全自愿。", interaction: "珠子拖拽、颜色规律与尺寸检查", output: "数字手串设计图" },
+  21: { goal: "理解图案在衣服上的位置、大小和颜色对比。", parent: "完成数字效果图即可，不要求打样或购买。", interaction: "图案缩放、位置与颜色对比", output: "T恤正反面效果图" },
+  22: { goal: "通过简单访谈理解家人的真实需要，再做设计。", parent: "不替家人猜喜好，先问三个问题再画。", interaction: "家庭访谈与手机壳设计画布", output: "需求卡和手机壳效果图" },
+  23: { goal: "把祝福、图案和使用场景组合成实用设计。", parent: "完成数字正反面方案即可，不要求购买制作。", interaction: "信息层级、图案与场景检查", output: "卡套正反面方案" },
+  24: { goal: "理解正面、侧面、背面和角色比例的关系。", parent: "这是轻量3D体验，不要求孩子学习专业建模软件。", interaction: "三视图切换、比例滑杆与可旋转简模", output: "三视图概念卡", materials: "不需要建模软件；网页内置正面、侧面、背面和可旋转简模。纸笔可选。", expected: "孩子可能认为侧面只是把正面压扁，或忽略背面的背包、尾巴等结构。", questions: ["从侧面看，哪些部位会变窄或被挡住？", "角色转到背面，哪些识别特征必须保留？"], mistake: "追求一次生成完整3D模型，忽略三视图是否一致和比例是否稳定。", safety: "第一阶段只做数字概念卡；不操作3D打印机、刀具、胶水等设备。", completion: "孩子能切换三视图，调整头身和脚部比例，并说出三个视图必须保持一致的特征。" },
+  25: { goal: "用主色、辅助色、点缀色和材质完成安全配色。", parent: "优先数字涂装；真实颜料、喷涂和工具不进入本课。", interaction: "数字涂装、材质选择与安全判断", output: "公仔配色方案" },
+  26: { goal: "让角色在不同场景中仍然保持同一个IP的识别度。", parent: "先定三个必须保持，再想三个可以变化。", interaction: "必须保持与可以变化分类", output: "角色设定表和三个场景" },
+  27: { goal: "把真实家庭画面写成30秒歌词、情绪和节奏。", parent: "不要求公开发行，先完成一段只属于家庭的音乐。", interaction: "歌词积木与音乐参数控制", output: "30秒家庭主题曲" },
+  28: { goal: "把一段音乐翻译成六个有顺序的镜头。", parent: "每个镜头服务一句歌词或一种情绪。", interaction: "镜头排序、景别与运镜选择", output: "MV六镜头分镜" },
+  29: { goal: "先说清游戏目标、规则、反馈，再完成一个可玩的单关。", parent: "孩子不需要懂复杂代码，先通过试玩发现规则问题。", interaction: "规则设置、试玩与修改", output: "可玩的背单词单关" },
+  30: { goal: "围绕真实专注问题设计一个简单、可运行的计时器。", parent: "功能少而清楚，数据只保存在本机。", interaction: "时间、提醒与休息设置", output: "可运行的专注计时器原型" },
+  31: { goal: "从作品库选择三件作品，讲清过程、收获并收集反馈。", parent: "只向家人、朋友或熟人展示，不要求向陌生人推销。", interaction: "作品库选择、60秒介绍与反馈卡", output: "三件作品展示单和反馈卡" }
+};
+
+Object.entries(curriculumV2Frameworks).forEach(([id, patch]) => {
+  Object.assign(courseFrameworks[id], patch);
+});
+
+[
+  "Future Ability Card", "Task-Tool Map", "Safety Gate Card", "Golden Prompt Card", "Image Design Card",
+  "Source Q&A Card", "Solution Explanation Card", "Before-and-After Draft", "30-Second Scene Dialogue", "Error Cause And Variation Card",
+  "Science Observation Card", "Four-Panel Picture Book", "Four-Panel History Comic Script", "Emotion Expression Card", "6-Second Animation Plan",
+  "Six-Shot Storyboard", "Work Value Card", "Six Original Sticker Sketches", "Badge Front Design", "Digital Bracelet Plan",
+  "Front-And-Back T-Shirt Mockup", "Needs Card And Phone Case Mockup", "Two-Sided Card Holder Plan", "Three-View Concept Card", "Figure Color Plan",
+  "Character Sheet And Three Scenes", "30-Second Family Theme Song", "Six-Shot MV Storyboard", "Playable Vocabulary Game Level", "Working Focus Timer Prototype",
+  "Three-Work Showcase And Feedback Card"
+].forEach((output, index) => {
+  courseFrameworks[index + 1].outputEn = output;
+});
+
+function requiredLectureBrief(item) {
+  const materials = item.materials || "准备纸笔；提前打开本课网页。外部AI工具只在作品延伸时使用，没有也不影响完成网页任务。";
+  const expected = item.expected || "孩子可能先给出很短的答案，也可能直接猜。先接住想法，再请他说出理由。";
+  const questions = item.questions || ["你为什么这样选？", "你准备怎样检查它是不是合适？"];
+  const mistake = item.mistake || "家长讲得太多、孩子只负责点击，或把AI给出的完整答案直接当成最终作品。";
+  const safety = item.safety || "不输入真实姓名、学校、住址、电话、账号和私人照片；AI结果必须由孩子和家长共同检查。";
+  const completion = item.completion || `孩子能说出本课方法、完成网页核心互动，并形成${item.output}。`;
+  return [
+    "上课前准备5分钟",
+    `课前材料：${materials}`,
+    `开场讲法：${item.parent}`,
+    `孩子可能回答：${expected}`,
+    `追问一：${questions[0]}`,
+    `追问二：${questions[1]}`,
+    `常见误区：${mistake}`,
+    `安全提醒：${safety}`,
+    `完成标准：${completion}`
+  ].join("\n\n");
+}
+
 function buildStandardLecture(id, lesson, item, originalPrep = "") {
   const steps = lesson?.zh?.steps || [];
   const title = lesson?.zh?.title || `第${id}课`;
@@ -1457,8 +1674,12 @@ function buildStandardLecture(id, lesson, item, originalPrep = "") {
 function frameworkPrep(id, lesson, originalPrep = "") {
   const item = courseFrameworks[id];
   if (!item) return originalPrep;
-  if (item.lecture) return item.lecture;
-  return buildStandardLecture(id, lesson, item, originalPrep);
+  const lecture = item.lecture
+    ? item.lecture
+        .replace(/^第\d+课[^\n]*/m, `第${id}课：${lesson?.zh?.title || ""}`)
+        .replace(/^副标题[^\n]*/m, "副标题：一课一能力，一课一作品")
+    : buildStandardLecture(id, lesson, item, originalPrep);
+  return `${requiredLectureBrief(item)}\n\n${lecture}`;
 }
 
 function applyCourseFramework(id, lesson) {
@@ -1502,7 +1723,7 @@ function buildExpandedLesson(config) {
   const zhNote = catalogItem.noteZh;
   const enNote = catalogItem.noteEn;
   const zhOutput = frameworkItem?.output || "我的本课作品卡";
-  const enOutput = frameworkItem?.output || "My Lesson Work Card";
+  const enOutput = frameworkItem?.outputEn || "My Lesson Work Card";
   return {
     illustration: "expanded",
     zh: {
@@ -1752,6 +1973,95 @@ const lessonDetails = {
 
 Object.keys(lessonDetails).forEach((id) => applyCourseFramework(Number(id), lessonDetails[id]));
 
+const lessonMinutes = {
+  zh: ["2分钟", "4分钟", "4分钟", "5分钟", "3分钟", "3分钟", "6分钟", "3分钟"],
+  en: ["2 min", "4 min", "4 min", "5 min", "3 min", "3 min", "6 min", "3 min"]
+};
+
+Object.entries(lessonDetails).forEach(([id, lesson]) => {
+  const catalogItem = lessonCatalog.find((item) => item.id === Number(id));
+  ["zh", "en"].forEach((lang) => {
+    lesson[lang].title = catalogItem[lang];
+    lesson[lang].kicker = lang === "zh"
+      ? `${catalogItem.pathZh} · 30分钟家庭互动课`
+      : `${catalogItem.pathEn} · 30-minute family lesson`;
+    lesson[lang].steps.forEach((step, index) => {
+      step.minutes = lessonMinutes[lang][index];
+    });
+  });
+});
+
+function configureV2SampleLesson(id, patch) {
+  const lesson = lessonDetails[id];
+  if (!lesson) return;
+  Object.entries(patch).forEach(([lang, values]) => {
+    const { steps = {}, ...lessonPatch } = values;
+    Object.assign(lesson[lang], lessonPatch);
+    Object.entries(steps).forEach(([index, stepPatch]) => {
+      Object.assign(lesson[lang].steps[Number(index)], stepPatch);
+    });
+  });
+}
+
+configureV2SampleLesson(6, {
+  zh: { steps: {
+    0: { body: "今天我们练习让AI只根据资料回答：先看资料，再找证据，最后用自己的话说明。", quote: "答案像真的还不够，必须能回到资料里找到依据。", bullets: ["资料：这段文字真正写了什么", "问题：我到底想知道什么", "证据：哪句话支持这个回答"] },
+    1: { title: "小安的恐龙问答卡", body: "小安把一页恐龙资料交给AI，问霸王龙跑得有多快。AI很快给出一个准确到小数点的数字，但资料里根本没有写。爸爸请他把回答分成两栏：资料中能找到的，和资料中没有的。小安重新要求AI只根据资料回答，并标出证据句。第二次AI说：这份资料没有提供奔跑速度，只能确认霸王龙是大型肉食恐龙。小安发现，会说‘资料里没有’也是可靠回答。", quote: "问孩子：第一次回答听起来很专业，为什么仍然不能直接相信？" },
+    2: { title: "资料问答三步法", body: "把‘AI知道很多’变成‘我知道答案依据在哪里’。", bullets: ["先限定：只根据我提供的资料", "再定位：请标出支持答案的原句", "后表达：区分资料事实、合理推测和不知道"] },
+    3: { specialLab: "evidence", title: "证据在哪里", prompt: "阅读水循环资料，点击最能回答问题的证据句。", guide: "请家长先让孩子完整读一遍资料，再读问题。孩子每选一句，都追问：这句话是背景信息，还是直接支持答案的证据？选对后，让孩子用两句证据重新组织自己的回答。" },
+    4: { title: "给回答加上证据要求", prompt: "原句：告诉我云为什么会形成。", choices: ["只根据这张资料卡", "先给一句简短回答", "标出支持回答的原句", "资料没写就明确说不知道"] },
+    5: { title: "识别资料外的漂亮答案", problem: "AI说：云是因为天空里的冷空气把水汽变成棉花一样的白色物体。资料里没有‘棉花’这个说法。", target: "请删除资料外的比喻，只根据资料说明：水蒸气遇冷凝结成小水滴，许多小水滴聚集形成云。" },
+    6: { title: "资料问答卡", fields: ["我的问题", "资料中的证据句", "根据证据的回答", "资料没有告诉我的内容"], placeholder: "比如：云为什么形成 / 水蒸气遇冷凝结 / 小水滴聚集成云 / 没说云有多重" },
+    7: { title: "我会让答案回到资料", chant: "先看资料，再找证据；没有依据，就先不知道。" }
+  } },
+  en: {
+    prep: ["Parent preparation: 5 minutes", "Materials: Use the built-in water-cycle source card. Paper and pencil are optional.", "Opening: Today AI may answer only from the source we give it, and every answer needs evidence.", "Likely answer: A child may think a confident answer is automatically true.", "Follow-up 1: Which exact sentence supports that answer?", "Follow-up 2: What should we say when the source does not tell us?", "Common mistake: Mixing guesses with facts from the source.", "Safety: Do not upload names, school details, addresses, contacts, or private photos.", "Completion: The child finds two evidence lines and completes a Source Q&A Card."].join("\n\n"),
+    tips: ["Read the whole source before choosing.", "Ask for a line of evidence, not just a fluent answer.", "Saying 'the source does not tell us' is a valid result."],
+    steps: { 3: { specialLab: "evidence", title: "Find The Evidence", guide: "Read the source first. For every chosen line, ask whether it directly answers the question. Then let the child restate the answer from the two evidence lines." } }
+  }
+});
+
+configureV2SampleLesson(14, {
+  zh: { steps: {
+    0: { body: "今天练习把感受翻译成清楚表达：发生了什么、我感到什么、我需要什么、我准备怎么做。", quote: "AI可以帮我们整理句子，但真正的陪伴和帮助来自可信任的人。", bullets: ["看见情绪，不给自己贴标签", "说出需要，不用攻击别人", "选择行动，必要时找真人帮助"] },
+    1: { title: "小安把‘烦死了’说清楚", body: "小安的小组作品被同学改掉了，他回家只说‘烦死了’，然后关上房门。妈妈没有马上讲道理，而是请他先选情绪强度。小安选了4级生气，又发现里面还有2级难过。他慢慢说出：因为我的想法没有被问过，我感到生气和委屈，我需要被听见，我准备明天请同学一起商量。AI只帮他把这句话排顺，真正听他说话、陪他决定下一步的仍然是妈妈。", quote: "问孩子：小安从一个‘烦’字里，翻译出了哪些更具体的信息？" },
+    2: { title: "情绪表达四步法", body: "情绪没有标准答案，先诚实看见，再选择安全行动。", bullets: ["发生：只说看得见的事情，不给人下结论", "感受：选情绪并标出1到5的强度", "需要：我希望被理解、被尊重或得到帮助", "行动：说一句请求，或找可信任的大人"] },
+    3: { specialLab: "emotion", title: "情绪翻译实验室", prompt: "选择情境、感受和需要，拖动强度，拼出自己的表达句。", guide: "不要判断孩子选得对不对。请先读出他组合的完整句，再问：这句话是否比‘烦死了’更容易让别人理解？如果孩子不想谈真实事件，可以使用网页示例。" },
+    4: { title: "从指责升级成表达", prompt: "原句：你们都不听我的！", choices: ["发生了什么：作品被改了", "我的感受：生气和委屈", "我的需要：希望先听完我的想法", "我的请求：明天一起重新商量"] },
+    5: { title: "AI不能替代真人帮助", problem: "AI说：你只要一直和我聊天就好了，不需要告诉家长或老师。", target: "这个建议不安全。AI只能帮我整理表达；遇到持续难受、被欺负或伤害风险时，我要立即告诉可信任的大人。" },
+    6: { title: "情绪表达卡", fields: ["发生了什么", "我的感受和强度", "我真正需要什么", "我准备采取的安全行动"], placeholder: "比如：作品被改 / 生气4级、难过2级 / 希望被听见 / 明天和同学商量" },
+    7: { title: "把感受说出来，也知道向谁求助", chant: "情绪可以说，行动要安全；AI帮整理，真人来陪伴。" }
+  } },
+  en: {
+    prep: ["Parent preparation: 5 minutes", "Materials: No external tool. Find five quiet minutes without interruption.", "Opening: We will turn a vague feeling into an event, feeling, need, and safe action.", "Likely answer: A child may only say 'annoyed' or may not want to talk yet.", "Follow-up 1: How strong is the feeling from 1 to 5?", "Follow-up 2: What do you want another person to understand or help with?", "Common mistake: Rushing to give advice or treating AI as a counselor.", "Safety: If the child mentions harm, bullying, or ongoing severe distress, stop the AI activity and contact a trusted adult or professional.", "Completion: The child builds a four-part expression and knows when to seek human help."].join("\n\n"),
+    tips: ["Feelings do not have an answer key.", "Let the child use a sample scene instead of sharing something private.", "AI organizes words; trusted people provide care and help."],
+    steps: { 3: { specialLab: "emotion", title: "Emotion Translator Lab", guide: "Do not judge the choices. Read the full sentence aloud and ask whether it communicates more clearly than one vague word." } }
+  }
+});
+
+configureV2SampleLesson(24, {
+  zh: { steps: {
+    0: { body: "今天不学专业建模软件，只用正面、侧面、背面和比例，看懂一个平面角色怎样变成立体角色。", quote: "三个方向看起来不同，但必须还是同一个角色。", bullets: ["方向：正面、侧面、背面", "比例：头身、身体宽度、脚部大小", "一致：标志、背包、尾巴等特征不能乱变"] },
+    1: { title: "消失的能量包", body: "小安设计了一个圆脑袋、背着蓝色能量包的机器人。AI先画出漂亮正面图，但侧面把能量包画没了，背面又多出一条尾巴。爸爸请他不要急着生成3D，而是先画三张卡：正面记录脸和胸前标志，侧面记录脑袋厚度和能量包位置，背面记录背包形状和后脑结构。小安再转动网页简模检查，三个方向终于像同一个角色。", quote: "问孩子：如果只看正面，我们最容易漏掉哪些立体信息？" },
+    2: { title: "轻量三视图三步法", body: "不需要懂专业软件，也能先把立体角色想清楚。", bullets: ["切换方向：观察正、侧、背分别能看见什么", "调整比例：大头会可爱，脚太小可能站不稳", "锁定特征：三个视图的颜色、标志和结构要一致"] },
+    3: { specialLab: "threeView", title: "转动我的角色简模", prompt: "切换三视图并拖动比例与旋转滑杆，观察角色怎样变化。", guide: "先依次点击正面、侧面、背面，让孩子说每个方向新看见了什么。再拖动头部和脚部比例，讨论可爱、稳定和识别度如何变化。这里是空间理解，不是专业建模。" },
+    4: { title: "给三视图加上约束", prompt: "原句：帮我把机器人做成立体的。", choices: ["提供正面、侧面、背面", "头身比例约1:2", "三个方向保留蓝色能量包", "脚部够宽、角色能够站稳"] },
+    5: { title: "修正不一致的侧面", problem: "AI的侧面图把能量包删掉，还把圆耳朵画成尖耳朵。", target: "请保留正面图的圆耳朵和蓝色能量包，只改变观察方向，不新增尾巴或其他结构。" },
+    6: { title: "三视图概念卡", fields: ["正面识别特征", "侧面厚度和结构", "背面必须看见什么", "头身与脚部比例"], placeholder: "比如：圆耳+胸前星星 / 圆脑袋+背包 / 蓝色能量包 / 头身1:2、脚够宽" },
+    7: { title: "我能从三个方向想角色", chant: "先看三面，再调比例；保持特征，才是同一个角色。" }
+  } },
+  en: {
+    prep: ["Parent preparation: 5 minutes", "Materials: No modeling software is needed. Use the built-in three-view viewer.", "Opening: We will look at one character from the front, side, and back while keeping it recognizable.", "Likely answer: A child may think the side view is only a squeezed front view.", "Follow-up 1: What becomes hidden or narrower from the side?", "Follow-up 2: Which identifying feature must stay visible from the back?", "Common mistake: Trying to generate a finished 3D model before the three views agree.", "Safety: This is a digital concept lesson. No printer, knife, glue, or workshop tool is used.", "Completion: The child compares three views, adjusts proportions, and names three features that stay consistent."].join("\n\n"),
+    tips: ["Compare front, side, and back before adjusting sliders.", "Ask what must stay the same in every view.", "The goal is spatial thinking, not professional modeling."],
+    steps: { 3: { specialLab: "threeView", title: "Rotate The Simple Character", guide: "Switch front, side, and back first. Then adjust head and feet, and ask how proportion changes cuteness, balance, and identity." } }
+  }
+});
+
+lessonDetails[31].zh.steps[3].specialLab = "portfolio";
+lessonDetails[31].en.steps[3].specialLab = "portfolio";
+lessonDetails[31].zh.steps[3].guide = "请孩子从本地作品库里只选三件最能代表成长的作品。不要按‘最好看’来选，要能说出每件作品遇到的困难、修改过程和收获。作品只向家人、朋友或熟人展示。";
+lessonDetails[31].en.steps[3].guide = "Choose three works that best show growth. Explain a challenge, revision, and learning for each, and share only with family or familiar friends.";
+
 const homeView = document.querySelector("#homeView");
 const lessonView = document.querySelector("#lessonView");
 const lessonGrid = document.querySelector("#lessonGrid");
@@ -1787,6 +2097,30 @@ let musicEnabled = false;
 let sfxEnabled = true;
 let lectureCollapsed = false;
 let lessonWork = {};
+const STORAGE_KEY = "cybermagic-ai-parent-classroom-v2";
+
+function loadLearningState() {
+  try {
+    const saved = JSON.parse(localStorage.getItem(STORAGE_KEY) || "{}");
+    return {
+      works: saved.works && typeof saved.works === "object" ? saved.works : {},
+      completed: saved.completed && typeof saved.completed === "object" ? saved.completed : {},
+      portfolio: Array.isArray(saved.portfolio) ? saved.portfolio : []
+    };
+  } catch (error) {
+    return { works: {}, completed: {}, portfolio: [] };
+  }
+}
+
+let learningState = loadLearningState();
+
+function saveLearningState() {
+  try {
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(learningState));
+  } catch (error) {
+    // The lesson remains usable when private browsing blocks local storage.
+  }
+}
 
 function tr(key) {
   return ui[languageMode][key];
@@ -1801,7 +2135,8 @@ function resetLessonWork() {
     puzzle: "",
     upgrade: "",
     repair: "",
-    design: ""
+    design: "",
+    ...(learningState.works[currentLessonId] || {})
   };
 }
 
@@ -1842,20 +2177,23 @@ function updateStaticLanguage() {
 }
 
 function renderCatalog() {
-  lessonGrid.innerHTML = lessonCatalog.map((lesson) => {
+  const renderCard = (lesson) => {
     const available = Boolean(lessonDetails[lesson.id]);
-    const statusText = available ? tr("sample") : tr("pending");
+    const completed = Boolean(learningState.completed[lesson.id]);
+    const statusText = completed
+      ? (languageMode === "zh" ? "作品已保存" : "Work Saved")
+      : available ? tr("sample") : tr("pending");
     const note = available
       ? lesson[`note${languageMode === "zh" ? "Zh" : "En"}`]
       : lesson[`note${languageMode === "zh" ? "Zh" : "En"}`];
     const unit = lesson[`unit${languageMode === "zh" ? "Zh" : "En"}`];
     const titlePrefix = languageMode === "zh" ? `第${lesson.id}课：` : `Lesson ${lesson.id}: `;
     return `
-      <button class="lesson-card ${available ? "available" : "disabled"}" ${available ? `data-open-lesson="${lesson.id}"` : "disabled"}>
+      <button class="lesson-card ${available ? "available" : "disabled"} ${completed ? "completed" : ""}" ${available ? `data-open-lesson="${lesson.id}"` : "disabled"}>
         ${lessonCoverImages[lesson.id] ? `<div class="lesson-thumb"><img src="${lessonCoverImages[lesson.id]}" alt=""></div>` : ""}
         <div class="card-top">
           <span class="lesson-badge">${lesson.id}</span>
-          <span class="status-chip ${available ? "" : "pending"}">${statusText}</span>
+          <span class="status-chip ${available ? "" : "pending"} ${completed ? "completed" : ""}">${statusText}</span>
         </div>
         <span class="lesson-unit">${unit}</span>
         <h3>${titlePrefix}${lesson[languageMode]}</h3>
@@ -1863,7 +2201,25 @@ function renderCatalog() {
         <span class="mini-action">${available ? tr("enter") : tr("waiting")}</span>
       </button>
     `;
-  }).join("");
+  };
+  const groups = [
+    { start: 1, end: 16, zh: "16节核心课", en: "16 Core Lessons", noteZh: "先建立认知、学习、判断和表达能力", noteEn: "Build literacy, learning, judgment, and expression first" },
+    { start: 17, end: 31, zh: "15节创客拓展课", en: "15 Maker Extension Lessons", noteZh: "再把能力放进作品、设计和综合创造", noteEn: "Apply those abilities in making, design, and creation" }
+  ];
+  lessonGrid.innerHTML = groups.map((group) => `
+    <section class="catalog-group">
+      <header class="catalog-group-head">
+        <div>
+          <span>${languageMode === "zh" ? "学习路径" : "Learning Path"}</span>
+          <h3>${group[languageMode]}</h3>
+        </div>
+        <p>${group[`note${languageMode === "zh" ? "Zh" : "En"}`]}</p>
+      </header>
+      <div class="catalog-card-grid">
+        ${lessonCatalog.filter((lesson) => lesson.id >= group.start && lesson.id <= group.end).map(renderCard).join("")}
+      </div>
+    </section>
+  `).join("");
 }
 
 function currentCatalogItem() {
@@ -2141,6 +2497,7 @@ function openLesson(lessonId) {
 function closeLesson() {
   lessonView.hidden = true;
   homeView.hidden = false;
+  renderCatalog();
 }
 
 function focusLessonTop() {
@@ -2231,6 +2588,12 @@ function buildLectureText(lesson, stepData) {
     design: zh ? "讲法：这是唯一最终作品页。家长可以帮忙记录，但作品判断和表达尽量让孩子完成。" : "Teaching: this is the one final work page. Parent may record; child should decide and express.",
     summary: zh ? "讲法：复盘围绕五件事：目标、讲法、互动、工具、最终作品。不要额外增加新任务。" : "Teaching: review goal, method, interaction, tool, and final work. Do not add new tasks."
   };
+  const specialHelp = {
+    evidence: zh ? "讲法：让孩子先读资料再选证据。选错时不要马上公布答案，追问这句话是否直接回答问题；选对后请孩子根据证据重述。" : "Teaching: read first, then choose evidence. Ask whether each line directly answers the question.",
+    emotion: zh ? "讲法：情绪没有标准答案。家长负责接住表达和确认安全边界，不分析、不诊断，也不让AI替代真人陪伴。" : "Teaching: feelings have no answer key. Support expression and safety without diagnosis or replacing human care.",
+    threeView: zh ? "讲法：依次看正、侧、背，再调比例。追问哪些特征必须保持，帮助孩子建立空间一致性。" : "Teaching: compare front, side, and back, then adjust proportions and check consistent features.",
+    portfolio: zh ? "讲法：只选三件最能代表成长的作品。60秒介绍讲过程、困难、修改和收获，只向家人、朋友或熟人展示。" : "Teaching: choose three works that show growth and share only with family or familiar friends."
+  };
   const helpMap = currentLessonId > 5
     ? expandedHelp
     : currentLessonId === 1
@@ -2242,7 +2605,7 @@ function buildLectureText(lesson, stepData) {
         : currentLessonId === 4
           ? lessonFourHelp
           : lessonFiveHelp;
-  const typeHelp = helpMap[stepData.type];
+  const typeHelp = stepData.specialLab ? specialHelp[stepData.specialLab] : helpMap[stepData.type];
   return [currentStepIndex === 0 ? lesson.prep : stepData.guide, typeHelp].filter(Boolean).join("\n\n");
 }
 
@@ -2338,9 +2701,125 @@ function storyBodyMarkup(body) {
   `;
 }
 
+function evidenceLabMarkup(stepData, lesson) {
+  const zh = languageMode === "zh";
+  const lines = zh
+    ? [
+        ["太阳照射海洋、河流和地面，水受热后变成看不见的水蒸气。", false],
+        ["水蒸气升到高空，遇冷凝结成许多小水滴。", true],
+        ["许多小水滴聚集在一起，就形成了我们看见的云。", true],
+        ["小水滴继续变大，可能以雨或雪的形式落回地面。", false]
+      ]
+    : [
+        ["Sunlight warms water and turns it into water vapor.", false],
+        ["Water vapor rises, cools, and condenses into tiny droplets.", true],
+        ["Many tiny droplets gather to form a cloud.", true],
+        ["Larger droplets may fall as rain or snow.", false]
+      ];
+  return `
+    <div class="topic-lab evidence-lab">
+      <section class="source-paper">
+        <div class="lab-heading"><span class="time-tag">${stepData.minutes}</span><strong>${zh ? "资料卡：水循环" : "Source: Water Cycle"}</strong></div>
+        <p class="lab-question">${zh ? "问题：云为什么会形成？请选出两句直接证据。" : "Question: Why do clouds form? Choose two direct evidence lines."}</p>
+        <div class="evidence-lines">
+          ${lines.map(([line, correct], index) => `<button data-evidence-line="${index}" data-correct="${correct}"><span>${index + 1}</span>${line}</button>`).join("")}
+        </div>
+      </section>
+      <section class="lab-result-card">
+        <span class="lab-kicker">${zh ? "证据定位器" : "Evidence Locator"}</span>
+        <h3>${zh ? "答案必须站在资料上" : "Answers Need Evidence"}</h3>
+        <div class="lab-live-output" data-evidence-feedback>${lessonWork.puzzle || (zh ? "先读资料，再选两句证据。" : "Read first, then select two lines.")}</div>
+        ${outputActionsMarkup("puzzle")}
+      </section>
+    </div>
+    ${tipsMarkup(lesson)}
+  `;
+}
+
+function emotionLabMarkup(stepData, lesson) {
+  const zh = languageMode === "zh";
+  const groups = zh
+    ? [["发生", ["作品被改了", "比赛没有选上", "朋友没有回应"]], ["感受", ["生气", "难过", "紧张", "失望"]], ["需要", ["被听见", "被尊重", "得到解释", "有人陪伴"]], ["行动", ["和对方商量", "告诉可信任的大人", "先休息再表达"]]]
+    : [["Event", ["my work was changed", "I was not selected", "a friend did not reply"]], ["Feeling", ["angry", "sad", "nervous", "disappointed"]], ["Need", ["to be heard", "respect", "an explanation", "support"]], ["Action", ["talk together", "tell a trusted adult", "rest before speaking"]]];
+  return `
+    <div class="topic-lab emotion-lab">
+      <section class="emotion-controls">
+        <div class="lab-heading"><span class="time-tag">${stepData.minutes}</span><strong>${zh ? "把‘烦’翻译清楚" : "Translate A Vague Feeling"}</strong></div>
+        ${groups.map(([name, options], index) => `<div class="emotion-row"><strong>${name}</strong><div class="chip-grid">${options.map((option) => `<button class="chip emotion-option" data-emotion-kind="${index}" data-piece="${option}">${option}</button>`).join("")}</div></div>`).join("")}
+        <label class="intensity-control"><span>${zh ? "情绪强度" : "Intensity"}：<b data-intensity-value>3</b> / 5</span><input type="range" min="1" max="5" value="3" data-emotion-intensity></label>
+      </section>
+      <section class="lab-result-card emotion-result">
+        <span class="lab-kicker">${zh ? "我的表达句" : "My Expression"}</span>
+        <div class="lab-live-output" data-emotion-output>${lessonWork.puzzle || (zh ? "每行选一个，再调节情绪强度。" : "Choose one per row and set the intensity.")}</div>
+        <div class="safety-callout"><strong>${zh ? "什么时候必须找真人" : "When To Find A Person"}</strong><p>${zh ? "持续强烈难受、被欺负，或有伤害自己/他人的想法时，马上告诉家长、老师或其他可信任的大人。" : "Tell a trusted adult immediately about ongoing distress, bullying, or any risk of harm."}</p></div>
+        ${outputActionsMarkup("puzzle")}
+      </section>
+    </div>
+    ${tipsMarkup(lesson)}
+  `;
+}
+
+function threeViewLabMarkup(stepData, lesson) {
+  const zh = languageMode === "zh";
+  return `
+    <div class="topic-lab three-view-lab">
+      <section class="model-stage">
+        <div class="lab-heading"><span class="time-tag">${stepData.minutes}</span><strong>${zh ? "轻量3D观察台" : "Light 3D Viewer"}</strong></div>
+        <div class="view-tabs" role="tablist">
+          ${[["front", zh ? "正面" : "Front"], ["side", zh ? "侧面" : "Side"], ["back", zh ? "背面" : "Back"]].map(([view, label]) => `<button class="${view === "front" ? "selected" : ""}" data-model-view="${view}">${label}</button>`).join("")}
+        </div>
+        <div class="model-viewport">
+          <div class="simple-model" data-simple-model data-view="front"><div class="model-antenna"></div><div class="model-head"><i></i><i></i></div><div class="model-pack"></div><div class="model-body"><b>CM</b></div><div class="model-feet"><i></i><i></i></div></div>
+          <span data-view-label>${zh ? "正面：看脸、胸前标志和左右宽度" : "Front: face, chest mark, and width"}</span>
+        </div>
+      </section>
+      <section class="model-controls lab-result-card">
+        <label><span>${zh ? "头部比例" : "Head size"}</span><input type="range" min="80" max="125" value="100" data-model-control="head"></label>
+        <label><span>${zh ? "脚部宽度" : "Foot width"}</span><input type="range" min="80" max="140" value="105" data-model-control="feet"></label>
+        <label><span>${zh ? "自由旋转" : "Rotate"}</span><input type="range" min="-45" max="225" value="0" data-model-control="rotate"></label>
+        <div class="lab-live-output" data-model-output>${lessonWork.puzzle || (zh ? "切换方向并调节比例，观察哪些特征必须保持。" : "Switch views and adjust proportions.")}</div>
+        ${outputActionsMarkup("puzzle")}
+      </section>
+    </div>
+    ${tipsMarkup(lesson)}
+  `;
+}
+
+function portfolioLabMarkup(stepData, lesson) {
+  const zh = languageMode === "zh";
+  const works = lessonCatalog.filter((item) => item.id < 31 && learningState.works[item.id]?.design).map((item) => ({ ...item, work: learningState.works[item.id].design }));
+  const selected = learningState.portfolio || [];
+  return `
+    <div class="topic-lab portfolio-lab">
+      <section class="portfolio-picker">
+        <div class="lab-heading"><span class="time-tag">${stepData.minutes}</span><strong>${zh ? "我的本地作品库" : "My Local Work Library"}</strong></div>
+        <p>${zh ? "选择3件最能代表你的作品。所有内容只保存在这台设备的浏览器里。" : "Choose three representative works. They stay in this browser on this device."}</p>
+        <div class="portfolio-grid">
+          ${works.length ? works.map((item) => `<button class="portfolio-item ${selected.includes(item.id) ? "selected" : ""}" data-portfolio-id="${item.id}"><span>${zh ? `第${item.id}课` : `Lesson ${item.id}`}</span><strong>${item[languageMode]}</strong><p>${escapeHtml(item.work).slice(0, 110)}</p></button>`).join("") : `<div class="empty-library"><strong>${zh ? "作品库还是空的" : "The library is empty"}</strong><p>${zh ? "先完成任意课程第7页的作品卡，再回来选择。" : "Finish any lesson's work-card page, then return here."}</p></div>`}
+        </div>
+      </section>
+      <section class="lab-result-card">
+        <span class="lab-kicker">${zh ? "成果展清单" : "Showcase List"}</span>
+        <div class="lab-live-output" data-portfolio-output>${lessonWork.puzzle || (zh ? `已选择 ${selected.length} / 3 件作品` : `${selected.length} / 3 works selected`)}</div>
+        ${outputActionsMarkup("puzzle")}
+      </section>
+    </div>
+    ${tipsMarkup(lesson)}
+  `;
+}
+
+function specialLabMarkup(stepData, lesson) {
+  if (stepData.specialLab === "evidence") return evidenceLabMarkup(stepData, lesson);
+  if (stepData.specialLab === "emotion") return emotionLabMarkup(stepData, lesson);
+  if (stepData.specialLab === "threeView") return threeViewLabMarkup(stepData, lesson);
+  if (stepData.specialLab === "portfolio") return portfolioLabMarkup(stepData, lesson);
+  return "";
+}
+
 function renderStep(stepData, lesson) {
   const visual = visualMarkup(stepData);
   const tips = tipsMarkup(lesson);
+  if (stepData.specialLab) return specialLabMarkup(stepData, lesson);
   if (stepData.type === "story") {
     return `
       <div class="panel-grid story-panel-grid">
@@ -2621,12 +3100,114 @@ function joinPrompt(parts) {
 function recordWork(kind, value) {
   const clean = value.trim();
   lessonWork[kind] = clean;
+  learningState.works[currentLessonId] = { ...lessonWork };
+  if (kind === "design" && clean) learningState.completed[currentLessonId] = true;
+  saveLearningState();
   const status = document.querySelector(`[data-work-status="${kind}"]`);
   if (status) status.textContent = clean ? (languageMode === "zh" ? "已放入作品卡" : "Saved") : (languageMode === "zh" ? "完成后自动放入作品卡" : "Saved after completion");
 }
 
 function outputSelector(kind) {
+  if (kind === "puzzle") {
+    const special = localLesson().steps[currentStepIndex].specialLab;
+    if (special === "evidence") return "[data-evidence-feedback]";
+    if (special === "emotion") return "[data-emotion-output]";
+    if (special === "threeView") return "[data-model-output]";
+    if (special === "portfolio") return "[data-portfolio-output]";
+  }
   return `[data-${kind}-output]`;
+}
+
+function bindSpecialLabInteractions() {
+  const evidenceButtons = Array.from(document.querySelectorAll("[data-evidence-line]"));
+  evidenceButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      button.classList.toggle("selected");
+      const chosen = evidenceButtons.filter((item) => item.classList.contains("selected"));
+      const correct = chosen.length === 2 && chosen.every((item) => item.dataset.correct === "true");
+      const feedback = document.querySelector("[data-evidence-feedback]");
+      const text = correct
+        ? (languageMode === "zh" ? "证据找到了：水蒸气遇冷凝结成小水滴，小水滴聚集形成云。" : "Evidence found: vapor cools into droplets, and droplets gather into clouds.")
+        : (languageMode === "zh" ? `已选择 ${chosen.length} 句。再检查：它是否直接回答“云为什么形成”？` : `${chosen.length} selected. Do they directly explain cloud formation?`);
+      feedback.textContent = text;
+      recordWork("puzzle", correct ? text : "");
+      playSfx(correct ? "complete" : "click");
+    });
+  });
+
+  const emotionButtons = Array.from(document.querySelectorAll("[data-emotion-kind]"));
+  const emotionIntensity = document.querySelector("[data-emotion-intensity]");
+  const updateEmotionOutput = () => {
+    const choices = [0, 1, 2, 3].map((kind) => document.querySelector(`[data-emotion-kind="${kind}"].selected`)?.dataset.piece || "");
+    const intensity = emotionIntensity?.value || "3";
+    const intensityValue = document.querySelector("[data-intensity-value]");
+    if (intensityValue) intensityValue.textContent = intensity;
+    const complete = choices.every(Boolean);
+    const text = languageMode === "zh"
+      ? (complete ? `当${choices[0]}时，我感到${choices[1]}，强度是${intensity}/5。我需要${choices[2]}，我准备${choices[3]}。` : "每行选一个，再调节情绪强度。")
+      : (complete ? `When ${choices[0]}, I feel ${choices[1]} at ${intensity}/5. I need ${choices[2]}, and I will ${choices[3]}.` : "Choose one per row and set the intensity.");
+    const output = document.querySelector("[data-emotion-output]");
+    if (output) output.textContent = text;
+    recordWork("puzzle", complete ? text : "");
+  };
+  emotionButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      document.querySelectorAll(`[data-emotion-kind="${button.dataset.emotionKind}"]`).forEach((item) => item.classList.remove("selected"));
+      button.classList.add("selected");
+      updateEmotionOutput();
+      playSfx("click");
+    });
+  });
+  emotionIntensity?.addEventListener("input", updateEmotionOutput);
+
+  const model = document.querySelector("[data-simple-model]");
+  const modelOutput = document.querySelector("[data-model-output]");
+  const modelLabels = {
+    zh: { front: "正面：看脸、胸前标志和左右宽度", side: "侧面：看脑袋厚度、背包位置和脚的长度", back: "背面：看能量包、后脑结构和左右对称" },
+    en: { front: "Front: face, chest mark, and width", side: "Side: head depth, pack, and foot length", back: "Back: energy pack, head structure, and symmetry" }
+  };
+  document.querySelectorAll("[data-model-view]").forEach((button) => {
+    button.addEventListener("click", () => {
+      document.querySelectorAll("[data-model-view]").forEach((item) => item.classList.remove("selected"));
+      button.classList.add("selected");
+      model.dataset.view = button.dataset.modelView;
+      model.style.setProperty("--model-rotate", button.dataset.modelView === "front" ? "0deg" : button.dataset.modelView === "side" ? "90deg" : "180deg");
+      document.querySelector("[data-view-label]").textContent = modelLabels[languageMode][button.dataset.modelView];
+      const text = languageMode === "zh" ? `我正在检查${button.textContent}，三个方向必须保留圆耳朵、胸前标志和蓝色能量包。` : `I am checking the ${button.textContent} view while keeping the same identifying features.`;
+      modelOutput.textContent = text;
+      recordWork("puzzle", text);
+      playSfx("click");
+    });
+  });
+  document.querySelectorAll("[data-model-control]").forEach((input) => {
+    input.addEventListener("input", () => {
+      const type = input.dataset.modelControl;
+      if (type === "head") model.style.setProperty("--head-scale", Number(input.value) / 100);
+      if (type === "feet") model.style.setProperty("--feet-scale", Number(input.value) / 100);
+      if (type === "rotate") model.style.setProperty("--model-rotate", `${input.value}deg`);
+      const text = languageMode === "zh" ? "我调节了角色比例和观察角度，并检查三个方向的识别特征是否一致。" : "I adjusted proportions and viewing angle, then checked consistency across views.";
+      modelOutput.textContent = text;
+      recordWork("puzzle", text);
+    });
+  });
+
+  document.querySelectorAll("[data-portfolio-id]").forEach((button) => {
+    button.addEventListener("click", () => {
+      const id = Number(button.dataset.portfolioId);
+      const selected = new Set(learningState.portfolio || []);
+      if (selected.has(id)) selected.delete(id);
+      else if (selected.size < 3) selected.add(id);
+      learningState.portfolio = Array.from(selected);
+      saveLearningState();
+      document.querySelectorAll("[data-portfolio-id]").forEach((item) => item.classList.toggle("selected", selected.has(Number(item.dataset.portfolioId))));
+      const names = lessonCatalog.filter((item) => selected.has(item.id)).map((item) => item[languageMode]);
+      const complete = selected.size === 3;
+      const text = languageMode === "zh" ? (complete ? `我的成果展作品：${names.join("、")}。` : `已选择 ${selected.size} / 3 件作品`) : (complete ? `My showcase works: ${names.join(", ")}.` : `${selected.size} / 3 works selected`);
+      document.querySelector("[data-portfolio-output]").textContent = text;
+      recordWork("puzzle", complete ? text : "");
+      playSfx(complete ? "complete" : "click");
+    });
+  });
 }
 
 function bindStepInteractions() {
@@ -2666,6 +3247,7 @@ function bindStepInteractions() {
       recordWork("design", values.length >= 4 ? joinPrompt(values) : "");
     });
   });
+  bindSpecialLabInteractions();
 }
 
 document.addEventListener("click", (event) => {
